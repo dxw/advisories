@@ -1,0 +1,86 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "40175b24bed97d93ba58fa59ea49612e",
+    "packages": [
+        {
+            "name": "dxw/php-missing",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/php-missing.git",
+                "reference": "3a1872b72791575c5de514621b15c8c7b3fa8f3e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/php-missing/zipball/3a1872b72791575c5de514621b15c8c7b3fa8f3e",
+                "reference": "3a1872b72791575c5de514621b15c8c7b3fa8f3e",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Missing": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "http://dxw.com"
+                }
+            ],
+            "description": "The stdlib you wish PHP had",
+            "homepage": "https://github.com/dxw/php-missing",
+            "time": "2013-10-25 15:21:09"
+        },
+        {
+            "name": "dxw/roots-composer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@git.dxw.net:roots-composer",
+                "reference": "9e13934ab3d04e27ce1c06373d3e2b0d9f50ef18"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "autoload.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "http://dxw.com"
+                }
+            ],
+            "description": "Roots in a Composer module!",
+            "homepage": "https://github.com/dxw/roots-composer",
+            "time": "2013-08-23 13:56:20"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "dxw/roots-composer": 20,
+        "dxw/php-missing": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

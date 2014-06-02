@@ -1,0 +1,3 @@
+[submodule "wp-content/themes/dxw-advisories/assets/bootstrap"]
+	path = wp-content/themes/dxw-advisories/assets/bootstrap
+	url = git@git.dxw.net:bootstrap

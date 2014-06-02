@@ -1,0 +1,42 @@
+{
+    "acf-options-page": {
+        "repository": "git@git.dxw.net:wordpress-plugins/acf-options-page",
+        "revision": "master",
+        "commit": "34ea02cb73960e3f52dcceea23e039cc82efe5ab"
+    },
+    "acf-repeater": {
+        "repository": "git@git.dxw.net:wordpress-plugins/acf-repeater",
+        "revision": "master",
+        "commit": "4e3bc8818b85cbcdafd8a412a0dcb8a844b255a7"
+    },
+    "advanced-custom-fields": {
+        "repository": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields",
+        "revision": "master",
+        "commit": "ff500ac914ab8f1cb7a1fdd2782097a73d553f22"
+    },
+    "akismet": {
+        "repository": "git@git.dxw.net:wordpress-plugins/akismet",
+        "revision": "master",
+        "commit": "6859da8e1a3854761962fc87ff2f7c285dc1f764"
+    },
+    "co-authors-plus": {
+        "repository": "git@git.dxw.net:wordpress-plugins/co-authors-plus",
+        "revision": "master",
+        "commit": "705c73f6679e5dd1f521b747c5cf0493915a3dbc"
+    },
+    "new-members-only": {
+        "repository": "git@git.dxw.net:wordpress-plugins/new-members-only",
+        "revision": "master",
+        "commit": "67d8527143d552a2c42ee29ba61985ef4d8ac76f"
+    },
+    "page-excerpt": {
+        "repository": "git@git.dxw.net:wordpress-plugins/page-excerpt",
+        "revision": "master",
+        "commit": "5e7aca2ae8a92ab43190a017c46543685d55b230"
+    },
+    "wp-to-twitter": {
+        "repository": "git@git.dxw.net:wordpress-plugins/wp-to-twitter",
+        "revision": "master",
+        "commit": "ac1596e423eed438f4f246bae67987e551d99fa0"
+    }
+}
