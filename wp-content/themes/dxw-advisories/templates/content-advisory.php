@@ -70,7 +70,7 @@ Version: <?php echo get_field('version') ?>
 
 Homepage: <?php echo get_field('codex_link') ?>
 
-Advisory ID: <?php if($post->post_status == 'publish' || $post->post_status == 'private') { the_advisory_id(); } else { echo "Awaiting publication"; } ?>
+Advisory report: <?php if($post->post_status == 'publish' || $post->post_status == 'private') { the_permalink(); } else { echo "Awaiting publication"; } ?>
 
 CVE: <?php if(get_field('cve') != '') { echo get_field('cve'); } else { echo "Awaiting assignment"; } ?>
 
@@ -104,19 +104,12 @@ This vulnerability will be published if we do not receive a response to this rep
 Timeline
 ================
 <?php echo strip_tags(get_field('timeline')) ?>
-<<<<<<< HEAD
+
 
 Discovered by dxw:
 ================
 <?php if(function_exists('coauthors')) { coauthors(); } else { the_author(); } ?>
 
-=======
-
-Discovered by dxw:
-================
-<?php if(function_exists('coauthors')) { coauthors(); } else { the_author(); } ?>
-
->>>>>>> 65c687d5cb3c4aa66c28a30a4f2aaf33169dc464
 Please visit security.dxw.com for more information.
           </textarea>
 
@@ -126,7 +119,7 @@ Please visit security.dxw.com for more information.
 Vulnerability
 ================
 <?php echo strip_tags(get_field('issue')) ?>
-<<<<<<< HEAD
+
 
 Details
 ================
@@ -143,24 +136,7 @@ Advisory ID: <?php if($post->post_status == 'publish' || $post->post_status == '
 
 CVSS: <?php the_cvss_score(); ?> (<?php echo the_cvss_severity(); ?>; AV:<?php echo substr(get_field_label('access_vector'), 0, 1); ?>/AC:<?php echo substr(get_field_label('access_complexity'), 0, 1); ?>/Au:<?php echo substr(get_field_label('authentication'), 0, 1); ?>/C:<?php echo substr(get_field_label('confidentiality'), 0, 1); ?>/I:<?php echo substr(get_field_label('integrity'), 0, 1); ?>/A:<?php echo substr(get_field_label('availability'), 0, 1); ?>)
 
-=======
 
-Details
-================
-
-Summary: <?php the_title(); ?>
-
-Software: <?php echo get_field('component') ?>
-
-Version: <?php echo get_field('version') ?>
-
-Homepage: <?php echo get_field('codex_link') ?>
-
-Advisory ID: <?php if($post->post_status == 'publish' || $post->post_status == 'private') { the_advisory_id(); } else { echo "Awaiting publication"; } ?>
-
-CVSS: <?php the_cvss_score(); ?> (<?php echo the_cvss_severity(); ?>; AV:<?php echo substr(get_field_label('access_vector'), 0, 1); ?>/AC:<?php echo substr(get_field_label('access_complexity'), 0, 1); ?>/Au:<?php echo substr(get_field_label('authentication'), 0, 1); ?>/C:<?php echo substr(get_field_label('confidentiality'), 0, 1); ?>/I:<?php echo substr(get_field_label('integrity'), 0, 1); ?>/A:<?php echo substr(get_field_label('availability'), 0, 1); ?>)
-
->>>>>>> 65c687d5cb3c4aa66c28a30a4f2aaf33169dc464
 Discovered by:
 ================
   <?php if(function_exists('coauthors')) { coauthors(); } else { the_author(); } ?>
