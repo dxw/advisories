@@ -17,11 +17,11 @@
           During a plugin inspection, the tester scans the codebase of the plugin for particular keywords that relate to the inspection
           criteria given below. Matches are then manually reviewed to check for issues of concern. When a match is being reviewed, the code path
           leading to and/or from the match is often reviewed as well, along with the immediately surrounding code. An inspection is an attempt to
-          obtain some assurance about the quality of a plugin without going to the time and expense of a <a href="/about/plugin-reviews">plugin review</a>. 
+          obtain some assurance about the quality of a plugin without going to the time and expense of a <a href="/about/plugin-reviews">plugin review</a>.
         </p>
         <p>
-          During an inspection, the tester will look for instances of the failure criteria given below. A plugin inspection which finds issues 
-          should give you confidence that the plugin is likely to contain issues of concern which you should carefully consider. If we do not find issues, 
+          During an inspection, the tester will look for instances of the failure criteria given below. A plugin inspection which finds issues
+          should give you confidence that the plugin is likely to contain issues of concern which you should carefully consider. If we do not find issues,
           you should conduct your own checks to ensure that you agree with our findings. A review is not a substitute for security best-practices.
         </p>
         <p>
@@ -42,7 +42,7 @@
 
         <h3>Results</h3>
         <p>The outputs of a plugin inspection are a list of the matched criteria from the list below, accompanied with a short description of the findings and a recommendation.</p>
-        
+
         <p>While testers should in general follow the criteria in this section when making recommendations, they may at their discretion make any recommendation. However, if the recommendation is not based on one of the criteria given below, the tester must obtain a second opinion, and must explain the reason for their decision.</p>
 
         <h3 id="recommendations">The possible recommendations are as follows:</h3>
@@ -51,7 +51,7 @@
       <div class="span12 content">
 
         <hr />
-      
+
         <table class="rating">
         <tbody>
           <tr>
@@ -90,7 +90,7 @@
         </tbody>
         </table>
       </div>
-           
+
       <div class="span8 content failure">
         <h3 id="failure_criteria">Failure criteria</h3>
         <p>Plugin inspections require human judgement and should not be conducted mechanistically. These criteria are a guide to the sorts of issues that an inspection should consider.</p>
@@ -117,8 +117,6 @@
             <td> <p>The plugin generates and executes PHP code from user-influenceable variables using (for example) eval or create_function</p> </td>
           </tr>
           <tr>
-            <td>
-          <tr>
             <td> <p>Poor coding style</p> </td>
             <td>
               <p>Exhibits the characteristics of poor coding style, including (but not limited to):</p>
@@ -131,7 +129,7 @@
               </ol>
 
               <p>
-                Note: This failure criterion is not subjective and is not met merely because of a difference 
+                Note: This failure criterion is not subjective and is not met merely because of a difference
                 in opinion about good style, or because of a few examples of inconsistency or bad practice. The lack of good
                 style must materially reduce the tester's ability to understand what the code is doing, thereby indicating
                 that the lack of good style has reduced code readability and maintainability.
