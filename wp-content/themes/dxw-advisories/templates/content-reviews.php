@@ -14,45 +14,45 @@
     <div class="row">
     <div class="span8 content">
       <p>
-        During a plugin review, the tester code reviews the plugin, line by line, actively attempting to find ways in which the plugin could 
+        During a plugin review, the tester code reviews the plugin, line by line, actively attempting to find ways in which the plugin could
         be exploited. A review is a concerted attempt to prove that a plugin is vulnerable to attack, allowing a usage recommendation to
         be given with high confidence.
       </p>
 
       <p>
-        It is not possible for a plugin review to prove that a plugin does not contain vulnerabilities, and a review should not be considered 
-        a substitute for security best-practices. However, a plugin review which does find issues should give you confidence that the plugin 
+        It is not possible for a plugin review to prove that a plugin does not contain vulnerabilities, and a review should not be considered
+        a substitute for security best-practices. However, a plugin review which does find issues should give you confidence that the plugin
         definitely contains issues of concern which you should carefully consider. If we do not find issues, you should conduct your own checks to
         ensure that you agree with our findings.
       </p>
 
       <p>
-        A plugin review cannot provide assurance that the site using the plugin is secure, and in particular, cannot demonstrate that a 
-        plugin is secure if it interacts with other software in was not anticipated by the tester. 
+        A plugin review cannot provide assurance that the site using the plugin is secure, and in particular, cannot demonstrate that a
+        plugin is secure if it interacts with other software in ways not anticipated by the tester.
       </p>
-      
+
       <p>
         If further assurance is required, a penetration test should be conducted.
       </p>
-      
+
       <h3>Results</h3>
       <p>
-        The outputs of a plugin review are a short summary of the findings, a list of the vulnerabilities found and their location in the 
+        The outputs of a plugin review are a short summary of the findings, a list of the vulnerabilities found and their location in the
         codebase and a recommendation.
       </p>
 
       <p>
-        While testers should in general follow the criteria in this section when making recommendations, they may at their discretion 
-        make any recommendation. However, if the recommendation is not based on one of the criteria given below, the tester must explain 
+        While testers should in general follow the criteria in this section when making recommendations, they may at their discretion
+        make any recommendation. However, if the recommendation is not based on one of the criteria given below, the tester must explain
         the reason for their decision.
       </p>
-      
+
       <h3>The possible recommendations are as follows:</h3>
     </div>
     <div class="span12 content">
-      
+
       <hr />
-    
+
         <table class="rating">
         <tbody>
           <tr>
@@ -90,7 +90,7 @@
         </tbody>
         </table>
       </div>
-      
+
       <hr />
     </div>
     </div>
