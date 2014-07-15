@@ -17,7 +17,7 @@
     "akismet": {
         "repository": "git@git.dxw.net:wordpress-plugins/akismet",
         "revision": "master",
-        "commit": "6859da8e1a3854761962fc87ff2f7c285dc1f764"
+        "commit": "2d4297c25a4742ff2acd848ed95250d7f6b00266"
     },
     "co-authors-plus": {
         "repository": "git@git.dxw.net:wordpress-plugins/co-authors-plus",
