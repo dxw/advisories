@@ -12,7 +12,7 @@
     "advanced-custom-fields": {
         "repository": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields",
         "revision": "master",
-        "commit": "ff500ac914ab8f1cb7a1fdd2782097a73d553f22"
+        "commit": "123aeb2152014fa8692eea83d0952d2f7d807154"
     },
     "akismet": {
         "repository": "git@git.dxw.net:wordpress-plugins/akismet",
@@ -27,7 +27,7 @@
     "new-members-only": {
         "repository": "git@git.dxw.net:wordpress-plugins/new-members-only",
         "revision": "master",
-        "commit": "5acf9d7da4cfb61ac2f96d379126ab4fd46bfafc"
+        "commit": "008bfcc7382d7d76dcdfe3ff338f5233117988e6"
     },
     "page-excerpt": {
         "repository": "git@git.dxw.net:wordpress-plugins/page-excerpt",
@@ -37,6 +37,6 @@
     "wp-to-twitter": {
         "repository": "git@git.dxw.net:wordpress-plugins/wp-to-twitter",
         "revision": "master",
-        "commit": "d66a255d485776a6773fff076ec9253160709c78"
+        "commit": "376664f6eedbc33c8daf6725bb6c066b4753c252"
     }
 }
