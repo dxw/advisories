@@ -12,7 +12,7 @@
     "advanced-custom-fields": {
         "repository": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields",
         "revision": "master",
-        "commit": "123aeb2152014fa8692eea83d0952d2f7d807154"
+        "commit": "3b074ca7d68f490c30c1bdb912a9ac03e4747272"
     },
     "akismet": {
         "repository": "git@git.dxw.net:wordpress-plugins/akismet",
@@ -37,6 +37,6 @@
     "wp-to-twitter": {
         "repository": "git@git.dxw.net:wordpress-plugins/wp-to-twitter",
         "revision": "master",
-        "commit": "3a738a0d10885fd8a7bb828783a896cfee92184a"
+        "commit": "95ccccfc16fcb1c7f5a1839766a6741d0c21e7c3"
     }
 }
