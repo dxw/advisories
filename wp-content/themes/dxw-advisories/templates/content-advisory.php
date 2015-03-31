@@ -54,7 +54,7 @@
           <a href="#" class="email_button btn btn-danger" id="email_dxw_wp_sec" data-subject="<?php the_title_for_email(); ?>" data-body="textarea.report_email">dxw WP Security</a>
 
           <h4>Report emails</h4>
-          <a href="#" class="email_button btn btn-danger" id="email_wp_plugins" data-subject="<?php the_title_for_email(); ?>" data-body="textarea.cve_email">WP Plugins</a>
+          <a href="#" class="email_button btn btn-danger" id="email_wp_plugins" data-subject="<?php the_title_for_email(); ?>" data-body="textarea.report_email">WP Plugins</a>
           <a href="#" class="email_button btn btn-danger" id="email_cve" data-subject="CVE request: <?php the_title_for_email(); ?>" data-body="textarea.cve_email">Request CVE</a>
           <div class="alert hidden email_results">
         </div>
