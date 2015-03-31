@@ -86,9 +86,10 @@ class PluginVersionChecker {
    */
   function most_recent_version_on_wporg() {
     $response = $this->get_plugin_information($this->slug);
-    if (isset($response->error)) {
+    if (isset($response->error) || empty($response)) {
       return null;
     }
+
     return $response->version;
   }
 
