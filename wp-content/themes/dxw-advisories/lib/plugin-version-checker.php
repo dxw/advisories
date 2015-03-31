@@ -94,11 +94,22 @@ class PluginVersionChecker {
   }
 
   function get_link($version) {
-    $posts = get_posts(array(
-      'post_type' => 'plugins',
-      'meta_key' => 'version_of_plugin',
-      'meta_value' => $version,
-    ));
+    $posts = get_posts(
+      array(
+        'numberposts' => 1,
+        'post_type' => 'plugins',
+        'meta_query' => array(
+          array(
+            'key' => 'codex_link',
+            'value' => $this->codex_link,
+          ),
+          array(
+            'key' => 'version_of_plugin',
+            'value' => $version,
+          ),
+        )
+      )
+    );
 
     if (count($posts)) {
       return get_permalink($posts[0]->ID);
