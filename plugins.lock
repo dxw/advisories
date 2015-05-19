@@ -37,6 +37,6 @@
     "wp-to-twitter": {
         "repository": "git@git.dxw.net:wordpress-plugins/wp-to-twitter",
         "revision": "master",
-        "commit": "9f342adf792e3b02c03065895549b2d016fa3857"
+        "commit": "2a356bc1f0dc993142cc3c73c39aaffa71332bf3"
     }
 }
