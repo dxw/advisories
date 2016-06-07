@@ -1,28 +1,33 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
-    "hash": "40175b24bed97d93ba58fa59ea49612e",
+    "hash": "acd925cb53495190b3f064d57fe87120",
+    "content-hash": "072058620a426807171d9f8392865cec",
     "packages": [
         {
             "name": "dxw/php-missing",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dxw/php-missing.git",
-                "reference": "3a1872b72791575c5de514621b15c8c7b3fa8f3e"
+                "reference": "544ce7df568f6296e3811454b0e1df79ceb498b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dxw/php-missing/zipball/3a1872b72791575c5de514621b15c8c7b3fa8f3e",
-                "reference": "3a1872b72791575c5de514621b15c8c7b3fa8f3e",
+                "url": "https://api.github.com/repos/dxw/php-missing/zipball/544ce7df568f6296e3811454b0e1df79ceb498b7",
+                "reference": "544ce7df568f6296e3811454b0e1df79ceb498b7",
                 "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Missing": "src/"
+                "psr-4": {
+                    "Missing\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -38,15 +43,21 @@
             ],
             "description": "The stdlib you wish PHP had",
             "homepage": "https://github.com/dxw/php-missing",
-            "time": "2013-10-25 15:21:09"
+            "time": "2016-05-17 16:56:43"
         },
         {
             "name": "dxw/roots-composer",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@git.dxw.net:roots-composer",
+                "url": "https://github.com/dxw/roots-composer.git",
                 "reference": "9e13934ab3d04e27ce1c06373d3e2b0d9f50ef18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/roots-composer/zipball/8feaedb984aaf465e0fce1a4af3676934cd07af9",
+                "reference": "9e13934ab3d04e27ce1c06373d3e2b0d9f50ef18",
+                "shasum": ""
             },
             "type": "library",
             "autoload": {
@@ -54,6 +65,7 @@
                     "autoload.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Tom Adams",
@@ -67,20 +79,46 @@
         }
     ],
     "packages-dev": [
-
+        {
+            "name": "dxw/phar-install",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/phar-install.git",
+                "reference": "7cdc3081296a1009393382ccb338461a747e5732"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/phar-install/zipball/7cdc3081296a1009393382ccb338461a747e5732",
+                "reference": "7cdc3081296a1009393382ccb338461a747e5732",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/phar-install"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "http://dxw.com"
+                }
+            ],
+            "homepage": "https://github.com/dxw/phar-install",
+            "time": "2016-02-17 13:55:06"
+        }
     ],
-    "aliases": [
-
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dxw/roots-composer": 20,
-        "dxw/php-missing": 20
+        "dxw/roots-composer": 20
     },
-    "platform": [
-
-    ],
-    "platform-dev": [
-
-    ]
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
 }
