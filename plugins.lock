@@ -27,7 +27,7 @@
     "new-members-only": {
         "repository": "git@git.dxw.net:wordpress-plugins/new-members-only",
         "revision": "master",
-        "commit": "84f07a9d2576e19ff280fe02dd42d57691e7ca6e"
+        "commit": "5f036e65cad5a07ba107a1c88131227cc6e71779"
     },
     "page-excerpt": {
         "repository": "git@git.dxw.net:wordpress-plugins/page-excerpt",
