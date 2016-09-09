@@ -4,7 +4,7 @@
         {
             "name": "akismet",
             "src": "git@git.dxw.net:wordpress-plugins/akismet",
-            "revision": "14e1a788ada204bcfea650c61abf6e48f5ad9401"
+            "revision": "9ca38d7b3e345affc3afc07c4c09598d41c9543b"
         },
         {
             "name": "acf-options-page",
@@ -34,7 +34,7 @@
         {
             "name": "wp-to-twitter",
             "src": "git@git.dxw.net:wordpress-plugins/wp-to-twitter",
-            "revision": "e99d2765392d5be4ded7d6490668c6c04492c983"
+            "revision": "d0d28d875d26e018981291fa0747fde8fafe75bd"
         },
         {
             "name": "page-excerpt",
