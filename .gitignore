@@ -5,11 +5,11 @@
 /wp-content/node_debug.log
 /wp-content/npm-debug.log
 
+/wp-content/plugins/akismet
 /wp-content/plugins/acf-options-page
 /wp-content/plugins/acf-repeater
 /wp-content/plugins/advanced-custom-fields
-/wp-content/plugins/akismet
 /wp-content/plugins/co-authors-plus
 /wp-content/plugins/new-members-only
-/wp-content/plugins/page-excerpt
 /wp-content/plugins/wp-to-twitter
+/wp-content/plugins/page-excerpt
