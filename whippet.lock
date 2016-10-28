@@ -1,5 +1,5 @@
 {
-    "hash": "19e12ef50789198e160efa576dc027a327e5ea21",
+    "hash": "c391c01a6123a63c2fc7143f23de3c1c602f5a0b",
     "plugins": [
         {
             "name": "akismet",
@@ -7,19 +7,9 @@
             "revision": "9ca38d7b3e345affc3afc07c4c09598d41c9543b"
         },
         {
-            "name": "acf-options-page",
-            "src": "git@git.dxw.net:wordpress-plugins/acf-options-page",
-            "revision": "34ea02cb73960e3f52dcceea23e039cc82efe5ab"
-        },
-        {
-            "name": "acf-repeater",
-            "src": "git@git.dxw.net:wordpress-plugins/acf-repeater",
-            "revision": "4e3bc8818b85cbcdafd8a412a0dcb8a844b255a7"
-        },
-        {
-            "name": "advanced-custom-fields",
-            "src": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields",
-            "revision": "df26f74c9b10cae9f773c861218ced9cca03c63c"
+            "name": "advanced-custom-fields-pro",
+            "src": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields-pro",
+            "revision": "6fa611881e792fc4a145d931520990a4287b9098"
         },
         {
             "name": "co-authors-plus",
@@ -29,12 +19,12 @@
         {
             "name": "new-members-only",
             "src": "git@git.dxw.net:wordpress-plugins/new-members-only",
-            "revision": "5f036e65cad5a07ba107a1c88131227cc6e71779"
+            "revision": "014771ac933679dad25a88d83c3f2575b8ee5578"
         },
         {
             "name": "wp-to-twitter",
             "src": "git@git.dxw.net:wordpress-plugins/wp-to-twitter",
-            "revision": "d0d28d875d26e018981291fa0747fde8fafe75bd"
+            "revision": "f934ec738d0c17cae022eb4ade48a3e3461a538b"
         },
         {
             "name": "page-excerpt",
