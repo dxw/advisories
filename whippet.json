@@ -3,29 +3,11 @@
         "plugins": "git@git.dxw.net:wordpress-plugins/"
     },
     "plugins": [
-        {
-            "name": "akismet"
-        },
-        {
-            "name": "acf-options-page"
-        },
-        {
-            "name": "acf-repeater"
-        },
-        {
-            "name": "advanced-custom-fields"
-        },
-        {
-            "name": "co-authors-plus"
-        },
-        {
-            "name": "new-members-only"
-        },
-        {
-            "name": "wp-to-twitter"
-        },
-        {
-            "name": "page-excerpt"
-        }
+        {"name": "akismet"},
+        {"name": "advanced-custom-fields-pro"},
+        {"name": "co-authors-plus"},
+        {"name": "new-members-only"},
+        {"name": "wp-to-twitter"},
+        {"name": "page-excerpt"}
     ]
 }
