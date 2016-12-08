@@ -1,0 +1,6 @@
+{
+    "require-dev": {
+        "peridot-php/peridot": "~1.15",
+        "peridot-php/leo": "~1.0"
+    }
+}
