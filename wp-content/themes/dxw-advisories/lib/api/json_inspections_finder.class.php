@@ -30,21 +30,3 @@ class JSONInspectionsFinder
     }
 
 }
-
-class InspectionsFinder
-{
-    public function find()
-    {
-    }
-}
-
-class Inspection
-{
-    public function url()
-    {
-    }
-
-    public function result()
-    {
-    }
-}

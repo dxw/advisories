@@ -1,4 +1,5 @@
 <?php
+include(__DIR__.'/api/inspections_finder.class.php');
 include(__DIR__.'/api/json_inspections_finder.class.php');
 include(__DIR__.'/api/inspections_controller.class.php');
 
