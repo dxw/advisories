@@ -18,6 +18,11 @@ class Inspection
         $this->date = date_create($raw_inspection->post_date);
     }
 
+    public function versions()
+    {
+        return get_field('version_of_plugin', $this->post_id);
+    }
+
     public function url()
     {
         return get_permalink($this->post_id);

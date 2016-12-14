@@ -24,6 +24,7 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
         {
             $name = $args['name'];
             $slug = $args['slug'];
+            $versions = $args['versions'];
             $url = $args['url'];
             $date = $args['date'];
             $result = $args['result'];
@@ -33,6 +34,8 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
             $inspection = \Mockery::mock('\\DxwSec\\API\\Inspection');
             $inspection->name = $name;
             $inspection->slug = $slug;
+            $inspection->shouldReceive('versions')
+                ->andReturn($versions);
             $inspection->date = $date;
             $inspection->shouldReceive('url')
                 ->andReturn($url);
@@ -60,6 +63,7 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
                 $this->fake_inspection(array(
                     'name' => 'Advanced Custom Fields: Table Field',
                     'slug' => 'advanced-custom-fields-table-field',
+                    'versions' => '1.2.0',
                     'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field2/',
                     'date' => new DateTime('2016-09-01 14:00:17.000000'),
                     'result' => 'use with caution',
@@ -67,6 +71,7 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
                 $this->fake_inspection(array(
                     'name' => 'Advanced Custom Fields: Table Field',
                     'slug' => 'advanced-custom-fields-table-field',
+                    'versions' => '1.1.0,1.1.1',
                     'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field/',
                     'date' => new DateTime('2016-07-13 17:44:23.000000'),
                     'result' => 'no issues found'
@@ -77,6 +82,7 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
                 array(
                     'name' => 'Advanced Custom Fields: Table Field',
                     'slug' => 'advanced-custom-fields-table-field',
+                    'versions' => '1.2.0',
                     'date' => '2016-09-01T14:00:17+00:00',
                     'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field2/',
                     'result' => 'use with caution',
@@ -84,6 +90,7 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
                 array(
                     'name' => 'Advanced Custom Fields: Table Field',
                     'slug' => 'advanced-custom-fields-table-field',
+                    'versions' => '1.1.0,1.1.1',
                     'date' => '2016-07-13T17:44:23+00:00',
                     'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field/',
                     'result' => 'no issues found',

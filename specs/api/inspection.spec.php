@@ -78,6 +78,28 @@ describe('\\DxwSec\\API\\Inspection', function() {
         });
     });
 
+    describe('versions', function() {
+        beforeEach(function() {
+            \WP_Mock::setUp();
+            \Mockery::getConfiguration()->allowMockingNonExistentMethods(true);
+        });
+
+        afterEach(function() {
+            \WP_Mock::tearDown();
+            \Mockery::getConfiguration()->allowMockingNonExistentMethods(false);
+        });
+
+        it("returns versions from the post's custom field", function() {
+            \WP_Mock::wpFunction('get_field', [
+                'args' => ['version_of_plugin', 2418],
+                'return' => '1.2.3',
+            ]);
+            $fake_post = $this->fake_post(['ID' => '2418']);
+            $inspection = new DxwSec\API\Inspection($fake_post);
+            expect($inspection->versions())->to->equal('1.2.3');
+        });
+    });
+
     describe('date', function() {
         it('returns a datetime object from the string in the post', function() {
             $fake_post = $this->fake_post(['post_date' => '2016-07-13 17:44:23']);

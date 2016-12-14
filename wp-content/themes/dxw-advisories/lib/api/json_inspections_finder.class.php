@@ -23,6 +23,7 @@ class JSONInspectionsFinder
         return array(
             'name' => $inspection->name,
             'slug' => $inspection->slug,
+            'versions' => $inspection->versions(),
             'date' => $inspection->date->format(DATE_ATOM),
             'url' => $inspection->url(),
             'result' => $inspection->result(),
