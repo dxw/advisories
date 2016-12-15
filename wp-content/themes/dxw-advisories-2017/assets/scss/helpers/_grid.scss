@@ -44,20 +44,3 @@ $grid-gutters: $site-gutters;
     padding-right: $grid-gutters/2;
   }
 }
-
-/* Simple two col layout
-*
-* .row {
-*   @include row;
-*
-*   .col-left {
-*     @include col(1/2);
-*   }
-*
-*   .col-right {
-*     @include col(1/2);
-*   }
-*
-* }
-*
-*/

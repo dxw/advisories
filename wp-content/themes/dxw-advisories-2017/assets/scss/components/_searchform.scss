@@ -24,5 +24,6 @@
     float: right;
     width: 20%;
     @include button($dxw-blue, $button-text, big);
+    padding: 16px 0 17px;
   }
 }

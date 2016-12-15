@@ -1,18 +1,17 @@
 .single {
 
-  .grid-row {
-    @include gridrow(true);
-  }
-
   .page-title {
     background: $dxw-purple;
     padding: #{$padding * 2} 0;
     color: $white;
 
-
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
 
     .title {
-      @include gridcol(2/3);
+      width: 66.6666%;
     }
 
     .button {
@@ -20,25 +19,24 @@
     }
 
     .recommendation {
-      @include gridcol(1/3);
+      width: 33.3333%;
       .inner {
         background: scale-color($dxw-purple, $lightness: -25%);
         padding: #{$padding / 2}
       }
       a {
         color: $white;
-
       }
     }
   }
 
   .findings {
-    @include gridcol(2/3);
+    width: 66.6666%;
     padding-top: #{$padding * 2};
   }
 
   .meta {
-    @include gridcol(1/3);
+    width: 33.3333%;
     padding-top: #{$padding * 2};
   }
 

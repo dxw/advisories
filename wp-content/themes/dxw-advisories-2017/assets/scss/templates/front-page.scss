@@ -3,12 +3,8 @@
   color: $white;
   padding: #{$padding * 3} 0;
 
-  .content-block {
-    @include gridrow(true);
-  }
-
   h1, .rich-text {
-    @include gridcol(4/5);
+    width: 80%;
   }
 
   a {
@@ -22,26 +18,15 @@
 }
 
 .recent-reviews {
-  @include gridrow(true);
   padding: #{$padding * 2} 0;
+  display: flex;
+  flex-direction: row;
 
   .plugin-recommendations {
-    @include gridcol(1/2);
+    width: 50%;
   }
 
   .recent-advisories {
-    @include gridcol(1/2);
-    position: relative;;
-
-    &:before {
-      content: "";
-      width: 3px;
-      display: block;
-      height: 100%;
-      background: #000;
-      position: absolute;
-      left: -2px;
-      top: 0;
-    }
+    width: 50%;
   }
 }
