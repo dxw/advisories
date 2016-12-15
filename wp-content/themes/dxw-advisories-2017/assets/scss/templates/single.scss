@@ -1,0 +1,45 @@
+.single {
+
+  .grid-row {
+    @include gridrow(true);
+  }
+
+  .page-title {
+    background: $dxw-purple;
+    padding: #{$padding * 2} 0;
+    color: $white;
+
+
+
+    .title {
+      @include gridcol(2/3);
+    }
+
+    .button {
+      margin: $margin 0;
+    }
+
+    .recommendation {
+      @include gridcol(1/3);
+      .inner {
+        background: scale-color($dxw-purple, $lightness: -25%);
+        padding: #{$padding / 2}
+      }
+      a {
+        color: $white;
+
+      }
+    }
+  }
+
+  .findings {
+    @include gridcol(2/3);
+    padding-top: #{$padding * 2};
+  }
+
+  .meta {
+    @include gridcol(1/3);
+    padding-top: #{$padding * 2};
+  }
+
+}

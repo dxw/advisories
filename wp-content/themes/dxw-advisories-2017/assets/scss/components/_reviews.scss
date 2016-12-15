@@ -1,0 +1,24 @@
+.short-review {
+  margin-bottom: $margin;
+
+  .short {
+    padding: 1px 5px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+  a {
+    display: block;
+  }
+}
+
+.unsafe {
+  background: #d30000;
+}
+
+.caution {
+  background: #ff822e;
+}
+
+.allgood {
+  background: #5daa1a;
+}

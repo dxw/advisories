@@ -1,0 +1,28 @@
+.search-form {
+  background: $dxw-purple;
+  padding: $padding 0;
+  color: $white;
+
+  form {
+    width: 66.6666%;
+    margin: auto;
+  }
+
+  label {
+    display: block;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  input[type="search"] {
+    width: 80%;
+    border-color: scale-color($dxw-purple, $lightness: -25%);
+    padding: 15px;
+  }
+
+  .button {
+    float: right;
+    width: 20%;
+    @include button($dxw-blue, $button-text, big);
+  }
+}

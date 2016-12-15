@@ -1,0 +1,59 @@
+.global-footer {
+  background: $dark-grey;
+  padding: #{$padding * 2} 0 0;
+  color: $white;
+
+  a {
+    color: $white;
+
+    &:hover {
+      border-bottom: 2px solid $white;
+    }
+  }
+
+  .global-footer-links {
+    display: flex;
+    flex-direction: row;
+
+    section {
+      width: 25%;
+    }
+
+    .footer-contact {
+      span {
+        display: block;
+      }
+      span[itemprop=addressLocality], span[itemprop=postalCode] {
+        display: inline-flex;
+      }
+    }
+  }
+
+  .global-footer-certificates {
+    display: flex;
+    flex-direction: row-reverse;;
+    padding: #{$padding * 2} 0;
+    margin:  #{$padding * 2} 0 0 0;
+    border-top: 1px solid $light-grey;
+
+    .badges {
+      width: 33.3333%;
+      img {
+        height: 90px;
+        margin-right: #{$margin / 2};
+      }
+    }
+    p {
+      width: 66.6666%;
+      font-family: $font-family-sans;
+      float: right;
+    }
+
+  }
+
+  .global-footer-copyright {
+    background: $black;
+    padding: #{$padding * 2} 0;
+  }
+
+}

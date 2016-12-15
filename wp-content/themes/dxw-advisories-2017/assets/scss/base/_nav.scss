@@ -1,0 +1,102 @@
+.navigation {
+  margin: $margin 0;
+  width: 50%;
+  float: right;
+
+  .nav-menu {
+    position: relative;
+    text-align: right;;
+    display: block;
+    z-index: 1;
+  }
+
+  .nav-menu > li {
+    display: inline-block;
+    margin-left: $margin;
+  }
+
+  .nav-menu > li > a {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 5px 0;
+    color: $white;
+    text-decoration: none;
+  }
+
+  .nav-menu > li > a:hover,
+  .nav-menu > li > a:focus,
+  .nav-menu > li > a.open  {
+    border-bottom: 3px solid $white;
+  }
+
+  .nav-menu > li > a:focus {
+    outline: 2px solid $brand-primary;
+  }
+
+  .sub-nav {
+    background: $medium-grey;
+    position: absolute;
+    display: none;
+    top: 60px;
+    padding: $padding/2 $padding;
+  }
+
+  .sub-nav ul {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 $margin 0 0;
+    padding: 0;
+  }
+
+  .sub-nav li {
+    display: block;
+    padding: 0 0 0 $padding/2;
+  }
+
+  .sub-nav a {
+    display: block;
+    margin: 0 $margin 0 0;
+    min-width: 200px;
+  }
+
+  .sub-nav a:hover {
+  }
+
+  .sub-nav a:focus {
+    outline: 2px solid $brand-primary;
+  }
+
+  .sub-nav.open {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: $small-screen) {
+
+  .nav-item {
+    display: block;
+    width: 100%;
+  }
+
+  .navigation li.nav-item > a {
+    float: none;
+    display: block;
+  }
+
+  .navigation .sub-nav {
+    display: block;
+    position: static;
+  }
+
+  .navigation .sub-nav-group {
+    float: none;
+    width: 100%;
+  }
+
+  .navigation .sub-nav a {
+    min-width: 100%;
+    display: block;
+  }
+
+}

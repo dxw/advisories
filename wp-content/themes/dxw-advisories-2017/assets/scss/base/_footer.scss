@@ -1,0 +1,16 @@
+.about-block {
+  background: $light-grey;
+  padding: #{$padding * 2} 0;
+  margin: $margin 0 0;
+  color: $black;
+  text-align: center;
+
+  a {
+    color: $dxw-pink;
+  }
+
+  p {
+    max-width: 40em;
+    margin: auto;
+  }
+}

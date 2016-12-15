@@ -1,0 +1,28 @@
+// Site
+
+html {
+  font-size: 62.5%; // Creates a baseline of 1em/rem = 10px;
+  background: $body-background;
+}
+
+body {
+  // background: url("../images/baseline.png");
+  font-family: $base-sans;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  color: $base-font-colour;
+}
+
+.row {
+  max-width: $site-max-width;
+  margin: auto;
+  padding: 0 $site-gutters;
+}
+
+.grid-row {
+  @include gridrow(true);
+}
+
+a {
+  text-decoration: none;
+}
