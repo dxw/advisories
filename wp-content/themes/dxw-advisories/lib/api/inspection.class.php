@@ -11,10 +11,11 @@ class Inspection
 
     private $post_id;
 
-    public function __construct($raw_inspection) {
+    public function __construct($raw_inspection)
+    {
         $this->post_id = $raw_inspection->ID;
         $this->name = trim($raw_inspection->post_title);
-        $this->slug = $this->strip_trailing_digits($raw_inspection->post_name);
+        $this->slug = $this->stripTrailingDigits($raw_inspection->post_name);
         $this->date = date_create($raw_inspection->post_date);
     }
 
@@ -31,15 +32,16 @@ class Inspection
     public function result()
     {
         $recommendation = get_field('recommendation', $this->post_id);
-        return $this->recommendation_map($recommendation);
+        return $this->recommendationMap($recommendation);
     }
 
-    private function strip_trailing_digits($string)
+    private function stripTrailingDigits($string)
     {
         return preg_replace('/-\d+$/', '', $string);
     }
 
-    private function recommendation_map($code) {
+    private function recommendationMap($code)
+    {
         return [
           'green' => 'No issues found',
           'yellow' => 'Use with caution',

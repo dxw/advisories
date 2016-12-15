@@ -24,7 +24,7 @@ class InspectionsFinder
         ];
         $inspections = get_posts($args);
 
-        return array_map(function($inspection) {
+        return array_map(function ($inspection) {
             return new Inspection($inspection);
         }, $inspections);
     }

@@ -14,20 +14,19 @@ class JSONInspectionsFinder
     public function find($slug)
     {
         $inspections = $this->inspections_finder->find($slug);
-        return array_map(array($this, 'inspection_to_array'), $inspections);
+        return array_map([$this, 'inspectionToArray'], $inspections);
     }
 
-    private function inspection_to_array($inspection)
+    private function inspectionToArray($inspection)
     {
         // DATE_ATOM is ISO8601. DATE_ISO8601 is an incorrect legacy implementation in php
-        return array(
+        return [
             'name' => $inspection->name,
             'slug' => $inspection->slug,
             'versions' => $inspection->versions(),
             'date' => $inspection->date->format(DATE_ATOM),
             'url' => $inspection->url(),
             'result' => $inspection->result(),
-        );
+        ];
     }
-
 }

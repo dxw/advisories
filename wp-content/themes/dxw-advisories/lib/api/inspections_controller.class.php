@@ -9,7 +9,8 @@ class InspectionsController
         $this->json_inspections_finder = $json_inspections_finder;
     }
 
-    public function show($params) {
+    public function show($params)
+    {
         $slug = $params->get_url_params()['slug'];
 
         return $this->json_inspections_finder->find($slug);
