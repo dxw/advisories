@@ -1,42 +1,42 @@
 <?php
 require_once 'wp-content/themes/dxw-advisories/lib/api/inspections_finder.class.php';
 
-describe('\\DxwSec\\API\\InspectionsFinder', function() {
-    beforeEach(function() {
+describe('\\DxwSec\\API\\InspectionsFinder', function () {
+    beforeEach(function () {
         \WP_Mock::setUp();
         \Mockery::getConfiguration()->allowMockingNonExistentMethods(true);
     });
 
-    afterEach(function() {
+    afterEach(function () {
         \WP_Mock::tearDown();
         \Mockery::getConfiguration()->allowMockingNonExistentMethods(false);
     });
 
-    describe('->find()', function() {
-        it('returns an array of inspection objects', function() {
+    describe('->find()', function () {
+        it('returns an array of inspection objects', function () {
             $inspection = (object) [
                 'ID' => 2644,
                 'post_author' => 5,
                 'post_date' => '2016-07-13 17:44:23',
                 'post_date_gmt' => '2016-07-13 17:44:23',
-                'post_content' => NULL,
+                'post_content' => null,
                 'post_title' => 'Advanced Custom Fields: Table Field',
-                'post_excerpt' => NULL,
+                'post_excerpt' => null,
                 'post_status' => 'publish',
                 'comment_status' => 'closed',
                 'ping_status' => 'closed',
-                'post_password' => NULL,
+                'post_password' => null,
                 'post_name' => 'advanced-custom-fields-table-field',
-                'to_ping' => NULL,
-                'pinged' => NULL,
+                'to_ping' => null,
+                'pinged' => null,
                 'post_modified' => '2016-08-08 18:26:16',
                 'post_modified_gmt' => '2016-08-08 18:26:16',
-                'post_content_filtered' => NULL,
+                'post_content_filtered' => null,
                 'post_parent' => 0,
                 'guid' => 'https://security.dxw.com/?post_type=plugins&#038;p=2644',
                 'menu_order' => 0,
                 'post_type' => 'plugins',
-                'post_mime_type' => NULL,
+                'post_mime_type' => null,
                 'comment_count' => 0,
                 'filter' => 'raw',
             ];
@@ -74,7 +74,7 @@ describe('\\DxwSec\\API\\InspectionsFinder', function() {
             expect($output->result())->to->equal('No issues found');
         });
 
-        it('searches the database for published inspections matching the slug', function() {
+        it('searches the database for published inspections matching the slug', function () {
             $args = [
                 'post_type' => 'plugins',
                 'post_status' => 'publish',
@@ -97,8 +97,8 @@ describe('\\DxwSec\\API\\InspectionsFinder', function() {
             $finder->find('my-awesome-plugin');
         });
 
-        context('when there are no matching inspections', function() {
-            it('returns an empty array', function() {
+        context('when there are no matching inspections', function () {
+            it('returns an empty array', function () {
                 \WP_Mock::wpFunction('get_posts', [
                     'return' => []
                 ]);
@@ -109,4 +109,3 @@ describe('\\DxwSec\\API\\InspectionsFinder', function() {
         });
     });
 });
-?>

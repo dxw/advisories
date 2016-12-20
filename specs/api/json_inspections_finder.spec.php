@@ -1,14 +1,15 @@
 <?php
 require_once 'wp-content/themes/dxw-advisories/lib/api/json_inspections_finder.class.php';
 
-describe('\\DxwSec\\API\\InspectionsController', function() {
-    afterEach(function() {
+describe('\\DxwSec\\API\\InspectionsController', function () {
+    afterEach(function () {
         \Mockery::close();
     });
 
     class JSONInspectionsFinderScope extends Peridot\Scope\Scope
     {
-        public function fake_inspections_finder($result) {
+        public function fake_inspections_finder($result)
+        {
             return \Mockery::mock('\\DxwSec\\API\\InspectionsFinder')
                 ->shouldReceive('find')
                 ->andReturn($result)
@@ -20,7 +21,7 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
     // from a WP_Query search for inspections
     class InspectionScope extends Peridot\Scope\Scope
     {
-        public function fake_inspection(Array $args)
+        public function fake_inspection(array $args)
         {
             $name = $args['name'];
             $slug = $args['slug'];
@@ -57,8 +58,8 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
     $this->peridotAddChildScope(new InspectionScope);
     $this->peridotAddChildScope(new JSONInspectionsFinderScope);
 
-    describe('->find()', function() {
-        it('returns an array corresponding to the returned inspections', function() {
+    describe('->find()', function () {
+        it('returns an array corresponding to the returned inspections', function () {
             $inspections = array(
                 $this->fake_inspection(array(
                     'name' => 'Advanced Custom Fields: Table Field',
@@ -103,7 +104,7 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
             expect($result)->to->equal($inspection_output);
         });
 
-        it('calls an inspections finder with the given slug', function() {
+        it('calls an inspections finder with the given slug', function () {
             $finder = \Mockery::mock('\\DxwSec\\API\\InspectionsFinder')
                 ->shouldReceive('find')
                 ->with('my-awesome-plugin')
@@ -114,8 +115,8 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
             $json_finder->find('my-awesome-plugin');
         });
 
-        context('when there are no matching inspections', function() {
-            it('returns an empty array', function() {
+        context('when there are no matching inspections', function () {
+            it('returns an empty array', function () {
                 $finder = $this->fake_inspections_finder([]);
                 $json_finder = new \DxwSec\API\JSONInspectionsFinder($finder);
                 $result = $json_finder->find('slug-with-no-matches');
@@ -124,4 +125,3 @@ describe('\\DxwSec\\API\\InspectionsController', function() {
         });
     });
 });
-?>
