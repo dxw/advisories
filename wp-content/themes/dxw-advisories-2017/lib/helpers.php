@@ -160,7 +160,7 @@ function plugin_vulnerabilities() {
   $posts = get_plugin_vulnerabilities(get_field('codex_link'), get_field('version_of_plugin'));
 
   if(!count($posts)) {
-    ?> <p class="other_versions no_results">None</p> <?php
+    ?> <p class="other-versions no_results">None</p> <?php
 
     return;
   }
@@ -184,7 +184,6 @@ function get_cvss_score() {
 function the_cvss_score() {
   echo get_cvss_score();
 }
-
 
 function get_cvss_severity() {
   $s = get_cvss_score();
