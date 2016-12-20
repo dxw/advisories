@@ -4,7 +4,7 @@ require 'wp-content/themes/dxw-advisories/lib/api/inspections_controller.class.p
 describe('\\DxwSec\\API\\InspectionsController', function () {
     class ControllerScope extends Peridot\Scope\Scope
     {
-        public function fake_json_inspections_finder($result)
+        public function fakeJsonInspectionsFinder($result)
         {
             return \Mockery::mock('\\DxwSec\\API\\JSONInspectionsFinder')
                 ->shouldReceive('find')
@@ -24,7 +24,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                 'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field/',
                 'result' => 'use with caution',
             );
-            $controller = new \DxwSec\API\InspectionsController($this->fake_json_inspections_finder([$inspection]));
+            $controller = new \DxwSec\API\InspectionsController($this->fakeJsonInspectionsFinder([$inspection]));
             $params = new FakeParams(array('slug' => 'my-awesome-plugin'));
             $result = $controller->show($params);
             expect($result)->to->equal([$inspection]);
@@ -43,14 +43,13 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
 
         context('when there are no matching inspections', function () {
             it('returns an empty array', function () {
-                $controller = new \DxwSec\API\InspectionsController($this->fake_json_inspections_finder([]));
+                $controller = new \DxwSec\API\InspectionsController($this->fakeJsonInspectionsFinder([]));
                 $params = new FakeParams(array('slug' => 'foo'));
                 $result = $controller->show($params);
                 expect($result)->to->equal([]);
             });
         });
     });
-
 
     class FakeParams
     {

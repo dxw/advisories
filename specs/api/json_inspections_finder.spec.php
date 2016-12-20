@@ -8,7 +8,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
 
     class JSONInspectionsFinderScope extends Peridot\Scope\Scope
     {
-        public function fake_inspections_finder($result)
+        public function fakeInspectionsFinder($result)
         {
             return \Mockery::mock('\\DxwSec\\API\\InspectionsFinder')
                 ->shouldReceive('find')
@@ -21,7 +21,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
     // from a WP_Query search for inspections
     class InspectionScope extends Peridot\Scope\Scope
     {
-        public function fake_inspection(array $args)
+        public function fakeInspection(array $args)
         {
             $name = $args['name'];
             $slug = $args['slug'];
@@ -45,14 +45,6 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
 
             return $inspection;
         }
-
-        private function random_datetime()
-        {
-            $timestamp = rand(0, time());
-            $datetime = new DateTime();
-            date_timestamp_set($datetime, $timestamp);
-            return $datetime;
-        }
     }
 
     $this->peridotAddChildScope(new InspectionScope);
@@ -61,7 +53,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
     describe('->find()', function () {
         it('returns an array corresponding to the returned inspections', function () {
             $inspections = array(
-                $this->fake_inspection(array(
+                $this->fakeInspection(array(
                     'name' => 'Advanced Custom Fields: Table Field',
                     'slug' => 'advanced-custom-fields-table-field',
                     'versions' => '1.2.0',
@@ -69,7 +61,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                     'date' => new DateTime('2016-09-01 14:00:17.000000'),
                     'result' => 'use with caution',
                 )),
-                $this->fake_inspection(array(
+                $this->fakeInspection(array(
                     'name' => 'Advanced Custom Fields: Table Field',
                     'slug' => 'advanced-custom-fields-table-field',
                     'versions' => '1.1.0,1.1.1',
@@ -98,7 +90,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                 )
             );
 
-            $finder = $this->fake_inspections_finder($inspections);
+            $finder = $this->fakeInspectionsFinder($inspections);
             $json_finder = new \DxwSec\API\JSONInspectionsFinder($finder);
             $result = $json_finder->find('advanced-custom-fields-table-field');
             expect($result)->to->equal($inspection_output);
@@ -117,7 +109,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
 
         context('when there are no matching inspections', function () {
             it('returns an empty array', function () {
-                $finder = $this->fake_inspections_finder([]);
+                $finder = $this->fakeInspectionsFinder([]);
                 $json_finder = new \DxwSec\API\JSONInspectionsFinder($finder);
                 $result = $json_finder->find('slug-with-no-matches');
                 expect($result)->to->equal([]);
