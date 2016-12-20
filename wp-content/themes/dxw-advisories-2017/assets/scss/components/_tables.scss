@@ -1,0 +1,46 @@
+
+table {
+  width: 100%;
+  margin: $margin 0;
+
+  caption {
+    caption-side: bottom;
+    text-align: left;
+    color: scale-color($base-font-colour, $lightness: 25%);
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  thead {
+    text-align: left;
+    th {
+      border-bottom: 2px solid $table-borders;
+      font-family: $font-family-brand-headings, $system-font-family-sans;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $table-borders;
+    }
+  }
+
+  .status, .fail {
+    text-align: center;
+  }
+
+  .high {
+    background: $warning-red;
+  }
+
+  .medium {
+    background: $warning-yellow;
+  }
+
+  .low {
+    background: $warning-green;
+  }
+
+}

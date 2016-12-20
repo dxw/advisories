@@ -37,7 +37,7 @@ h6 {
   p {
     font-size: $base-font-size;
     margin: 0 0 $margin 0;
-    max-width: 34em;
+    max-width: $text-measure;
     -webkit-font-variant-ligatures: discretionary-ligatures;
   }
 
@@ -58,6 +58,7 @@ h6 {
     margin: 0 0 $margin 0;
     li {
       list-style-type: decimal;
+      margin: 0 0 #{$margin / 2 };
       ol {
         margin: 0 0 0 $margin;
         li {
@@ -69,7 +70,7 @@ h6 {
 
   dl {
     dt {
-      font-weight: bold;
+      font-family: $font-family-brand-headings, $system-font-family-sans;
     }
     dd {
     }
@@ -78,7 +79,7 @@ h6 {
   blockquote {
     padding: 0 0 0 #{$padding * 2};
     margin: 0 0 $margin 0;
-    max-width: 40em;
+    max-width: $text-measure;
     border-left: 4px solid scale-color($base-font-colour, $lightness: 50%);
 
     cite:before {
@@ -90,7 +91,6 @@ h6 {
     }
   }
 
-  // Article Links
   a {
     color: $link-colour;
     text-decoration: none;
@@ -102,69 +102,9 @@ h6 {
   a:active { }
   a:focus { }
 
-}
-
-// add external link state with icon to show link goes outside
-
-// Post Images
-.post-image {
-  width: 33%; // Just for test page
-  margin: 30px;
-}
-
-.post-image img {
-  width: 100%;
-  height: auto;
-}
-
-.alignright {
-  float: right;
-}
-
-.alignleft {
-  float: left;
-}
-
-.post-image.alignright {
-  margin-right: 0;
-}
-
-.post-image.alignleft {
-  margin-left: 0;
-}
-
-// Tablular Data
-
-table {
-  width: 100%;
-  margin: $margin 0;
-
-  caption {
-    caption-side: bottom;
-    text-align: left;
-    color: scale-color($base-font-colour, $lightness: 25%);
-  }
-
-  th, td {
-    padding: 10px;
-  }
-
-  thead {
-    text-align: left;
-    th {
-      border-bottom: 2px solid $table-borders;
-      font-weight: bold;
-    }
-  }
-
-  tbody {
-    tr {
-      border-bottom: 1px solid $table-borders;
-    }
-  }
-
-  .status, .fail {
-    text-align: center;
+  table {
+    width: $text-measure;
+    margin: $margin 0;
   }
 
 }

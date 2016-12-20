@@ -1,43 +1,104 @@
 .single {
 
-  .page-title {
-    background: $dxw-purple;
-    padding: #{$padding * 2} 0;
-    color: $white;
+  // Plugin
+  .content-plugins {
+    .page-title {
+      background: $dxw-turquoise;
+      padding: #{$padding * 2} 0;
+      color: $white;
+
+      .row {
+        display: block;
+      }
+
+      .button {
+        margin: $margin 0;
+        display: inline-block;
+      }
+    }
 
     .row {
       display: flex;
       flex-direction: row;
     }
 
-    .title {
-      width: 66.6666%;
-    }
-
-    .button {
-      margin: $margin 0;
-    }
-
     .recommendation {
-      width: 33.3333%;
-      .inner {
-        background: scale-color($dxw-purple, $lightness: -25%);
-        padding: #{$padding / 2}
-      }
+      padding: $padding;
+      margin-bottom: $margin;
+
       a {
-        color: $white;
+        color: $black;
+        border-color: $black;
+      }
+
+      &.green {
+        background: $warning-green;
+      }
+      &.yellow {
+        background: $warning-yellow;
+      }
+      &.red {
+        background: $warning-red;
       }
     }
+  }
+
+  // Advisories
+  .content-advisories {
+    .page-title {
+      background: $dxw-turquoise;
+      padding: #{$padding * 2} 0;
+      color: $white;
+      .row {
+        flex-direction: column;
+      }
+
+      h1 {
+        width: 75%;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .summary-table {
+      width: 75%;
+      th {
+        border-bottom: 2px solid $white;
+      }
+      tr {
+        border-bottom: 1px solid $white;
+        td {
+          text-align: center;
+        }
+      }
+    }
+
   }
 
   .findings {
     width: 66.6666%;
-    padding-top: #{$padding * 2};
+    padding: #{$padding * 2} #{$padding * 2} 0 0;
   }
 
   .meta {
     width: 33.3333%;
-    padding-top: #{$padding * 2};
+    padding: #{$padding * 2} 0 0 #{$padding * 2};
   }
+
+  .admin-tools {
+    background: $red-25;
+    padding: $padding;
+
+
+    textarea {
+      font-family: monospace;
+      width: 100%;
+      height: 400px;
+    }
+  }
+
 
 }

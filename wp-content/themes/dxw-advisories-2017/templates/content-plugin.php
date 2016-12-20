@@ -2,20 +2,19 @@
 
     <header class="page-title">
         <div class="row">
-            <div class="title">
-                <h1><?php the_title() ?></h1>
-                <p><?php echo get_field('description') ?></p>
-                <a href="<?php echo get_field('codex_link') ?>" class="button button--inverted">View plugin homepage</a>
-            </div>
-            <section class="recommendation plugin <?php echo get_field('recommendation'); ?>">
-                <div class="inner"><?php the_recommendation() ?></div>
-            </section>
+            <h1><?php the_title() ?></h1>
+            <p><?php echo get_field('description') ?></p>
+            <a href="<?php echo get_field('codex_link') ?>" class="button button--inverted">View plugin homepage</a>
         </div>
     </header>
 
-    <article <?php post_class('row rich-text') ?>>
+    <div class="row">
 
-        <div class="findings">
+        <article <?php post_class('rich-text findings') ?>>
+
+            <section class="recommendation plugin <?php echo get_field('recommendation'); ?>">
+                <?php the_recommendation() ?>
+            </section>
 
             <?php $vulns = get_plugin_vulnerabilities(get_field('codex_link'), get_field('version_of_plugin')); ?>
             <?php if(count($vulns)): ?>
@@ -75,11 +74,11 @@
                 </table>
                 <?php } ?>
             </section>
-        </div>
 
-        <aside role="complementary" class="meta">
+        </article>
+
+        <aside class="rich-text meta" role="complementary" >
             <?php get_template_part('templates/disclaimer') ?>
-
             <dl>
                 <dt>Testers</dt>
                 <dd><?php  if(function_exists('coauthors')) { coauthors(); } else { the_author(); } ?> </dd>
@@ -94,11 +93,10 @@
                 <dd><a href="<?php the_field('codex_link'); ?>"><?php the_field('name_of_plugin'); ?></a></dd>
 
                 <dt>Other versions</dt>
-                <dd> <?php the_other_versions(); ?></dd>
+                <dd><?php the_other_versions(); ?></dd>
             </dl>
-            
         </aside>
 
-    </article>
+    </div>
 
 </section>
