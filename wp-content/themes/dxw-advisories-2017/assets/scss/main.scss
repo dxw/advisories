@@ -7,6 +7,7 @@
 @import "helpers/grid";
 
 @import "base/reset";
+@import "base/helpers";
 @import "base/typography";
 @import "base/forms";
 @import "base/buttons";
@@ -22,5 +23,6 @@
 
 @import "templates/front-page";
 @import "templates/single";
+@import "templates/archive";
 
 @import "ie";

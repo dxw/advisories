@@ -43,7 +43,6 @@ $fontPath: "../static/fonts/";
     position: static;
     left: inherit;
 }
-
 @mixin button($background, $colour, $size) {
     position: relative;
     -webkit-appearance:none;

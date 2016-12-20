@@ -5,6 +5,9 @@
 
   h1, .rich-text {
     width: 80%;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+    }
   }
 
   a {
@@ -21,12 +24,22 @@
   padding: #{$padding * 2} 0;
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: $small-screen) {
+    flex-direction: column;
+  }
 
   .plugin-recommendations {
     width: 50%;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+    }
   }
 
   .recent-advisories {
     width: 50%;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+      margin: $margin 0 0 0;
+    }
   }
 }

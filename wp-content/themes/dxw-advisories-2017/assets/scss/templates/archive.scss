@@ -1,0 +1,19 @@
+.page-title {
+  background: $dxw-turquoise;
+  color: $white;
+  padding: #{$padding * 1} 0;
+}
+
+
+.search-results {
+  display: flex;
+  flex: wrap row;
+
+  .posts {
+    width: 75%;
+  }
+
+  .get-a-quote {
+    width: 25%;
+  }
+}

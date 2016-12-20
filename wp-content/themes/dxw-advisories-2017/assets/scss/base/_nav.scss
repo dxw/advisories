@@ -1,102 +1,145 @@
-.navigation {
-  margin: $margin 0;
-  width: 50%;
-  float: right;
+// Nav
+$nav-link: $white;
+$nav-link-hover: $white;
+$nav-link-active: $white;
 
-  .nav-menu {
-    position: relative;
-    text-align: right;;
-    display: block;
-    z-index: 1;
+$sub-nav-link: $white;
+$sub-nav-link-hover: $white;
+
+@media screen and (min-width: $small-screen) {
+
+  .navigation {
+    float: left;
+    margin: $margin 0 0 #{ $margin * 3};
+
+    .nav-menu {
+      text-align: left;
+      display: block;
+    }
+
+    li {
+      display: inline-block;
+      position: relative;
+    }
+
+    li > a {
+      color: $nav-link;
+    }
+
+    li > a:hover,
+    li > a.open {
+      color: $nav-link-hover;
+      text-decoration: underline;
+    }
+
+    .active > a {
+      color: $nav-link-hover;
+      text-decoration: underline;
+    }
+
+    li > a:focus {
+      color: $sub-nav-link;
+    }
+
+    li > a.open {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sub-nav {
+      display: none;
+      position: absolute;
+      top: 34px;
+      left: 0px;
+    }
+
+    .sub-nav a {
+      display: block;
+      min-width: 200px;
+      color: $sub-nav-link;
+
+      &:hover {
+        color: $sub-nav-link-hover;
+      }
+    }
+
+    .sub-nav a:focus {
+      outline: 2px solid $highlight;
+    }
+
+    .sub-nav.open {
+      display: block;
+    }
+
+    .sub-nav li {
+      display: block;
+    }
   }
-
-  .nav-menu > li {
-    display: inline-block;
-    margin-left: $margin;
-  }
-
-  .nav-menu > li > a {
-    position: relative;
-    display: inline-block;
-    padding: 0 0 5px 0;
-    color: $white;
-    text-decoration: none;
-  }
-
-  .nav-menu > li > a:hover,
-  .nav-menu > li > a:focus,
-  .nav-menu > li > a.open  {
-    border-bottom: 3px solid $white;
-  }
-
-  .nav-menu > li > a:focus {
-    outline: 2px solid $brand-primary;
-  }
-
-  .sub-nav {
-    background: $medium-grey;
-    position: absolute;
-    display: none;
-    top: 60px;
-    padding: $padding/2 $padding;
-  }
-
-  .sub-nav ul {
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 $margin 0 0;
-    padding: 0;
-  }
-
-  .sub-nav li {
-    display: block;
-    padding: 0 0 0 $padding/2;
-  }
-
-  .sub-nav a {
-    display: block;
-    margin: 0 $margin 0 0;
-    min-width: 200px;
-  }
-
-  .sub-nav a:hover {
-  }
-
-  .sub-nav a:focus {
-    outline: 2px solid $brand-primary;
-  }
-
-  .sub-nav.open {
-    display: block;
-  }
-
 }
 
 @media screen and (max-width: $small-screen) {
 
-  .nav-item {
-    display: block;
-    width: 100%;
-  }
+  .navigation {
+    clear: both;
+    text-align: left;
+    padding: 15px 0 0 0;
+    @include hide;
 
-  .navigation li.nav-item > a {
-    float: none;
-    display: block;
-  }
+    &.open {
+      @include show;
+    }
 
-  .navigation .sub-nav {
-    display: block;
-    position: static;
-  }
+    .active a {
+      background: transparent;
+      color: $nav-link;
+      display: inline-block;
+    }
 
-  .navigation .sub-nav-group {
-    float: none;
-    width: 100%;
-  }
+    li {
+      display: inline-block;;
+      width: auto;
 
-  .navigation .sub-nav a {
-    min-width: 100%;
-    display: block;
-  }
+      > a {
+        float: left;
+        display: inline-block;
+        padding: 0;
+        margin: 0 $margin/2 0 0;
+        color: $nav-link;
+        background: transparent;
 
+        &:hover {
+          color: $sub-nav-link-hover;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .has-sub-nav {
+      display: block;
+      position: static;
+    }
+
+    .sub-nav {
+      width: auto;
+      position: static;
+      display: inline;
+      visibility: visible;
+      background: transparent;
+      padding: 0 0 0 10px;
+      clear: both;
+
+      li {
+        display: inline-block;
+        width: auto;
+      }
+
+      a {
+        min-width: auto;
+        float: left;
+        display: inline-block;
+        padding: 0;
+        margin: 0 $margin/2 0 0;
+      }
+    }
+  }
 }

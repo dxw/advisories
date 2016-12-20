@@ -18,12 +18,38 @@
     width: 80%;
     border-color: scale-color($dxw-purple, $lightness: -25%);
     padding: 15px;
+    @media screen and (max-width: $small-screen) {
+      width: 70%;
+    }
   }
 
   .button {
     float: right;
     width: 20%;
     @include button($dxw-blue, $button-text, big);
-    padding: 16px 0 17px;
+    height: 62px;
+    position: relative;
+    @media screen and (max-width: $small-screen) {
+      width: 30%;
+    }
+
+    svg {
+      width: 30px;
+      margin-right: #{$margin / 2};
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -15px 0 0 -15px;
+      display: none;
+      @media screen and (max-width: $small-screen) {
+        display: block;
+      }
+    }
+
+    span {
+      @media screen and (max-width: $small-screen) {
+        display: none;
+      }
+    }
   }
 }
