@@ -36,6 +36,8 @@ include(__DIR__.'/lib/acf-fields.php');
 include(__DIR__.'/lib/ajax_handlers.php');
 include(__DIR__.'/lib/plugin-version-checker.php');
 include(__DIR__.'/lib/twiddle_wpt_shortcodes.php');
+include(__DIR__.'/lib/post_classes.php');
+
 
 // Admin
 include(__DIR__.'/lib/admin/fetch_plugin_details.php');

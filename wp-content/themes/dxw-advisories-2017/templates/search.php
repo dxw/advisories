@@ -4,6 +4,10 @@
     </header>
 </div>
 
+<div class="filter">
+    <?php get_search_form(); ?>
+</div>
+
 <div class="search-results row">
 
     <div class="posts">
@@ -16,15 +20,15 @@
             	the_post_thumbnail('large');
             	} ?>
           </header>
-          <?php echo get_field('description') ?>
+          <?php
+            if (get_field('recommendation')) {
+                echo the_field_label('recommendation');
+            }
+            echo get_field('description')
+          ?>
           <div class="entry-summary">
             <?php the_excerpt() ?>
           </div>
-          <footer>
-            <a class="read-more" href="<?php the_permalink() ?>">Read more</a>
-            —
-            <a href="<?php comments_link() ?>"><?php printf(_n('1 comment', '%1$s comments', get_comments_number(), 'roots'), number_format_i18n(get_comments_number())) ?></a>
-          </footer>
         </article>
         <?php endwhile ?>
 
