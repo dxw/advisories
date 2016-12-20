@@ -16,7 +16,7 @@ class Inspection
         $this->post_id = $raw_inspection->ID;
         $this->name = trim($raw_inspection->post_title);
         $this->slug = $this->stripTrailingDigits($raw_inspection->post_name);
-        $this->date = date_create($raw_inspection->post_date);
+        $this->date = $this->parseDate($raw_inspection->post_date);
     }
 
     public function versions()
@@ -47,5 +47,10 @@ class Inspection
           'yellow' => 'Use with caution',
           'red' => 'Potentially unsafe',
         ][$code];
+    }
+
+    private function parseDate($string)
+    {
+        return date_create($string, timezone_open('UTC'));
     }
 }
