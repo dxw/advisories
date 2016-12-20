@@ -1,0 +1,13 @@
+image: thedxw/php-testing:7.0
+
+peridot:
+  before_script:
+    - composer install
+  script:
+    - vendor/bin/peridot specs
+
+psr2:
+  before_script:
+    - composer install
+  script:
+    - vendor/bin/phpcs wp-content/themes/dxw-advisories/lib/api specs --standard=PSR2
