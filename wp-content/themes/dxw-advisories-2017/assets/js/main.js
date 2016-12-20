@@ -1,5 +1,8 @@
 /* globals jQuery */
 
+var enquire = require('../../bower_components/enquire/dist/enquire.js')
+require('../../bower_components/jquery-accessibleMegaMenu/js/jquery-accessibleMegaMenu.js')
+
 'use strict'
 
 jQuery(function ($) {
@@ -30,4 +33,30 @@ jQuery(function ($) {
   $(window).scroll(function () {
     $('.header').addClass('scrolled')
   }).removeClass('scrolled')
+})
+
+jQuery(function ($) {
+  enquire.register('screen and (min-width:779px)', {
+    match: function () {
+      // Main Nav
+      $('.menu-header-menu-container').accessibleMegaMenu({
+        uuidPrefix: 'accessible-nav',
+        menuClass: 'nav-menu',
+        topNavItemClass: 'nav-item',
+        panelClass: 'sub-nav',
+        panelGroupClass: 'sub-nav-group',
+        hoverClass: 'hover',
+        focusClass: 'focus',
+        openClass: 'open'
+      })
+      // hack so that the megamenu doesn't show flash of css animation after the page loads.
+      setTimeout(function () {
+        $('body').removeClass('init')
+      }, 500)
+      // Change aria-hidden state
+      $('#js-navigation-toggle').attr('aria-hidden', 'true')
+    },
+    unmatch: function () {
+    }
+  })
 })
