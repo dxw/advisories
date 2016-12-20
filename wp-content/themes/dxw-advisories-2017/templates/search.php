@@ -12,23 +12,45 @@
 
     <div class="posts">
         <?php while (have_posts()) : the_post() ?>
-        <article <?php post_class() ?>>
+        <article <?php post_class(strtolower(get_cvss_severity())) ?>>
           <header>
+            <?php
+            $post_type = (get_post_type() === 'advisories' ? 'Advisory' : null);
+            $post_type = (get_post_type() === 'plugins' ? 'Plugin' : $post_type);
+            if (!is_null($post_type)) { ?>
+                <span><?php
+                echo $post_type; ?>
+            </span><?php
+            }
+            ?>
             <h2 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-            <?php get_template_part('templates/entry-meta') ?>
+
             <?php if ( has_post_thumbnail() ) {
             	the_post_thumbnail('large');
             	} ?>
           </header>
           <?php
             if (get_field('recommendation')) {
-                echo the_field_label('recommendation');
+                echo '<p>' . the_field_label('recommendation') . '</p>';
             }
             echo get_field('description')
           ?>
+          <?php
+            if (get_post_type() === 'advisories') {
+                ?>
+                <p>
+                    Severity: <?php the_cvss_severity(); ?>
+                </p> <?php
+            }
+            echo get_field('description');
+            ?>
+          
           <div class="entry-summary">
             <?php the_excerpt() ?>
           </div>
+          <footer>
+              <?php get_template_part('templates/entry-meta') ?>
+          </footer>
         </article>
         <?php endwhile ?>
 
