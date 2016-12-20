@@ -2,8 +2,6 @@
 
 namespace DxwSec\API;
 
-include_once(__DIR__.'/inspection.class.php');
-
 // Responsible for querying the WordPress database and wrapping the results in an
 // object to make it easier to get at the ACF data
 class InspectionsFinder
