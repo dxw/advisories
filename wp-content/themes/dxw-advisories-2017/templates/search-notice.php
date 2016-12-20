@@ -1,16 +1,7 @@
 <div class="page-title">
-
-        <header>
-            <h1>Search results for: <?php the_search_query(); ?> </h1>
-        </header>
-
-        <form role="search" method="get" id="searchform-notices" class="form-search search-header visible-desktop visible-tablet" action="<?php echo home_url('/') ?>">
-          <input type="hidden" name="post_type" value="notices">
-          <label class="visuallyhidden" for="s-notices">Search notices:</label>
-          <input type="text" value="<?php echo get_search_query() ?>" name="s" id="s-<?php echo esc_html('notices') ?>" class="search-query" placeholder="Search notices">
-          <button value="Search notices">Search</button>
-        </form>
-
+    <header class="row">
+        <h1>Search results for <?php the_search_query(); ?></h1>
+    </header>
 </div>
 
 <div class="posts">

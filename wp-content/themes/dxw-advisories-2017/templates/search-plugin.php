@@ -1,13 +1,6 @@
 <div class="page-title">
-    <form role="search" method="get" id="searchform-plugins" class="form-search search-header visible-desktop visible-tablet" action="<?php echo home_url('/') ?>">
-        <input type="hidden" name="post_type" value="plugins">
-        <label class="visuallyhidden" for="s-plugins">Search plugins:</label>
-        <input type="text" value="<?php echo get_search_query() ?>" name="s" id="s-<?php echo esc_html('plugins') ?>" class="search-query" placeholder="Search plugins">
-        <button value="Search plugins">Search</button>
-    </form>
-
-    <header>
-        <h1>Search results</h1>
+    <header class="row">
+        <h1>Search results for <?php the_search_query(); ?></h1>
     </header>
 </div>
 
@@ -26,7 +19,7 @@
 
           <h2><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
           <?php echo get_field('description') ?>
-          <p class="byline author vcard">
+          <p class="byline">
             <span class="sev <?php echo the_field('recommendation'); ?>"><?php the_field_label('recommendation'); ?></span>
             &mdash; <time class="updated" datetime="<?php echo get_the_time('c') ?>" pubdate><?php echo get_the_date('j F Y') ?></time>
           </p>
