@@ -11,61 +11,32 @@
 <div class="search-results row">
 
     <div class="posts">
-        <?php while (have_posts()) : the_post() ?>
-        <article <?php post_class(strtolower(get_cvss_severity())) ?>>
-          <header>
-            <?php
-            $post_type = (get_post_type() === 'advisories' ? 'Advisory' : null);
-            $post_type = (get_post_type() === 'plugins' ? 'Plugin' : $post_type);
-            if (!is_null($post_type)) { ?>
-                <span><?php
-                echo $post_type; ?>
-            </span><?php
+        <?php
+        while (have_posts()) : the_post();
+            switch(get_post_type()) {
+                case 'advisories':
+                    get_template_part('templates/result', 'advisory');
+                    break;
+                case 'plugins':
+                    get_template_part('templates/result', 'plugin');
+                    break;
+                default:
+                    get_template_part('templates/result');
             }
-            ?>
-            <h2 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+        endwhile ?>
 
-            <?php if ( has_post_thumbnail() ) {
-            	the_post_thumbnail('large');
-            	} ?>
-          </header>
-          <?php
-            if (get_field('recommendation')) {
-                echo '<p>' . the_field_label('recommendation') . '</p>';
-            }
-            echo get_field('description')
-          ?>
-          <?php
-            if (get_post_type() === 'advisories') {
-                ?>
-                <p>
-                    Severity: <?php the_cvss_severity(); ?>
-                </p> <?php
-            }
-            echo get_field('description');
-            ?>
-          
-          <div class="entry-summary">
-            <?php the_excerpt() ?>
-          </div>
-          <footer>
-              <?php get_template_part('templates/entry-meta') ?>
-          </footer>
-        </article>
-        <?php endwhile ?>
-
-        <?php if ($wp_query->max_num_pages > 1) : ?>
+    <?php if ($wp_query->max_num_pages > 1) : ?>
 
     <div class="pager">
         <?php the_posts_pagination( array(
             'mid_size' => 3,
-            'prev_text' => __( 'Older'),
-            'next_text' => __( 'Newer'),
+            'prev_text' => __( 'Newer'),
+            'next_text' => __( 'Older'),
             'screen_reader_text' => '',
         ) ); ?>
     </div>
 
-<?php endif; ?>
+    <?php endif; ?>
     </div>
 
     <aside class="get-a-quote" role="complementary">
