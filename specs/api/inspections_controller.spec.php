@@ -1,19 +1,23 @@
 <?php
 require 'wp-content/themes/dxw-advisories/lib/api/inspections_controller.class.php';
+require 'wp-content/themes/dxw-advisories/lib/api/json_inspections_finder.class.php';
 
 describe('\\DxwSec\\API\\InspectionsController', function () {
-    class ControllerScope extends Peridot\Scope\Scope
-    {
-        public function fakeJsonInspectionsFinder($result)
-        {
+    beforeEach(function () {
+        $this->fakeJsonInspectionsFinder = function ($result) {
             return \Mockery::mock('\\DxwSec\\API\\JSONInspectionsFinder')
                 ->shouldReceive('find')
                 ->andReturn($result)
                 ->getMock();
-        }
-    }
+        };
 
-    $this->peridotAddChildScope(new ControllerScope);
+        $this->fakeParams = function ($url_params) {
+            return \Mockery::mock()
+                ->shouldReceive('get_url_params')
+                ->andReturn($url_params)
+                ->getMock();
+        };
+    });
 
     describe('->show()', function () {
         it('returns a list of inspections matching the slug', function () {
@@ -25,7 +29,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                 'result' => 'use with caution',
             );
             $controller = new \DxwSec\API\InspectionsController($this->fakeJsonInspectionsFinder([$inspection]));
-            $params = new FakeParams(array('slug' => 'my-awesome-plugin'));
+            $params = $this->fakeParams(array('slug' => 'my-awesome-plugin'));
             $result = $controller->show($params);
             expect($result)->to->equal([$inspection]);
         });
@@ -37,30 +41,17 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                 ->with('my-awesome-plugin')
                 ->getMock();
             $controller = new \DxwSec\API\InspectionsController($finder);
-            $params = new FakeParams(array('slug' => 'my-awesome-plugin'));
+            $params = $this->fakeParams(array('slug' => 'my-awesome-plugin'));
             $controller->show($params);
         });
 
         context('when there are no matching inspections', function () {
             it('returns an empty array', function () {
                 $controller = new \DxwSec\API\InspectionsController($this->fakeJsonInspectionsFinder([]));
-                $params = new FakeParams(array('slug' => 'foo'));
+                $params = $this->fakeParams(array('slug' => 'foo'));
                 $result = $controller->show($params);
                 expect($result)->to->equal([]);
             });
         });
     });
-
-    class FakeParams
-    {
-        public function __construct(array $url_params)
-        {
-            $this->url_params = $url_params;
-        }
-
-        public function get_url_params()
-        {
-            return $this->url_params;
-        }
-    }
 });

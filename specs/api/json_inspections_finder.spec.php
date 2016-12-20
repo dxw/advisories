@@ -1,28 +1,18 @@
 <?php
 require_once 'wp-content/themes/dxw-advisories/lib/api/json_inspections_finder.class.php';
+require_once 'wp-content/themes/dxw-advisories/lib/api/inspections_finder.class.php';
+require_once 'wp-content/themes/dxw-advisories/lib/api/inspection.class.php';
 
 describe('\\DxwSec\\API\\InspectionsController', function () {
-    afterEach(function () {
-        \Mockery::close();
-    });
-
-    class JSONInspectionsFinderScope extends Peridot\Scope\Scope
-    {
-        public function fakeInspectionsFinder($result)
-        {
+    beforeEach(function () {
+        $this->fakeInspectionsFinder = function ($result) {
             return \Mockery::mock('\\DxwSec\\API\\InspectionsFinder')
                 ->shouldReceive('find')
                 ->andReturn($result)
                 ->getMock();
-        }
-    }
+        };
 
-    // Factory for creating doubles for the kind of inspections that get returned
-    // from a WP_Query search for inspections
-    class InspectionScope extends Peridot\Scope\Scope
-    {
-        public function fakeInspection(array $args)
-        {
+        $this->fakeInspection = function (array $args) {
             $name = $args['name'];
             $slug = $args['slug'];
             $versions = $args['versions'];
@@ -44,11 +34,8 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                 ->andReturn($result);
 
             return $inspection;
-        }
-    }
-
-    $this->peridotAddChildScope(new InspectionScope);
-    $this->peridotAddChildScope(new JSONInspectionsFinderScope);
+        };
+    });
 
     describe('->find()', function () {
         it('returns an array corresponding to the returned inspections', function () {

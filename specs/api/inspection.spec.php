@@ -3,10 +3,8 @@ require_once 'wp-content/themes/dxw-advisories/lib/api/inspection.class.php';
 
 describe('\\DxwSec\\API\\Inspection', function () {
 
-    class InspectionPostScope extends Peridot\Scope\Scope
-    {
-        public function fakePost($args)
-        {
+    beforeEach(function () {
+        $this->fakePost = function ($args) {
             $defaults = [
                 'ID' => rand(999, 9999),
                 'post_title' => 'Someone elses rubbish plugin',
@@ -41,16 +39,13 @@ describe('\\DxwSec\\API\\Inspection', function () {
                 'comment_count' => 0,
                 'filter' => 'raw',
             ];
-        }
+        };
 
-        private function randomDate()
-        {
+        $this->randomDate = function () {
             $timestamp = rand(0, time());
             return strftime("%Y-%m-%d %H:%M:%S", $timestamp);
-        }
-    }
-
-    $this->peridotAddChildScope(new InspectionPostScope);
+        };
+    });
 
     describe('name', function () {
         it('returns the post title of the inspection, stripped of whitespace', function () {
