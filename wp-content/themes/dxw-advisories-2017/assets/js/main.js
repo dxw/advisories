@@ -60,3 +60,9 @@ jQuery(function ($) {
     }
   })
 })
+
+jQuery(function ($) {
+  $('.search-form input[name=post_type]').change(function () {
+    $('form#searchform').submit()
+  })
+})
