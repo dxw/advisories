@@ -1,12 +1,25 @@
-image: thedxw/php-testing:7.0
+.php70: &php70
+  image: thedxw/php-testing:7.0
 
-peridot:
+.php71: &php71
+  image: thedxw/php-testing:7.1
+
+.peridot: &peridot
   before_script:
     - composer install
   script:
     - vendor/bin/peridot specs
 
-psr2:
+php_70_tests:
+  <<: *php70
+  <<: *peridot
+
+php_71_tests:
+  <<: *php71
+  <<: *peridot
+
+php_style:
+  <<: *php70
   before_script:
     - composer install
   script:
