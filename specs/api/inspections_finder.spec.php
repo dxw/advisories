@@ -1,5 +1,6 @@
 <?php
 require_once 'wp-content/themes/dxw-advisories/lib/api/inspections_finder.class.php';
+require_once 'wp-content/themes/dxw-advisories/lib/api/inspection.class.php';
 
 describe('\\DxwSec\\API\\InspectionsFinder', function () {
     beforeEach(function () {
@@ -13,6 +14,17 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
     });
 
     describe('->find()', function () {
+        beforeEach(function () {
+            $this->stubEscLike = function ($string) {
+                global $wpdb;
+                $wpdb = Mockery::mock();
+                $wpdb->shouldReceive('esc_like')
+                    ->once()
+                    ->with($string)
+                    ->andReturn($string);
+            };
+        });
+
         it('returns an array of inspection objects', function () {
             $inspection = (object) [
                 'ID' => 2644,
@@ -40,6 +52,8 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
                 'comment_count' => 0,
                 'filter' => 'raw',
             ];
+
+            $this->stubEscLike('advanced-custom-fields-table-field');
 
             \WP_Mock::wpFunction('get_posts', [
                 'return' => [$inspection],
@@ -88,6 +102,8 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
                 ],
             ];
 
+            $this->stubEscLike('my-awesome-plugin');
+
             \WP_Mock::wpFunction('get_posts', [
                 'times' => 1,
                 'args' => [$args],
@@ -99,6 +115,8 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
 
         context('when there are no matching inspections', function () {
             it('returns an empty array', function () {
+                $this->stubEscLike('slug-with-no-matches');
+
                 \WP_Mock::wpFunction('get_posts', [
                     'return' => []
                 ]);

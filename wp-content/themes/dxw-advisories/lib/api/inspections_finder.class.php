@@ -6,8 +6,10 @@ namespace DxwSec\API;
 // object to make it easier to get at the ACF data
 class InspectionsFinder
 {
+
     public function find($slug)
     {
+        global $wpdb;
         $args = [
             'post_type' => 'plugins',
             'post_status' => 'publish',
@@ -15,7 +17,7 @@ class InspectionsFinder
                 'relation' => 'AND',
                 [
                     'key' => 'codex_link',
-                    'value' => '/'.$slug.'/',
+                    'value' => '/'.$wpdb->esc_like($slug).'/',
                     'compare' => 'LIKE',
                 ],
             ],
