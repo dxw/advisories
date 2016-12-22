@@ -33,7 +33,7 @@ function the_short_recommendation($post_id = 0) {
       break;
 
     case 'green':
-      ?><span class="allgood short">No issues found</span><?php
+      ?><span class="good short">No issues found</span><?php
       break;
   }
 }
