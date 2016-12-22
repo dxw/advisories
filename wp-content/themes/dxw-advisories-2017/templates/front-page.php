@@ -14,9 +14,10 @@
 
 <?php get_search_form() ?>
 
-<div class="container row">
+<div class="row">
 
     <div class="recent-reviews">
+
         <div class="plugin-recommendations">
             <h4>Recent plugin recommendations</h4>
             <ul>
@@ -52,6 +53,7 @@
 
             <a href="/advisories" class="button">All advisories</a>
         </div>
+        
     </div>
 
 </div>
