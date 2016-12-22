@@ -61,8 +61,36 @@ jQuery(function ($) {
   })
 })
 
+// Change aria-hidden state
 jQuery(function ($) {
-  $('.search-form input[name=post_type]').change(function () {
-    $('form#searchform').submit()
+  enquire.register('screen and (max-width:779px)', {
+    match: function () {
+      $('#js-navigation-toggle').attr('aria-hidden', 'false')
+      $('.sub-nav').attr('aria-hidden', 'false')
+    },
+    unmatch: function () {
+      $('#js-navigation-toggle').attr('aria-hidden', 'true')
+      $('.sub-nav').attr('aria-hidden', 'true')
+    }
+  })
+})
+
+jQuery(function ($) {
+  // Extend jQuery to make a toggle text function.
+  jQuery.fn.extend({
+    toggleText: function (stateOne, stateTwo) {
+      return this.each(function () {
+        stateTwo = stateTwo || ''
+        $(this).text() !== stateTwo && stateOne ? $(this).text(stateTwo) : $(this).text(stateOne)
+      })
+    }
+  })
+})
+
+// Toggle navigation
+jQuery(function ($) {
+  $('#js-navigation-toggle').click(function () {
+    $(this).toggleText('Close', 'Menu')
+    $('#js-navigation').toggleClass('open')
   })
 })
