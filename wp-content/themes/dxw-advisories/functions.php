@@ -1,7 +1,6 @@
 <?php
 
 include(__DIR__.'/vendor.phar');
-require_once(__DIR__.'/vendor/autoload.php');
 
 // From lib/config.php
 define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y

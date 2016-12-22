@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "acd925cb53495190b3f064d57fe87120",
+    "hash": "cdb8adef3359eae9a709d4601344af53",
     "content-hash": "072058620a426807171d9f8392865cec",
     "packages": [
         {
@@ -55,7 +55,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dxw/roots-composer/zipball/8feaedb984aaf465e0fce1a4af3676934cd07af9",
+                "url": "https://api.github.com/repos/dxw/roots-composer/zipball/9e13934ab3d04e27ce1c06373d3e2b0d9f50ef18",
                 "reference": "9e13934ab3d04e27ce1c06373d3e2b0d9f50ef18",
                 "shasum": ""
             },

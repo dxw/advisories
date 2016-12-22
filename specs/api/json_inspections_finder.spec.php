@@ -1,7 +1,7 @@
 <?php
-require_once 'wp-content/themes/dxw-advisories/lib/api/json_inspections_finder.class.php';
-require_once 'wp-content/themes/dxw-advisories/lib/api/inspections_finder.class.php';
-require_once 'wp-content/themes/dxw-advisories/lib/api/inspection.class.php';
+require_once 'wp-content/themes/dxw-advisories/lib/api/JsonInspectionsFinder.php';
+require_once 'wp-content/themes/dxw-advisories/lib/api/InspectionsFinder.php';
+require_once 'wp-content/themes/dxw-advisories/lib/api/Inspection.php';
 
 describe('\\DxwSec\\API\\InspectionsController', function () {
     beforeEach(function () {

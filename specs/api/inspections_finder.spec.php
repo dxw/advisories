@@ -1,6 +1,6 @@
 <?php
-require_once 'wp-content/themes/dxw-advisories/lib/api/inspections_finder.class.php';
-require_once 'wp-content/themes/dxw-advisories/lib/api/inspection.class.php';
+require_once 'wp-content/themes/dxw-advisories/lib/api/InspectionsFinder.php';
+require_once 'wp-content/themes/dxw-advisories/lib/api/Inspection.php';
 
 describe('\\DxwSec\\API\\InspectionsFinder', function () {
     beforeEach(function () {
