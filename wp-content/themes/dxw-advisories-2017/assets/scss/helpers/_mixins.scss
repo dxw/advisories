@@ -43,16 +43,38 @@ $fontPath: "../static/fonts/";
     position: static;
     left: inherit;
 }
+
 @mixin button($background, $colour, $size) {
     position: relative;
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     cursor: pointer;
     border: 0;
     font-size: $base-font-size;
     text-decoration: none;
     background: $background;
+    color: $colour;
+    display: inline-block;
+    @if $size == big {
+        padding: $padding/2;
+    } @if $size == small {
+        padding: 5px 10px;
+    } @else {
+        padding: 8px $padding;
+    }
+}
+
+@mixin ghostbutton($colour, $size) {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance :none;
+    cursor: pointer;
+    border: 2px solid $colour;
+    font-size: $base-font-size;
+    text-decoration: none;
+    background: transparent;
     color: $colour;
     display: inline-block;
     @if $size == big {

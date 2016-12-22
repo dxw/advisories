@@ -8,12 +8,21 @@
 .search-results {
   display: flex;
   flex: wrap row;
+  @media screen and (max-width: $small-screen) {
+    flex: wrap column;
+  }
 
   .posts {
     width: 75%;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+    }
   }
 
   .get-a-quote {
     width: 25%;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+    }
   }
 }

@@ -1,22 +1,18 @@
-
 // Header
 
 .header {
   padding: #{$padding / 2} 0;
   background: $dxw-turquoise;
-//  background: linear-gradient( 0, $dxw-turquoise, $dxw-blue );
 
   .logo {
     width: 200px;
     float: left;
+      @media screen and (max-width: $small-screen) {
+        float: right;
+      }
 
     img {
       width: 100%;
     }
   }
-
-  .search .button {
-    padding: 7px $padding
-  }
-
 }

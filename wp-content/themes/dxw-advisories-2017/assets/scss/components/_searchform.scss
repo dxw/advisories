@@ -16,7 +16,7 @@
 
   input[type="search"] {
     width: 80%;
-    border-color: scale-color($dxw-purple, $lightness: -25%);
+    border-color: $white;
     padding: 15px;
     @media screen and (max-width: $small-screen) {
       width: 70%;

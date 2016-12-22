@@ -24,22 +24,27 @@
   padding: #{$padding * 2} 0;
   display: flex;
   flex-direction: row;
+
   @media screen and (max-width: $small-screen) {
     flex-direction: column;
   }
 
   .plugin-recommendations {
     width: 50%;
+    padding: 0 $padding 0 0;
     @media screen and (max-width: $small-screen) {
       width: 100%;
+      padding: 0;
     }
   }
 
   .recent-advisories {
     width: 50%;
+    padding: 0 0 0 $padding;
     @media screen and (max-width: $small-screen) {
       width: 100%;
       margin: $margin 0 0 0;
+      padding: 0;
     }
   }
 }

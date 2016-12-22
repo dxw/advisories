@@ -3,6 +3,7 @@ $nav-link: $white;
 $nav-link-hover: $white;
 $nav-link-active: $white;
 
+$sub-nav-background: $dxw-turquoise;
 $sub-nav-link: $white;
 $sub-nav-link-hover: $white;
 
@@ -24,17 +25,21 @@ $sub-nav-link-hover: $white;
 
     li > a {
       color: $nav-link;
+      border-bottom: 2px solid transparent;
+      margin-right: $margin;
+      padding: 0 0 3px 0;
     }
 
     li > a:hover,
     li > a.open {
       color: $nav-link-hover;
-      text-decoration: underline;
+      text-decoration: none;
+      border-bottom: 2px solid $nav-link;
     }
 
     .active > a {
       color: $nav-link-hover;
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     li > a:focus {
@@ -49,11 +54,13 @@ $sub-nav-link-hover: $white;
     .sub-nav {
       display: none;
       position: absolute;
-      top: 34px;
+      top: 40px;
       left: 0px;
+      background: $sub-nav-background;
     }
 
     .sub-nav a {
+      background: $sub-nav-background;
       display: block;
       min-width: 200px;
       color: $sub-nav-link;
@@ -122,11 +129,12 @@ $sub-nav-link-hover: $white;
     .sub-nav {
       width: auto;
       position: static;
-      display: inline;
+      display: block;
       visibility: visible;
       background: transparent;
       padding: 0 0 0 10px;
       clear: both;
+      font-size: $small-font-size;
 
       li {
         display: inline-block;
@@ -141,5 +149,23 @@ $sub-nav-link-hover: $white;
         margin: 0 $margin/2 0 0;
       }
     }
+  }
+}
+
+// Nav Toggle
+
+.nav-toggle {
+  @include ghostbutton($white, small);
+  @include hide;
+  font-size: $small-font-size;
+
+  &:visited {
+    @include ghostbutton($white, small);
+  }
+
+  @media screen and (max-width: $small-screen) {
+    position: absolute;
+    left: 60px;
+    top: 40px;
   }
 }

@@ -20,6 +20,9 @@
     .row {
       display: flex;
       flex-direction: row;
+      @media screen and (max-width: $small-screen) {
+        flex-direction: column;
+      }
     }
 
     .recommendation {
@@ -61,6 +64,9 @@
     .row {
       display: flex;
       flex-direction: row;
+      @media screen and (max-width: $small-screen) {
+        flex-direction: column;
+      }
     }
 
     .summary-table {
@@ -81,17 +87,24 @@
   .findings {
     width: 66.6666%;
     padding: #{$padding * 2} #{$padding * 2} 0 0;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+      padding: #{$padding * 2} 0 0 0;
+    }
   }
 
   .meta {
     width: 33.3333%;
     padding: #{$padding * 2} 0 0 #{$padding * 2};
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+      padding: 0;
+    }
   }
 
   .admin-tools {
     background: $red-25;
     padding: $padding;
-
 
     textarea {
       font-family: monospace;
@@ -99,6 +112,5 @@
       height: 400px;
     }
   }
-
 
 }

@@ -1,3 +1,15 @@
+// Margin - Padding
+$padding: 30px;
+$margin: 30px;
+
+// Breakpoints
+$big-screen: 1020px;
+$medium-screen: 900px;
+$small-screen: 780px;
+$tiny-screen: 480px;
+
+$small-font-size: 18px;
+
 .global-footer {
   background: $dark-grey;
   padding: #{$padding * 2} 0 0;
