@@ -282,6 +282,17 @@ if(function_exists("register_field_group")) {
       array (
         'default_value' => '',
         'formatting' => 'html',
+        'key' => 'field_585bbf7cc7f03',
+        'label' => 'Plugin slug',
+        'required' => true,
+        'name' => 'slug',
+        'type' => 'text',
+        'instructions' => 'For plugins in dxw\'s repo this should match the repo name.
+For directory plugins this usually matches the last part of the URL',
+      ),
+      array (
+        'default_value' => '',
+        'formatting' => 'html',
         'key' => 'field_51bef66430192',
         'required' => true,
         'label' => 'Versions of plugin checked',
