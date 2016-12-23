@@ -16,9 +16,9 @@ class InspectionsFinder
             'meta_query' => [
                 'relation' => 'AND',
                 [
-                    'key' => 'codex_link',
-                    'value' => '/'.$wpdb->esc_like($slug).'/',
-                    'compare' => 'LIKE',
+                    'key' => 'slug',
+                    'value' => $slug,
+                    'compare' => '=',
                 ],
             ],
         ];
