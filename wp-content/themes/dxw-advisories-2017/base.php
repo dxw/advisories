@@ -7,8 +7,8 @@
     <meta charset="utf-8">
     <title><?php wp_title('-', true, 'right') ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo get_template_directory_uri(); ?>/static/">
-    <link rel="dns-prefetch" href="">
+    <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/static/img/touch-icon.png">
+    <link rel="dns-prefetch" href="//www.google-analytics.com/">
     <?php wp_head() ?>
   </head>
   <body <?php body_class() ?>>
