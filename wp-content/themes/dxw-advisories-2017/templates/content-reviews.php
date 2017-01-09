@@ -1,9 +1,9 @@
 <?php /* Template name: Reviews */ ?>
 <?php while (have_posts()) : the_post() ?>
     <header class="page-title">
-        <div class="row">
+        <div class="row rich-text">
             <h1><?php the_title() ?></h1>
-            <div class="rich-text">
+            <div class="summary">
                 <p>A plugin review is a detailed assurance exercise involving line-by-line examination of a plugin, with a view to identifying and proving the existence of vulnerabilities that would affect a site’s confidentiality, integrity or availability.</p>
             </div>
         </div>
@@ -51,8 +51,8 @@
             <table>
                 <tbody>
                     <tr>
-                        <td style="background-color: #c00; width: 140px; color: #fff;"><p><strong>Potentially unsafe</strong></p></td>
-                        <td style="padding-left: 25px;">
+                        <td style="background-color: #c00; color: #fff;"><p><strong>Potentially unsafe</strong></p></td>
+                        <td>
                             <h4>This plugin should not be used unless very careful consideration is given to the vulnerabilities it contains and ways to mitigate them.</h4>
                             <p>One of the following conditions must be true:</p>
 
@@ -64,7 +64,7 @@
                     </tr>
                     <tr>
                         <td style="background-color: #ffa300; color: #fff;"><p><strong>Use with caution</strong></p></td>
-                        <td style="padding-left: 25px;">
+                        <td>
                             <h4>The plugin could be used but its use should be carefully considered.</h4>
                             <p>One of the following conditions must be true:</p>
                             <ol>
@@ -77,14 +77,14 @@
                     </tr>
                     <tr>
                         <td style="background-color: #6aa84f; color: #fff;"><p><strong>No issues found</strong></p></td>
-                        <td style="padding-left: 25px;">
+                        <td>
                             <h4>No issues were found or the issues identified were minor</h4>
                             <p>The plugin appears to be safe for use.</p>
                         </td>
                     </tr>
                 </tbody>
             </table>
-            
+
         </article>
     </div>
 

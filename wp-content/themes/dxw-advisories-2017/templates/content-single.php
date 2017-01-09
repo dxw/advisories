@@ -2,13 +2,15 @@
 <?php get_template_part('templates/header-page') ?>
   <article <?php post_class() ?>>
     <header>
-      <h1 class="entry-title"><?php the_title() ?></h1>
-      <?php get_template_part('templates/entry-meta') ?>
-      <?php if ( has_post_thumbnail() ) {
-    	the_post_thumbnail('large');
-    	} ?>
+        <div class="row rich-text">
+            <h1><?php the_title() ?></h1>
+            <?php get_template_part('templates/entry-meta') ?>
+            <?php if ( has_post_thumbnail() ) {
+            the_post_thumbnail('large');
+            } ?>
+        </div>
     </header>
-    <div class="entry-content content">
+    <div class="rich-text content">
       <?php the_content() ?>
     </div>
     <footer class="single">

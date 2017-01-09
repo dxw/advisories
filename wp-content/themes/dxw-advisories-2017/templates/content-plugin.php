@@ -1,7 +1,7 @@
 <section class="content-plugins">
 
     <header class="page-title">
-        <div class="row">
+        <div class="row rich-text">
             <h1><?php the_title() ?></h1>
             <p><?php echo get_field('description') ?></p>
             <a href="<?php echo get_field('codex_link') ?>" class="button button--inverted">View plugin homepage</a>
@@ -10,7 +10,7 @@
 
     <div class="row">
 
-        <article <?php post_class('rich-text findings') ?>>
+        <article class="rich-text findings">
 
             <section class="recommendation plugin <?php echo get_field('recommendation'); ?>">
                 <?php the_recommendation() ?>
@@ -54,7 +54,7 @@
                 ?>
                 <p>Read more about our <a href="/about/plugin-inspections/#failure_criteria">failure criteria</a>.</p>
 
-                <table class="failure-criteria table">
+                <table class="failure-criteria">
                     <thead>
                         <tr>
                             <th class="status">Status</th>

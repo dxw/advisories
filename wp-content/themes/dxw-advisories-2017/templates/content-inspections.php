@@ -2,14 +2,14 @@
 <?php while (have_posts()) : the_post() ?>
 
     <header class="page-title">
-        <div class="row">
+        <div class="row rich-text">
             <h1><?php the_title() ?></h1>
             <p>A plugin inspection is a light-touch assurance exercise, intended to identify plugins which are likely to present security issues.</p>
         </div>
     </header>
 
     <div class="row">
-        <article class="rich-text">
+        <article class="rich-text content">
             <p>
                 During a plugin inspection, the tester scans the codebase of the plugin for particular keywords that relate to the inspection
                 criteria given below. Matches are then manually reviewed to check for issues of concern. When a match is being reviewed, the code path
@@ -50,7 +50,7 @@
             <table class="rating">
                 <tbody>
                     <tr>
-                        <td><p><strong>Potentially unsafe</strong></p></td>
+                        <td style="background-color: #c00; color: #fff;"><p><strong>Potentially unsafe</strong></p></td>
                         <td>
                             <h4>This plugin should not be used unless very careful consideration is given to the vulnerabilities it probably contains and ways to mitigate them.</h4>
                             <p>One of the following conditions must be likely:</p>
@@ -61,9 +61,8 @@
                             </ol>
                         </td>
                     </tr>
-
                     <tr>
-                        <td><p><strong>Use with caution</strong></p></td>
+                        <td style="background-color: #ffa300; color: #fff;"><p><strong>Use with caution</strong></p></td>
                         <td>
                             <h4>The plugin could be used but its use should be carefully considered.</h4>
                             <p>One of the following conditions must be likely:</p>
@@ -75,16 +74,14 @@
                             </ol>
                         </td>
                     </tr>
-
                     <tr>
-                        <td><p><strong>No issues found</strong></p></td>
+                        <td style="background-color: #6aa84f; color: #fff;"><p><strong>No issues found</strong></p></td>
                         <td>
                             <h4>No issues were found or the issues identified were minor</h4>
                             <p>The plugin appears to be safe for use.</p>
 
                         </td>
                     </tr>
-
                 </tbody>
             </table>
 

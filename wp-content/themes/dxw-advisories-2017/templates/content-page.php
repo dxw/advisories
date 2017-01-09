@@ -2,9 +2,9 @@
 
 <?php while (have_posts()) : the_post() ?>
     <header class="page-title">
-        <div class="row">
+        <div class="row rich-text">
             <h1><?php the_title() ?></h1>
-            <div class="rich-text excerpt">
+            <div class="excerpt">
                 <p><?php the_excerpt(); ?></p>
             </div>
         </div>

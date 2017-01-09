@@ -8,7 +8,7 @@
     <?php get_search_form(); ?>
 </div>
 
-<div class="search-results row">
+<div class="search-results-posts row">
 
     <div class="posts">
         <?php
@@ -25,26 +25,10 @@
             }
         endwhile ?>
 
-    <?php if ($wp_query->max_num_pages > 1) : ?>
+    <?php get_template_part('templates/pager') ?>
 
-    <div class="pager">
-        <?php the_posts_pagination( array(
-            'mid_size' => 3,
-            'prev_text' => __( 'Newer'),
-            'next_text' => __( 'Older'),
-            'screen_reader_text' => '',
-        ) ); ?>
     </div>
 
-    <?php endif; ?>
-    </div>
-
-    <aside class="get-a-quote" role="complementary">
-        <h3>Get a quote</h3>
-        <p>Need an updated review or inspection, or assurance for another plugin?</p>
-        <div class="buttons">
-            <a href="mailto:contact@dxw.com" class="button">Contact us for a quote</a>
-        </div>
-    </aside>
+    <?php get_template_part('templates/order', 'plugin') ?>
 
 </div>

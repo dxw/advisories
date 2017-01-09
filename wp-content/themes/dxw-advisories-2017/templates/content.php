@@ -4,9 +4,9 @@
     <?php get_template_part('templates/entry-meta') ?>
     <?php if ( has_post_thumbnail() ) {
     	the_post_thumbnail('large');
-    	} ?> 
+    	} ?>
   </header>
-  <div class="entry-summary">
+  <div class="rich-text entry-summary">
     <?php the_excerpt() ?>
   </div>
   <footer>

@@ -6,7 +6,7 @@
                 <div itemscope itemtype="http://schema.org/Organization">
                      <span itemprop="name">dxw</span>
                      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">9-9 Hoxton Square</span>
+                        <span itemprop="streetAddress">8-9 Hoxton Square</span>
                         <span itemprop="addressLocality">London</span>,
                         <span itemprop="postalCode">N1 6NU</span>
                      </div>
@@ -18,30 +18,30 @@
             <section class="footer-services">
                 <h5>Services</h5>
                 <ul>
-                    <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
                 </ul>
             </section>
 
             <section class="footer-github">
                 <h5>GitHub</h5>
                 <ul>
+                    <li><a href="https://dxw.com/">Thing</a></li>
                     <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
                 </ul>
             </section>
 
             <section class="footer-learn">
                 <h5>Learn</h5>
                 <ul>
-                    <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
-                    <li><a href="#">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
+                    <li><a href="https://dxw.com/">Thing</a></li>
                 </ul>
             </section>
         </div>
