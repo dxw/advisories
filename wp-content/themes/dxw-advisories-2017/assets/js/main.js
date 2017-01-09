@@ -30,12 +30,6 @@ jQuery(function ($) {
 })
 
 jQuery(function ($) {
-  $(window).scroll(function () {
-    $('.header').addClass('scrolled')
-  }).removeClass('scrolled')
-})
-
-jQuery(function ($) {
   enquire.register('screen and (min-width:779px)', {
     match: function () {
       // Main Nav
@@ -54,7 +48,7 @@ jQuery(function ($) {
         $('body').removeClass('init')
       }, 500)
       // Change aria-hidden state
-      $('#js-navigation-toggle').attr('aria-hidden', 'true')
+      $('#js-main-navigation-toggle').attr('aria-hidden', 'true')
     },
     unmatch: function () {
     }
@@ -65,11 +59,11 @@ jQuery(function ($) {
 jQuery(function ($) {
   enquire.register('screen and (max-width:779px)', {
     match: function () {
-      $('#js-navigation-toggle').attr('aria-hidden', 'false')
+      $('#js-main-navigation-toggle').attr('aria-hidden', 'false')
       $('.sub-nav').attr('aria-hidden', 'false')
     },
     unmatch: function () {
-      $('#js-navigation-toggle').attr('aria-hidden', 'true')
+      $('#js-main-navigation-toggle').attr('aria-hidden', 'true')
       $('.sub-nav').attr('aria-hidden', 'true')
     }
   })
@@ -89,8 +83,23 @@ jQuery(function ($) {
 
 // Toggle navigation
 jQuery(function ($) {
-  $('#js-navigation-toggle').click(function () {
+  $('#js-main-navigation-toggle').click(function () {
     $(this).toggleText('Close', 'Menu')
-    $('#js-navigation').toggleClass('open')
+    $('#js-main-navigation').toggleClass('open')
+  })
+})
+
+// Search form
+jQuery(function ($) {
+  $('.search-form input[name=post_type]').change(function () {
+    $('form#searchform').submit()
+  })
+})
+
+// Add selected class and aria roles to checked input labels
+jQuery(function ($) {
+  $('input[type=radio],input[type=checkbox]').each(function () {
+    $('input[type=radio],input[type=checkbox]').attr('aria-checked', 'false').parent().removeClass('checked')
+    $('input[type=radio]:checked,input[type=checkbox]:checked').attr('aria-checked', 'true').parent().addClass('checked')
   })
 })
