@@ -10,13 +10,9 @@
     }
   }
 
-  a {
+  p a {
     color: $white;
-    border-bottom: 2px solid $white;
-
-    &:hover {
-      border-bottom: none;
-    }
+    background: scale-color($dxw-turquoise, $lightness: -20%);
   }
 }
 

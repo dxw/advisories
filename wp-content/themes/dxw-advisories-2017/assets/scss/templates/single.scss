@@ -1,5 +1,32 @@
 .single {
 
+  article {
+    p a {
+      color: $link-colour;
+    }
+  }
+
+  // Notice
+  .content-notice {
+    .page-title {
+      background: $dxw-turquoise;
+      padding: #{$padding * 2} 0;
+      color: $white;
+
+      .row {
+        display: block;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width: $small-screen) {
+        flex-direction: column;
+      }
+    }
+  }
+
   // Plugin
   .content-plugins {
     .page-title {
@@ -66,19 +93,6 @@
       flex-direction: row;
       @media screen and (max-width: $small-screen) {
         flex-direction: column;
-      }
-    }
-
-    .summary-table {
-      width: 75%;
-      th {
-        border-bottom: 2px solid $white;
-      }
-      tr {
-        border-bottom: 1px solid $white;
-        td {
-          text-align: center;
-        }
       }
     }
 

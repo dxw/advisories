@@ -14,9 +14,7 @@ body {
 }
 
 .row {
-  max-width: $site-max-width;
-  margin: auto;
-  padding: 0 $site-gutters;
+  @include row;
 }
 
 .grid-row {

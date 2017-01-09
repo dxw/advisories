@@ -70,8 +70,7 @@ textarea:focus {
 }
 
 .form-group, .form-buttons {
-  padding: 0 15px;
-  margin: 0 0 30px 0;
+  margin: 0 0 $margin 0;
 }
 
 .form-group .required {
@@ -87,39 +86,39 @@ textarea:focus {
   border-color: $error;
 }
 
-.form-error span {
-  font-weight: 600;
-}
-
-
+// Radios and Checboxes
 label.radio-group, label.checkbox-group {
   position: relative;
-  background: scale-color($input-border, $lightness: 75%);
-  border: 2px solid scale-color($input-border, $lightness: 75%);
-  padding: 15px 30px 15px 45px;
-  margin: 0 1em 1em 0;
+  background: scale-color($dxw-purple, $lightness: -25%);
+  border: 2px solid scale-color($dxw-purple, $lightness: -50%);
+  padding: 5px 15px;
+  margin: 0 $margin $margin 0;
   display: inline-block;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .block-labels {
-
   label.radio-group, label.checkbox-group {
     float: left;
     display: block;
     clear: left;
   }
-
 }
 
-label.radio-group:hover, label.radio-group.selected,
-label.checkbox-group:hover, label.checkbox-group.selected {
-  border:2px solid scale-color($input-border-focus, $lightness: 0%);
+label.radio-group:hover, label.radio-group.checked,
+label.checkbox-group:hover, label.checkbox-group.checked {
+  border: 2px solid scale-color($input-border-focus, $lightness: 0%);
 }
 
 label.radio-group input[type=radio],
 label.checkbox-group input[type=checkbox] {
-  position: absolute;
-  top: 20px;
-  left: 15px;
+  opacity: 0;
+  display: none;
+
+  &:before {
+  }
+
+  &:after {
+  }
 }

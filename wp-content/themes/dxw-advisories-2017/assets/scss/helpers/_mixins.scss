@@ -34,6 +34,12 @@ $fontPath: "../static/fonts/";
   border-top: $size solid $colour;
 }
 
+@mixin row {
+  max-width: $site-max-width;
+  margin: auto;
+  padding: 0 $site-gutters;
+}
+
 @mixin hide {
     position: absolute;
     left: -9999em;
@@ -56,6 +62,7 @@ $fontPath: "../static/fonts/";
     background: $background;
     color: $colour;
     display: inline-block;
+    transition: all 0.2s ease-in-out;
     @if $size == big {
         padding: $padding/2;
     } @if $size == small {
@@ -77,6 +84,7 @@ $fontPath: "../static/fonts/";
     background: transparent;
     color: $colour;
     display: inline-block;
+    transition: all 0.2s ease-in-out;
     @if $size == big {
         padding: $padding/2;
     } @if $size == small {

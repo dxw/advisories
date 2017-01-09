@@ -37,7 +37,6 @@ $grid-gutters: $site-gutters;
 
 // Column
 @mixin gridcol($width: 1, $padding: true) {
-  float: left;
   width: percentage($width);
   @if($padding == true) {
     padding-left: $grid-gutters/2;

@@ -14,16 +14,20 @@
       text-decoration: underline;
     }
   }
+}
 
-  .unsafe {
-    background: $warning-red;
-  }
+// Global classes for colouring the reports
+.unsafe, .high, .red {
+  background: $warning-red;
+  color: #fff;
+}
 
-  .caution {
-    background: $warning-yellow;
-  }
+.caution, .medium, .yellow {
+  background: $warning-yellow;
+  color: #fff;
+}
 
-  .good {
-    background: $warning-green;
-  }
+.good, .low, .green {
+  background: $warning-green;
+  color: #fff;
 }

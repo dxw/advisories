@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-  font-size: #{$base-font-size * 1.5};
+  font-size: #{$base-font-size + 6px};
 }
 
 h3 {
@@ -43,6 +43,7 @@ h6 {
 
   ul {
     margin: 0 0 $margin 0;
+    max-width: $text-measure;
     li {
       list-style-type: disc;
       ul {
@@ -56,6 +57,7 @@ h6 {
 
   ol {
     margin: 0 0 $margin 0;
+    max-width: $text-measure;
     li {
       list-style-type: decimal;
       margin: 0 0 #{$margin / 2 };
@@ -69,10 +71,13 @@ h6 {
   }
 
   dl {
+    margin: 0 0 $margin 0;
+    max-width: $text-measure;
     dt {
       font-family: $font-family-brand-headings, $system-font-family-sans;
     }
     dd {
+      margin: 0 0 #{$margin / 2 };
     }
   }
 
@@ -91,20 +96,34 @@ h6 {
     }
   }
 
-  a {
-    color: $link-colour;
-    text-decoration: none;
-    border-bottom: 1px solid $link-colour;
-  }
+  p, ul, ol, dl, blockquote {
+    a {
+      color: $black;
+      background: scale-color($link-colour, $lightness: 60%);
+      text-decoration: none;
+      padding: 0 2px;
+      transition: all 0.2s ease-in-out;
 
-  a:hover { }
-  a:visited { }
-  a:active { }
-  a:focus { }
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
 
   table {
     width: $text-measure;
     margin: $margin 0;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+    }
+  }
+
+  pre {
+    white-space: pre-wrap;
+    padding: $padding;
+    color: $light-grey;
+    background: $black;
+    font-size: $small-font-size;
   }
 
 }
