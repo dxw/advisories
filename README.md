@@ -7,3 +7,9 @@ We publish information about that work on this site.
 * [Staging](https://security.staging.dxw.net)
 
 Please use `develop/master` branches
+
+## Project management
+- [Trello](https://trello.com/b/Yl4BLYGS/security-dxw-com)
+
+## Ghost Inspector tests
+- TBC (Currently undergoing a redesign)
