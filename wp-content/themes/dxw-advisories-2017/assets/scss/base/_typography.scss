@@ -111,7 +111,6 @@ h6 {
   }
 
   table {
-    width: $text-measure;
     margin: $margin 0;
     @media screen and (max-width: $small-screen) {
       width: 100%;

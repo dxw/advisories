@@ -24,3 +24,11 @@ body {
 a {
   text-decoration: none;
 }
+
+.main {
+  background: $white;
+}
+
+.visually-hidden {
+  @include hide;
+}

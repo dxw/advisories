@@ -26,8 +26,7 @@
   }
 
   .plugin-recommendations {
-    width: 50%;
-    padding: 0 $padding 0 0;
+    flex: 2;
     @media screen and (max-width: $small-screen) {
       width: 100%;
       padding: 0;
@@ -35,8 +34,7 @@
   }
 
   .recent-advisories {
-    width: 50%;
-    padding: 0 0 0 $padding;
+    flex: 2;
     @media screen and (max-width: $small-screen) {
       width: 100%;
       margin: $margin 0 0 0;

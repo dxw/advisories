@@ -3,6 +3,7 @@
   "dependencies": {
     "jquery": "~1.12.x",
     "jquery-accessibleMegaMenu": "https://github.com/adobe-accessibility/Accessible-Mega-Menu.git",
-    "enquire": "~2.1.2"
+    "enquire": "~2.1.2",
+    "media-match": "~2.0.2"
   }
 }

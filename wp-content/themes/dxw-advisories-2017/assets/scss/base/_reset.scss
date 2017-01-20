@@ -1,14 +1,14 @@
-html, body, div, span, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, a, abbr, acronym, address, del, em, img, q, small, strike, strong, sub, sup, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, main, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html, body, ul, ol, dl, dt, dd, p, blockquote, figure, figcaption, table, tr, td,
+article, aside, details, figcaption, figure, footer, header, nav, section, summary, details,
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
 }
 
-main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+article, aside, details, figcaption, figure, footer, header, nav, section {
+	display: block;
 }
 
 body {

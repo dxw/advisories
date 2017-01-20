@@ -1,13 +1,3 @@
-aside {
-  p, ul, ol, dl, blockquote {
-    a {
-      color: $link-colour;
-      text-decoration: none;
-      border-bottom: 1px solid $link-colour;
-    }
-  }
-}
-
 .get-a-quote {
   width: 33.3333%;
   padding: #{$padding * 2} 0 0 #{$padding * 2};

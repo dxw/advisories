@@ -69,7 +69,8 @@ module.exports = function (grunt) {
     copy: {
       production: {
         files: {
-          'static/js/lib/jquery.min.js': 'bower_components/jquery/dist/jquery.min.js'
+          'static/js/lib/jquery.min.js': 'bower_components/jquery/dist/jquery.min.js',
+          'static/js/lib/media.match.min.js': 'bower_components/media-match/media.match.min.js'
         }
       }
     },

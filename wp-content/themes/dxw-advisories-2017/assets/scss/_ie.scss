@@ -1,0 +1,174 @@
+.lt-ie11 {
+  .logo {
+    background: url("../img/logo.png") no-repeat 0 0;
+    height: 70px;
+    width: 141px;
+
+    a {
+      height: 70px;
+      width: 141px;
+      display: block;
+    }
+  }
+
+  // Nav
+  .main-navigation {
+    float: right;
+    margin: $margin #{$margin * 3} 0 0;
+
+    .nav-menu {
+      text-align: left;
+      display: block;
+    }
+
+    li {
+      display: inline-block;
+      position: relative;
+    }
+
+    li > a {
+      color: $nav-link;
+      border-bottom: 5px solid transparent;
+      margin-right: $margin;
+      padding: 0 0 10px 0;
+    }
+
+    li > a:hover,
+    .active > a {
+      color: $nav-link-hover;
+      text-decoration: none;
+      border-bottom: 5px solid $nav-link;
+    }
+
+    li > a:focus {
+      color: $sub-nav-link;
+    }
+
+    li > a.open {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sub-nav {
+      display: none;
+      position: absolute;
+      top: 48px;
+      left: 0px;
+      background: $sub-nav-background;
+    }
+
+    .sub-nav a {
+      background: $sub-nav-background;
+      display: block;
+      min-width: 200px;
+      color: $sub-nav-link;
+
+      &:hover {
+        color: $sub-nav-link-hover;
+      }
+    }
+
+    .sub-nav.open {
+      display: block;
+    }
+
+    .sub-nav li {
+      display: block;
+    }
+  }
+
+  // Search form
+
+  .search-form {
+    label {
+      display: block;
+    }
+    input {
+      width: 74%;
+    }
+    .button {
+      width: 25%;
+    }
+  }
+
+  // Front page
+
+  .plugin-recommendations, .recent-advisories {
+    width: 50%;
+    float: left;
+  }
+
+  // Footer
+
+  .global-footer .global-footer-links section {
+    float: left;
+  }
+
+  .global-footer .global-footer-links .footer-contact span[itemprop=addressLocality], .global-footer .global-footer-links .footer-contact span[itemprop=postalCode] {
+    display: inline-block;
+  }
+
+  .global-footer-certificates {
+    clear: both;
+  }
+
+  .global-footer-certificates p {
+    margin: 0 0 $margin 0;
+  }
+
+  .global-footer .global-footer-copyright .footer-legal {
+    width: 100%;
+    margin: 0 0 $margin 0;
+  }
+
+  .global-footer .global-footer-copyright .footer-social {
+    width: 100%;
+  }
+
+  .global-footer .global-footer-copyright .footer-social li {
+    float: left;
+    margin: 0 $margin 0 0;
+    text-align: left;
+    width: auto;
+  }
+
+  .global-footer .global-footer-copyright .footer-social li a {
+    text-align: left;
+    margin: 0;
+  }
+
+  .global-footer .global-footer-copyright .footer-social span {
+    @include show;
+  }
+
+  .global-footer .global-footer-certificates .badges {
+    width: 100%;
+  }
+
+
+  // Archive
+
+  .archive-posts {
+    .posts {
+      float: left;
+    }
+  }
+
+  // Sidebar
+
+  .get-a-quote {
+    float: right;
+  }
+
+
+  // Single
+
+  .single .findings {
+    float: left;
+    width: 60%;
+  }
+
+  .single .meta {
+    float: right;
+  }
+}
