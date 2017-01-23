@@ -2,10 +2,8 @@
 
 add_action('wp_ajax_send_email', function() {
   $targets = array(
-    'email_hackers'    => 'wp-hackers@lists.automattic.com',
     'email_wp_plugins' => 'plugins@wordpress.org',
     'email_fd'         => 'fulldisclosure@seclists.org',
-    'email_cve'        => 'cve-assign@mitre.org',
     'email_wpscan'     => 'wpscanteam@gmail.com',
     'email_dxw_wp_sec' => 'dxw-wp-security@lists.dxw.com',
   );
