@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html class="no-js lt-ie9 lt-ie10 lt-ie11" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 9]> <html class="no-js lt-ie10 lt-ie11" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 10]> <html class="no-js lt-ie11" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 11]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<html class="no-js" <?php language_attributes(); ?>>
   <head>
     <meta charset="utf-8">
     <title><?php wp_title('-', true, 'right') ?></title>

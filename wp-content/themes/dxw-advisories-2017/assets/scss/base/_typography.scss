@@ -98,14 +98,12 @@ h6 {
 
   p, ul, ol, dl, blockquote {
     a {
-      color: $black;
-      background: scale-color($link-colour, $lightness: 60%);
-      text-decoration: none;
-      padding: 0 2px;
-      transition: all 0.2s ease-in-out;
+      color: $link-colour;
+      text-decoration: underline;
+      text-decoration-skip: ink;
 
       &:hover {
-        background: transparent;
+        text-decoration: none;
       }
     }
   }

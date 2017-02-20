@@ -1,11 +1,5 @@
 .single {
 
-  article {
-    p a {
-      color: $link-colour;
-    }
-  }
-
   // Notice
   .content-notice {
     .page-title {
@@ -57,8 +51,13 @@
       margin-bottom: $margin;
 
       a {
-        color: $black;
-        border-color: $black;
+        color: $white;
+        text-decoration: underline;
+        text-decoration-skip: ink;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
 
       &.green {
@@ -66,6 +65,11 @@
       }
       &.yellow {
         background: $warning-yellow;
+        color: $black;
+
+        a {
+          color: $black;
+        }
       }
       &.red {
         background: $warning-red;

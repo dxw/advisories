@@ -1,4 +1,8 @@
-.lt-ie11 {
+// Using modernizr to detect stuff much easier than pissing about with coditional comments
+// No flexbox
+.no-flexbox {
+
+  // Header
   .logo {
     background: url("../img/logo.png") no-repeat 0 0;
     height: 70px;
@@ -78,7 +82,6 @@
   }
 
   // Search form
-
   .search-form {
     label {
       display: block;
@@ -92,14 +95,12 @@
   }
 
   // Front page
-
   .plugin-recommendations, .recent-advisories {
     width: 50%;
     float: left;
   }
 
   // Footer
-
   .global-footer .global-footer-links section {
     float: left;
   }
@@ -137,10 +138,6 @@
     margin: 0;
   }
 
-  .global-footer .global-footer-copyright .footer-social span {
-    @include show;
-  }
-
   .global-footer .global-footer-certificates .badges {
     width: 100%;
   }
@@ -170,5 +167,12 @@
 
   .single .meta {
     float: right;
+  }
+}
+
+// No SVG
+.no-svg {
+  .global-footer .global-footer-copyright .footer-social span {
+    @include show;
   }
 }
