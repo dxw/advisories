@@ -89,6 +89,9 @@
 
       h1 {
         width: 75%;
+        @media screen and (max-width: $small-screen) {
+          width: 100%;
+        }
       }
     }
 

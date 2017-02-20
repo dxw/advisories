@@ -41,6 +41,12 @@ textarea {
   resize: none;
 }
 
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+  padding-left: $padding;
+}
+
 input[type=text]:focus,
 input[type=search]:focus,
 input[type=email]:focus,
