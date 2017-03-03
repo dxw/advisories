@@ -1,0 +1,137 @@
+.single {
+
+  // Notice
+  .content-notice {
+    .page-title {
+      background: $dxw-turquoise;
+      padding: #{$padding * 2} 0;
+      color: $white;
+
+      .row {
+        display: block;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width: $small-screen) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  // Plugin
+  .content-plugins {
+    .page-title {
+      background: $dxw-turquoise;
+      padding: #{$padding * 2} 0;
+      color: $white;
+
+      .row {
+        display: block;
+      }
+
+      .button {
+        margin: $margin 0;
+        display: inline-block;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width: $small-screen) {
+        flex-direction: column;
+      }
+    }
+
+    .recommendation {
+      padding: $padding;
+      margin-bottom: $margin;
+
+      a {
+        color: $white;
+        text-decoration: underline;
+        text-decoration-skip: ink;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      &.green {
+        background: $warning-green;
+      }
+      &.yellow {
+        background: $warning-yellow;
+        color: $black;
+
+        a {
+          color: $black;
+        }
+      }
+      &.red {
+        background: $warning-red;
+      }
+    }
+  }
+
+  // Advisories
+  .content-advisories {
+    .page-title {
+      background: $dxw-turquoise;
+      padding: #{$padding * 2} 0;
+      color: $white;
+      .row {
+        flex-direction: column;
+      }
+
+      h1 {
+        width: 75%;
+        @media screen and (max-width: $small-screen) {
+          width: 100%;
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      @media screen and (max-width: $small-screen) {
+        flex-direction: column;
+      }
+    }
+
+  }
+
+  .findings {
+    width: 66.6666%;
+    padding: #{$padding * 2} #{$padding * 2} 0 0;
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+      padding: #{$padding * 2} 0 0 0;
+    }
+  }
+
+  .meta {
+    width: 33.3333%;
+    padding: #{$padding * 2} 0 0 #{$padding * 2};
+    @media screen and (max-width: $small-screen) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .admin-tools {
+    background: $red-25;
+    padding: $padding;
+
+    textarea {
+      font-family: monospace;
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+}

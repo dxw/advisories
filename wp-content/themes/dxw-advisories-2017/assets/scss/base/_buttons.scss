@@ -1,0 +1,41 @@
+// Buttons
+
+.button {
+  @include button($button, $button-text, default);
+
+  &:visited {
+    @include button($button, $button-text, default);
+  }
+
+  &:hover {
+    @include button($button-hover, $button-text-hover, default);
+  }
+
+  &:active {
+    @include button($button-hover, $button-text-hover, default);
+    outline: 3px solid $highlight;
+  }
+}
+
+.button[disabled="disabled"], .button:hover[disabled="disabled"] {
+  @include button($button-inactive, $button-text, default);
+  cursor: default;
+  opacity: 0.5;
+}
+
+.button--inverted {
+  @include button($white, $button, default);
+
+  &:visited {
+    @include button($white, $button, default);
+  }
+
+  &:hover {
+    @include button($button-hover, $button-text-hover, default);
+  }
+
+  &:active {
+    @include button($button-hover, $button-text-hover, default);
+    outline: 3px solid $highlight;
+  }
+}

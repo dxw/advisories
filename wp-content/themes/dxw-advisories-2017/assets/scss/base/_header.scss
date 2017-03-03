@@ -1,0 +1,18 @@
+// Header
+
+.header {
+  padding: $padding 0;
+  background: $dxw-turquoise;
+
+  .logo {
+    width: 141px;
+    float: left;
+      @media screen and (max-width: $small-screen) {
+        float: right;
+      }
+
+    img {
+      width: 100%;
+    }
+  }
+}

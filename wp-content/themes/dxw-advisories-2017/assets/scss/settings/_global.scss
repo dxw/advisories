@@ -1,0 +1,82 @@
+// Paths
+$imagePath: "/images";
+$fontPath: "../fonts";
+
+// Site Width
+$site-max-width: 1280px;
+$site-gutters: 40px;
+
+// Breakpoints
+$big-screen: 1020px;
+$medium-screen: 900px;
+$small-screen: 780px;
+$tiny-screen: 480px;
+
+// Margins & Padding
+$margin: 20px;
+$padding: 20px;
+
+// Colours
+
+// Brand
+$brand-primary: $dxw-blue;
+$brand-secondary: $dxw-orange;
+$brand-tertiary: $dxw-purple;
+
+// Errors
+$highlight: #ffbf47;
+$error: #df3034;
+
+// Base Site
+$base-font-colour: $black;
+$body-background: $white;
+$link-colour: $brand-primary;
+$link-hover-colour: $brand-tertiary;
+
+// Buttons
+$button: $dxw-blue;
+$button-inactive: $dxw-orange;
+$button-hover: $dxw-orange;
+$button-text: $white;
+$button-text-hover: $white;
+
+// Tables
+$table-borders: $dark-grey;
+
+// Borders
+$border-colour: $dark-grey;
+$border-radius: 0px;
+$input-border: $dark-grey;
+$input-border-focus: $highlight;
+
+// Typography <- should this be moved to the typography partial?
+
+@font-face {
+ font-family: 'Founders-Light';
+ src: url('#{$fontPath}/FoundersGroteskTextWeb-Light.eot'); /* IE9 Compat Modes */
+ src: url('#{$fontPath}/FoundersGroteskTextWeb-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('#{$fontPath}/FoundersGroteskTextWeb-Light.woff2') format('woff2'), /* Super Modern Browsers */
+      url('#{$fontPath}/FoundersGroteskTextWeb-Light.woff') format('woff');
+}
+
+@font-face {
+ font-family: 'Founders-Medium';
+ src: url('#{$fontPath}/FoundersGroteskTextWeb-Medium.eot'); /* IE9 Compat Modes */
+ src: url('#{$fontPath}/FoundersGroteskTextWeb-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('#{$fontPath}/FoundersGroteskTextWeb-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+      url('#{$fontPath}/FoundersGroteskTextWeb-Medium.woff') format('woff');
+}
+
+$font-family-brand-body: "Founders-Light";
+$font-family-brand-headings: "Founders-Medium";
+// Use system-font-family for iOS/ Android devices. Listed are: Apple iOS system font, iOS San Francisco, Apple San Francisco, Android, Windows Phone;
+$system-font-family-sans: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", Sans-Serif;
+$font-family-sans: $font-family-brand-body, $system-font-family-sans;
+$font-family-serif: "Georgia", Times,Serif;
+$base-sans: $font-family-sans;
+$base-font-size: 24px;
+$base-line-height: 1.4;
+$heading-line-height: 1;
+$small-font-size: 18px;
+$print-font-size: $small-font-size;
+$text-measure: 34em;

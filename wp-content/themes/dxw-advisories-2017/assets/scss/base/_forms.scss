@@ -1,0 +1,130 @@
+// Resets / Global form styles
+
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=phone],
+input[type=password],
+textarea {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  border-radius: 0;
+  border: 2px solid scale-color($input-border, $lightness: 50%);
+  font-size: $base-font-size;
+  padding: 5px;
+  margin: 0;
+  outline: 0;
+  transition: all 0.2s ease-in-out;
+  width: 50%;
+}
+
+@media screen and (max-width: $small-screen) {
+
+  input[type=text],
+  input[type=search],
+  input[type=email],
+  input[type=phone],
+  input[type=password],
+  textarea {
+    width:100%;
+  }
+
+}
+
+input[type=file] {
+  outline: none;
+  font-size: $base-font-size;
+}
+
+textarea {
+  resize: none;
+}
+
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+  padding-left: $padding;
+}
+
+input[type=text]:focus,
+input[type=search]:focus,
+input[type=email]:focus,
+input[type=phone]:focus,
+input[type=password]:focus,
+textarea:focus {
+  border: 2px solid $input-border-focus;
+}
+
+// Labels
+
+.data-collection {
+  padding: 15px;
+  border: 1px solid scale-color($input-border, $lightness: 75%);
+}
+
+.form-group label, .form-group legend {
+  display: block;
+  padding: 0 0 7.5px 0;
+}
+
+.form-group em {
+  font-style: italic;
+  display: block;
+  color: scale-color($base-font-colour, $lightness: 50%);
+  font-size: $base-font-size/1.618;
+}
+
+.form-group, .form-buttons {
+  margin: 0 0 $margin 0;
+}
+
+.form-group .required {
+  font-size: $base-font-size/1.618;
+}
+
+.form-error {
+  padding: 15px;
+  background: scale-color($error, $lightness: 50%);
+}
+
+.form-error input[type=text] {
+  border-color: $error;
+}
+
+// Radios and Checboxes
+label.radio-group, label.checkbox-group {
+  position: relative;
+  background: scale-color($dxw-purple, $lightness: -25%);
+  border: 2px solid scale-color($dxw-purple, $lightness: -50%);
+  padding: 5px 15px;
+  margin: 0 $margin $margin 0;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.block-labels {
+  label.radio-group, label.checkbox-group {
+    float: left;
+    display: block;
+    clear: left;
+  }
+}
+
+label.radio-group:hover, label.radio-group.checked,
+label.checkbox-group:hover, label.checkbox-group.checked {
+  border: 2px solid scale-color($input-border-focus, $lightness: 0%);
+}
+
+label.radio-group input[type=radio],
+label.checkbox-group input[type=checkbox] {
+  opacity: 0;
+  display: none;
+
+  &:before {
+  }
+
+  &:after {
+  }
+}
