@@ -1,34 +1,34 @@
 {
-    "hash": "c391c01a6123a63c2fc7143f23de3c1c602f5a0b",
+    "hash": "c6859e5ce39c18594018bed044c0a448b99647ca",
     "plugins": [
         {
             "name": "akismet",
-            "src": "git@git.dxw.net:wordpress-plugins/akismet",
+            "src": "git@git.govpress.com:wordpress-plugins/akismet",
             "revision": "9ca38d7b3e345affc3afc07c4c09598d41c9543b"
         },
         {
             "name": "advanced-custom-fields-pro",
-            "src": "git@git.dxw.net:wordpress-plugins/advanced-custom-fields-pro",
+            "src": "git@git.govpress.com:wordpress-plugins/advanced-custom-fields-pro",
             "revision": "f1139c7637b122a08719d725300db2aafbfa4f01"
         },
         {
             "name": "co-authors-plus",
-            "src": "git@git.dxw.net:wordpress-plugins/co-authors-plus",
+            "src": "git@git.govpress.com:wordpress-plugins/co-authors-plus",
             "revision": "82d5bf7a22b2449a3554496df33b22ec6f1a241c"
         },
         {
             "name": "new-members-only",
-            "src": "git@git.dxw.net:wordpress-plugins/new-members-only",
+            "src": "git@git.govpress.com:wordpress-plugins/new-members-only",
             "revision": "b1541aee71f2b6856d48e8e4d60b7fe72956b6a5"
         },
         {
             "name": "wp-to-twitter",
-            "src": "git@git.dxw.net:wordpress-plugins/wp-to-twitter",
+            "src": "git@git.govpress.com:wordpress-plugins/wp-to-twitter",
             "revision": "f87f57350d0488ef775f255a762ac85dd27eda79"
         },
         {
             "name": "page-excerpt",
-            "src": "git@git.dxw.net:wordpress-plugins/page-excerpt",
+            "src": "git@git.govpress.com:wordpress-plugins/page-excerpt",
             "revision": "5e7aca2ae8a92ab43190a017c46543685d55b230"
         }
     ]
