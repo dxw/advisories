@@ -1,6 +1,6 @@
 {
     "src": {
-        "plugins": "git@git.dxw.net:wordpress-plugins/"
+        "plugins": "git@git.govpress.com:wordpress-plugins/"
     },
     "plugins": [
         {"name": "akismet"},
