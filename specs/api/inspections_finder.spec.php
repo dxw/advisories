@@ -70,7 +70,7 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
             expect($output->name)->to->equal('Advanced Custom Fields: Table Field');
             expect($output->slug)->to->equal('advanced-custom-fields-table-field');
             expect($output->versions())->to->equal('2.2.3');
-            expect($output->date)->to->loosely->equal(date_create('2016-07-13 17:44:23'));
+            expect($output->date)->to->loosely->equal(date_create('2016-07-13 17:44:23', timezone_open('UTC')));
             expect($output->url())->to->equal('https://security.dxw.com/plugins/advanced-custom-fields-table-field');
             expect($output->result())->to->equal('No issues found');
         });
