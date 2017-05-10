@@ -3,7 +3,7 @@ require_once 'wp-content/themes/dxw-advisories/lib/api/JsonInspectionsFinder.php
 require_once 'wp-content/themes/dxw-advisories/lib/api/InspectionsFinder.php';
 require_once 'wp-content/themes/dxw-advisories/lib/api/Inspection.php';
 
-describe('\\DxwSec\\API\\InspectionsController', function () {
+describe('\\DxwSec\\API\\JsonInspectionsFinder', function () {
     beforeEach(function () {
         $this->fakeInspectionsFinder = function ($result) {
             return \Mockery::mock('\\DxwSec\\API\\InspectionsFinder')
