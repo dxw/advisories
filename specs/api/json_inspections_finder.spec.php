@@ -45,7 +45,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                     'slug' => 'advanced-custom-fields-table-field',
                     'versions' => '1.2.0',
                     'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field2/',
-                    'date' => new DateTime('2016-09-01 14:00:17.000000'),
+                    'date' => new DateTime('2016-09-01 14:00:17.000000', new DateTimeZone('Etc/UTC')),
                     'result' => 'use with caution',
                 )),
                 $this->fakeInspection(array(
@@ -53,7 +53,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                     'slug' => 'advanced-custom-fields-table-field',
                     'versions' => '1.1.0,1.1.1',
                     'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field/',
-                    'date' => new DateTime('2016-07-13 17:44:23.000000'),
+                    'date' => new DateTime('2016-07-13 17:44:23.000000', new DateTimeZone('Etc/UTC')),
                     'result' => 'no issues found'
                 ))
             );

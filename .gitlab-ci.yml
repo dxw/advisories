@@ -6,6 +6,8 @@
 
 .peridot: &peridot
   before_script:
+    # Set timezone
+    - echo 'date.timezone = Pacific/Auckland' >> /usr/local/etc/php/conf.d/tz.ini
     - composer install
   script:
     - vendor/bin/peridot specs
