@@ -8,10 +8,5 @@
   },
   "require-dev": {
     "dxw/phar-install": "^1.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "DxwSec\\": "lib/"
-    }
   }
 }

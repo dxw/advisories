@@ -1,5 +1,4 @@
 .DS_Store
-/vendor
 /wp-content/whippet-wp-config.php
 /wp-content/uploads
 /wp-content/node_modules
@@ -12,3 +11,5 @@
 /wp-content/plugins/new-members-only
 /wp-content/plugins/wp-to-twitter
 /wp-content/plugins/page-excerpt
+
+/wp-content/plugins/dxw-sec-api/vendor

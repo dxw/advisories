@@ -1,6 +1,6 @@
 <?php
-require 'wp-content/themes/dxw-advisories/lib/api/InspectionsController.php';
-require 'wp-content/themes/dxw-advisories/lib/api/JsonInspectionsFinder.php';
+require 'lib/InspectionsController.php';
+require 'lib/JsonInspectionsFinder.php';
 
 describe('\\DxwSec\\API\\InspectionsController', function () {
     beforeEach(function () {

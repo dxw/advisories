@@ -1,5 +1,5 @@
 <?php
-require_once 'wp-content/themes/dxw-advisories/lib/api/Inspection.php';
+require_once 'lib/Inspection.php';
 
 describe('\\DxwSec\\API\\Inspection', function () {
 
