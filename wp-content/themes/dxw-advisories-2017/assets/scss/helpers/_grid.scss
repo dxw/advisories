@@ -1,0 +1,45 @@
+// Column
+@mixin col($width: 1, $padding: true) {
+  float: left;
+  width: percentage($width);
+  @if($padding == true) {
+    padding-left: $grid-gutters/2;
+    padding-right: $grid-gutters/2;
+  }
+}
+
+
+// Grid Mixins
+
+$grid-wrapper: $site-max-width;
+$grid-gutters: $site-gutters;
+
+// Row
+@mixin gridrow($inside: false) {
+  @if($inside == true) {
+    margin-left: -$grid-gutters/2;
+    margin-right: -$grid-gutters/2;
+  }
+  @else {
+    width: 100%;
+    max-width: $grid-wrapper;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Column
+@mixin gridcol($width: 1, $padding: true) {
+  width: percentage($width);
+  @if($padding == true) {
+    padding-left: $grid-gutters/2;
+    padding-right: $grid-gutters/2;
+  }
+}
