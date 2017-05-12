@@ -8,6 +8,7 @@
   before_script:
     # Set timezone
     - echo 'date.timezone = Pacific/Auckland' >> /usr/local/etc/php/conf.d/tz.ini
+    - cd 'wp-content/plugins/dxw-sec-api'
     - composer install
   script:
     - vendor/bin/peridot specs
@@ -23,6 +24,7 @@ php_71_tests:
 php_style:
   <<: *php70
   before_script:
+    - cd 'wp-content/plugins/dxw-sec-api'
     - composer install
   script:
-    - vendor/bin/phpcs wp-content/themes/dxw-advisories/lib/api specs --standard=PSR2
+    - vendor/bin/phpcs lib specs --standard=PSR2
