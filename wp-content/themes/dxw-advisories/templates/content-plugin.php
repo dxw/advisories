@@ -48,7 +48,7 @@
         $recommendation = get_field('recommendation');
         if($recommendation != 'green') {
       ?>
-        <h3>Failure criteria</h3>
+        <h3>Reason for the '<?php echo recommendation_name($recommendation) ?>' result</h3>
         <p><?php echo get_field_label('recommendation_criterion_' . $recommendation) ?>:</p>
         <blockquote><p><?php echo get_field('reason') ?></p></blockquote>
 
