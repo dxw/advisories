@@ -21,68 +21,63 @@ function the_advisory_id($post_id = 0) {
 }
 
 function the_short_recommendation($post_id = 0) {
-  $recommendation = get_field('recommendation', $post_id);
-
-  switch($recommendation) {
-    case 'red':
-      ?><span class="unsafe short">Potentially unsafe</span><?php
-      break;
-
-    case 'yellow':
-      ?><span class="caution short">Use with caution</span><?php
-      break;
-
-    case 'green':
-      ?><span class="good short">No issues found</span><?php
-      break;
-  }
+    $recommendation = get_field('recommendation', $post_id);
+?>
+    <span class="<?php echo recommendation_slug($recommendation) ?> short"><?php echo recommendation_name($recommendation) ?></span>
+<?php
 }
 
-
 function the_recommendation() {
-  $recommendation = get_field('recommendation');
-  $assurance = get_field('assurance_level');
+    $recommendation = get_field('recommendation');
+    $assurance = get_field('assurance_level');
 
-  if($assurance == 'codereviewed') {
-      $assurance = 'High <span>This plugin has been given a thorough, line-by-line review</span>';
+    if($assurance == 'codereviewed') {
+        $assurance = 'High <span>This plugin has been given a thorough, line-by-line review</span>';
     }
-  else {
-    $assurance = 'Medium <span>This plugin has been given a short, targeted code review.</span>';
-  }
+    else {
+        $assurance = 'Medium <span>This plugin has been given a short, targeted code review.</span>';
+    }
+?>
+    <h5 class="<?php echo recommendation_slug($recommendation) ?>"><?php echo recommendation_name($recommendation) ?></h5>
+    <div>
+      <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance; ?></a></p>
+      <p><?php echo recommendation_text($recommendation) ?></p>
+      <p><a href="/about/plugin-inspections/#recommendations" class="recs">More information about this recommendation</a></p>
+    </div>
+<?php
+}
 
-  switch($recommendation) {
+function recommendation_name($recommendation) {
+    switch($recommendation) {
     case 'red':
-      ?>
-        <h5 class="unsafe">Potentially unsafe</h5>
-          <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance; ?></a></p>
-          <p>Before using this plugin, you should very carefully consider its potential problems and should conduct a thorough assessment.</p>
-      <?php
-
-      break;
-
+        return 'Potentially unsafe';
     case 'yellow':
-      ?>
-        <h5 class="caution">Use with caution</h5>
-          <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance; ?></a></p>
-          <p>Before using this plugin, you should carefully consider these findings.</p>
-      <?php
-
-      break;
-
+        return 'Use with caution';
     case 'green':
-      ?>
-        <h5 class="allgood">No issues found</h5>
-          <p class="confidence">Confidence: <span class="tooltipo"><?php echo $assurance; ?></span></p>
-          <p>We didn't find anything worrying in this plugin. It's probably safe.</p>
-      <?php
+        return 'No issues found';
+    }
+}
 
-      break;
-  }
+function recommendation_slug($recommendation) {
+    switch($recommendation) {
+    case 'red':
+        return 'unsafe';
+    case 'yellow':
+        return 'caution';
+    case 'green':
+        return 'good';
+    }
+}
 
-  ?>
-    <p><a href="/about/plugin-inspections/#recommendations" class="recs">More information about this recommendation</a></p>
-  <?php
-
+function recommendation_text($recommendation) {
+    switch($recommendation) {
+    case 'red':
+        return 'Before using this plugin, you should very carefully consider its potential problems and should conduct a thorough assessment.';
+    case 'yellow':
+        return 'Before using this plugin, you should carefully consider these findings.';
+    case 'green':
+        return "We didn't find anything worrying in this plugin. It's probably safe.";
+    }
 }
 
 function get_field_label($field_key, $post_id=null, $options=array()){
