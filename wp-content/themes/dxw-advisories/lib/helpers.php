@@ -22,20 +22,9 @@ function the_advisory_id($post_id = 0) {
 
 function the_short_recommendation($post_id = 0) {
   $recommendation = get_field('recommendation', $post_id);
-
-  switch($recommendation) {
-    case 'red':
-      ?><span class="red short">Potentially unsafe</span><?php
-      break;
-
-    case 'yellow':
-      ?><span class="yellow short">Use with caution</span><?php
-      break;
-
-    case 'green':
-      ?><span class="green short">No issues found</span><?php
-      break;
-  }
+  ?>
+    <span class="<?php echo $recommendation ?> short"><?php echo recommendation_name($recommendation) ?></span>
+  <?php
 }
 
 
@@ -49,45 +38,38 @@ function the_recommendation() {
   else {
     $assurance = 'Medium <span>This plugin has been given a short, targeted code review.</span>';
   }
-
-  switch($recommendation) {
-    case 'red':
-      ?>
-        <h3>Potentially unsafe</h3>
-        <div>
-          <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance; ?></a></p>
-          <p>Before using this plugin, you should very carefully consider its potential problems and should conduct a thorough assessment.</p>
-      <?php
-
-      break;
-
-    case 'yellow':
-      ?>
-        <h3>Use with caution</h3>
-        <div>
-          <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance; ?></a></p>
-          <p>Before using this plugin, you should carefully consider these findings.</p>
-      <?php
-
-      break;
-
-    case 'green':
-      ?>
-        <h3>No issues found</h3>
-        <div>
-          <p class="confidence">Confidence: <span class="tooltipo"><?php echo $assurance; ?></span></p>
-          <p>We didn't find anything worrying in this plugin. It's probably safe.</p>
-      <?php
-
-      break;
-  }
-
   ?>
-    <p><a href="/about/plugin-inspections/#recommendations" class="recs">More information about this recommendation</a></p>
-  </div>
+    <h3><?php echo recommendation_name($recommendation) ?></h3>
+    <div>
+      <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance; ?></a></p>
+      <p><?php echo recommendation_text($recommendation) ?></p>
+      <p><a href="/about/plugin-inspections/#recommendations" class="recs">More information about this recommendation</a></p>
+    </div>
   <?php
-
 }
+
+function recommendation_name($recommendation) {
+    switch($recommendation) {
+    case 'red':
+        return 'Potentially unsafe';
+    case 'yellow':
+        return 'Use with caution';
+    case 'green':
+        return 'No issues found';
+    }
+}
+
+function recommendation_text($recommendation) {
+    switch($recommendation) {
+    case 'red':
+        return 'Before using this plugin, you should very carefully consider its potential problems and should conduct a thorough assessment.';
+    case 'yellow':
+        return 'Before using this plugin, you should carefully consider these findings.';
+    case 'green':
+        return "We didn't find anything worrying in this plugin. It's probably safe.";
+    }
+}
+
 
 function get_field_label($field_key, $post_id=null, $options=array()){
   global $post;
