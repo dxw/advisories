@@ -39,40 +39,34 @@
             <section class="report">
                 <h2>Findings</h2>
                 <?php echo get_field('findings') ?>
-                <?php
-                    $failure_criteria = get_field_label('matched_criteria');
-                    if (is_array($failure_criteria) && count($failure_criteria)) {
-                ?>
 
-                <h3>Failure criteria</h3>
                 <?php
                     $recommendation = get_field('recommendation');
-                    if ($recommendation != 'green') {
-                        echo '<p>' . get_field_label('recommendation_criterion_' . $recommendation) . ':</p>';
-                        echo get_field('reason');
-                    }
+                    if ($recommendation != 'green') :
                 ?>
-                <p>Read more about our <a href="/about/plugin-inspections/#failure_criteria">failure criteria</a>.</p>
+                    <?php $recommendation_data = recommendation_data($recommendation); ?>
+                    <h3>Reason for the '<?php echo $recommendation_data->name ?>' result</h3>
+                    <p><?php echo get_field_label('recommendation_criterion_' . $recommendation) ?>:</p>
+                    <?php echo get_field('reason') ?>
 
-                <table class="failure-criteria">
-                    <thead>
-                        <tr>
-                            <th class="status">Status</th>
-                            <th>Reasons</th>
-                        </tr>
-                    </thead>
-                  <tbody>
                     <?php
-                        foreach($failure_criteria as $criterion) {
+                        $failure_criteria = get_field_label('matched_criteria');
+                        if(is_array($failure_criteria) && count($failure_criteria)) :
                     ?>
-                    <tr>
-                        <td class="fail"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/bad.svg" width="22" height="22" alt="Fail"></td>
-                        <td><?php echo $criterion ?></td>
-                    </tr>
-                    <?php } ?>
-                  </tbody>
-                </table>
-                <?php } ?>
+                        <h3>Failure criteria</h3>
+                        <table class="failure_criteria">
+                            <tbody>
+                            <?php foreach($failure_criteria as $criterion) { ?>
+                                <tr>
+                                    <td class="fail"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/bad.png" width="22" height="22" alt="Fail"></td>
+                                    <td><?php echo $criterion ?></td>
+                                </tr>
+                            <?php } ?>
+                            </tbody>
+                        </table>
+                        <p>Read more about our <a href="/about/plugin-inspections/#failure_criteria">failure criteria</a>.</p>
+                    <?php endif ?>
+                <?php endif ?>
             </section>
 
         </article>
