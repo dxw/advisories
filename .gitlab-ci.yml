@@ -1,0 +1,30 @@
+.php70: &php70
+  image: thedxw/php-testing:7.0
+
+.php71: &php71
+  image: thedxw/php-testing:7.1
+
+.peridot: &peridot
+  before_script:
+    # Set timezone
+    - echo 'date.timezone = Pacific/Auckland' >> /usr/local/etc/php/conf.d/tz.ini
+    - cd 'wp-content/plugins/dxw-sec-api'
+    - composer install
+  script:
+    - vendor/bin/peridot specs
+
+php_70_tests:
+  <<: *php70
+  <<: *peridot
+
+php_71_tests:
+  <<: *php71
+  <<: *peridot
+
+php_style:
+  <<: *php70
+  before_script:
+    - cd 'wp-content/plugins/dxw-sec-api'
+    - composer install
+  script:
+    - vendor/bin/phpcs lib specs --standard=PSR2
