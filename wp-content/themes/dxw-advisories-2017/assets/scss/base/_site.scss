@@ -11,6 +11,8 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $base-font-colour;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .row {
