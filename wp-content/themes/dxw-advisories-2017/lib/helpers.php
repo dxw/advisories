@@ -21,14 +21,14 @@ function the_advisory_id($post_id = 0) {
 }
 
 function the_short_recommendation($post_id = 0) {
-    $recommendation = get_field('recommendation', $post_id);
+    $recommendation = recommendation_data(get_field('recommendation', $post_id));
 ?>
-    <span class="<?php echo recommendation_slug($recommendation) ?> short"><?php echo recommendation_name($recommendation) ?></span>
+    <span class="<?php echo $recommendation->slug ?> short"><?php echo $recommendation->name ?></span>
 <?php
 }
 
 function the_recommendation() {
-    $recommendation = get_field('recommendation');
+    $recommendation = recommendation_data(get_field('recommendation'));
     $assurance = get_field('assurance_level');
 
     if($assurance == 'codereviewed') {
@@ -38,46 +38,37 @@ function the_recommendation() {
         $assurance = 'Medium <span>This plugin has been given a short, targeted code review.</span>';
     }
 ?>
-    <h5 class="<?php echo recommendation_slug($recommendation) ?>"><?php echo recommendation_name($recommendation) ?></h5>
+    <h5 class="<?php echo $recommendation->slug ?>"><?php echo $recommendation->name ?></h5>
     <div>
       <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance; ?></a></p>
-      <p><?php echo recommendation_text($recommendation) ?></p>
+      <p><?php echo $recommendation->text ?></p>
       <p><a href="/about/plugin-inspections/#recommendations" class="recs">More information about this recommendation</a></p>
     </div>
 <?php
 }
 
-function recommendation_name($recommendation) {
-    switch($recommendation) {
-    case 'red':
-        return 'Potentially unsafe';
-    case 'yellow':
-        return 'Use with caution';
-    case 'green':
-        return 'No issues found';
-    }
-}
+function recommendation_data($recommendation) {
+    $data = new stdClass();
 
-function recommendation_slug($recommendation) {
-    switch($recommendation) {
-    case 'red':
-        return 'unsafe';
-    case 'yellow':
-        return 'caution';
-    case 'green':
-        return 'good';
+    switch ($recommendation) {
+        case 'red':
+            $data->name = 'Potentially unsafe';
+            $data->slug = 'unsafe';
+            $data->text = 'Before using this plugin, you should very carefully consider its potential problems and should conduct a thorough assessment.';
+            break;
+        case 'yellow':
+            $data->name = 'Use with caution';
+            $data->slug = 'caution';
+            $data->text = 'Before using this plugin, you should carefully consider these findings.';
+            break;
+        case 'green':
+            $data->name = 'No issues found';
+            $data->slug = 'good';
+            $data->text = "We didn't find anything worrying in this plugin. It's probably safe.";
+            break;
     }
-}
 
-function recommendation_text($recommendation) {
-    switch($recommendation) {
-    case 'red':
-        return 'Before using this plugin, you should very carefully consider its potential problems and should conduct a thorough assessment.';
-    case 'yellow':
-        return 'Before using this plugin, you should carefully consider these findings.';
-    case 'green':
-        return "We didn't find anything worrying in this plugin. It's probably safe.";
-    }
+    return $data;
 }
 
 function get_field_label($field_key, $post_id=null, $options=array()){
