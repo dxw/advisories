@@ -11,12 +11,6 @@ Please use `develop/master` branches
 ## Project management
 - [Trello](https://trello.com/b/Yl4BLYGS/security-dxw-com)
 
-## Unit Tests
-
-Run the tests with `vendor/bin/peridot specs`
-
-The first time you do this you'll need to `composer install` from the root of
-the project.
 
 ## Ghost Inspector tests
 - TBC (Currently undergoing a redesign)
@@ -44,3 +38,11 @@ The site exposes an JSON API of plugin inspections:
   }
 ]
 ```
+### API Unit Tests
+
+The API code is packaged as a plugin.
+
+To run the tests, run `vendor/bin/peridot specs` from the plugin directory.
+
+The first time you do this you'll need to `composer install` from the plugin
+directory.
