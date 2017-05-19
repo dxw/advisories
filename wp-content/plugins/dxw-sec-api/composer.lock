@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab63f12822b5dd99a4df016b95c6376b",
+    "content-hash": "6efb1fc0d8562312194f0c55a2790817",
     "packages": [],
     "packages-dev": [
         {
@@ -84,6 +84,38 @@
                 "testing"
             ],
             "time": "2016-07-02T04:25:33+00:00"
+        },
+        {
+            "name": "dxw/phar-install",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/phar-install.git",
+                "reference": "7cdc3081296a1009393382ccb338461a747e5732"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/phar-install/zipball/7cdc3081296a1009393382ccb338461a747e5732",
+                "reference": "7cdc3081296a1009393382ccb338461a747e5732",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/phar-install"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "http://dxw.com"
+                }
+            ],
+            "homepage": "https://github.com/dxw/phar-install",
+            "time": "2016-02-17T13:55:06+00:00"
         },
         {
             "name": "evenement/evenement",

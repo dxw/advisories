@@ -6,7 +6,7 @@ Author: dxw
 Author URI: https://www.dxw.com/
 */
 
-require_once(__DIR__.'/vendor/autoload.php');
+include(__DIR__.'/vendor.phar');
 
 add_action('rest_api_init', function () {
     $finder = new \DxwSec\API\InspectionsFinder();
