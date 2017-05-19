@@ -7,10 +7,8 @@
         "squizlabs/php_codesniffer": "^2.7",
         "dxw/phar-install": "^1.0"
     },
-    "autoload": {
-      "psr-4": {
-        "DxwSec\\API\\": "lib/"
-      }
+    "require": {
+        "aura/autoload": "^2.0"
     },
     "scripts": {
       "post-update-cmd": "vendor/bin/phar-install"

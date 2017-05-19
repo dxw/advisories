@@ -9,6 +9,10 @@ Author URI: https://www.dxw.com/
 include(__DIR__.'/vendor.phar');
 
 add_action('rest_api_init', function () {
+    $loader = new \Aura\Autoload\Loader;
+    $loader->register();
+    $loader->addPrefix('DxwSec\\API\\', __DIR__.'/lib/');
+
     $finder = new \DxwSec\API\InspectionsFinder();
     $json_finder = new \DxwSec\API\JSONInspectionsFinder($finder);
 
