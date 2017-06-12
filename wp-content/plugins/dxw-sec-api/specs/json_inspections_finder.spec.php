@@ -1,9 +1,9 @@
 <?php
-require_once 'lib/JsonInspectionsFinder.php';
+require_once 'lib/JSONInspectionsFinder.php';
 require_once 'lib/InspectionsFinder.php';
 require_once 'lib/Inspection.php';
 
-describe('\\DxwSec\\API\\JsonInspectionsFinder', function () {
+describe('\\DxwSec\\API\\JSONInspectionsFinder', function () {
     beforeEach(function () {
         $this->fakeInspectionsFinder = function ($result) {
             return \Mockery::mock('\\DxwSec\\API\\InspectionsFinder')
