@@ -45,39 +45,30 @@
       <h3>Findings</h3>
       <p><?php echo get_field('findings') ?></p>
       <?php
-        $failure_criteria = get_field_label('matched_criteria');
+        $recommendation = get_field('recommendation');
+        if($recommendation != 'green') {
+      ?>
+        <h3>Reason for the '<?php echo recommendation_name($recommendation) ?>' result</h3>
+        <p><?php echo get_field_label('recommendation_criterion_' . $recommendation) ?>:</p>
+        <blockquote><p><?php echo get_field('reason') ?></p></blockquote>
 
-        if(is_array($failure_criteria) && count($failure_criteria)) {  ?>
-          <h3>Failure criteria</h3>
-          <?php
-            $recommendation = get_field('recommendation');
-
-            if($recommendation != 'green') {
-              echo '<p>' . get_field_label('recommendation_criterion_' . $recommendation) . ':</p>';
-              echo '<blockquote><p>' . get_field('reason') . '</p></blockquote>';
-            }
-          ?>
+        <?php
+          $failure_criteria = get_field_label('matched_criteria');
+          if(is_array($failure_criteria) && count($failure_criteria)) {
+        ?>
           <p>Read more about our <a href="/about/plugin-inspections/#failure_criteria">failure criteria</a>.</p>
           <table class="failure_criteria table-striped table">
           <tbody>
-            <?php
-              foreach($failure_criteria as $criterion) {
-                ?>
-                <tr>
-                  <td class="span1 bad"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/bad.png" width="22" height="22" alt="Fail"></td>
-                  <td><?php echo $criterion ?></td>
-                </tr>
-                <?php
-                }
-            ?>
+            <?php foreach($failure_criteria as $criterion) { ?>
+              <tr>
+                <td class="span1 bad"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/bad.png" width="22" height="22" alt="Fail"></td>
+                <td><?php echo $criterion ?></td>
+              </tr>
+            <?php } ?>
           </tbody>
-          </table> <?php
-        }
-
-        ?>
-
-
-
+          </table>
+        <?php } ?>
+      <?php } ?>
     </div>
 
     <div class="span4">
