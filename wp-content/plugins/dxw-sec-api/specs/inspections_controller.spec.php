@@ -1,6 +1,6 @@
 <?php
 require 'lib/InspectionsController.php';
-require 'lib/JsonInspectionsFinder.php';
+require 'lib/JSONInspectionsFinder.php';
 
 describe('\\DxwSec\\API\\InspectionsController', function () {
     beforeEach(function () {
