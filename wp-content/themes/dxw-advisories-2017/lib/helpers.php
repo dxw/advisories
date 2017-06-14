@@ -149,25 +149,11 @@ function get_plugin_vulnerabilities($codex_link, $version)
     ));
 }
 
-
-function plugin_vulnerabilities()
+function the_plugin_vulnerabilities()
 {
-    $posts = get_plugin_vulnerabilities(get_field('codex_link'), get_field('version_of_plugin'));
-
-    if (!count($posts)) {
-        ?> <p class="other-versions no_results">None</p> <?php
-
-    return;
-    }
-
-    ?><ul class="vulnerabilities"><?php
-foreach ($posts as $p) {
-    ?>
-    <li><a href="<?php echo get_permalink($p); ?>"><?php echo $p->post_title; ?></a></li>
-    <?php
+    return get_plugin_vulnerabilities(get_field('codex_link'), get_field('version_of_plugin'));
 }
-    ?></ul><?php
-}
+
 function get_cvss_score()
 {
     $exploitability = 20 * get_field('access_vector') * get_field('access_complexity') * get_field('authentication');

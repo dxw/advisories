@@ -16,12 +16,16 @@
                 <?php the_recommendation() ?>
             </section>
 
-            <?php $vulns = get_plugin_vulnerabilities(get_field('codex_link'), get_field('version_of_plugin')); ?>
-            <?php if(count($vulns)): ?>
+            <?php if(count(the_plugin_vulnerabilities())): ?>
             <section class="alert alert-error">
                 <h2>Warning: Version <?php the_field('version_of_plugin'); ?> of this plugin has known vulnerabilities</h2>
                 <p>The version of this plugin that this recommendation was based on is known to be vulnerable to attack:</p>
-                <?php plugin_vulnerabilities(); ?>
+
+                <ul class="vulnerabilities">
+                <?php foreach ($posts as $p) { ?>
+                    <li><a href="<?php echo get_permalink($p); ?>"><?php echo $p->post_title; ?></a></li>
+                <?php } ?>
+                </ul>
             </section>
             <?php endif; ?>
 
