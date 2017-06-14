@@ -13,6 +13,20 @@
   script:
     - vendor/bin/peridot specs
 
+.api_style: &api_style
+  before_script:
+    - cd 'wp-content/plugins/dxw-sec-api'
+    - composer install
+  script:
+    - vendor/bin/phpcs lib specs --standard=PSR2
+
+.theme_style: &theme_style
+  before_script:
+    - cd 'wp-content/themes/dxw-advisories-2017'
+    - composer install
+  script:
+    - vendor/bin/phpcs lib/helpers.php --standard=PSR2 --warning-severity=false
+
 php_70_tests:
   <<: *php70
   <<: *peridot
@@ -21,10 +35,10 @@ php_71_tests:
   <<: *php71
   <<: *peridot
 
-php_style:
-  <<: *php70
-  before_script:
-    - cd 'wp-content/plugins/dxw-sec-api'
-    - composer install
-  script:
-    - vendor/bin/phpcs lib specs --standard=PSR2
+api_style:
+  <<: *php71
+  <<: *api_style
+
+theme_style:
+  <<: *php71
+  <<: *theme_style
