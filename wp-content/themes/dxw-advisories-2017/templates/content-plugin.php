@@ -62,7 +62,7 @@
                             <tbody>
                             <?php foreach($failure_criteria as $criterion) { ?>
                                 <tr>
-                                    <td class="fail"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/bad.png" width="22" height="22" alt="Fail"></td>
+                                    <td class="fail"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/bad.svg" width="22" height="22" alt="Fail"></td>
                                     <td><?php echo $criterion ?></td>
                                 </tr>
                             <?php } ?>
