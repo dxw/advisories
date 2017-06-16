@@ -7,6 +7,7 @@
     "post-update-cmd": "vendor/bin/phar-install"
   },
   "require-dev": {
+    "squizlabs/php_codesniffer": "^2.7",
     "dxw/phar-install": "^1.0"
   }
 }
