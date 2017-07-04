@@ -33,10 +33,9 @@
       <p><a href="" class="btn">More information &amp; pricing</a></p>
     </div>
     <div class="block span3">
-      <h3>Advisories &amp; notices</h3>
+      <h3>Advisories</h3>
       <div>
         <p>We responsibly disclose vulnerabilities that we find, having first worked with the vendor to resolve them. Vulnerabilitity advisories are <a href="advisories">published on this site</a>.</p>
-        <p>We also share information about ongoing attacks on the sites that we host with suitable organisations.</p>
       </div>
       <p><a href="" class="btn">More information</a></p>
     </div>  -->
