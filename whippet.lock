@@ -1,5 +1,5 @@
 {
-    "hash": "c6859e5ce39c18594018bed044c0a448b99647ca",
+    "hash": "057f2b00680cd0766c9bc560217ae55ca6ef6256",
     "plugins": [
         {
             "name": "akismet",
@@ -15,11 +15,6 @@
             "name": "co-authors-plus",
             "src": "git@git.govpress.com:wordpress-plugins/co-authors-plus",
             "revision": "3f253887f3d99012cd6044f7a2daa6e295f3d3f1"
-        },
-        {
-            "name": "new-members-only",
-            "src": "git@git.govpress.com:wordpress-plugins/new-members-only",
-            "revision": "b1541aee71f2b6856d48e8e4d60b7fe72956b6a5"
         },
         {
             "name": "wp-to-twitter",
