@@ -33,6 +33,7 @@ table {
 
   tbody {
     tr {
+      border-top: 2px solid $table-borders;
       border-bottom: 2px solid $table-borders;
     }
   }

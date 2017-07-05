@@ -111,18 +111,6 @@ add_action( 'init', function() {
 	   	  break;
 	  }
 	}, 10, 2 );
-
-	register_post_type( 'notices',
-		array(
-			'labels' => array(
-				'name' => __( 'Security notices' ),
-				'singular_name' => __( 'Security notice' )
-			),
-  		'public' => true,
-      'has_archive' => true,
-      'supports' => array('author', 'revisions', 'title'),
-    )
-	);
 });
 
 function advisory_age($advisory){

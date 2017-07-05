@@ -16,12 +16,16 @@
                 <?php the_recommendation() ?>
             </section>
 
-            <?php $vulns = get_plugin_vulnerabilities(get_field('codex_link'), get_field('version_of_plugin')); ?>
-            <?php if(count($vulns)): ?>
+            <?php if(count(the_plugin_vulnerabilities())): ?>
             <section class="alert alert-error">
                 <h2>Warning: Version <?php the_field('version_of_plugin'); ?> of this plugin has known vulnerabilities</h2>
                 <p>The version of this plugin that this recommendation was based on is known to be vulnerable to attack:</p>
-                <?php plugin_vulnerabilities(); ?>
+
+                <ul class="vulnerabilities">
+                <?php foreach ($posts as $p) { ?>
+                    <li><a href="<?php echo get_permalink($p); ?>"><?php echo $p->post_title; ?></a></li>
+                <?php } ?>
+                </ul>
             </section>
             <?php endif; ?>
 
@@ -39,40 +43,34 @@
             <section class="report">
                 <h2>Findings</h2>
                 <?php echo get_field('findings') ?>
-                <?php
-                    $failure_criteria = get_field_label('matched_criteria');
-                    if (is_array($failure_criteria) && count($failure_criteria)) {
-                ?>
 
-                <h3>Failure criteria</h3>
                 <?php
                     $recommendation = get_field('recommendation');
-                    if ($recommendation != 'green') {
-                        echo '<p>' . get_field_label('recommendation_criterion_' . $recommendation) . ':</p>';
-                        echo get_field('reason');
-                    }
+                    if ($recommendation != 'green') :
                 ?>
-                <p>Read more about our <a href="/about/plugin-inspections/#failure_criteria">failure criteria</a>.</p>
+                    <?php $recommendation_data = recommendation_data($recommendation); ?>
+                    <h3>Reason for the '<?php echo $recommendation_data->name ?>' result</h3>
+                    <p><?php echo get_field_label('recommendation_criterion_' . $recommendation) ?>:</p>
+                    <?php echo get_field('reason') ?>
 
-                <table class="failure-criteria">
-                    <thead>
-                        <tr>
-                            <th class="status">Status</th>
-                            <th>Reasons</th>
-                        </tr>
-                    </thead>
-                  <tbody>
                     <?php
-                        foreach($failure_criteria as $criterion) {
+                        $failure_criteria = get_field_label('matched_criteria');
+                        if(is_array($failure_criteria) && count($failure_criteria)) :
                     ?>
-                    <tr>
-                        <td class="fail"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/bad.svg" width="22" height="22" alt="Fail"></td>
-                        <td><?php echo $criterion ?></td>
-                    </tr>
-                    <?php } ?>
-                  </tbody>
-                </table>
-                <?php } ?>
+                        <h3>Failure criteria</h3>
+                        <table class="failure_criteria">
+                            <tbody>
+                            <?php foreach($failure_criteria as $criterion) { ?>
+                                <tr>
+                                    <td class="fail"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/bad.svg" width="22" height="22" alt="Fail"></td>
+                                    <td><?php echo $criterion ?></td>
+                                </tr>
+                            <?php } ?>
+                            </tbody>
+                        </table>
+                        <p>Read more about our <a href="/about/plugin-inspections/#failure_criteria">failure criteria</a>.</p>
+                    <?php endif ?>
+                <?php endif ?>
             </section>
 
         </article>
