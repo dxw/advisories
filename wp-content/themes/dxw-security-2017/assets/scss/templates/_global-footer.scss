@@ -28,8 +28,7 @@
   
   .global-footer-links {
     @include flexbox;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 
     @include grid-media($grid-mobile) {
       display: inline-block;
