@@ -1,0 +1,90 @@
+// Buttons
+@mixin button-background($background) {
+  background: $background;
+  box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+  &:hover {
+    background: darken($background, 15);
+  }
+  &:active,
+  &:focus {
+    background: darken($background, 20);
+    outline: 2px solid $highlight;
+    box-shadow: 4px 4px 1px rgba(0,0,0,0.2);
+  }
+}
+
+@mixin button-light($text) {
+  background: $lightest;
+  color: $text;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+
+  &:hover,
+  &:focus {
+    background: darken($lightest, 15);
+  }
+  &:active {
+    background: darken($lightest, 25);
+  }
+}
+
+%button {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  @include button-background($brand-secondary);
+  padding: $gutter/2 $gutter $gutter-medium $gutter;
+  font-family: $base-font;
+  @include font-size-map($body-font-size);
+  color: $lightest;
+  cursor: pointer;
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+
+  &:hover, &:focus {
+    color: $lightest;
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+}
+
+.button {
+  @extend %button;
+}
+
+.button-white {
+  @extend %button;
+  @include button-background($lightest);
+  color: $brand-secondary;
+
+  &:hover, &:focus {
+    color: darken($brand-secondary, 15);
+  }
+}
+
+.button-small {
+  @extend %button;
+  padding: 3px $medium-spacing $medium-spacing/2 $medium-spacing;
+  @include font-size-map($small-font-size);
+}
+
+.button-container {
+
+  @media screen and (max-width:$small-screen) {
+    text-align: center;
+  }
+
+  @media screen and (max-width:$smaller-screen) {
+
+    .button,
+    .button-white {
+      display: block;
+    }
+  }
+}

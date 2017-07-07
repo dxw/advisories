@@ -1,0 +1,8 @@
+/node_modules
+/.grunt
+/bower_components
+/.npm-debug.log
+/vendor
+/.sass-cache
+/static/**/*.map
+/static/img/**/*.bak

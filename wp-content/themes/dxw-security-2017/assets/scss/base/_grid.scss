@@ -1,0 +1,26 @@
+/**
+ * Neat grid. Documentation: https://neat.bourbon.io/docs/latest/
+ */
+$neat-grid: (
+  columns: 12,
+  gutter: $gutter,
+);
+
+$grid-mobile: (
+  columns: 2,
+  gutter: $gutter-mobile,
+  media: "screen and (max-width: 768px)",
+);
+
+$max-width: 1100px;   // the maximum width of the container in pixels
+$min-width: 768px;    // the minimum width of the container in pixels, before it switches to a mobile friendly display
+
+.row {
+  @include row;
+  @include grid-container;
+
+  @media screen and (max-width: $small-screen) {
+    width: 100%;
+    min-width: 0;
+  }
+}
