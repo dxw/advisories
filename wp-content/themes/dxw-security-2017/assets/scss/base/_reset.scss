@@ -1,0 +1,49 @@
+// Resets
+
+*,*:after,*:before {
+  @include box-sizing(border-box);
+}
+
+html, body, ul, ol, dl, dt, dd, p, blockquote, figure, figcaption, table, tr, td,
+article, aside, details, figcaption, figure, footer, header, nav, section, summary, details,
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+main, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

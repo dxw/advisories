@@ -1,0 +1,52 @@
+// dxw palette
+$dxw-light-green: #3bc492;
+$dxw-green: #006874;
+$dxw-orange: #fe603a;
+$dxw-yellow: #ffb72c;
+$dxw-red: #9f1f1f;
+$dxw-pink: #b15fa2;
+$dxw-purple: #5b527f;
+$dxw-turquoise: #00a0b0;
+$dxw-blue: #006998; // dark blue
+$dxw-light-blue: #1ca4de;
+
+// dxw security palette
+$dxwsec-purple: #36304b;
+$dxwsec-turquoise: #00a0b0;
+$dxwsec-red: #cc0000;
+$dxwsec-yellow: #fab614;
+$dxwsec-orange: #f26d04;
+$dxwsec-orange-dark: #d34202;
+$dexsec-green: #1d8046;
+
+// greys
+$black: #283133;
+$placeholder-grey: #505456;
+$dark-grey: #4c535a;
+$grey: #95989a;
+$slight-grey: #e0e0e0;
+$medium-grey: #eeeeee;
+$light-grey: #f2f2f2;
+$white: #ffffff;
+
+// Social media
+$twitter: #1da1f2;
+$facebook: #3b5998;
+$linkedin: #0077b5;
+$google: #dd4b39;
+$github: #4078c0;
+
+// Theme colours
+$brand-primary: $dxwsec-turquoise;
+$brand-secondary: $dxwsec-purple;
+$accent-colour: $dxw-blue;
+
+$lightest: $white;
+$darkest: $black;
+
+// Errors and notifications
+$highlight: $dxwsec-yellow;
+$error: $dxwsec-red;
+$success: $dxw-green;
+$info: $dxw-blue;
+$alert: $dxwsec-orange-dark;

@@ -1,0 +1,115 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin hide {
+  position: absolute;
+  left: -9999em;
+}
+
+@mixin box-sizing($type) {
+  // http://www.w3.org/TR/css3-ui/#box-sizing
+  // $type can be one of: content-box | padding-box | border-box | inherit
+  -webkit-box-sizing: $type; // Chrome 4.0 to 9.0, Safari 3.1 to 5.0, Mobile Safari 3.2 to 4.3, Android Browser 2.1 to 3.0
+     -moz-box-sizing: $type; // Firefox 2.0 to 28.0, Firefox for Android 26.0 onwards
+          box-sizing: $type;
+}
+
+// Triangle arrow
+@mixin arrow($width: 10px, $direction: up, $vertical: 0, $horizontal: 50%, $color: red) {
+
+  width: $width;
+  height: $width;
+  content: '';
+  position: absolute;
+
+  // Right
+  @if $direction == right {
+    top: $vertical;
+    right: $horizontal;
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+  }
+
+  // Left
+  @if $direction == left {
+    top: $vertical;
+    left: $horizontal;
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+  }
+
+  // Up
+  @if $direction == up {
+    top: $vertical;
+    left: $horizontal;
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-bottom: $width solid $color;
+  }
+
+  // Down
+  @if $direction == down {
+    bottom: $vertical;
+    left: $horizontal;
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+  }
+
+}
+
+// Linear gradient
+@mixin linearGradient($top, $bottom){
+  background: $top; /* Old browsers */
+  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+}
+
+// Flexbox
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+@mixin row {
+  overflow:  hidden;
+  max-width: $max-width;
+  min-width: $min-width;
+  margin:    0 auto;
+
+  &:after {
+    content: "";
+    display: table;
+    clear:   both;
+  }
+}
