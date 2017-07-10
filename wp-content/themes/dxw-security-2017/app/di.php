@@ -16,13 +16,15 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Scripts::class, new \Dxw\DxwS
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Media::class, new \Dxw\DxwSecurity2017\Theme\Media());
-$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Menus::class, new \Dxw\DxwSecurity2017\Theme\Menus());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Menus::class, new \Dxw\DxwSecurity2017\Theme\Menus(
+    $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)));
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Widgets::class, new \Dxw\DxwSecurity2017\Theme\Widgets());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Helpers::class, new \Dxw\DxwSecurity2017\Theme\Helpers());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\TitleTag::class, new \Dxw\DxwSecurity2017\Theme\TitleTag());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Pagination::class, new \Dxw\DxwSecurity2017\Theme\Pagination(
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\ThemeSettings::class, new \Dxw\DxwSecurity2017\Theme\ThemeSettings());
 
 // Post types and additional fields
 $registrar->addInstance(\Dxw\DxwSecurity2017\Posts\PostTypes::class, new \Dxw\DxwSecurity2017\Posts\PostTypes());
