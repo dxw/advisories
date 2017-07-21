@@ -1,0 +1,8 @@
+.page-section {
+  padding: $gutter*2 0;
+
+  @media screen and (max-width:$small-screen) {
+    padding-top: $gutter-mobile*2;
+    padding-bottom: $gutter-mobile*2;
+  }
+}

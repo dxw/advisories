@@ -1,6 +1,6 @@
 <div class="search-form<?php if(is_search()) { echo ' for-results'; } ?>">
     <form role="search" method="get" id="searchform" class="form-search" action="<?php echo home_url('/') ?>">
-        <label for="s" class="block-label">Search advisories &amp; plugins</label>
+        <label for="s" class="block-label">Search advisories &amp; plugins &amp;</label>
         <input type="search" value="<?php echo get_search_query() ?>" name="s" id="s-<?php echo esc_html($type) ?>" class="search-query">
         <button value="Search <?php echo esc_html($type) ?>" class="button">
         <!--[if gt IE 9]><!-->
