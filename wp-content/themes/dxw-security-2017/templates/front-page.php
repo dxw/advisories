@@ -38,7 +38,7 @@
                     foreach($custom_posts as $post) : setup_postdata($post); ?>
                     <li>
                         <div class="short-review">
-                            <?php //the_short_recommendation(); ?><a href="<?php the_permalink();?>"><?php the_title(); ?> (<?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?>)</a>
+                            <a href="<?php the_permalink();?>"><?php the_title(); ?> (<?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?>)</a>
                         </div>
                     </li>
                 <?php endforeach; ?>

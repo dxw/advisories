@@ -3,7 +3,7 @@
   padding-top: $gutter*2;
   padding-bottom: $gutter*2;
 
-  @media screen and (max-width:$small-screen) {
+  @include grid-media($grid-mobile) {
     padding-top: $gutter-mobile*2;
     padding-bottom: $gutter-mobile*2;
   }
@@ -12,22 +12,46 @@
     @include grid-column(4);
     margin-top: 9px;
     color: $lightest;
+
+    @include grid-media($grid-mobile) {
+      @include grid-column(2);
+      margin-top: 0;
+      margin-bottom: $gutter;
+    }
   }
 
   .form-field {
     @include grid-column(8);
 
+    @include grid-media($grid-mobile) {
+      @include grid-column(2);
+    }
+
     input[type="search"] {
       width: 75%;
       float: left;
+
+      @media screen and (max-width:$tiny-screen) {
+        width: 70%;
+      }
     }
 
     button {
       width: 25%;
       @include button-light($medium-grey, $brand-secondary);
-      padding-left: $gutter*3;
-      padding-right: $gutter*3;
+      padding-left: $gutter;
+      padding-right: $gutter;
       float: right;
+
+      @media screen and (max-width:$small-screen) {
+        padding-bottom: 14px;
+      }
+
+      @media screen and (max-width:$tiny-screen) {
+        width: 30%;
+        padding-left: $gutter-mobile;
+        padding-right: $gutter-mobile;
+      }
     }
   }
 }

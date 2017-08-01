@@ -15,6 +15,15 @@
     display: flex;
     @include grid-column(6);
 
+    @include grid-media($grid-mobile) {
+      @include grid-column(2);
+      display: block;
+
+      &:first-of-type {
+        margin-bottom: $gutter-mobile;
+      }
+    }
+
     a {
       display: block;
       padding: $gutter $gutter $gutter*2 $gutter;
@@ -50,5 +59,13 @@
 
   .homepage-feed-container {
     @include grid-column(6);
+
+    @include grid-media($grid-mobile) {
+      @include grid-column(2);
+
+      &:first-of-type {
+        margin-bottom: $gutter-mobile*2;
+      }
+    }
   }
 }
