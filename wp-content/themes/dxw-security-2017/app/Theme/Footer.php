@@ -2,7 +2,7 @@
 
 namespace Dxw\DxwSecurity2017\Theme;
 
-class Helpers implements \Dxw\Iguana\Registerable
+class Footer implements \Dxw\Iguana\Registerable
 {
     public function register()
     {
