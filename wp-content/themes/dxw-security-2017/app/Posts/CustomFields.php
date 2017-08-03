@@ -27,7 +27,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'placeholder' => '',
                     'maxlength' => '',
                     'rows' => '',
-                    'new_lines' => '',
+                    'new_lines' => 'wpautop',
                 ),
             ),
             'location' => array(
