@@ -1,0 +1,55 @@
+.recommendations {
+
+  article {
+    padding: $gutter 0;
+    border-bottom: 1px solid $medium-grey;
+
+    &:first-of-type {
+      border-top: 1px solid $medium-grey;
+    }
+
+    h3 {
+      line-height: 1.7;
+
+      &:before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-right: $gutter;
+      }
+
+      &.red {
+        color: $dxwsec-red;
+
+        &:before {
+          background: url('#{$imagePath}/icon-warning.svg') no-repeat;
+        }
+      }
+
+      &.orange {
+        color: $dxwsec-orange-dark;
+
+        &:before {
+          background: url('#{$imagePath}/icon-exclamation.svg') no-repeat;
+        }
+      }
+
+      &.green {
+        color: $dxwsec-green;
+
+        &:before {
+          background: url('#{$imagePath}/icon-check.svg') no-repeat;
+        }
+      }
+    }
+
+    p, ol, ul {
+      margin-bottom: $gutter;
+    }
+
+    .rich-text {
+      padding-left: 60px;
+    }
+  }
+}
