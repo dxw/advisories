@@ -33,7 +33,7 @@ class PostTypes implements \Dxw\Iguana\Registerable
 
     public function manageEditPluginsColumns()
     {
-        add_filter('manage_edit-plugins_columns', function($columns) {
+        add_filter('manage_edit-plugins_columns', function ($columns) {
 
             $new_columns = [
                 'cb' => $columns['cb'],
@@ -50,12 +50,12 @@ class PostTypes implements \Dxw\Iguana\Registerable
 
     public function managePluginsColumn()
     {
-        add_action('manage_plugins_posts_custom_column', function($column, $post_id) {
-           switch($column) {
+        add_action('manage_plugins_posts_custom_column', function ($column, $post_id) {
+           switch ($column) {
             case 'result': echo $this->theShortRecommendation($post_id); break;
             case 'version': echo str_replace(',', ', ', get_field('version_of_plugin', $post_id)); break;
            }
-        }, 10, 2 );
+        }, 10, 2);
     }
 
     public function addAdvisoriesPostType()
@@ -76,9 +76,9 @@ class PostTypes implements \Dxw\Iguana\Registerable
 
     public function advisoryFirstPublishDate()
     {
-        add_filter('wp_insert_post', function($post_id, $post, $update) {
+        add_filter('wp_insert_post', function ($post_id, $post, $update) {
             // Save the date of first publication for the advisory ID
-            if($post->post_type == 'advisories' && !$update) {
+            if ($post->post_type == 'advisories' && !$update) {
                 add_post_meta($post_id, '_first_published', $post->post_date);
             }
         }, 3, 10);
@@ -86,7 +86,7 @@ class PostTypes implements \Dxw\Iguana\Registerable
 
     public function manageEditAdvisoriesColumns()
     {
-        add_filter('manage_edit-advisories_columns', function($columns) {
+        add_filter('manage_edit-advisories_columns', function ($columns) {
 
             $new_columns = [
                 'cb' => $columns['cb'],
@@ -104,10 +104,10 @@ class PostTypes implements \Dxw\Iguana\Registerable
 
     public function manageAdvisoriesColumn()
     {
-        add_action('manage_advisories_posts_custom_column', function($column, $post_id) {
+        add_action('manage_advisories_posts_custom_column', function ($column, $post_id) {
             $advisory = get_post($post_id);
 
-            switch($column) {
+            switch ($column) {
             case 'workflow': echo ucfirst(get_field('workflow_state', $post_id)); break;
             case 'age':
                 echo $this->advisoryAge($advisory) . ' days';
@@ -117,38 +117,33 @@ class PostTypes implements \Dxw\Iguana\Registerable
                 $state = get_field('workflow_state', $post_id);
                 $age = $this->advisoryAge($advisory);
 
-            if($advisory->post_status == 'draft') {
+            if ($advisory->post_status == 'draft') {
                 echo "Finish the advisory and publish privately";
-            }
-            elseif($advisory->post_status == 'publish') {
+            } elseif ($advisory->post_status == 'publish') {
                 echo "No further action";
-            }
-            else {
-                if($state == 'identified') {
+            } else {
+                if ($state == 'identified') {
                     echo "Report to vendor";
-                }
-                else if($state == 'reported') {
-                    if($age <= 14) {
+                } elseif ($state == 'reported') {
+                    if ($age <= 14) {
                         echo "Work with vendor to fix the problem";
-                    }
-                    else if($age > 14 && $age <= 60) {
+                    } elseif ($age > 14 && $age <= 60) {
                         echo "Publish on agreed date, or on a reasonable date if no agreement";
-                    }
-                    else {
+                    } else {
                         echo "Publish immediately";
                     }
-                }
-                else if($state == 'fixed') {
+                } elseif ($state == 'fixed') {
                     echo "Publish";
                 }
             }
 
             break;
             }
-        }, 10, 2 );
+        }, 10, 2);
     }
 
-    public function advisoryAge($advisory){
+    public function advisoryAge($advisory)
+    {
         return round((time() - strtotime($advisory->post_date)) / 86400);
     }
 }

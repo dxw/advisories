@@ -27,7 +27,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'placeholder' => '',
                     'maxlength' => '',
                     'rows' => '',
-                    'new_lines' => '',
+                    'new_lines' => 'wpautop',
                 ),
             ),
             'location' => array(
@@ -49,11 +49,11 @@ class CustomFields implements \Dxw\Iguana\Registerable
             'description' => '',
         ));
 
-        acf_add_local_field_group(array (
+        acf_add_local_field_group(array(
             'key' => 'group_5971ca59db830',
             'title' => 'Homepage services',
-            'fields' => array (
-                array (
+            'fields' => array(
+                array(
                     'key' => 'field_5971ccdec65d9',
                     'label' => 'Heading',
                     'name' => 'heading',
@@ -61,7 +61,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -72,7 +72,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'append' => '',
                     'maxlength' => '',
                 ),
-                array (
+                array(
                     'key' => 'field_5971ca9692ec2',
                     'label' => 'Services',
                     'name' => 'services',
@@ -80,7 +80,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -90,8 +90,8 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'max' => 2,
                     'layout' => 'row',
                     'button_label' => 'Add Service',
-                    'sub_fields' => array (
-                        array (
+                    'sub_fields' => array(
+                        array(
                             'key' => 'field_5971cb7c92ec3',
                             'label' => 'Title',
                             'name' => 'title',
@@ -99,7 +99,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -110,7 +110,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'append' => '',
                             'maxlength' => '',
                         ),
-                        array (
+                        array(
                             'key' => 'field_5971f03903de9',
                             'label' => 'Link',
                             'name' => 'link',
@@ -118,20 +118,20 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
                             ),
-                            'post_type' => array (
+                            'post_type' => array(
                             ),
-                            'taxonomy' => array (
+                            'taxonomy' => array(
                             ),
                             'allow_null' => 0,
                             'allow_archives' => 1,
                             'multiple' => 0,
                         ),
-                        array (
+                        array(
                             'key' => 'field_5971cc3292ec5',
                             'label' => 'Icon name',
                             'name' => 'icon_name',
@@ -139,7 +139,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '\'Plug\' or \'info\'',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -150,7 +150,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'append' => '',
                             'maxlength' => '',
                         ),
-                        array (
+                        array(
                             'key' => 'field_5971cc3e92ec6',
                             'label' => 'Description',
                             'name' => 'description',
@@ -158,7 +158,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -172,9 +172,9 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     ),
                 ),
             ),
-            'location' => array (
-                array (
-                    array (
+            'location' => array(
+                array(
+                    array(
                         'param' => 'page_type',
                         'operator' => '==',
                         'value' => 'front_page',
@@ -186,7 +186,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
             'style' => 'default',
             'label_placement' => 'top',
             'instruction_placement' => 'label',
-            'hide_on_screen' => array (
+            'hide_on_screen' => array(
                 0 => 'the_content',
                 1 => 'excerpt',
                 2 => 'discussion',

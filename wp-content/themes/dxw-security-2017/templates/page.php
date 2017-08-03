@@ -1,13 +1,12 @@
-<article>
-    <header>
-        <h1><?php the_title(); ?></h1>
-    </header>
+<?php get_template_part('partials/page-header'); ?>
 
-    <div class="entry content rich-text">
-        <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('large'); ?>
-        <?php endif; ?>
-        <?php the_content(); ?>
+<?php get_template_part('partials/page-introduction'); ?>
+
+<div class="row">
+    <div class="page-container">
+        <article class="rich-text">
+            <?php the_post();
+            the_content(); ?>
+        </article>
     </div>
-
-</article>
+</div>
