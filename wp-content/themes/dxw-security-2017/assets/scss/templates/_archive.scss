@@ -1,0 +1,15 @@
+ul.feed-archive {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: $gutter;
+    padding-bottom: $gutter;
+    border-bottom: 1px solid $medium-grey;
+
+    a {
+      border-bottom: none;
+      font-family: $header-font-family;
+    }
+  }
+}

@@ -13,17 +13,18 @@
   }
 }
 
-@mixin button-light($text) {
-  background: $lightest;
+@mixin button-light($background, $text) {
+  background: $background;
   color: $text;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
 
   &:hover,
   &:focus {
-    background: darken($lightest, 15);
+    background: darken($background, 10);
+    color: $text;
   }
   &:active {
-    background: darken($lightest, 25);
+    background: darken($background, 20);
   }
 }
 
@@ -31,7 +32,7 @@
   display: inline-block;
   text-decoration: none;
   border: none;
-  @include button-background($brand-secondary);
+  @include button-background($brand-primary);
   padding: $gutter/2 $gutter $gutter-medium $gutter;
   font-family: $base-font;
   @include font-size-map($body-font-size);
