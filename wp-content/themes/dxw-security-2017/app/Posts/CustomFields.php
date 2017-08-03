@@ -6,11 +6,12 @@ class CustomFields implements \Dxw\Iguana\Registerable
 {
     public function register()
     {
+        $this->addPageTemplatesFields();
         $this->addHomePageFields();
         $this->addPostFields();
     }
 
-    public function addHomePageFields()
+    public function addPageTemplatesFields()
     {
         acf_add_local_field_group(array(
             'key' => 'group_59427d8ae4e29',
@@ -55,6 +56,143 @@ class CustomFields implements \Dxw\Iguana\Registerable
             'description' => '',
         ));
 
+        acf_add_local_field_group(array (
+            'key' => 'group_598326606c784',
+            'title' => 'Recommendations',
+            'fields' => array (
+                array (
+                    'key' => 'field_59832752ae698',
+                    'label' => 'Recommendations heading',
+                    'name' => 'recommendations_heading',
+                    'type' => 'text',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array (
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'default_value' => '',
+                    'placeholder' => '',
+                    'prepend' => '',
+                    'append' => '',
+                    'maxlength' => '',
+                ),
+                array (
+                    'key' => 'field_598327e2ae699',
+                    'label' => 'Recommendations',
+                    'name' => 'recommendations',
+                    'type' => 'repeater',
+                    'instructions' => '',
+                    'required' => 0,
+                    'conditional_logic' => 0,
+                    'wrapper' => array (
+                        'width' => '',
+                        'class' => '',
+                        'id' => '',
+                    ),
+                    'collapsed' => '',
+                    'min' => 0,
+                    'max' => 3,
+                    'layout' => 'row',
+                    'button_label' => 'Add Recommendation',
+                    'sub_fields' => array (
+                        array (
+                            'key' => 'field_59832881ae69a',
+                            'label' => 'Security warning',
+                            'name' => 'security_warning',
+                            'type' => 'radio',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array (
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'choices' => array (
+                                'red' => 'Potentially unsafe',
+                                'orange' => 'Use with caution',
+                                'green' => 'No issues found',
+                            ),
+                            'allow_null' => 0,
+                            'other_choice' => 0,
+                            'save_other_choice' => 0,
+                            'default_value' => '',
+                            'layout' => 'vertical',
+                            'return_format' => 'value',
+                        ),
+                        array (
+                            'key' => 'field_598329cfae69b',
+                            'label' => 'Subtitle',
+                            'name' => 'subtitle',
+                            'type' => 'textarea',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array (
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'placeholder' => '',
+                            'maxlength' => '',
+                            'rows' => '',
+                            'new_lines' => '',
+                        ),
+                        array (
+                            'key' => 'field_59832a89ae69c',
+                            'label' => 'Description',
+                            'name' => 'description',
+                            'type' => 'wysiwyg',
+                            'instructions' => '',
+                            'required' => 0,
+                            'conditional_logic' => 0,
+                            'wrapper' => array (
+                                'width' => '',
+                                'class' => '',
+                                'id' => '',
+                            ),
+                            'default_value' => '',
+                            'tabs' => 'visual',
+                            'toolbar' => 'full',
+                            'media_upload' => 1,
+                            'delay' => 0,
+                        ),
+                    ),
+                ),
+            ),
+            'location' => array (
+                array (
+                    array (
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-reviews.php',
+                    ),
+                ),
+                array (
+                    array (
+                        'param' => 'page_template',
+                        'operator' => '==',
+                        'value' => 'page-inspections.php',
+                    ),
+                ),
+            ),
+            'menu_order' => 0,
+            'position' => 'normal',
+            'style' => 'default',
+            'label_placement' => 'top',
+            'instruction_placement' => 'label',
+            'hide_on_screen' => '',
+            'active' => 1,
+            'description' => '',
+        ));
+    }
+
+    public function addHomePageFields()
+    {
         acf_add_local_field_group(array(
             'key' => 'group_5971ca59db830',
             'title' => 'Homepage services',
