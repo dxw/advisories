@@ -15,6 +15,9 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Lib\Whippet\TemplateTags::class, ne
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Scripts::class, new \Dxw\DxwSecurity2017\Theme\Scripts(
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Helpers::class, new \Dxw\DxwSecurity2017\Theme\Helpers(
+    $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
+));
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Media::class, new \Dxw\DxwSecurity2017\Theme\Media());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Menus::class, new \Dxw\DxwSecurity2017\Theme\Menus(
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)));

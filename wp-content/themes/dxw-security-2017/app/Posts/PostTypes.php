@@ -52,7 +52,7 @@ class PostTypes implements \Dxw\Iguana\Registerable
     {
         add_action('manage_plugins_posts_custom_column', function ($column, $post_id) {
            switch ($column) {
-            case 'result': echo $this->theShortRecommendation($post_id); break;
+            case 'result': echo h()->the_short_recommendation($post_id); break;
             case 'version': echo str_replace(',', ', ', get_field('version_of_plugin', $post_id)); break;
            }
         }, 10, 2);
