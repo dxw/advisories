@@ -30,7 +30,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Helpers::class, function () {
             expect($result)->to->be->equal(implode("\n", [
                 '        <script type="text/javascript">',
                 '            var _gaq = _gaq || [];',
-                "            var TRACKING_CODE = ''; // Put the Google Analytics tracking code here",
+                "            var TRACKING_CODE = 'UA-29555961-5'; // Put the Google Analytics tracking code here",
                 "            _gaq.push(['_setAccount', TRACKING_CODE]);",
                 "            _gaq.push(['_trackPageview']);",
                 '            if (!TRACKING_CODE.length) {',
