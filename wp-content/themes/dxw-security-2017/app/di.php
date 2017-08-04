@@ -28,6 +28,7 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Pagination::class, new \Dxw\D
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\ThemeSettings::class, new \Dxw\DxwSecurity2017\Theme\ThemeSettings());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\AjaxHandlers::class, new \Dxw\DxwSecurity2017\Theme\AjaxHandlers());
 
 // Post types and additional fields
 $registrar->addInstance(\Dxw\DxwSecurity2017\Posts\PostTypes::class, new \Dxw\DxwSecurity2017\Posts\PostTypes());
