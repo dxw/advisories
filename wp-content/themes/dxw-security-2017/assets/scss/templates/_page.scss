@@ -16,15 +16,11 @@
     padding-bottom: $gutter-mobile*2;
   }
 
-  .rich-text {
+  .page-content {
     width: 80%;
 
     @include grid-media($grid-mobile) {
       width: 100%;
-    }
-
-    p:last-of-type {
-      margin-bottom: 0;
     }
   }
 }

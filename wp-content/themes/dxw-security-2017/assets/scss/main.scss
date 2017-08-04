@@ -13,6 +13,7 @@
 @import "base/typography";
 @import "base/forms";
 @import "base/buttons";
+@import "base/tables";
 
 @import "templates/global-header";
 @import "templates/global-footer";
@@ -25,3 +26,5 @@
 @import "templates/search-form";
 @import "templates/page-header-panel";
 @import "templates/page-introduction";
+@import "templates/recommendations";
+@import "templates/failure-criteria";

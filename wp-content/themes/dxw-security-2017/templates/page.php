@@ -4,7 +4,7 @@
 
 <div class="row">
     <div class="page-container">
-        <article class="rich-text">
+        <article class="page-content rich-text">
             <?php the_post();
             the_content(); ?>
         </article>

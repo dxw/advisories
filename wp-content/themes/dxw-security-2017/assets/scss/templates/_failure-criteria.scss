@@ -1,0 +1,7 @@
+.failure-criteria {
+  margin-top: $gutter*2;
+
+  @include grid-media($grid-mobile) {
+    margin-top: $gutter-mobile*2;
+  }
+}
