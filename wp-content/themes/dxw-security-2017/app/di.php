@@ -28,6 +28,11 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Pagination::class, new \Dxw\D
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\ThemeSettings::class, new \Dxw\DxwSecurity2017\Theme\ThemeSettings());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\AjaxHandlers::class, new \Dxw\DxwSecurity2017\Theme\AjaxHandlers());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Feeds::class, new \Dxw\DxwSecurity2017\Theme\Feeds());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\PostClasses::class, new \Dxw\DxwSecurity2017\Theme\PostClasses());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\WpHead::class, new \Dxw\DxwSecurity2017\Theme\WpHead());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\WordPressToTwitter::class, new \Dxw\DxwSecurity2017\Theme\WordPressToTwitter());
 
 // Post types and additional fields
 $registrar->addInstance(\Dxw\DxwSecurity2017\Posts\PostTypes::class, new \Dxw\DxwSecurity2017\Posts\PostTypes());

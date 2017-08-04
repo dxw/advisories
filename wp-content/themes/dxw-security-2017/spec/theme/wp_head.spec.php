@@ -31,10 +31,13 @@ describe(\Dxw\DxwSecurity2017\Theme\WpHead::class, function () {
                 ['wp_head', 'rsd_link'],
                 ['wp_head', 'wp_generator'],
                 ['wp_head', 'wlwmanifest_link'],
+                ['wp_head', 'wp_resource_hints', 2],
                 ['wp_head', 'feed_links_extra', 3],
                 ['wp_head', 'start_post_rel_link', 10, 0],
                 ['wp_head', 'parent_post_rel_link', 10, 0],
                 ['wp_head', 'adjacent_posts_rel_link', 10, 0],
+                ['wp_head', 'rest_output_link_wp_head', 10],
+                ['wp_head', 'wp_oembed_add_discovery_links', 10],
             ];
 
             foreach ($actions as $args) {
