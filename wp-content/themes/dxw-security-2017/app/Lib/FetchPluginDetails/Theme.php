@@ -1,9 +1,16 @@
 <?php
 
-namespace Dxw\DxwSecurity2017\Theme;
+namespace Dxw\DxwSecurity2017\Lib\FetchPluginDetails;
 
-class FetchPluginDetails implements \Dxw\Iguana\Registerable
+class Theme implements \Dxw\Iguana\Registerable
 {
+    private $plugin;
+
+    public function __construct(Plugin $plugin)
+    {
+        $this->plugin = $plugin;
+    }
+
     public function register()
     {
         add_action('wp_ajax_fetch_plugin_details', [$this, 'wp_ajax_fetch_plugin_details']);
@@ -16,10 +23,10 @@ class FetchPluginDetails implements \Dxw\Iguana\Registerable
     public function wp_ajax_fetch_plugin_details()
     {
         check_ajax_referer('fetch_plugin_details');
-        $data = \Dxw\DxwSecurity2017\Lib\FetchPluginDetails::get_details($_POST['plugin-slug']);
+        $data = $this->plugin->getDetails($_POST['plugin-slug']);
 
         echo(json_encode($data)."\n");
-        die();
+        wp_die();
     }
 
     public function admin_enqueue_scripts()

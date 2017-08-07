@@ -1,0 +1,100 @@
+<?php
+
+describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () {
+    beforeEach(function () {
+        \WP_Mock::setUp();
+        $this->getter = Mockery::mock(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Getter::class);
+        $this->plugin = new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin($this->getter);
+    });
+
+    afterEach(function () {
+        \WP_Mock::tearDown();
+    });
+
+    describe('->getDetails()', function () {
+        context('null response', function () {
+            it('echoes ok=>false then dies', function () {
+                $slug = 'foo';
+                $this->getter->shouldReceive('getPluginInfo')
+                    ->once()
+                    ->with($slug)
+                    ->andReturn(null);
+                WP_Mock::wpFunction('wp_die', [
+                    'times' => 1,
+                ]);
+                ob_start();
+                $this->plugin->getDetails($slug);
+                $result = ob_get_clean();
+                expect($result)->to->equal("{\"ok\":false}\n");
+            });
+        });
+
+        context('valid response', function () {
+            context('description has multiple paras', function () {
+                it('gets first para of description and returns data', function () {
+                    $slug = 'foo';
+                    $response = new stdClass();
+                    $response->name = 'Plugin name';
+                    $response->version = '1.1.1';
+                    $response->contributors = [
+                        'author1' => 'about1',
+                        'author2' => 'about2'
+                    ];
+                    $response->sections = [
+                        'description' => '<h1>A heading</h1><p>First para</p><p>Second para</p>'
+                    ];
+                    $this->getter->shouldReceive('getPluginInfo')
+                        ->once()
+                        ->with($slug)
+                        ->andReturn($response);
+                    WP_Mock::wpFunction('wp_die', [
+                        'times' => 0,
+                    ]);
+                    $result = $this->plugin->getDetails($slug);
+                    expect($result)->to->equal([
+                        'description' => '<p>First para</p>',
+                        'ok' => true,
+                        'slug' => $slug,
+                        'name' => 'Plugin name',
+                        'version' => '1.1.1',
+                        'author' => 'author1, author2',
+                        'link' => 'http://wordpress.org/plugins/foo/',
+                    ]);
+                });
+            });
+            context('description has no paras', function () {
+                it('returns data with empty description', function () {
+                    $slug = 'foo';
+                    $response = new stdClass();
+                    $response->name = 'Plugin name';
+                    $response->version = '1.1.1';
+                    $response->contributors = [
+                        'author1' => 'about1',
+                        'author2' => 'about2'
+                    ];
+                    $response->sections = [
+                        'description' => '<h1>A heading</h1>'
+                    ];
+                    $this->getter->shouldReceive('getPluginInfo')
+                        ->once()
+                        ->with($slug)
+                        ->andReturn($response);
+                    WP_Mock::wpFunction('wp_die', [
+                        'times' => 0,
+                    ]);
+                    $result = $this->plugin->getDetails($slug);
+                    expect($result)->to->equal([
+                        'description' => '',
+                        'ok' => true,
+                        'slug' => $slug,
+                        'name' => 'Plugin name',
+                        'version' => '1.1.1',
+                        'author' => 'author1, author2',
+                        'link' => 'http://wordpress.org/plugins/foo/',
+                    ]);
+                });
+            });
+        });
+    });
+
+});
