@@ -37,6 +37,7 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\WordPressToTwitter::class, ne
 // Post types and additional fields
 $registrar->addInstance(\Dxw\DxwSecurity2017\Posts\PostTypes::class, new \Dxw\DxwSecurity2017\Posts\PostTypes());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Posts\CustomFields::class, new \Dxw\DxwSecurity2017\Posts\CustomFields());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Posts\OptionsPage::class, new \Dxw\DxwSecurity2017\Posts\OptionsPage());
 
 // Plugin dependency check - pass in any required plugins
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Plugins::class, new \Dxw\DxwSecurity2017\Theme\Plugins([

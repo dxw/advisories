@@ -15,3 +15,5 @@
 <div class="pager">
     <?php get_template_part('partials/pager') ?>
 </div>
+
+<?php get_template_part('partials/options-banner'); ?>

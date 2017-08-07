@@ -18,3 +18,5 @@
         </footer>
     </article>
 <?php endwhile ?>
+
+<?php get_template_part('partials/options-banner'); ?>
