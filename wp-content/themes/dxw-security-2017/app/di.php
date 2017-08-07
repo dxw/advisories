@@ -33,6 +33,7 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Feeds::class, new \Dxw\DxwSec
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\PostClasses::class, new \Dxw\DxwSecurity2017\Theme\PostClasses());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\WpHead::class, new \Dxw\DxwSecurity2017\Theme\WpHead());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\WordPressToTwitter::class, new \Dxw\DxwSecurity2017\Theme\WordPressToTwitter());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\OptionsPage::class, new \Dxw\DxwSecurity2017\Theme\OptionsPage());
 
 // Post types and additional fields
 $registrar->addInstance(\Dxw\DxwSecurity2017\Posts\PostTypes::class, new \Dxw\DxwSecurity2017\Posts\PostTypes());

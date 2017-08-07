@@ -6,3 +6,7 @@ while (have_posts()) {
 
     comments_template('/comments.php');
 }
+
+?>
+
+<?php get_template_part('partials/options-banner'); ?>
