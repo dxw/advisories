@@ -1,6 +1,6 @@
 <?php
 
-namespace Dxw\DxwSecurity2017\Posts;
+namespace Dxw\DxwSecurity2017\Theme;
 
 class OptionsPage implements \Dxw\Iguana\Registerable
 {
