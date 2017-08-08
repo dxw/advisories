@@ -39,6 +39,8 @@
                     <li>
                         <div class="short-review">
                             <a href="<?php the_permalink();?>"><?php the_title(); ?> (<?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?>)</a>
+                            <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
+                            <?php h()->the_short_recommendation(); ?>
                         </div>
                     </li>
                 <?php endforeach; ?>
