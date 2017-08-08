@@ -54,8 +54,13 @@ class Helpers implements \Dxw\Iguana\Registerable
     public function the_short_recommendation($post_id = 0)
     {
         $recommendation = $this->recommendation_data(get_field('recommendation', $post_id));
+<<<<<<< HEAD
         ?>
         <span class="<?php echo $recommendation->slug ?> short"><?php echo $recommendation->name ?></span>
+=======
+    ?>
+        <p class="<?php echo $recommendation->slug ?> short"><?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?> - <span class="recommendation"><?php echo $recommendation->name ?></span></p>
+>>>>>>> (feature) card 48, styled plugin reviews feed on homepage
     <?php
 
     }

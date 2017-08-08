@@ -1,0 +1,65 @@
+.short-review {
+
+  a {
+    display: block;
+  }
+
+  time.published {
+    @extend small;
+    color: $dark-grey;
+    display: block;
+    margin: $medium-spacing/2 0;
+  }
+
+  p {
+    font-family: $header-font-family;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin-top: 4px;
+      margin-right: $medium-spacing;
+
+      @include grid-media($grid-mobile) {
+        width: 18px;
+        height: 18px;
+        margin-right: $medium-spacing/2;
+      }
+    }
+
+    &.unsafe {
+
+      &:before {
+        background: url('#{$imagePath}/icon-warning.svg') no-repeat;
+      }
+
+      .recommendation {
+        color: $dxwsec-red;
+      }
+    }
+
+    &.caution {
+
+      &:before {
+        background: url('#{$imagePath}/icon-exclamation.svg') no-repeat;
+      }
+
+      .recommendation {
+        color: $dxwsec-orange-dark;
+      }
+    }
+
+    &.good {
+
+      &:before {
+        background: url('#{$imagePath}/icon-check.svg') no-repeat;
+      }
+
+      .recommendation {
+        color: $dxwsec-green;
+      }
+    }
+  }
+}

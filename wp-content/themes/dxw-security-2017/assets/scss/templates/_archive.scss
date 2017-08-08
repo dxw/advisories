@@ -3,9 +3,14 @@ ul.feed-archive {
 
   li {
     list-style: none;
-    margin-bottom: $gutter;
-    padding-bottom: $gutter;
+    margin-bottom: $gutter-medium*2;
+    padding-bottom: $gutter-medium*2;
     border-bottom: 1px solid $medium-grey;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-medium;
+      padding-bottom: $gutter-medium;
+    }
 
     a {
       border-bottom: none;
