@@ -63,7 +63,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                         ->andReturn($responseContent);
                     $result = $this->plugin->getDetails($slug);
                     expect($result)->to->equal([
-                        'description' => '<p>First para</p>',
+                        'description' => 'First para',
                         'ok' => true,
                         'slug' => $slug,
                         'name' => 'Plugin name',

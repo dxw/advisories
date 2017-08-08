@@ -26,7 +26,7 @@ class Plugin {
             $bigDesc = $response->sections['description'];
             preg_match('/<p>(.*?)<\/p>/', $bigDesc, $m);
             if ($m) {
-                $data['description'] = $m[0];
+                $data['description'] = strip_tags($m[0]);
             }
             else {
                 $data['description'] = '';
