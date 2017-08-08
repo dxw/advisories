@@ -6,7 +6,7 @@ class Plugin {
 
     private $getter;
 
-    public function __construct(Getter $getter)
+    public function __construct(WordPressAPIGetter $getter)
     {
         $this->getter = $getter;
     }

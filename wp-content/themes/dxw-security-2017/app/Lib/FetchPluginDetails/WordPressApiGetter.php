@@ -2,7 +2,7 @@
 
 namespace Dxw\DxwSecurity2017\Lib\FetchPluginDetails;
 
-class Getter {
+class WordPressAPIGetter {
 
     public function getPluginInfo($slug) {
         // Whoever thought PHP serialized objects were a good idea for an API needs a slap

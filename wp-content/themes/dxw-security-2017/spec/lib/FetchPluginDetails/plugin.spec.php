@@ -3,7 +3,7 @@
 describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () {
     beforeEach(function () {
         \WP_Mock::setUp();
-        $this->getter = Mockery::mock(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Getter::class);
+        $this->getter = Mockery::mock(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressAPIGetter::class);
         $this->plugin = new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin($this->getter);
     });
 

@@ -1,9 +1,9 @@
 <?php
 
-describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Getter::class, function () {
+describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressAPIGetter::class, function () {
     beforeEach(function () {
         \WP_Mock::setUp();
-        $this->getter = new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Getter();
+        $this->getter = new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressAPIGetter();
     });
 
     afterEach(function () {
