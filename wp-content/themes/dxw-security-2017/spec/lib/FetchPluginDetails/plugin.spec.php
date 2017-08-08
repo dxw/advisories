@@ -13,7 +13,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
 
     describe('->getDetails()', function () {
         context('result isErr()', function () {
-            it('echoes ok=>false then dies', function () {
+            it('returns ok=>false', function () {
                 $slug = 'foo';
                 $result = Mockery::Mock(\Dxw\Result\Result::class);
                 $this->getter->shouldReceive('getPluginInfo')
@@ -23,13 +23,8 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                 $result->shouldReceive('isErr')
                     ->once()
                     ->andReturn(true);
-                WP_Mock::wpFunction('wp_die', [
-                    'times' => 1,
-                ]);
-                ob_start();
-                $this->plugin->getDetails($slug);
-                $result = ob_get_clean();
-                expect($result)->to->equal("{\"ok\":false}\n");
+                $result = $this->plugin->getDetails($slug);
+                expect($result)->to->equal(["ok" => false]);
             });
         });
 

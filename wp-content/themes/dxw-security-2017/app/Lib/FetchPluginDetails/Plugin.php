@@ -17,8 +17,7 @@ class Plugin
         $result = $this->getter->getPluginInfo($slug);
 
         if ($result->isErr()) {
-            echo(json_encode(array('ok' => false))."\n");
-            wp_die();
+            return(['ok' => false]);
         } else {
             $response = $result->unwrap();
             $data = array();
