@@ -9,10 +9,10 @@
         var thus = this
 
         this.$('div[data-name="codex_link"] input').blur(function () {
-            var m = this.value.match(/https?:\/\/wordpress.org\/plugins\/(.*)\//)
+            var m = this.value.match(/https?:\/\/(en-gb\.)?wordpress.org\/plugins\/(.*)\//)
             if (m) {
                 var filler = new DataFiller(jQuery)
-                filler.fill(m[1])
+                filler.fill(m[m.length-1])
             } else {
                 var filler = new DataFiller(jQuery)
                 filler.fill(this.value, true)
