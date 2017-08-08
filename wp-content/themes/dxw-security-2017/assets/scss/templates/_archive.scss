@@ -1,15 +1,13 @@
-ul.feed-archive {
-  padding-left: 0;
+.feed-container {
 
-  li {
-    list-style: none;
-    margin-bottom: $gutter;
-    padding-bottom: $gutter;
+  article {
+    margin-bottom: $gutter-medium*2;
+    padding-bottom: $gutter-medium*2;
     border-bottom: 1px solid $medium-grey;
 
-    a {
-      border-bottom: none;
-      font-family: $header-font-family;
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-medium;
+      padding-bottom: $gutter-medium;
     }
   }
 }

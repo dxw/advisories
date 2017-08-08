@@ -1,0 +1,77 @@
+.short-review {
+
+  a {
+    display: block;
+    border-bottom: none;
+    font-family: $header-font-family;
+  }
+
+  time.published {
+    @extend small;
+    color: $dark-grey;
+    display: block;
+    margin: $medium-spacing/2 0;
+  }
+
+  p {
+    font-family: $header-font-family;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      float: left;
+      margin-top: 4px;
+      margin-right: $medium-spacing;
+
+      @include grid-media($grid-mobile) {
+        width: 18px;
+        height: 18px;
+        margin-right: $medium-spacing/2;
+      }
+    }
+
+    &.unsafe,
+    &.high {
+
+      &:before {
+        background: url('#{$imagePath}/icon-warning.svg') no-repeat;
+      }
+
+      .recommendation,
+      .score {
+        color: $dxwsec-red;
+      }
+    }
+
+    &.caution,
+    &.medium {
+
+      &:before {
+        background: url('#{$imagePath}/icon-exclamation.svg') no-repeat;
+      }
+
+      .recommendation,
+      .score {
+        color: $dxwsec-orange-dark;
+      }
+    }
+
+    &.good,
+    &.low {
+
+      &:before {
+        background: url('#{$imagePath}/icon-check.svg') no-repeat;
+      }
+
+      .recommendation,
+      .score {
+        color: $dxwsec-green;
+      }
+    }
+
+    &.score {
+      margin-top: $medium-spacing/2;
+    }
+  }
+}

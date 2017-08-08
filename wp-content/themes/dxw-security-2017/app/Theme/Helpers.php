@@ -55,7 +55,8 @@ class Helpers implements \Dxw\Iguana\Registerable
     {
         $recommendation = $this->recommendation_data(get_field('recommendation', $post_id));
         ?>
-        <span class="<?php echo $recommendation->slug ?> short"><?php echo $recommendation->name ?></span>
+
+        <p class="<?php echo $recommendation->slug ?> recommendation"><?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?> - <span class="recommendation"><?php echo $recommendation->name ?></span></p>
     <?php
 
     }
