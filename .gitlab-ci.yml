@@ -29,10 +29,10 @@
 
 .theme_style: &theme_style
   before_script:
-    - cd 'wp-content/themes/dxw-advisories-2017'
+    - cd 'wp-content/themes/dxw-security-2017'
     - composer install
   script:
-    - vendor/bin/phpcs lib/helpers.php --standard=PSR2 --warning-severity=false
+    - vendor/bin/php-cs-fixer fix --dry-run -v --diff
 
 php_70_tests_api:
   <<: *php70

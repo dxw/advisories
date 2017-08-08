@@ -56,11 +56,11 @@ class CustomFields implements \Dxw\Iguana\Registerable
             'description' => '',
         ));
 
-        acf_add_local_field_group(array (
+        acf_add_local_field_group(array(
             'key' => 'group_598326606c784',
             'title' => 'Recommendations',
-            'fields' => array (
-                array (
+            'fields' => array(
+                array(
                     'key' => 'field_59832752ae698',
                     'label' => 'Recommendations heading',
                     'name' => 'recommendations_heading',
@@ -68,7 +68,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -79,7 +79,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'append' => '',
                     'maxlength' => '',
                 ),
-                array (
+                array(
                     'key' => 'field_598327e2ae699',
                     'label' => 'Recommendations',
                     'name' => 'recommendations',
@@ -87,7 +87,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -97,8 +97,8 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'max' => 3,
                     'layout' => 'row',
                     'button_label' => 'Add Recommendation',
-                    'sub_fields' => array (
-                        array (
+                    'sub_fields' => array(
+                        array(
                             'key' => 'field_59832881ae69a',
                             'label' => 'Security warning',
                             'name' => 'security_warning',
@@ -106,12 +106,12 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
                             ),
-                            'choices' => array (
+                            'choices' => array(
                                 'red' => 'Potentially unsafe',
                                 'orange' => 'Use with caution',
                                 'green' => 'No issues found',
@@ -123,7 +123,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'layout' => 'vertical',
                             'return_format' => 'value',
                         ),
-                        array (
+                        array(
                             'key' => 'field_598329cfae69b',
                             'label' => 'Subtitle',
                             'name' => 'subtitle',
@@ -131,7 +131,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -142,7 +142,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'rows' => '',
                             'new_lines' => '',
                         ),
-                        array (
+                        array(
                             'key' => 'field_59832a89ae69c',
                             'label' => 'Description',
                             'name' => 'description',
@@ -150,7 +150,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -164,16 +164,16 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     ),
                 ),
             ),
-            'location' => array (
-                array (
-                    array (
+            'location' => array(
+                array(
+                    array(
                         'param' => 'page_template',
                         'operator' => '==',
                         'value' => 'page-reviews.php',
                     ),
                 ),
-                array (
-                    array (
+                array(
+                    array(
                         'param' => 'page_template',
                         'operator' => '==',
                         'value' => 'page-inspections.php',
@@ -190,11 +190,11 @@ class CustomFields implements \Dxw\Iguana\Registerable
             'description' => '',
         ));
 
-        acf_add_local_field_group(array (
+        acf_add_local_field_group(array(
             'key' => 'group_59834207067c2',
             'title' => 'Failure criteria',
-            'fields' => array (
-                array (
+            'fields' => array(
+                array(
                     'key' => 'field_5983428185451',
                     'label' => 'Failure criteria description',
                     'name' => 'failure_criteria_description',
@@ -202,7 +202,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -213,7 +213,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'media_upload' => 0,
                     'delay' => 0,
                 ),
-                array (
+                array(
                     'key' => 'field_5983454e62ac7',
                     'label' => 'Table caption',
                     'name' => 'table_caption',
@@ -222,7 +222,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
         Only visible for screen readers.',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -233,7 +233,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'append' => '',
                     'maxlength' => '',
                 ),
-                array (
+                array(
                     'key' => 'field_5983429e85452',
                     'label' => 'Failure criteria table',
                     'name' => 'failure_criteria_table',
@@ -241,7 +241,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'instructions' => '',
                     'required' => 0,
                     'conditional_logic' => 0,
-                    'wrapper' => array (
+                    'wrapper' => array(
                         'width' => '',
                         'class' => '',
                         'id' => '',
@@ -251,8 +251,8 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     'max' => 0,
                     'layout' => 'row',
                     'button_label' => 'Add Row',
-                    'sub_fields' => array (
-                        array (
+                    'sub_fields' => array(
+                        array(
                             'key' => 'field_598342c585453',
                             'label' => 'Criterion',
                             'name' => 'criterion',
@@ -260,7 +260,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -271,7 +271,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'append' => '',
                             'maxlength' => '',
                         ),
-                        array (
+                        array(
                             'key' => 'field_598342ee85454',
                             'label' => 'Explanation',
                             'name' => 'explanation',
@@ -279,7 +279,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                             'instructions' => '',
                             'required' => 0,
                             'conditional_logic' => 0,
-                            'wrapper' => array (
+                            'wrapper' => array(
                                 'width' => '',
                                 'class' => '',
                                 'id' => '',
@@ -293,9 +293,9 @@ class CustomFields implements \Dxw\Iguana\Registerable
                     ),
                 ),
             ),
-            'location' => array (
-                array (
-                    array (
+            'location' => array(
+                array(
+                    array(
                         'param' => 'page_template',
                         'operator' => '==',
                         'value' => 'page-inspections.php',
@@ -465,17 +465,17 @@ class CustomFields implements \Dxw\Iguana\Registerable
 
     public function addPostFields()
     {
-        if(function_exists("register_field_group")) {
+        if (function_exists("register_field_group")) {
 
           // Advisories
 
-          register_field_group(array (
+          register_field_group(array(
             'id' => 'acf_advisories',
             'title' => 'Advisory Details',
-            'fields' => array (
-              array (
+            'fields' => array(
+              array(
                 'layout' => 'vertical',
-                'choices' => array (
+                'choices' => array(
                   'yes' => 'Yes',
                   'no' => 'No',
                 ),
@@ -486,7 +486,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'type' => 'radio',
               ),
 
-              array (
+              array(
                 'default_value' => '',
                 'formatting' => 'text',
                 'key' => 'field_51beddd730196',
@@ -509,7 +509,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 */
               ),
 
-              array (
+              array(
                 'default_value' => '',
                 'formatting' => 'html',
                 'key' => 'field_e9f7a6e31b782',
@@ -518,7 +518,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'type' => 'text',
               ),
 
-              array (
+              array(
                 'default_value' => '',
                 'formatting' => 'html',
                 'key' => 'field_51bef80d01ef3',
@@ -526,7 +526,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'component',
                 'type' => 'text',
               ),
-              array (
+              array(
                 'default_value' => '',
                 'formatting' => 'text',
                 'key' => 'field_51bef52901ef3',
@@ -534,7 +534,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'cve',
                 'type' => 'text',
               ),
-              array (
+              array(
                 'toolbar' => 'full',
                 'media_upload' => 'yes',
                 'default_value' => '',
@@ -544,7 +544,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'type' => 'wysiwyg',
                 'instructions' => 'What\'s the problems?',
               ),
-              array (
+              array(
                 'toolbar' => 'full',
                 'media_upload' => 'yes',
                 'default_value' => '',
@@ -554,7 +554,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'type' => 'wysiwyg',
                 'instructions' => 'What are the steps to reproduce this issue?'
               ),
-              array (
+              array(
                 'toolbar' => 'full',
                 'media_upload' => 'yes',
                 'default_value' => '',
@@ -564,7 +564,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'type' => 'wysiwyg',
                 'instructions' => 'What should people do to stay safe?'
               ),
-              array (
+              array(
                 'toolbar' => 'full',
                 'media_upload' => 'yes',
                 'default_value' => '',
@@ -574,10 +574,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'type' => 'wysiwyg',
                 'instructions' => 'What happened when (reported, fix released, disclosed, etc)?'
               ),
-              array (
+              array(
                 'multiple' => 0,
                 'allow_null' => 0,
-                'choices' => array (
+                'choices' => array(
                   '0.395' => 'Local',
                   '0.646' => 'Adjacent network',
                   '1.0' => 'Network',
@@ -592,10 +592,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 Adjacent Network: The attacker must have access to the broadcast or collision domain of the vulnerable system.<br>
                 Network: The vulnerable interface is remotely exploitable.</p>',
               ),
-              array (
+              array(
                 'multiple' => 0,
                 'allow_null' => 0,
-                'choices' => array (
+                'choices' => array(
                   '0.35' => 'High',
                   '0.61' => 'Medium',
                   '0.71' => 'Low',
@@ -610,10 +610,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 Medium: There are some additional requirements for access, such as a limit on the origin of the attacks, or a requirement for the vulnerable system to be running with an uncommon, non-default configuration.<br>
                 Low: There are no special conditions for access to the vulnerability, such as when the system is available to large numbers of users, or the vulnerable configuration is ubiquitous.</p>',
               ),
-              array (
+              array(
                 'multiple' => 0,
                 'allow_null' => 0,
-                'choices' => array (
+                'choices' => array(
                   '0.45' => 'Multiple',
                   '0.56' => 'Single',
                   '0.704' => 'None',
@@ -628,10 +628,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 Single: The attacker must authenticate once in order to exploit the vulnerability.<br>
                 None: There is no requirement for the attacker to authenticate.</p>',
               ),
-              array (
+              array(
                 'multiple' => 0,
                 'allow_null' => 0,
-                'choices' => array (
+                'choices' => array(
                   '0.0' => 'None',
                   '0.275' => 'Partial',
                   '0.66' => 'Complete',
@@ -646,10 +646,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 Partial: There is considerable disclosure of information, but the scope of the loss is constrained such that not all of the data is available.<br>
                 Complete: There is total information disclosure, providing access to any / all data on the system.</p>',
               ),
-              array (
+              array(
                 'multiple' => 0,
                 'allow_null' => 0,
-                'choices' => array (
+                'choices' => array(
                   '0.0' => 'None',
                   '0.275' => 'Partial',
                   '0.66' => 'Complete',
@@ -664,10 +664,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 Partial: Modification of some data or system files is possible, but the scope of the modification is limited.<br>
                 Complete: There is total loss of integrity; the attacker can modify any files or information on the target system.</p>',
               ),
-              array (
+              array(
                 'multiple' => 0,
                 'allow_null' => 0,
-                'choices' => array (
+                'choices' => array(
                   '0.0' => 'None',
                   '0.275' => 'Partial',
                   '0.66' => 'Complete',
@@ -684,9 +684,9 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 Complete: There is total loss of availability of the attacked resource.</p>',
               ),
 
-              array (
+              array(
                 'layout' => 'horizontal',
-                'choices' => array (
+                'choices' => array(
                   'identified' => 'Identified',
                   'reported' => 'Reported',
                   'fixed' => 'Fixed',
@@ -698,9 +698,9 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'type' => 'radio',
               ),
             ),
-            'location' => array (
-              array (
-                array (
+            'location' => array(
+              array(
+                array(
                   'param' => 'post_type',
                   'operator' => '==',
                   'value' => 'advisories',
@@ -709,10 +709,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 ),
               ),
             ),
-            'options' => array (
+            'options' => array(
               'position' => 'normal',
               'layout' => 'default',
-              'hide_on_screen' => array (
+              'hide_on_screen' => array(
                 0 => 'the_content',
               ),
             ),
@@ -721,11 +721,11 @@ class CustomFields implements \Dxw\Iguana\Registerable
 
           // Plugins
 
-          register_field_group(array (
+          register_field_group(array(
             'id' => 'acf_plugins',
             'title' => 'Plugin Results',
-            'fields' => array (
-              array (
+            'fields' => array(
+              array(
                 'default_value' => '',
                 'formatting' => 'html',
                 'key' => 'field_51bef6c730196',
@@ -735,7 +735,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'codex_link',
                 'required' => true,
               ),
-              array (
+              array(
                 'default_value' => '',
                 'formatting' => 'html',
                 'key' => 'field_51bef3cd30191',
@@ -744,7 +744,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'name_of_plugin',
                 'type' => 'text',
               ),
-              array (
+              array(
                 'default_value' => '',
                 'formatting' => 'html',
                 'key' => 'field_585bbf7cc7f03',
@@ -755,7 +755,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'instructions' => 'For plugins in dxw\'s repo this should match the repo name.
         For directory plugins this usually matches the last part of the URL',
               ),
-              array (
+              array(
                 'default_value' => '',
                 'formatting' => 'html',
                 'key' => 'field_51bef66430192',
@@ -765,7 +765,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'instructions' => 'Comma separated list, no spaces, eg: 1.0,1.1,1.6',
                 'type' => 'text',
               ),
-              array (
+              array(
                 'default_value' => '',
                 'formatting' => 'html',
                 'key' => 'field_51bef6ae30195',
@@ -773,7 +773,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'author',
                 'type' => 'text',
               ),
-              array (
+              array(
                 'media_upload' => 'no',
                 'default_value' => '',
                 'key' => 'field_51bef69830194',
@@ -781,9 +781,9 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'description',
                 'type' => 'text',
               ),
-              array (
+              array(
                 'layout' => 'horizontal',
-                'choices' => array (
+                'choices' => array(
                   'inspected' => 'Inspected',
                   'codereviewed' => 'Code Reviewed',
                 ),
@@ -793,7 +793,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'assurance_level',
                 'type' => 'radio',
               ),
-              array (
+              array(
                 'toolbar' => 'full',
                 'media_upload' => 'no',
                 'default_value' => '',
@@ -802,7 +802,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'pluginscan_output',
                 'type' => 'textarea',
               ),
-              array (
+              array(
                 'default_value' => '',
                 'key' => 'field_51bef7de30000',
                 'label' => 'Private notes',
@@ -810,9 +810,9 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'type' => 'textarea',
                 'instructions' => 'Notes for yourself, or other testers. Will not be published.',
               ),
-              array (
+              array(
                 'layout' => 'vertical',
-                'choices' => array (
+                'choices' => array(
                   'a' => 'Lack of input sanitisation',
                   'b' => 'Execution of unprepared SQL statements',
                   'c' => 'Unsafe generation of PHP code',
@@ -832,7 +832,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'matched_criteria',
                 'type' => 'checkbox',
               ),
-              array (
+              array(
                 'toolbar' => 'full',
                 'media_upload' => 'yes',
                 'default_value' => '',
@@ -841,12 +841,12 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'name' => 'findings',
                 'type' => 'wysiwyg',
               ),
-              array (
+              array(
                 'key' => 'field_51bef6fc30198',
                 'label' => 'Recommendation',
                 'name' => 'recommendation',
                 'type' => 'radio',
-                'choices' => array (
+                'choices' => array(
                   'green' => 'No issues found',
                   'yellow' => 'Use with caution',
                   'red' => 'Potentially unsafe',
@@ -856,15 +856,15 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'default_value' => '',
                 'layout' => 'vertical',
               ),
-              array (
+              array(
                 'key' => 'field_51bef6de30022',
                 'label' => 'Recommendation criterion',
                 'name' => 'recommendation_criterion_yellow',
                 'type' => 'radio',
-                'conditional_logic' => array (
+                'conditional_logic' => array(
                   'status' => 1,
-                  'rules' => array (
-                    array (
+                  'rules' => array(
+                    array(
                       'field' => 'field_51bef6fc30198',
                       'operator' => '==',
                       'value' => 'yellow',
@@ -872,7 +872,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                   ),
                   'allorany' => 'all',
                 ),
-                'choices' => array (
+                'choices' => array(
                   'e' => 'The plugin contains or is likely to contain a vulnerability which could be exploited by a privileged user to affect the site’s confidentiality, integrity or availability in a manner exceeding their privileges',
                   'a' => 'The plugin appears not to be vulnerable, but could interact with another component in such a way as to become vulnerable',
                   'b' => 'The plugin meets a large number of failure criteria and is of poor quality, leading the tester to fear that subsequent versions of the plugin are likely to introduce vulnerabilities',
@@ -884,15 +884,15 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'default_value' => '',
                 'layout' => 'vertical',
               ),
-              array (
+              array(
                 'key' => 'field_51bef6de30011',
                 'label' => 'Recommendation criterion',
                 'name' => 'recommendation_criterion_red',
                 'type' => 'radio',
-                'conditional_logic' => array (
+                'conditional_logic' => array(
                   'status' => 1,
-                  'rules' => array (
-                    array (
+                  'rules' => array(
+                    array(
                       'field' => 'field_51bef6fc30198',
                       'operator' => '==',
                       'value' => 'red',
@@ -900,7 +900,7 @@ class CustomFields implements \Dxw\Iguana\Registerable
                   ),
                   'allorany' => 'all',
                 ),
-                'choices' => array (
+                'choices' => array(
                   'a' => 'The plugin contains or is likely to contain a vulnerability which could be exploited by an end user and which would compromise the site’s confidentiality, integrity or availability',
                   'c' => 'The plugin is written such that its expected, ordinary use could affect the site’s confidentiality, integrity or availability',
                   'd' => 'The plugin has been given this recommendation at the tester\'s discretion',
@@ -910,21 +910,21 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'default_value' => '',
                 'layout' => 'vertical',
               ),
-              array (
+              array(
                 'key' => 'field_51bef6de30000',
                 'label' => 'Reason',
                 'name' => 'reason',
                 'type' => 'wysiwyg',
                 'instructions' => 'What\'s the specific reason for the yellow or red recommendation?',
-                'conditional_logic' => array (
+                'conditional_logic' => array(
                   'status' => 1,
-                  'rules' => array (
-                    array (
+                  'rules' => array(
+                    array(
                       'field' => 'field_51bef6fc30198',
                       'operator' => '==',
                       'value' => 'yellow',
                     ),
-                    array (
+                    array(
                       'field' => 'field_51bef6fc30198',
                       'operator' => '==',
                       'value' => 'red',
@@ -937,9 +937,9 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 'media_upload' => 'yes',
               ),
             ),
-            'location' => array (
-              array (
-                array (
+            'location' => array(
+              array(
+                array(
                   'param' => 'post_type',
                   'operator' => '==',
                   'value' => 'plugins',
@@ -948,10 +948,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
                 ),
               ),
             ),
-            'options' => array (
+            'options' => array(
               'position' => 'normal',
               'layout' => 'default',
-              'hide_on_screen' => array (
+              'hide_on_screen' => array(
                 0 => 'the_content',
               ),
             ),

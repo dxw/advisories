@@ -2,9 +2,11 @@
 
 namespace Dxw\DxwSecurity2017\Lib\FetchPluginDetails;
 
-class WordPressAPIGetter {
+class WordPressApiGetter
+{
 
-    public function getPluginInfo($slug) {
+    public function getPluginInfo($slug)
+    {
         // Whoever thought PHP serialized objects were a good idea for an API needs a slap
 
         $response = wp_remote_post(
@@ -19,10 +21,9 @@ class WordPressAPIGetter {
                 'timeout' => 15
             )
         );
-        if(is_wp_error($response)) {
+        if (is_wp_error($response)) {
             return \Dxw\Result\Result::err($response->get_error_message());
         }
         return \Dxw\Result\Result::ok(unserialize($response['body']));
     }
-
 }

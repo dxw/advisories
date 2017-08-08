@@ -2,11 +2,12 @@
 
 namespace Dxw\DxwSecurity2017\Lib\FetchPluginDetails;
 
-class Plugin {
+class Plugin
+{
 
     private $getter;
 
-    public function __construct(WordPressAPIGetter $getter)
+    public function __construct(WordPressApiGetter $getter)
     {
         $this->getter = $getter;
     }
@@ -18,17 +19,14 @@ class Plugin {
         if ($result->isErr()) {
             echo(json_encode(array('ok' => false))."\n");
             wp_die();
-        }
-
-        else {
+        } else {
             $response = $result->unwrap();
             $data = array();
             $bigDesc = $response->sections['description'];
             preg_match('/<p>(.*?)<\/p>/', $bigDesc, $m);
             if ($m) {
                 $data['description'] = strip_tags($m[0]);
-            }
-            else {
+            } else {
                 $data['description'] = '';
             }
             $data['ok'] = true;
@@ -41,5 +39,4 @@ class Plugin {
             return $data;
         }
     }
-
 }

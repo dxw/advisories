@@ -35,8 +35,8 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\WpHead::class, new \Dxw\DxwSe
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\WordPressToTwitter::class, new \Dxw\DxwSecurity2017\Theme\WordPressToTwitter());
 
 // FetchPluginDetails - autopopulates plugin inspection fields
-$registrar->addInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressAPIGetter::class, new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressAPIGetter());
-$registrar->addInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin($registrar->getInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressAPIGetter::class)));
+$registrar->addInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter());
+$registrar->addInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin($registrar->getInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class)));
 $registrar->addInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme($registrar->getInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class)));
 
 // Post types and additional fields

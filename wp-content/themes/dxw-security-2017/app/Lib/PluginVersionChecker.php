@@ -2,8 +2,10 @@
 
 namespace Dxw\DxwSecurity2017\Lib;
 
-class PluginVersionChecker {
-    function __construct() {
+class PluginVersionChecker
+{
+    public function __construct()
+    {
         $this->id = (int)get_the_ID();
         $this->versions = explode(',', get_field('version_of_plugin'));
         $this->version = end($this->versions);
@@ -13,8 +15,7 @@ class PluginVersionChecker {
         if ($m) {
             $this->is_codex = true;
             $this->slug = $m[1];
-        }
-        else {
+        } else {
             $this->is_codex = false;
         }
     }
@@ -22,7 +23,8 @@ class PluginVersionChecker {
     ////////////////////////////////////////////////////////////////////////////
     // Public API
 
-    function is_old() {
+    public function is_old()
+    {
         if ($this->most_recent_version_on_dxwsec() !== $this->version) {
             return true;
         }
@@ -37,7 +39,8 @@ class PluginVersionChecker {
         return false;
     }
 
-    function have_latest() {
+    public function have_latest()
+    {
         $version = $this->most_recent_version_on_wporg();
         if ($version && $version !== $this->most_recent_version_on_dxwsec()) {
             return false;
@@ -46,7 +49,8 @@ class PluginVersionChecker {
         return true;
     }
 
-    function most_recent_version() {
+    public function most_recent_version()
+    {
         $version = $this->most_recent_version_on_wporg();
         if ($version) {
             return $version;
@@ -55,18 +59,21 @@ class PluginVersionChecker {
         return $this->most_recent_version_on_dxwsec();
     }
 
-    function our_most_recent_version() {
+    public function our_most_recent_version()
+    {
         return $this->most_recent_version_on_dxwsec();
     }
 
-    function our_most_recent_link() {
+    public function our_most_recent_link()
+    {
         return $this->get_link($this->our_most_recent_version());
     }
 
     ////////////////////////////////////////////////////////////////////////////
     // "Private" functions
 
-    function most_recent_version_on_dxwsec() {
+    public function most_recent_version_on_dxwsec()
+    {
         $posts = get_posts(array(
             'post_type' => 'plugins',
             'meta_key' => 'codex_link',
@@ -86,7 +93,8 @@ class PluginVersionChecker {
     /**
     * May return null, careful!
     */
-    function most_recent_version_on_wporg() {
+    public function most_recent_version_on_wporg()
+    {
         $response = $this->get_plugin_information($this->slug);
         if (isset($response->error) || empty($response)) {
             return null;
@@ -95,7 +103,8 @@ class PluginVersionChecker {
         return $response->version;
     }
 
-    function get_link($version) {
+    public function get_link($version)
+    {
         $posts = get_posts(
             array(
                 'numberposts' => 1,
@@ -120,7 +129,8 @@ class PluginVersionChecker {
         return '';
     }
 
-    function get_plugin_information($slug) {
+    public function get_plugin_information($slug)
+    {
         $t_name = 'dxwsec_plugin_information_'.$slug;
         $response = get_transient($t_name);
         if ($response) {
@@ -132,7 +142,8 @@ class PluginVersionChecker {
         return $response;
     }
 
-    function _get_plugin_information($slug) {
+    public function _get_plugin_information($slug)
+    {
         $response = wp_remote_post(
             'http://api.wordpress.org/plugins/info/1.0/',
             array(
