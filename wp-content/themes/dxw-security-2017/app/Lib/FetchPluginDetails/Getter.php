@@ -17,9 +17,12 @@ class Getter {
                     )),
                 ),
                 'timeout' => 15
-                )
-            );
-        return unserialize($response['body']);
+            )
+        );
+        if(is_wp_error($response)) {
+            return \Dxw\Result\Result::err($response->get_error_message());
+        }
+        return \Dxw\Result\Result::ok(unserialize($response['body']));
     }
 
 }

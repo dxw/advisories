@@ -13,14 +13,15 @@ class Plugin {
 
     public function getDetails($slug)
     {
-        $response = $this->getter->getPluginInfo($slug);
+        $result = $this->getter->getPluginInfo($slug);
 
-        if ($response === null) {
+        if ($result->isErr()) {
             echo(json_encode(array('ok' => false))."\n");
             wp_die();
         }
 
         else {
+            $response = $result->unwrap();
             $data = array();
             $bigDesc = $response->sections['description'];
             preg_match('/<p>(.*?)<\/p>/', $bigDesc, $m);

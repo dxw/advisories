@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "00f695af7572b902b21ea3d0d87341ae",
-    "content-hash": "245fcba2138c405c79413ca3662f7e64",
+    "hash": "232c7696400c57ddcea9572cc94fd371",
+    "content-hash": "b6dcb02ba4c3179a5acd2a7c7a674567",
     "packages": [
         {
             "name": "aura/autoload",
@@ -197,6 +197,84 @@
             "description": "Unit-tested framework-agnostic pagination that works with Bootstrap and Foundation",
             "homepage": "https://github.com/dxw/pagination",
             "time": "2016-07-15 13:07:32"
+        },
+        {
+            "name": "dxw/php-missing",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/php-missing.git",
+                "reference": "544ce7df568f6296e3811454b0e1df79ceb498b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/php-missing/zipball/544ce7df568f6296e3811454b0e1df79ceb498b7",
+                "reference": "544ce7df568f6296e3811454b0e1df79ceb498b7",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Missing\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "http://dxw.com"
+                }
+            ],
+            "description": "The stdlib you wish PHP had",
+            "homepage": "https://github.com/dxw/php-missing",
+            "time": "2016-05-17 16:56:43"
+        },
+        {
+            "name": "dxw/result",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dxw/result.git",
+                "reference": "f4162f94234f3444dcbc1612889f6e2bfabc03ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dxw/result/zipball/f4162f94234f3444dcbc1612889f6e2bfabc03ec",
+                "reference": "f4162f94234f3444dcbc1612889f6e2bfabc03ec",
+                "shasum": ""
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.11.4",
+                "peridot-php/leo": "^1.5",
+                "peridot-php/peridot": "^1.18"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dxw\\Result\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Adams",
+                    "email": "tom@dxw.com",
+                    "homepage": "https://www.dxw.com/"
+                }
+            ],
+            "description": "Result values",
+            "homepage": "https://github.com/dxw/result",
+            "time": "2016-07-19 13:32:11"
         }
     ],
     "packages-dev": [
