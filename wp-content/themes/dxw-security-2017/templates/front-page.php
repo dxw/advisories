@@ -53,10 +53,9 @@
                     $args = array('post_type' => 'Advisories');
                     $custom_posts = get_posts($args);
                     foreach($custom_posts as $post) : setup_postdata($post); ?>
-                    <li>
-                        <div class="short-review">
-                            <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
-                        </div>
+                    <li class="short-review">
+                        <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                        <p class="score <?php echo strtolower(h()->get_cvss_severity()); ?>">Severity: <span class="score"><?php h()->the_cvss_severity(); ?></span></p>
                     </li>
                 <?php endforeach; ?>
             </ul>

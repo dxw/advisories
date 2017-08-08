@@ -29,37 +29,47 @@
       }
     }
 
-    &.unsafe {
+    &.unsafe,
+    &.high {
 
       &:before {
         background: url('#{$imagePath}/icon-warning.svg') no-repeat;
       }
 
-      .recommendation {
+      .recommendation,
+      .score {
         color: $dxwsec-red;
       }
     }
 
-    &.caution {
+    &.caution,
+    &.medium {
 
       &:before {
         background: url('#{$imagePath}/icon-exclamation.svg') no-repeat;
       }
 
-      .recommendation {
+      .recommendation,
+      .score {
         color: $dxwsec-orange-dark;
       }
     }
 
-    &.good {
+    &.good,
+    &.low {
 
       &:before {
         background: url('#{$imagePath}/icon-check.svg') no-repeat;
       }
 
-      .recommendation {
+      .recommendation,
+      .score {
         color: $dxwsec-green;
       }
+    }
+
+    &.score {
+      margin-top: $medium-spacing/2;
     }
   }
 }

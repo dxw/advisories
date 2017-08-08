@@ -59,8 +59,12 @@ class Helpers implements \Dxw\Iguana\Registerable
         <span class="<?php echo $recommendation->slug ?> short"><?php echo $recommendation->name ?></span>
 =======
     ?>
+<<<<<<< HEAD
         <p class="<?php echo $recommendation->slug ?> short"><?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?> - <span class="recommendation"><?php echo $recommendation->name ?></span></p>
 >>>>>>> (feature) card 48, styled plugin reviews feed on homepage
+=======
+        <p class="<?php echo $recommendation->slug ?> recommendation"><?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?> - <span class="recommendation"><?php echo $recommendation->name ?></span></p>
+>>>>>>> (feature) card 48, styled advisories feed on homepage
     <?php
 
     }
