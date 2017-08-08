@@ -8,8 +8,8 @@
     DataFiller.prototype.listen = function () {
         var thus = this
 
-        this.$('#acf-field-codex_link').blur(function () {
-            var m = this.value.match(/https?:\/\/wordpress.org\/plugins\/(.*)\//)
+        this.$('div[data-name="codex_link"] input').blur(function () {
+            var m = this.value.match(/https?:\/\/(?:en-gb\.)?wordpress.org\/plugins\/(.*)\//)
             if (m) {
                 var filler = new DataFiller(jQuery)
                 filler.fill(m[1])
@@ -43,20 +43,19 @@
             },
             function (data, callback) {
                 // Check data is ok
-
                 if (data['ok']) {
                     callback(null, data)
                 }
             },
             function (data, callback) {
+                console.log(data);
                 // Set fields
-
-                thus.setField('#acf-field-codex_link', data['link'], force)
-                thus.setField('#acf-field-name_of_plugin', data['name'])
-                thus.setField('#title', data['name'])
-                thus.setField('#acf-field-version_of_plugin', data['version'])
-                thus.setField('#acf-field-author', data['author'])
-                thus.setField('#acf-field-description', data['description'])
+                thus.setField('div[data-name="codex_link"] input', data['link'], force)
+                thus.setField('div[data-name="name_of_plugin"] input', data['name'])
+                thus.setField('div[data-name="slug"] input', data['slug'])
+                thus.setField('div[data-name="version_of_plugin"] input', data['version'])
+                thus.setField('div[data-name="author"] input', data['author'])
+                thus.setField('div[data-name="description"] input', data['description'])
 
                 callback(null)
             },

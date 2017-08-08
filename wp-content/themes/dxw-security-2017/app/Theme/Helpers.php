@@ -54,12 +54,13 @@ class Helpers implements \Dxw\Iguana\Registerable
     public function the_short_recommendation($post_id = 0)
     {
         $recommendation = $this->recommendation_data(get_field('recommendation', $post_id));
-    ?>
+        ?>
         <span class="<?php echo $recommendation->slug ?> short"><?php echo $recommendation->name ?></span>
     <?php
+
     }
 
-    function the_recommendation()
+    public function the_recommendation()
     {
         $recommendation = $this->recommendation_data(get_field('recommendation'));
         $assurance = get_field('assurance_level');
@@ -69,14 +70,16 @@ class Helpers implements \Dxw\Iguana\Registerable
         } else {
             $assurance = 'Medium <span>This plugin has been given a short, targeted code review.</span>';
         }
-    ?>
+        ?>
         <h5 class="<?php echo $recommendation->slug ?>"><?php echo $recommendation->name ?></h5>
         <div>
-          <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance; ?></a></p>
+          <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance;
+        ?></a></p>
           <p><?php echo $recommendation->text ?></p>
           <p><a href="/about/plugin-inspections/#recommendations" class="recs">More information about this recommendation</a></p>
         </div>
     <?php
+
     }
 
     public function recommendation_data($recommendation)
@@ -146,10 +149,14 @@ class Helpers implements \Dxw\Iguana\Registerable
                 continue;
             }
             ?>
-            <li><a href="<?php echo get_permalink($p); ?>"><?php echo $p->post_title; ?></a></li>
+            <li><a href="<?php echo get_permalink($p);
+            ?>"><?php echo $p->post_title;
+            ?></a></li>
             <?php
+
         }
         ?></ul><?php
+
     }
 
     public function get_plugin_vulnerabilities($codex_link, $version)
@@ -209,7 +216,7 @@ class Helpers implements \Dxw\Iguana\Registerable
         }
     }
 
-    function the_cvss_severity()
+    public function the_cvss_severity()
     {
         echo $this->get_cvss_severity();
     }
