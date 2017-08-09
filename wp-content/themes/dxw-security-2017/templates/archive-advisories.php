@@ -19,9 +19,11 @@
                 <?php get_template_part('partials/pager') ?>
             </div>
         </section>
-        <aside class="sidebar page-section">
-
-        </aside>
+        <?php if ( is_active_sidebar( 'sidebar-advisories' ) ) : ?>
+            <aside class="sidebar page-section">
+                <?php dynamic_sidebar( 'sidebar-advisories' ); ?>
+            </aside>
+        <?php endif; ?>
     </div>
 </div>
 

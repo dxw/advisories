@@ -1,0 +1,13 @@
+.sidebar {
+    .widget {
+        h3 {
+            @include font-size-map($body-font-size);
+        }
+        border: 1px solid $medium-grey;
+        border-top: 2px solid $dxw-turquoise;
+        padding: $padding-width;
+        @media screen and (max-width:$small-screen) {
+          border-width: 2px 0 0 0;
+        }
+    }
+}
