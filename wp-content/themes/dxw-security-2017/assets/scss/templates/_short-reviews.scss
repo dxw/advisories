@@ -16,6 +16,13 @@
   p {
     font-family: $header-font-family;
 
+    &.entry {
+      font-family: $font-family-sans;
+      &:before {
+        content: none;
+      }
+    }
+
     &:before {
       content: '';
       width: 20px;
@@ -29,6 +36,8 @@
         height: 18px;
         margin-right: $medium-spacing/2;
       }
+
+
     }
 
     &.unsafe,

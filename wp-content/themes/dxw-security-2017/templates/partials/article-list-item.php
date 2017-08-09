@@ -1,14 +1,14 @@
-<article <?php post_class('article-list-item'); ?>
-    <header>
-        <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-        <?php get_template_part('partials/entry-meta'); ?>
-    </header>
-
-    <div class="entry excerpt rich-text">
-        <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('large'); ?>
-        <?php endif; ?>
-        <?php the_excerpt(); ?>
-        <a href="<?php the_permalink(); ?>" class="button">Read more</a>
-    </div>
+<article class="short-review">
+    <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+    <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
+    <?php global $post;
+    if($post->post_type == 'plugins') : ?>
+        <div class="rich-text">
+            <p class="entry excerpt"><?php echo get_field('description'); ?></p>
+        </div>
+        <?php h()->the_short_recommendation(); ?>
+    <?php endif; ?>
+    <?php if($post->post_type == 'advisories') : ?>
+        <p class="score <?php echo strtolower(h()->get_cvss_severity()); ?>">Severity: <span class="score"><?php h()->the_cvss_severity(); ?></span></p>
+    <?php endif; ?>
 </article>
