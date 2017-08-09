@@ -52,6 +52,7 @@
                 foreach($custom_posts as $post) : setup_postdata($post); ?>
                 <article class="short-review">
                     <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
+                    <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
                     <p class="score <?php echo strtolower(h()->get_cvss_severity()); ?>">Severity: <span class="score"><?php h()->the_cvss_severity(); ?></span></p>
                 </article>
             <?php endforeach; ?>

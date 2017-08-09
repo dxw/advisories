@@ -1,22 +1,25 @@
-<h2 class="search-title">Search results for <?php the_search_query(); ?> </h2>
-<?php while (have_posts()) : the_post() ?>
-    <article <?php post_class() ?>>
-        <header>
-            <h2 class="entry-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-            <?php get_template_part('templates/entry-meta') ?>
-            <?php if ( has_post_thumbnail() ) {
-                the_post_thumbnail('large');
-            } ?> 
-        </header>
-        <div class="entry-summary">
-            <?php the_excerpt() ?>
-        </div>
-        <footer>
-            <a class="read-more" href="<?php the_permalink() ?>">Read more <span class="sr-only">about this topic</span></a>
-            —
-            <a href="<?php comments_link() ?>"><?php printf(_n('1 comment', '%1$s comments', get_comments_number(), 'roots'), number_format_i18n(get_comments_number())) ?></a>
-        </footer>
-    </article>
-<?php endwhile ?>
+<section class="page-header-panel">
+    <div class="row">
+        <h1>Search results for <?php the_search_query(); ?></h1>
+    </div>
+</section>
+
+<?php get_template_part('partials/global-search-form'); ?>
+
+<div class="row">
+    <div class="page-content">
+        <section class="feed-container page-section">
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : ?>
+                    <?php the_post(); ?>
+                    <?php get_template_part('partials/article-list-item'); ?>
+                <?php endwhile; ?>
+            <?php endif; ?>
+            <div class="pager">
+                <?php get_template_part('partials/pager') ?>
+            </div>
+        </section>
+    </div>
+</div>
 
 <?php get_template_part('partials/options-banner'); ?>
