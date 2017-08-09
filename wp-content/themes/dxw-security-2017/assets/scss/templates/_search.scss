@@ -1,0 +1,22 @@
+.search {
+    .search-form-container {
+        background-color: $light-grey;
+        label {
+            color: $black;
+        }
+        .form-field {
+            button {
+                background-color: $dxwsec-purple;
+                color: $white;
+            }
+        }
+    }
+    
+    .feed-container {
+        @include grid-column(12);
+
+        @include grid-media($grid-mobile) {
+          @include grid-column(2);
+        }
+    }
+}
