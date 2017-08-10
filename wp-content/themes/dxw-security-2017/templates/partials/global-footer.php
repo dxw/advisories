@@ -10,7 +10,7 @@
                         <span itemprop="addressLocality">London</span>,
                         <span itemprop="postalCode">N1 6NU</span>
                      </div>
-                     <span itemprop="telephone"><a href="tel:0345-257-7520">0345 257 7520</a></span>
+                     <span itemprop="telephone"><a href="tel:0345-257-7520"><span class="sr-only">Call us on </span>0345 257 7520</a></span>
                      <span itemprop="email"><a href="mailto:contact@govpress.com">contact@dxw.com</a></span>
                 </div>
             </section>
