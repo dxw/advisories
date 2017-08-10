@@ -67,17 +67,25 @@ class Helpers implements \Dxw\Iguana\Registerable
         $assurance = get_field('assurance_level');
 
         if ($assurance == 'codereviewed') {
-            $assurance = 'High <span>This plugin has been given a thorough, line-by-line review</span>';
+            $assurance_level = 'High';
+            $assurance = 'This plugin has been given a thorough, line-by-line review.';
         } else {
-            $assurance = 'Medium <span>This plugin has been given a short, targeted code review.</span>';
+            $assurance_level = 'Medium';
+            $assurance = 'This plugin has been given a short, targeted code review.';
         }
         ?>
-        <h5 class="<?php echo $recommendation->slug ?>"><?php echo $recommendation->name ?></h5>
-        <div>
-          <p class="confidence">Confidence: <a class="tooltipo"><?php echo $assurance;
-        ?></a></p>
-          <p><?php echo $recommendation->text ?></p>
-          <p><a href="/about/plugin-inspections/#recommendations" class="recs">More information about this recommendation</a></p>
+        <header>
+            <h2 class="<?php echo $recommendation->slug ?>"><?php echo $recommendation->name ?></h2>
+            <p class="review">Last revised: <time class="published" datetime="<?php echo get_the_time('c');
+        ?>"><?php echo get_the_date();
+        ?></time></p>
+        </header>
+        <div class="recommendation-description">
+            <p><strong>Confidence: <?php echo $assurance_level;
+        ?></strong>
+            <br><?php echo $assurance;
+        ?></p>
+            <p><?php echo $recommendation->text ?> <a href="/about/plugin-inspections/#recommendations" class="recs">Read more about this recommendation.</a></p>
         </div>
     <?php
 
@@ -139,25 +147,22 @@ class Helpers implements \Dxw\Iguana\Registerable
         ));
 
         if (count($posts) <= 1) {
-            ?> <p class="other_versions no_results">None listed</p> <?php
+            ?> <dd>None listed</dd> <?php
 
             return;
         }
 
-        ?><ul class="other_versions"><?php
         foreach ($posts as $p) {
             if ($p->ID == get_the_id()) {
                 continue;
             }
             ?>
-            <li><a href="<?php echo get_permalink($p);
+            <dd><a href="<?php echo get_permalink($p);
             ?>"><?php echo $p->post_title;
-            ?></a></li>
+            ?></a></dd>
             <?php
 
         }
-        ?></ul><?php
-
     }
 
     public function get_plugin_vulnerabilities($codex_link, $version)

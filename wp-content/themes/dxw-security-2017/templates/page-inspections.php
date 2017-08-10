@@ -13,7 +13,7 @@
             </article>
             <?php get_template_part('partials/recommendations'); ?>
             <?php if (get_field('failure_criteria_description')) : ?>
-                <section class="failure-criteria">
+                <section id="failure-criteria" class="failure-criteria">
                     <article class="rich-text">
                         <h2>Failure criteria</h2>
                         <?php the_field('failure_criteria_description'); ?>

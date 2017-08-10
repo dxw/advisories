@@ -43,18 +43,6 @@ describe(\Dxw\DxwSecurity2017\Theme\Widgets::class, function () {
 
             \WP_Mock::wpFunction('register_sidebar', [
                 'args' => [[
-                    'name' => __('Footer'),
-                    'id' => 'sidebar-footer',
-                    'before_widget' => '<section class="widget %1$s %2$s">',
-                    'after_widget' => '</section>',
-                    'before_title' => '<h3>',
-                    'after_title' => '</h3>',
-                ]],
-                'times' => 1,
-            ]);
-
-            \WP_Mock::wpFunction('register_sidebar', [
-                'args' => [[
                     'name' => __('Advisories archive'),
                     'id' => 'sidebar-advisories',
                     'before_widget' => '<section class="widget %1$s %2$s">',

@@ -128,7 +128,19 @@ a {
   }
 
   &.call-to-action {
-    font-weight: 700;
+    font-family: $header-font-family;
+  }
+}
+
+button {
+  font-family: $header-font-family;
+  color: $link-colour;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $link-hover-colour;
   }
 }
 
@@ -150,6 +162,11 @@ hr {
 
 address {
   font-style: normal;
+}
+
+time.published {
+  @extend small;
+  color: $dark-grey;
 }
 
 // Rich Text. Anything spat out by WordPress is/should be wrapped in a .rich-text class

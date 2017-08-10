@@ -1,13 +1,31 @@
 .sidebar {
-    .widget {
-        h3 {
-            @include font-size-map($body-font-size);
-        }
-        border: 1px solid $medium-grey;
-        border-top: 2px solid $dxw-turquoise;
+    section {
         padding: $padding-width;
-        @media screen and (max-width:$small-screen) {
-          border-width: 2px 0 0 0;
+        border: 1px solid $medium-grey;
+        border-top: 3px solid $dark-grey;
+        margin-bottom: $gutter*2;
+
+        @include grid-media($grid-mobile) {
+          margin-bottom: $gutter-mobile*2;
         }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+        
+        &.widget {
+            border-top: 3px solid $accent-colour;
+        }
+    }
+}
+
+dl.inspection-details {
+
+    dt {
+        font-family: $header-font-family;
+    }
+
+    dd {
+        margin-bottom: $medium-spacing;
     }
 }

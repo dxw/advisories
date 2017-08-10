@@ -1,6 +1,6 @@
 <?php if (get_field('recommendations_heading')) : ?>
     <section class="recommendations">
-        <h2><?php the_field('recommendations_heading'); ?></h2>
+        <h2 id="recommendations"><?php the_field('recommendations_heading'); ?></h2>
         <?php if (have_rows('recommendations')) :
             while (have_rows('recommendations')) :
                 the_row();

@@ -48,7 +48,7 @@
       &:hover {
         background-color: $brand-primary;
         color: $lightest;
-        h4 {
+        h3 {
           color: $lightest;
         }
       }
@@ -68,5 +68,9 @@
         margin-bottom: $gutter-mobile*2;
       }
     }
+  }
+
+  a.button {
+    margin-bottom: 5px; // Added bottom margin so the bottom shadow is visible
   }
 }
