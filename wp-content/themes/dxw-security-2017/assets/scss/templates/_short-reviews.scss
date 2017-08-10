@@ -7,8 +7,6 @@
   }
 
   time.published {
-    @extend small;
-    color: $dark-grey;
     display: block;
     margin: $medium-spacing/2 0;
   }

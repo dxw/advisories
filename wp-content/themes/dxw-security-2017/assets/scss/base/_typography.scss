@@ -167,8 +167,6 @@ address {
 time.published {
   @extend small;
   color: $dark-grey;
-  display: block;
-  margin: $medium-spacing/2 0;
 }
 
 // Rich Text. Anything spat out by WordPress is/should be wrapped in a .rich-text class
