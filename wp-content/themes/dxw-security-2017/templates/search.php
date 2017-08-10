@@ -4,7 +4,17 @@
     </div>
 </section>
 
-<?php get_template_part('partials/global-search-form'); ?>
+<?php
+    if(isset($_GET['post_type']) && ($_GET['post_type']) == 'plugins') {
+        get_template_part('partials/plugins-search-form');
+    }
+    elseif(isset($_GET['post_type']) && ($_GET['post_type']) == 'advisories') {
+        get_template_part('partials/advisories-search-form');
+    }
+    else {
+        get_template_part('partials/global-search-form');
+    }
+?>
 
 <div class="row">
     <div class="page-content">
