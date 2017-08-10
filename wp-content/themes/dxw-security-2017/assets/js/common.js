@@ -1,8 +1,8 @@
 /* globals jQuery */
 
-var ToggleMenu = require('./components/ToggleMenu')
-var ToggleMenu = require('./components/StickyNavigation')
-var ToggleMenu = require('./components/ProgressiveDisclosure')
+require('./components/ToggleMenu')
+require('./components/StickyNavigation')
+require('./components/ProgressiveDisclosure')
 
 jQuery(function ($) {
   'use strict'
