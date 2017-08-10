@@ -15,13 +15,44 @@
       @include grid-column(2);
     }
   }
+
+  .criteria-list {
+    padding-left: 0;
+    margin-bottom: $gutter;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-mobile;
+    }
+
+    li {
+      list-style: none;
+      border-bottom: 1px solid #ddd;
+      padding-top: $medium-spacing;
+      padding-bottom:$gutter-medium;
+      padding-left: 40px;
+      background: url(#{$imagePath}/icon-cross.svg) left center no-repeat;
+      background-size: 22px 21px;
+
+      &:first-child {
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
 }
 
 .alert {
   margin-bottom: $gutter;
 
+  &:last-of-type {
+    margin-bottom: $gutter*2;
+  }
+
   @include grid-media($grid-mobile) {
     margin-bottom: $gutter-mobile;
+
+    &:last-of-type {
+      margin-bottom: $gutter-mobile*2;
+    }
   }
 
   button.anchor {
@@ -51,5 +82,13 @@
       padding-top: $gutter-mobile;
       margin-bottom: $gutter-mobile;
     }
+  }
+}
+
+.report {
+  margin-top: $gutter*2;
+
+  @include grid-media($grid-mobile) {
+    margin-top: $gutter-mobile*2;
   }
 }

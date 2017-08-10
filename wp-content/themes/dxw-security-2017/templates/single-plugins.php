@@ -57,6 +57,41 @@
                 </section>
             <?php endif;
         ?>
+
+        <article class="report">
+            <h2>Findings</h2>
+            <div class="rich-text">
+                <?php the_field('findings') ?>
+            </div>
+
+            <?php
+                $recommendation = get_field('recommendation');
+                if ($recommendation != 'green') :
+            ?>
+                <?php $recommendation_data = h()->recommendation_data($recommendation); ?>
+                <h2>Reason for the '<?php echo $recommendation_data->name ?>' result</h2>
+                <div class="rich-text">
+                    <p><?php echo h()->get_field_label('recommendation_criterion_' . $recommendation) ?>:</p>
+                    <?php the_field('reason') ?>
+                </div>
+            <?php endif ?>
+        </article>
+        
+        <?php
+            $failure_criteria = h()->get_field_label('matched_criteria');
+            if(is_array($failure_criteria) && count($failure_criteria)) :
+        ?>
+            <section class="failure-criteria rich-text">
+                <h2>Failure criteria</h2>
+                <ul class="criteria-list">
+                    <?php foreach($failure_criteria as $criterion) { ?>
+                        <li><?php echo $criterion ?></li>
+                    <?php } ?>
+                </ul>
+                <p>Read more about our <a href="/about/plugin-inspections/#failure-criteria">failure criteria</a>.</p>
+            </section>
+        <?php endif ?>
+
     </section>
 
     <aside class="sidebar page-section">
