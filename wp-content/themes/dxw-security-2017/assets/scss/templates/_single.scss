@@ -1,0 +1,55 @@
+.single {
+
+  .inspection-content {
+    @include grid-column(8);
+
+    @include grid-media($grid-mobile) {
+      @include grid-column(2);
+    }
+  }
+
+  .sidebar {
+    @include grid-column(4);
+
+    @include grid-media($grid-mobile) {
+      @include grid-column(2);
+    }
+  }
+}
+
+.alert {
+  margin-bottom: $gutter;
+
+  @include grid-media($grid-mobile) {
+    margin-bottom: $gutter-mobile;
+  }
+
+  button.anchor {
+    @extend h3;
+    margin-bottom: 0;
+
+    &:before {
+      content: '\25B6';
+      padding-right: 0.5em;
+    }
+
+    &.open {
+
+      &:before {
+        content: '\25BC';
+      }
+    }
+  }
+
+  .details {
+    display: none;
+    padding-top: $gutter;
+    padding-left: $gutter-medium*2;
+    margin-bottom: $gutter;
+
+    @include grid-media($grid-mobile) {
+      padding-top: $gutter-mobile;
+      margin-bottom: $gutter-mobile;
+    }
+  }
+}

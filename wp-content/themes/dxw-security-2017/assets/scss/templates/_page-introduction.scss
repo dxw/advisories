@@ -64,24 +64,25 @@
     }
   }
 
-  time {
+  p.review {
     float: right;
     margin-bottom: 0;
     margin-top: $medium-spacing;
+    @extend small;
+    font-family: $header-font-family;
 
     @include grid-media($grid-mobile) {
       float: none;
       margin-top: $medium-spacing/2;
     }
+
+    time {
+      display: inline;
+      font-family: $base-font;
+    }
   }
 
   div.recommendation-description {
-    // @include grid-column(8);
-
-    // @include grid-media($grid-mobile) {
-    //   @include grid-column(2);
-    // }
-
     width: calc(66.6666666667% - 33.3333333333px); // main content width
 
     @include grid-media($grid-mobile) {

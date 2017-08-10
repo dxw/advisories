@@ -2,6 +2,7 @@
 
 var ToggleMenu = require('./components/ToggleMenu')
 var ToggleMenu = require('./components/StickyNavigation')
+var ToggleMenu = require('./components/ProgressiveDisclosure')
 
 jQuery(function ($) {
   'use strict'

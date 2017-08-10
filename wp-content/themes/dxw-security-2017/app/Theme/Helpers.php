@@ -76,7 +76,7 @@ class Helpers implements \Dxw\Iguana\Registerable
         ?>
         <header>
             <h2 class="<?php echo $recommendation->slug ?>"><?php echo $recommendation->name ?></h2>
-            <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
+            <p class="review">Last revised: <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time></p>
         </header>
         <div class="recommendation-description">
             <p><strong>Confidence: <?php echo $assurance_level; ?></strong>
@@ -143,25 +143,22 @@ class Helpers implements \Dxw\Iguana\Registerable
         ));
 
         if (count($posts) <= 1) {
-            ?> <p class="other_versions no_results">None listed</p> <?php
+            ?> <dd>None listed</dd> <?php
 
             return;
         }
 
-        ?><ul class="other_versions"><?php
         foreach ($posts as $p) {
             if ($p->ID == get_the_id()) {
                 continue;
             }
             ?>
-            <li><a href="<?php echo get_permalink($p);
+            <dd><a href="<?php echo get_permalink($p);
             ?>"><?php echo $p->post_title;
-            ?></a></li>
+            ?></a></dd>
             <?php
 
         }
-        ?></ul><?php
-
     }
 
     public function get_plugin_vulnerabilities($codex_link, $version)
