@@ -76,11 +76,15 @@ class Helpers implements \Dxw\Iguana\Registerable
         ?>
         <header>
             <h2 class="<?php echo $recommendation->slug ?>"><?php echo $recommendation->name ?></h2>
-            <p class="review">Last revised: <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time></p>
+            <p class="review">Last revised: <time class="published" datetime="<?php echo get_the_time('c');
+        ?>"><?php echo get_the_date();
+        ?></time></p>
         </header>
         <div class="recommendation-description">
-            <p><strong>Confidence: <?php echo $assurance_level; ?></strong>
-            <br><?php echo $assurance; ?></p>
+            <p><strong>Confidence: <?php echo $assurance_level;
+        ?></strong>
+            <br><?php echo $assurance;
+        ?></p>
             <p><?php echo $recommendation->text ?> <a href="/about/plugin-inspections/#recommendations" class="recs">Read more about this recommendation.</a></p>
         </div>
     <?php
