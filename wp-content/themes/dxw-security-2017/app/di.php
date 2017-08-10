@@ -28,7 +28,6 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Pagination::class, new \Dxw\D
     $registrar->getInstance(\Dxw\Iguana\Theme\Helpers::class)
 ));
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\ThemeSettings::class, new \Dxw\DxwSecurity2017\Theme\ThemeSettings());
-$registrar->addInstance(\Dxw\DxwSecurity2017\Theme\AjaxHandlers::class, new \Dxw\DxwSecurity2017\Theme\AjaxHandlers());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\Feeds::class, new \Dxw\DxwSecurity2017\Theme\Feeds());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\PostClasses::class, new \Dxw\DxwSecurity2017\Theme\PostClasses());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\WpHead::class, new \Dxw\DxwSecurity2017\Theme\WpHead());
@@ -39,6 +38,9 @@ $registrar->addInstance(\Dxw\DxwSecurity2017\Theme\OptionsPage::class, new \Dxw\
 $registrar->addInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter());
 $registrar->addInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin($registrar->getInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class)));
 $registrar->addInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, new \Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme($registrar->getInstance(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class)));
+
+// AdvisoryEmails - sets up handling of advisory email sending for admins
+$registrar->addInstance(\Dxw\DxwSecurity2017\Lib\AdvisoryEmails\AjaxHandler::class, new \Dxw\DxwSecurity2017\Lib\AdvisoryEmails\AjaxHandler());
 
 // Post types and additional fields
 $registrar->addInstance(\Dxw\DxwSecurity2017\Posts\PostTypes::class, new \Dxw\DxwSecurity2017\Posts\PostTypes());

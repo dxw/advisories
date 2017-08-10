@@ -1,8 +1,8 @@
 <?php
 
-namespace Dxw\DxwSecurity2017\Theme;
+namespace Dxw\DxwSecurity2017\Lib\AdvisoryEmails;
 
-class AjaxHandlers implements \Dxw\Iguana\Registerable
+class AjaxHandler implements \Dxw\Iguana\Registerable
 {
     public function register()
     {
