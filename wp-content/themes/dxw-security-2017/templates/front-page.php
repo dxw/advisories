@@ -14,7 +14,7 @@
 
                         <article class="service">
                             <a href="<?php the_sub_field('link'); ?>" class="icon-<?php the_sub_field('icon_name'); ?>">
-                                <h4><?php the_sub_field('title'); ?></h4>
+                                <h3><?php the_sub_field('title'); ?></h3>
                                 <?php the_sub_field('description'); ?>
                             </a>
                         </article>

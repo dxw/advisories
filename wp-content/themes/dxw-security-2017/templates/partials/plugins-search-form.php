@@ -4,7 +4,7 @@
             <label for="s" class="block-label">Search plugin reviews:</label>
             <div class="form-field">
                 <input type="hidden" name="post_type" value="plugins">
-                <input type="search" value="<?php echo get_search_query() ?>" name="s">
+                <input type="search" value="<?php echo get_search_query() ?>" name="s" id="s">
                 <button value="Search" class="button">Search</button>
             </div>
         </form>
