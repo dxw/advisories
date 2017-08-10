@@ -15,7 +15,8 @@ class Form
         <div class="admin_stuff">
           <h3>Admin tools</h3>
           <h4>Publish emails</h4>
-
+          <input id="send_email_nonce" type="hidden" value="<?php echo wp_create_nonce('send_email');
+        ?>">
           <a href="#" class="email_button btn btn-danger" id="email_fd" data-subject="<?php h()->the_title_for_email();
         ?>" data-body="textarea.report_email">Full Disclosure</a>
           <a href="#" class="email_button btn btn-danger" id="email_wpscan" data-subject="<?php h()->the_title_for_email();
