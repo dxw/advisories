@@ -11,6 +11,6 @@ class WordPressToTwitter implements \Dxw\Iguana\Registerable
 
     public function wpt_custom_shortcode($meta, $post, $field)
     {
-        return get_field_label($field);
+        return h()->get_field_label($field);
     }
 }

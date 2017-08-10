@@ -23,11 +23,15 @@ describe(\Dxw\DxwSecurity2017\Theme\WordPressToTwitter::class, function () {
 
     describe('->wpt_custom_shortcode()', function () {
         it('returns the field label', function () {
-            WP_Mock::wpFunction('get_field_label', [
+            $this->h = Mockery::Mock(stdClass::class);
+            WP_Mock::wpFunction('h', [
                 'times' => 1,
-                'args' => 'foo',
-                'return' => 'bar'
+                'return' => $this->h
             ]);
+            $this->h->shouldReceive('get_field_label')
+                ->once()
+                ->with('foo')
+                ->andReturn('bar');
             $result = $this->wordPressToTwitter->wpt_custom_shortcode('meta', 'post', 'foo');
             expect($result)->to->equal('bar');
         });
