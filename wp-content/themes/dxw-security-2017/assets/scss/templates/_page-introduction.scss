@@ -82,7 +82,8 @@
     }
   }
 
-  div.recommendation-description {
+  div.recommendation-description,
+  div.vulnerability-description {
     width: calc(66.6666666667% - 33.3333333333px); // main content width
 
     @include grid-media($grid-mobile) {
@@ -99,6 +100,58 @@
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+
+    &.state {
+      font-family: $header-font-family;
+
+      &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-top: 4px;
+        margin-right: $medium-spacing;
+
+        @include grid-media($grid-mobile) {
+          width: 18px;
+          height: 18px;
+          margin-right: $medium-spacing/2;
+        }
+      }
+
+      &.identified {
+
+        &:before {
+          background: url('#{$imagePath}/icon-warning.svg') no-repeat;
+        }
+      }
+
+      &.reported {
+
+        &:before {
+          background: url('#{$imagePath}/icon-exclamation.svg') no-repeat;
+        }
+      }
+
+      &.fixed {
+
+        &:before {
+          background: url('#{$imagePath}/icon-check.svg') no-repeat;
+        }
+      }
+
+      .red {
+        color: $dxwsec-red;
+      }
+
+      .orange {
+        color: $dxwsec-orange-dark;
+      }
+
+      .green {
+        color: $dxwsec-green;
+      }
     }
   }
 }
