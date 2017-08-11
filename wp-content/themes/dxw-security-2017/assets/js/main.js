@@ -7,15 +7,17 @@ require('./common')
 
 jQuery(function ($) {
   $('.email_button').click(function (e) {
-    var confirm
-    if (!confirm('Are you sure?')) {
+    if (!window.confirm('Are you sure?')) {
       return
     }
+    var nonce = $('#send_email_nonce').val()
+    console.log(nonce)
     var data = {
       action: 'send_email',
       target: $(e.target).attr('id'),
       subject: $(e.target).data('subject'),
-      body: $($(e.target).data('body')).val()
+      body: $($(e.target).data('body')).val(),
+      _ajax_nonce: nonce
     }
     console.log(data)
     $('.email_results').removeClass('alert-danger')

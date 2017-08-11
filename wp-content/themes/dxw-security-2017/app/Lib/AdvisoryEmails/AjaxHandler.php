@@ -1,8 +1,8 @@
 <?php
 
-namespace Dxw\DxwSecurity2017\Theme;
+namespace Dxw\DxwSecurity2017\Lib\AdvisoryEmails;
 
-class AjaxHandlers implements \Dxw\Iguana\Registerable
+class AjaxHandler implements \Dxw\Iguana\Registerable
 {
     public function register()
     {
@@ -11,6 +11,8 @@ class AjaxHandlers implements \Dxw\Iguana\Registerable
 
     public function wp_ajax_send_email()
     {
+        check_ajax_referer('send_email');
+
         $targets = array(
           'email_hackers'    => 'wp-hackers@lists.automattic.com',
           'email_wp_plugins' => 'plugins@wordpress.org',
