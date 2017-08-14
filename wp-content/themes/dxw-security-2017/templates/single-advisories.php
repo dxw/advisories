@@ -37,72 +37,64 @@
 <div class="row">
     <section class="page-section inspection-content">
 
-        <?php
-            $plugin = new \Dxw\DxwSecurity2017\Lib\PluginVersionChecker();
-            if (count(h()->the_plugin_vulnerabilities()) || $plugin->is_old()) :
-                echo '<h2>Warnings</h2>';
-            endif;
-
-            if (count(h()->the_plugin_vulnerabilities())) : ?>
-                <section class="alert">
-                    <button type="button" id="vulnerabilities" class="anchor">Version <?php the_field('version_of_plugin'); ?> of this plugin has known vulnerabilities</button>
-                    <div id="vulnerabilities" class="details">
-                        <p>The version of this plugin that this recommendation was based on is known to be vulnerable to attack:</p>
-                        <ul>
-                        <?php foreach ($posts as $p) { ?>
-                            <li><a href="<?php echo get_permalink($p); ?>"><?php echo $p->post_title; ?></a></li>
-                        <?php } ?>
-                        </ul>
-                    </div>
-                </section>
-            <?php endif;
-
-            if ($plugin->is_old()) : ?>
-                <section class="alert">
-                    <button type="button" id="old-versions" class="anchor">Old version</button>
-                    <div id="old-versions" class="details">
-                        <p>This recommendation applies to version <?php echo end(explode(',',get_field('version_of_plugin'))) ?> of this plugin, but the most recent version is <?php echo esc_html($plugin->most_recent_version()) ?>. These findings may no longer be correct.</p>
-                        <?php if ($plugin->have_latest()) : ?>
-                            <p><a href="<?php echo esc_html($plugin->our_most_recent_link()) ?>">View the recommendation for version <?php echo esc_html($plugin->our_most_recent_version()) ?> of this plugin instead</a></p>
-                        <?php endif ?>
-                    </div>
-                </section>
-            <?php endif;
-        ?>
+        <article>
+            <h2>CVSS Summary</h2>
+            <table class="cvss">
+                <caption>CVSS base scores for this vulnerability</caption>
+                <tbody>
+                    <tr>
+                        <th scope="col">Score</td>
+                        <td class="score <?php echo strtolower(h()->get_cvss_severity()); ?>"><?php h()->the_cvss_score(); ?> <?php echo h()->the_cvss_severity(); ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Vector</th>
+                        <td><?php h()->the_field_label('access_vector'); ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Complexity</th>
+                        <td><?php h()->the_field_label('access_complexity'); ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Authentication</th>
+                        <td><?php h()->the_field_label('authentication'); ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Confidentiality</th>
+                        <td><?php h()->the_field_label('confidentiality'); ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Integrity</th>
+                        <td><?php h()->the_field_label('integrity'); ?></td>
+                    </tr>
+                    <tr>
+                        <th scope="col">Availability</th>
+                        <td><?php h()->the_field_label('availability'); ?></td>
+                    </tr>
+                </tbody>
+            </table>
+            <small>You can read more about CVSS base scores on <a href="http://en.wikipedia.org/wiki/CVSS">Wikipedia</a> or in the <a href="http://www.first.org/cvss/cvss-guide">CVSS specification</a>.</small>
+        </article>
 
         <article class="report">
-            <h2>Findings</h2>
+            <h2>Proof of concept</h2>
             <div class="rich-text">
-                <?php the_field('findings') ?>
+                <?php the_field('proof') ?>
             </div>
-
-            <?php
-                $recommendation = get_field('recommendation');
-                if ($recommendation != 'green') :
-            ?>
-                <?php $recommendation_data = h()->recommendation_data($recommendation); ?>
-                <h2>Reason for the '<?php echo $recommendation_data->name ?>' result</h2>
-                <div class="rich-text">
-                    <p><?php echo h()->get_field_label('recommendation_criterion_' . $recommendation) ?>:</p>
-                    <?php the_field('reason') ?>
-                </div>
-            <?php endif ?>
         </article>
-        
-        <?php
-            $failure_criteria = h()->get_field_label('matched_criteria');
-            if(is_array($failure_criteria) && count($failure_criteria)) :
-        ?>
-            <section class="failure-criteria rich-text">
-                <h2>Failure criteria</h2>
-                <ul class="criteria-list">
-                    <?php foreach($failure_criteria as $criterion) { ?>
-                        <li><?php echo $criterion ?></li>
-                    <?php } ?>
-                </ul>
-                <p>Read more about our <a href="/about/plugin-inspections/#failure-criteria">failure criteria</a>.</p>
-            </section>
-        <?php endif ?>
+
+        <article class="report">
+            <h2>Advisory timeline</h2>
+            <div class="rich-text">
+                <?php the_field('timeline') ?>
+            </div>
+        </article>
+
+        <article class="report">
+            <h2>Mitigation/further actions</h2>
+            <div class="rich-text">
+                <?php the_field('mitigations') ?>
+            </div>
+        </article>
 
     </section>
 
