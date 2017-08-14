@@ -96,6 +96,9 @@
             </div>
         </article>
 
+        <?php $form = new \Dxw\DxwSecurity2017\Lib\AdvisoryEmails\Form();
+        $form->displayIfSuperAdmin(); ?>
+
     </section>
 
     <aside class="sidebar page-section">
