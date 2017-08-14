@@ -105,6 +105,7 @@
                 <dd><?php if(function_exists('coauthors')) { coauthors(); } else { the_author(); } ?></dd>
 
                 <dt>Advisory ID:</dt>
+                <?php global $post; ?>
                 <?php if($post->post_status == 'publish' || $post->post_status == 'private'): ?>
                     <dd><?php h()->the_advisory_id(); ?></dt>
                 <?php else: ?>
