@@ -67,6 +67,23 @@ wp menu item add-custom header-menu Advisories http://localhost/advisories
 wp menu item add-custom header-menu Plugins http://localhost/plugins
 wp menu item add-custom header-menu About http://localhost/about
 wp menu location assign header-menu header
+wp menu create Services
+wp menu item add-post Services 40 --title="Plugin reviews"
+wp menu item add-post Services 26 --title="Plugin inspections"
+wp menu item add-post Services 71 --title="Disclosure policy"
+wp menu item add-post Services 69 --title="Terms of service"
+wp menu location assign Services footer_first
+wp menu create Github
+wp menu item add-custom Github Whippet https://github.com/dxw/whippet
+wp menu item add-custom Github "Whippet Server" https://github.com/dxw/whippet-server
+wp menu item add-custom Github "2FA plugin" https://github.com/dxw/2fa
+wp menu item add-custom Github Iguana https://github.com/dxw/iguana
+wp menu location assign Github footer_second
+wp menu create "More from dxw"
+wp menu item add-custom "More from dxw" dxw https://dxw.com
+wp menu item add-custom "More from dxw" "Govpress by dxw" https://govpress.com
+wp menu location assign "More from dxw" footer_third
+
 wp option set show_on_front page
 wp option set page_on_front 3052
 wp option update blogdescription "WordPress security advisories, audit and assurance"
