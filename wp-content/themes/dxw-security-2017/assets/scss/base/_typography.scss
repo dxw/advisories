@@ -57,7 +57,7 @@ strong {
 
 ul, ol {
   list-style-position: inside;
-  padding-left: $gutter;
+  padding-left: $gutter-medium*2;
 }
 
 ul {
@@ -108,9 +108,26 @@ cite {
   @extend small;
 }
 
-p, pre {
+pre, code {
+  @include font-size-map($small-font-size);
   overflow-wrap: break-word;
   word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+pre {
+  display: block;
+  padding: $gutter;
+  background: $black;
+  color: $white;
+
+  @include grid-media($grid-mobile) {
+    padding: $gutter-mobile;
+  }
+}
+
+code {
+  background: $slight-grey;
 }
 
 // Links

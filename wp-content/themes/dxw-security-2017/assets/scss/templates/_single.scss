@@ -38,6 +38,34 @@
       }
     }
   }
+
+  table.cvss {
+    margin-bottom: $gutter;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-mobile;
+    }
+
+    th {
+      width: 40%;
+    }
+
+    td.score {
+      font-family: $header-font-family;
+
+      &.high {
+        color: $dxwsec-red;
+      }
+
+      &.medium {
+        color: $dxwsec-orange-dark;
+      }
+
+      &.low {
+        color: $dxwsec-green;
+      }
+    }
+  }
 }
 
 .alert {

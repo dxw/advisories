@@ -1,4 +1,4 @@
-$table-border: #ddd;
+$table-border: $medium-grey;
 
 table {
   width: 100%;
@@ -12,6 +12,22 @@ table {
 
     @include grid-media($grid-mobile) {
       padding: 5px 10px 10px 10px;
+    }
+  }
+
+  th {
+    font-family: $header-font-family;
+    text-align: left;
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: 1px solid $table-border;
+
+      &:first-child {
+        border-top: 1px solid $table-border;
+      }
     }
   }
 }
@@ -36,15 +52,16 @@ table.criteria-table {
 
     th {
       @include font-size-map($h4-font-size);
-      font-family: $header-font-family;
-      text-align: left;
     }
   }
 
   tbody {
 
     tr {
-      border-bottom: 1px solid $table-border;
+
+      &:first-child {
+        border-top: none;
+      }
 
       &:nth-child(odd) {
         background: $light-grey;
