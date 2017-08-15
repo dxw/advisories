@@ -1,7 +1,12 @@
 // Buttons
-@mixin button-background($background) {
+@mixin button-background($background, $text) {
   background: $background;
   box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
+  color: $text;
+  &:hover,
+  &:focus {
+    color: $text;
+  }
   &:hover {
     background: darken($background, 15);
   }
@@ -32,18 +37,13 @@
   display: inline-block;
   text-decoration: none;
   border: none;
-  @include button-background($brand-primary);
+  @include button-background($brand-primary, $lightest);
   padding: $gutter/2 $gutter $gutter-medium $gutter;
   font-family: $base-font;
   @include font-size-map($body-font-size);
-  color: $lightest;
   cursor: pointer;
   outline: 0;
   transition: all 0.3s ease-in-out;
-
-  &:hover, &:focus {
-    color: $lightest;
-  }
 }
 
 button {
@@ -61,8 +61,7 @@ button {
 
 .button-white {
   @extend %button;
-  @include button-background($lightest);
-  color: $brand-secondary;
+  @include button-background($lightest, $brand-secondary);
 
   &:hover, &:focus {
     color: darken($brand-secondary, 15);
