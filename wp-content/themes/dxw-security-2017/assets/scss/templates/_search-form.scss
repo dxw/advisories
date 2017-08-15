@@ -42,6 +42,7 @@
       padding-left: $gutter;
       padding-right: $gutter;
       float: right;
+      box-shadow: none;
 
       @media screen and (max-width:$small-screen) {
         padding-bottom: 14px;

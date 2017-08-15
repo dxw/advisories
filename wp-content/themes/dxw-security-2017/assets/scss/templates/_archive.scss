@@ -20,8 +20,8 @@
         }
         .form-field {
             button {
-                background-color: $dxwsec-purple;
-                color: $white;
+                @include button-background($brand-secondary, $lightest);
+                box-shadow: none;
             }
         }
     }
