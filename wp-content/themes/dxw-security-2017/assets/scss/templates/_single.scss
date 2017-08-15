@@ -53,18 +53,6 @@
 
     td.score {
       font-family: $header-font-family;
-
-      &.high {
-        color: $dxwsec-red;
-      }
-
-      &.medium {
-        color: $dxwsec-orange-dark;
-      }
-
-      &.low {
-        color: $dxwsec-green;
-      }
     }
   }
 }

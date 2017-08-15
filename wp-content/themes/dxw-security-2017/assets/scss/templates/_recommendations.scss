@@ -30,26 +30,23 @@
       }
 
       &.red {
-        color: $dxwsec-red;
 
         &:before {
-          background: url('#{$imagePath}/icon-warning.svg') no-repeat;
+          @include icon-warning;
         }
       }
 
       &.orange {
-        color: $dxwsec-orange-dark;
 
         &:before {
-          background: url('#{$imagePath}/icon-exclamation.svg') no-repeat;
+          @include icon-exclamation;
         }
       }
 
       &.green {
-        color: $dxwsec-green;
 
         &:before {
-          background: url('#{$imagePath}/icon-check.svg') no-repeat;
+          @include icon-check;
         }
       }
     }
