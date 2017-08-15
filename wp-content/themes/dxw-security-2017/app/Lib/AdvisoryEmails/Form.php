@@ -12,27 +12,34 @@ class Form
 
         global $post;
         ?>
-        <div class="admin_stuff">
-          <h3>Admin tools</h3>
-          <h4>Publish emails</h4>
-          <input id="send_email_nonce" type="hidden" value="<?php echo wp_create_nonce('send_email');
+        <section class="admin-tools-container">
+            <h2>Admin tools</h2>
+            <h3>Publish emails</h3>
+            <input id="send_email_nonce" type="hidden" value="<?php echo wp_create_nonce('send_email');
         ?>">
-          <a href="#" class="email_button btn btn-danger" id="email_fd" data-subject="<?php h()->the_title_for_email();
+            <ul class="email-links">
+                <li>
+                    <a href="#" class="send_email_button email-button icon-mail" id="email_fd" data-subject="<?php h()->the_title_for_email();
         ?>" data-body="textarea.report_email">Full Disclosure</a>
-          <a href="#" class="email_button btn btn-danger" id="email_wpscan" data-subject="<?php h()->the_title_for_email();
+                </li>
+                <li>
+                    <a href="#" class="send_email_button email-button icon-mail" id="email_wpscan" data-subject="<?php h()->the_title_for_email();
         ?>" data-body="textarea.report_email">WP Scan</a>
-          <a href="#" class="email_button btn btn-danger" id="email_dxw_wp_sec" data-subject="<?php h()->the_title_for_email();
+                </li>
+                <li>
+                    <a href="#" class="send_email_button email-button icon-mail" id="email_dxw_wp_sec" data-subject="<?php h()->the_title_for_email();
         ?>" data-body="textarea.report_email">dxw WP Security</a>
-
-          <h4>Report emails</h4>
-          <a href="#" class="email_button btn btn-danger" id="email_wp_plugins" data-subject="<?php h()->the_title_for_email();
+                </li>
+            </ul>
+            
+            <h3>Report emails</h3>
+            <a href="#" class="send_email_button email-button icon-mail" id="email_wp_plugins" data-subject="<?php h()->the_title_for_email();
         ?>" data-body="textarea.report_email">WP Plugins</a>
-          <div class="alert hidden email_results">
-        </div>
+            <div class="alert hidden email_results"></div>
 
-        <h4>Text version for reports</h4>
-        <p><a href="mailto:?subject=<?php h()->the_title_for_email() ?>">Click for a blank email with the right subject</a></p>
-        <textarea class="plain_text report_email">
+            <h3>Text version for reports</h3>
+            <a class="email-button icon-mail-open" href="mailto:?subject=<?php h()->the_title_for_email() ?>">Click for a blank email with the right subject</a>
+            <textarea class="plain_text report_email">
 Details
 ================
 Software: <?php echo get_field('component') ?>
@@ -106,15 +113,15 @@ Discovered by dxw:
         ?>
 
 Please visit security.dxw.com for more information.
-          </textarea>
+            </textarea>
 
-          <h4>Text version for CVE requests</h4>
-          <p><a href="mailto:cve-assign@mitre.org?subject=<?php echo "CVE request: " . preg_replace("/^Private: /", "", get_the_title());
+            <h3>Text version for CVE requests</h3>
+            <a class="email-button icon-mail-open" href="mailto:cve-assign@mitre.org?subject=<?php echo "CVE request: " . preg_replace("/^Private: /", "", get_the_title());
         if (get_field('is_plugin') == 'yes') {
             echo " (WordPress plugin)";
         }
-        ?>">Click for a blank email with the right subject</a></p>
-          <textarea class="plain_text cve_email">
+        ?>">Click for a blank email with the right subject</a>
+            <textarea class="plain_text cve_email">
 Vulnerability
 ================
 <?php echo strip_tags(get_field('issue')) ?>
@@ -158,8 +165,8 @@ Discovered by:
     the_author();
 }
         ?>
-          </textarea>
-        </div>
+            </textarea>
+        </section>
         <?php
 
     }
