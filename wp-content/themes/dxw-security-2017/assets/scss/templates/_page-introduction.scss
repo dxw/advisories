@@ -50,18 +50,6 @@
     @include grid-media($grid-mobile) {
       float: none;
     }
-
-    &.unsafe {
-      color: $dxwsec-red;
-    }
-
-    &.caution {
-      color: $dxwsec-orange-dark;
-    }
-
-    &.good {
-      color: $dxwsec-green;
-    }
   }
 
   p.review {
@@ -123,34 +111,22 @@
       &.identified {
 
         &:before {
-          background: url('#{$imagePath}/icon-warning.svg') no-repeat;
+          @include icon-warning;
         }
       }
 
       &.reported {
 
         &:before {
-          background: url('#{$imagePath}/icon-exclamation.svg') no-repeat;
+          @include icon-exclamation;
         }
       }
 
       &.fixed {
 
         &:before {
-          background: url('#{$imagePath}/icon-check.svg') no-repeat;
+          @include icon-check;
         }
-      }
-
-      .red {
-        color: $dxwsec-red;
-      }
-
-      .orange {
-        color: $dxwsec-orange-dark;
-      }
-
-      .green {
-        color: $dxwsec-green;
       }
     }
   }

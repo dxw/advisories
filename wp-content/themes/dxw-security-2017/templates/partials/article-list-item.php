@@ -9,6 +9,6 @@
         <?php h()->the_short_recommendation(); ?>
     <?php endif; ?>
     <?php if($post->post_type == 'advisories') : ?>
-        <p class="score <?php echo strtolower(h()->get_cvss_severity()); ?>">Severity: <span class="score"><?php h()->the_cvss_severity(); ?></span></p>
+        <p class="score <?php echo strtolower(h()->get_cvss_severity()); ?>"><span class="name">Severity:</span> <?php h()->the_cvss_severity(); ?></p>
     <?php endif; ?>
 </article>
