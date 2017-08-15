@@ -32,7 +32,7 @@
             endif;
 
             if (count(h()->the_plugin_vulnerabilities())) : ?>
-                <section class="alert">
+                <section class="warning">
                     <button type="button" id="vulnerabilities" class="anchor">Version <?php the_field('version_of_plugin'); ?> of this plugin has known vulnerabilities</button>
                     <div id="vulnerabilities" class="details">
                         <p>The version of this plugin that this recommendation was based on is known to be vulnerable to attack:</p>
@@ -46,7 +46,7 @@
             <?php endif;
 
             if ($plugin->is_old()) : ?>
-                <section class="alert">
+                <section class="warning">
                     <button type="button" id="old-versions" class="anchor">Old version</button>
                     <div id="old-versions" class="details">
                         <p>This recommendation applies to version <?php echo end(explode(',',get_field('version_of_plugin'))) ?> of this plugin, but the most recent version is <?php echo esc_html($plugin->most_recent_version()) ?>. These findings may no longer be correct.</p>

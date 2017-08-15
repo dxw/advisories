@@ -1,0 +1,97 @@
+section.admin-tools-container {
+  padding: $padding-width;
+  border: 1px solid $medium-grey;
+  border-top: 3px solid $dxwsec-red;
+  margin: $gutter*2 0;
+
+  @include grid-media($grid-mobile) {
+    margin-top: $gutter-mobile*2;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    margin-top: $gutter;
+    margin-bottom: 0.3em;
+
+    @include grid-media($grid-mobile) {
+      margin-top: $gutter-mobile*2;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .email-links {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin-right: $gutter;
+
+      @include grid-media($grid-mobile) {
+        margin-right: $gutter-mobile;
+      }
+    }
+  }
+
+  .email-button {
+    border-bottom: none;
+
+    &:before {
+      content: '';
+      width: 20px;
+      display: inline-block;
+      margin-right: 8px;
+
+      @include grid-media($grid-mobile) {
+        width: 16px;
+      }
+    }
+
+    &.icon-mail {
+
+      &:before {
+        height: 15px;
+        background: url('#{$imagePath}/icon-mail.svg') no-repeat;
+
+        @include grid-media($grid-mobile) {
+          height: 12px;
+        }
+      }
+    }
+
+    &.icon-mail-open {
+
+      &:before {
+        height: 20px;
+        background: url('#{$imagePath}/icon-mail-open.svg') no-repeat;
+
+        @include grid-media($grid-mobile) {
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  .email_results {
+    @extend .alert;
+    border-left-color: $dxwsec-green;
+    background: $light-grey;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    border: 10px solid $medium-grey;
+    margin-top: $gutter;
+    min-height: 340px;
+    color: $dark-grey;
+
+    @include grid-media($grid-mobile) {
+      margin-top: $gutter-mobile;
+      min-height: 240px;
+    }
+  }
+}

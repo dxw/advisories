@@ -8,10 +8,6 @@
         @include grid-media($grid-mobile) {
           margin-bottom: $gutter-mobile*2;
         }
-
-        &:last-of-type {
-            margin-bottom: 0;
-        }
         
         &.widget {
             border-top: 3px solid $accent-colour;
