@@ -40,6 +40,14 @@
     }
   }
 
+  article.cvss-table {
+    margin-bottom: $gutter*2;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-mobile*2;
+    }
+  }
+
   table.cvss {
     margin-bottom: $gutter;
 
@@ -103,9 +111,9 @@
 }
 
 .report {
-  margin-top: $gutter*2;
+  margin-bottom: $gutter*2;
 
   @include grid-media($grid-mobile) {
-    margin-top: $gutter-mobile*2;
+    margin-bottom: $gutter-mobile*2;
   }
 }

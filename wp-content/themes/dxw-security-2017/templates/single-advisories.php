@@ -37,7 +37,7 @@
 <div class="row">
     <section class="page-section inspection-content">
 
-        <article>
+        <article class="cvss-table">
             <h2>CVSS Summary</h2>
             <table class="cvss">
                 <caption>CVSS base scores for this vulnerability</caption>
