@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+#
+# Runs all site setup scripts
+
+`dirname $0`/../setup/external.sh
+docker-compose exec wordpress /usr/src/app/setup/internal.sh
