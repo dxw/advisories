@@ -30,18 +30,6 @@ if(function_exists("register_field_group")) {
         'name' => 'codex_link',
         'required' => true,
         'type' => 'text',
-        /*          'conditional_logic' => array (
-          'status' => 1,
-          'rules' => array (
-            array (
-              'field' => 'field_11bef6fc3019a',
-              'operator' => '==',
-              'value' => 'yes',
-            ),
-            'allorany' => 'all',
-          ),
-        ),
-        */
       ),
 
       array (
@@ -110,6 +98,25 @@ if(function_exists("register_field_group")) {
         'instructions' => 'What happened when (reported, fix released, disclosed, etc)?'
       ),
       array (
+          'key' => 'field_59d78986e0d0c',
+          'label' => 'Hide CVSS score',
+          'name' => 'hide_cvss_score',
+          'type' => 'true_false',
+          'instructions' => '',
+          'required' => 0,
+          'conditional_logic' => 0,
+          'wrapper' => array (
+              'width' => '',
+              'class' => '',
+              'id' => '',
+          ),
+          'message' => '',
+          'default_value' => 0,
+          'ui' => 0,
+          'ui_on_text' => '',
+          'ui_off_text' => '',
+      ),
+      array (
         'multiple' => 0,
         'allow_null' => 0,
         'choices' => array (
@@ -126,6 +133,15 @@ if(function_exists("register_field_group")) {
         <p>Local: The attacker must either have physical access to the vulnerable system (e.g. firewire attacks) or a local account (e.g. a privilege escalation attack).<br>
         Adjacent Network: The attacker must have access to the broadcast or collision domain of the vulnerable system.<br>
         Network: The vulnerable interface is remotely exploitable.</p>',
+        'conditional_logic' => array (
+            array (
+                array (
+                    'field' => 'field_59d78986e0d0c',
+                    'operator' => '!=',
+                    'value' => '1',
+                ),
+            ),
+        ),
       ),
       array (
         'multiple' => 0,
@@ -144,6 +160,15 @@ if(function_exists("register_field_group")) {
         <p>High: Specialised conditions exist, such as a race condition with a narrow window, or a requirement for social engineering methods that would be readily noticed by knowledgeable people.<br>
         Medium: There are some additional requirements for access, such as a limit on the origin of the attacks, or a requirement for the vulnerable system to be running with an uncommon, non-default configuration.<br>
         Low: There are no special conditions for access to the vulnerability, such as when the system is available to large numbers of users, or the vulnerable configuration is ubiquitous.</p>',
+        'conditional_logic' => array (
+            array (
+                array (
+                    'field' => 'field_59d78986e0d0c',
+                    'operator' => '!=',
+                    'value' => '1',
+                ),
+            ),
+        ),
       ),
       array (
         'multiple' => 0,
@@ -162,6 +187,15 @@ if(function_exists("register_field_group")) {
         <p>Multiple: Exploitation of the vulnerability requires that the attacker authenticate two or more times, even if the same credentials are used each time.<br>
         Single: The attacker must authenticate once in order to exploit the vulnerability.<br>
         None: There is no requirement for the attacker to authenticate.</p>',
+        'conditional_logic' => array (
+            array (
+                array (
+                    'field' => 'field_59d78986e0d0c',
+                    'operator' => '!=',
+                    'value' => '1',
+                ),
+            ),
+        ),
       ),
       array (
         'multiple' => 0,
@@ -180,6 +214,15 @@ if(function_exists("register_field_group")) {
         <p>None: There is no impact on the confidentiality of the system.<br>
         Partial: There is considerable disclosure of information, but the scope of the loss is constrained such that not all of the data is available.<br>
         Complete: There is total information disclosure, providing access to any / all data on the system.</p>',
+        'conditional_logic' => array (
+            array (
+                array (
+                    'field' => 'field_59d78986e0d0c',
+                    'operator' => '!=',
+                    'value' => '1',
+                ),
+            ),
+        ),
       ),
       array (
         'multiple' => 0,
@@ -198,6 +241,15 @@ if(function_exists("register_field_group")) {
         <p>None: There is no impact on the integrity of the system.<br>
         Partial: Modification of some data or system files is possible, but the scope of the modification is limited.<br>
         Complete: There is total loss of integrity; the attacker can modify any files or information on the target system.</p>',
+        'conditional_logic' => array (
+            array (
+                array (
+                    'field' => 'field_59d78986e0d0c',
+                    'operator' => '!=',
+                    'value' => '1',
+                ),
+            ),
+        ),
       ),
       array (
         'multiple' => 0,
@@ -217,6 +269,15 @@ if(function_exists("register_field_group")) {
         <p>None: There is no impact on the availability of the system.	<br>
         Partial: There is reduced performance or loss of some functionality.<br>
         Complete: There is total loss of availability of the attacked resource.</p>',
+        'conditional_logic' => array (
+            array (
+                array (
+                    'field' => 'field_59d78986e0d0c',
+                    'operator' => '!=',
+                    'value' => '1',
+                ),
+            ),
+        ),
       ),
 
       array (
