@@ -1,7 +1,7 @@
 $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
 
 .global-header {
-  margin: $gutter 0;
+  margin: $gutter*2 0;
   position: relative;
 
   @media screen and (max-width:$small-screen) {
@@ -22,9 +22,9 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
     }
 
     h1 {
-      width: 118px;
-      height: 70px;
-      background: url('#{$imagePath}/dxw-security-logo.svg') no-repeat 0 0;
+      width: 227px;
+      height: 47px;
+      background: url('#{$imagePath}/dxw-advisories-logo.svg') no-repeat 0 0;
       text-indent: -9999px;
       margin-bottom: 0;
     }
@@ -54,7 +54,7 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
   }
 
   ul {
-    margin-top: $medium-spacing*2;
+    margin-top: $medium-spacing;
     padding-left: 0;
     text-align: right;
 
