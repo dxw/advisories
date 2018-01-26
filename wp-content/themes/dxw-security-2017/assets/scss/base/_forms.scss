@@ -1,5 +1,6 @@
 label {
   font-family: $header-font-family;
+  font-weight: 700;
 }
 
 textarea,
@@ -28,7 +29,7 @@ input[type="color"] {
   color: $base-font-colour;
   font-family: $base-font;
   @include font-size-map($body-font-size);
-  font-weight: 300;
+  font-weight: 400;
   line-height: $base-line-height;
 
   &:focus {

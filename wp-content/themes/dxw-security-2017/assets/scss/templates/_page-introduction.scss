@@ -58,6 +58,7 @@
     margin-top: $medium-spacing;
     @extend small;
     font-family: $header-font-family;
+    font-weight: 700;
 
     @include grid-media($grid-mobile) {
       float: none;
@@ -92,6 +93,7 @@
 
     &.state {
       font-family: $header-font-family;
+      font-weight: 700;
 
       &:before {
         content: '';

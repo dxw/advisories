@@ -17,6 +17,7 @@ table {
 
   th {
     font-family: $header-font-family;
+    font-weight: 700;
     text-align: left;
   }
 
@@ -74,6 +75,7 @@ table.criteria-table {
         padding-left: 40px;
         background: url('#{$imagePath}/icon-cross.svg') no-repeat 10px 18px;
         font-family: $header-font-family;
+        font-weight: 700;
         background-size: 15px 15px;
 
         @include grid-media($grid-mobile) {

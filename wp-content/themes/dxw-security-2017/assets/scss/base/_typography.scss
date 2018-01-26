@@ -10,7 +10,7 @@ $small-font-size: (null: 17px, $small-screen: 15px);
 body {
   font-family: $base-font;
   @include font-size-map($body-font-size);
-  font-weight: 300;
+  font-weight: 400;
   line-height: $base-line-height;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,8 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.7em;
   font-family: $header-font-family;
   line-height: $header-line-height;
-  font-weight: 500;
-  letter-spacing: -1px;
+  font-weight: 700;
 }
 
 h1 {
@@ -53,6 +52,7 @@ small {
 
 strong {
   font-family: $header-font-family;
+  font-weight: 700;
 }
 
 ul, ol {
@@ -146,11 +146,13 @@ a {
 
   &.call-to-action {
     font-family: $header-font-family;
+    font-weight: 700;
   }
 }
 
 button {
   font-family: $header-font-family;
+  font-weight: 700;
   color: $link-colour;
   transition: all 0.2s ease-in-out;
 
