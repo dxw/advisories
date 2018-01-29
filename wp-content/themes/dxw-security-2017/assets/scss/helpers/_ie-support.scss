@@ -17,7 +17,7 @@
         a.dxw-logo {
           width: 120px;
           height: 58px;
-          background: url('#{$imagePath}/dxw-logo-white.png') no-repeat center center;
+          background: url('#{$imagePath}/dxw-advisories-logo-white.png') no-repeat center center;
 
           img {
             display: none;
@@ -54,7 +54,7 @@
   .global-header {
     .logo {
       h1 {
-        background: url('#{$imagePath}/dxw-security-logo.png') no-repeat 0 0;
+        background: url('#{$imagePath}/dxw-advisories-logo.png') no-repeat 0 0;
       }
     }
   }

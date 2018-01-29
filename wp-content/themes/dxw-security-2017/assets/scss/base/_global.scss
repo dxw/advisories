@@ -3,26 +3,12 @@ $imagePath: "img";
 $fontPath: "../assets/fonts";
 
 // Typography
-@font-face {
- font-family: 'Founders-Light';
- src: url('#{$fontPath}/FoundersGroteskTextWeb-Light.eot'); /* IE9 Compat Modes */
- src: url('#{$fontPath}/FoundersGroteskTextWeb-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('#{$fontPath}/FoundersGroteskTextWeb-Light.woff2') format('woff2'), /* Super Modern Browsers */
-      url('#{$fontPath}/FoundersGroteskTextWeb-Light.woff') format('woff');
-}
-
-@font-face {
- font-family: 'Founders-Medium';
- src: url('#{$fontPath}/FoundersGroteskTextWeb-Medium.eot'); /* IE9 Compat Modes */
- src: url('#{$fontPath}/FoundersGroteskTextWeb-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('#{$fontPath}/FoundersGroteskTextWeb-Medium.woff2') format('woff2'), /* Super Modern Browsers */
-      url('#{$fontPath}/FoundersGroteskTextWeb-Medium.woff') format('woff');
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 $system-font-family-sans: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', Sans-Serif;
 // Use system-font-family for iOS/ Android devices. Listed are: Apple iOS system font, iOS San Francisco, Apple San Francisco, Android, Windows Phone;
-$font-family-sans: 'Founders-Light', $system-font-family-sans;
-$header-font-family: 'Founders-Medium', $font-family-sans;
+$font-family-sans: 'Lato', $system-font-family-sans;
+$header-font-family: $font-family-sans;
 $font-family-serif: 'Georgia', Times, Serif;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $base-font: $font-family-sans;
