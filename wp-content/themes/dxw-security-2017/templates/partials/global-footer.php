@@ -4,7 +4,7 @@
             <section class="footer-contact">
                 <h5>Contact</h5>
                 <div itemscope itemtype="http://schema.org/Organization">
-                     <span itemprop="name">dxw security</span>
+                     <span itemprop="name">dxw advisories</span>
                      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                         <span itemprop="streetAddress">8-9 Hoxton Square</span>
                         <span itemprop="addressLocality">London</span>,
@@ -50,7 +50,7 @@
         <div class="row">
             <div class="footer-social">
                 <a href="https://www.dxw.com" class="dxw-logo">
-                    <img src="<?php h()->assetPath('img/dxw-advisories-logo-white.svg'); ?>" alt="dxw logo">
+                    <img src="<?php h()->assetPath('img/dxw-digital-logo-white.svg'); ?>" alt="dxw logo">
                 </a>
                 <ul>
                     <li>
