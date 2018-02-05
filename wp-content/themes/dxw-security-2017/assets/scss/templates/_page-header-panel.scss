@@ -1,0 +1,37 @@
+.page-header-panel {
+  background: $accent-colour;
+  padding-top: $gutter;
+  padding-bottom: $gutter;
+
+  @media screen and (max-width:$small-screen) {
+    padding-top: $gutter-mobile;
+    padding-bottom: $gutter-mobile;
+  }
+  
+  h1 {
+    color: $white;
+    @include grid-column(12);
+    margin-bottom: $medium-spacing;
+
+    @media screen and (max-width:$small-screen) {
+      margin-bottom: $medium-spacing/2;
+    }
+  }
+}
+
+body.single-plugins,
+body.single-advisories {
+
+  .page-header-panel {
+
+    h1, h2 {
+      @include grid-column(10);
+    }
+
+    h2 {
+      font-family: $base-font;
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+}

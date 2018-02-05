@@ -1,0 +1,39 @@
+// Paths - use like this : #{$imagePath}
+$imagePath: "img";
+$fontPath: "../assets/fonts";
+
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+$system-font-family-sans: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', Sans-Serif;
+// Use system-font-family for iOS/ Android devices. Listed are: Apple iOS system font, iOS San Francisco, Apple San Francisco, Android, Windows Phone;
+$font-family-sans: 'Lato', $system-font-family-sans;
+$header-font-family: $font-family-sans;
+$font-family-serif: 'Georgia', Times, Serif;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$base-font: $font-family-sans;
+$base-line-height: 1.4;
+$header-line-height: 1.4;
+$print-font-size: 18px;
+
+// Base site
+$base-font-colour: $black;
+$body-background-colour: $lightest;
+
+// Links
+$link-colour: $brand-primary;
+$link-hover-colour: darken($link-colour, 15);
+$link-visited-colour: #4c2c92;
+
+// Buttons
+$button: $brand-primary;
+$button-inactive: lighten($brand-primary, 50);
+$button-hover: darken($button, 15);
+$dark-button: darken($brand-secondary, 15);
+
+// Margins and paddings
+$gutter: 20px;
+$gutter-medium: 15px;
+$gutter-mobile: 15px;
+$medium-spacing: 10px;
+$padding-width: 15px;

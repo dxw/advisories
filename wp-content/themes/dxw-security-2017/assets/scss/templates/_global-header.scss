@@ -1,0 +1,176 @@
+$header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
+
+.global-header {
+  margin: $gutter*2 0;
+  position: relative;
+
+  @media screen and (max-width:$small-screen) {
+    margin-top: $gutter-mobile;
+    margin-bottom: $gutter-mobile;
+  }
+
+  .logo {
+    @include grid-column(4);
+
+    @media screen and (max-width:$small-screen) {
+      @include grid-column(12);
+    }
+
+    a {
+      display: inline-block;
+      border-bottom: 0;
+    }
+
+    h1 {
+      width: 227px;
+      height: 47px;
+      background: url('#{$imagePath}/dxw-advisories-logo.svg') no-repeat 0 0;
+      text-indent: -9999px;
+      margin-bottom: 0;
+    }
+  }
+
+  .header-navigation {
+    @include grid-column(8);
+
+    @media screen and (max-width:$small-screen) {
+      width: 100%;
+      display: inline-block;
+      margin-left: 0;
+    }
+  }
+}
+
+.menu-header {
+
+  @media screen and (max-width:$small-screen) {
+    display: none;
+
+    &.expanded {
+      width: 100%;
+      display: inline-block;
+      margin-top: $gutter-mobile;
+    }
+  }
+
+  ul {
+    margin-top: $medium-spacing;
+    padding-left: 0;
+    text-align: right;
+
+    @media screen and (max-width:$small-screen) {
+      margin-top: 0;
+      text-align: left;
+    }
+
+    li {
+      display: inline-block;
+      margin-left: $gutter;
+      @include font-size-map($header-nav-font-size);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      @media screen and (max-width:$small-screen) {
+        display: block;
+        margin-left: 0;
+      }
+
+      &.current_page_item,
+      &.current-menu-item,
+      &.current-page-ancestor {
+
+        a {
+          color: $brand-primary;
+          border-bottom-color: $brand-primary;
+
+          @media screen and (max-width:$small-screen) {
+            border-left-color: $brand-primary;
+          }
+        }
+      }
+
+      a {
+        padding-bottom: 11px;
+        border-bottom: 5px solid transparent;
+
+        @media screen and (max-width:$small-screen) {
+          display: block;
+          padding: $gutter/2 $gutter;
+          border-bottom: none;
+          border-left: 5px solid transparent;
+
+          &:hover,
+          &:focus {
+            background: $light-grey;
+          }
+        }
+      }
+    }
+  }
+}
+
+body.single-post .menu-header ul {
+
+  li.current_page_parent {
+    @extend li.current-page-ancestor;
+  }
+}
+
+.navigation-toggle {
+  width: 32px;
+  position: absolute;
+  top: 15px;
+  right: $gutter;
+
+  @media screen and (max-width:$tiny-screen) {
+    top: 10px;
+  }
+
+  svg {
+    path {
+      fill: $brand-primary;
+    }
+  }
+}
+
+// Sticky header
+@media screen and (min-width:$small-screen) {
+  .sticky {
+    height: 55px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba($white, 0.95);
+    border-bottom: 1px solid $medium-grey;
+    margin: 0;
+    z-index: 3000;
+
+    .logo {
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      h1 {
+        width: 32px;
+        height: 42px;
+        background: url('#{$imagePath}/dxw-marker.svg') no-repeat 0 0;
+      }
+    }
+
+    .menu-header ul {
+      margin-top: $medium-spacing;
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  body.admin-bar {
+
+    .sticky {
+      top: 32px;
+    }
+  }
+}

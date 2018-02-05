@@ -1,0 +1,29 @@
+@mixin icon-warning {
+  background: url('#{$imagePath}/icon-warning.svg') no-repeat;
+}
+
+@mixin icon-exclamation {
+  background: url('#{$imagePath}/icon-exclamation.svg') no-repeat;
+}
+
+@mixin icon-check {
+  background: url('#{$imagePath}/icon-check.svg') no-repeat;
+}
+
+.red,
+.unsafe,
+.high {
+  color: $dxwsec-red;
+}
+
+.orange,
+.caution,
+.medium {
+  color: $dxwsec-orange-dark;
+}
+
+.green,
+.good,
+.low {
+  color: $dxwsec-green;
+}

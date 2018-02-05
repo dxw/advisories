@@ -1,0 +1,135 @@
+.page-introduction {
+  background: $light-grey;
+  padding-top: $gutter*2;
+  padding-bottom: $gutter*2;
+
+  @include grid-media($grid-mobile) {
+    padding-top: $gutter-mobile*2;
+    padding-bottom: $gutter-mobile*2;
+  }
+}
+
+.introduction-container {
+  @include grid-column(12);
+
+  p {
+    width: 80%;
+    @extend h3;
+    margin-bottom: 0;
+
+    @include grid-media($grid-mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.inspection-introduction {
+  @extend .page-introduction;
+
+  .inspection-container {
+    @include grid-column(12);
+
+    header {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: $gutter-medium*2;
+      padding-bottom: $gutter-medium*2;
+      border-bottom: 1px solid #ddd;
+
+      @include grid-media($grid-mobile) {
+        margin-bottom: $gutter-medium;
+        padding-bottom: $gutter-medium;
+      }
+    }
+  }
+
+  h2 {
+    float: left;
+    margin-bottom: 0;
+
+    @include grid-media($grid-mobile) {
+      float: none;
+    }
+  }
+
+  p.review {
+    float: right;
+    margin-bottom: 0;
+    margin-top: $medium-spacing;
+    @extend small;
+    font-family: $header-font-family;
+    font-weight: 700;
+
+    @include grid-media($grid-mobile) {
+      float: none;
+      margin-top: $medium-spacing/2;
+    }
+
+    time {
+      display: inline;
+      font-family: $base-font;
+    }
+  }
+
+  div.recommendation-description,
+  div.vulnerability-description {
+    width: calc(66.6666666667% - 33.3333333333px); // main content width
+
+    @include grid-media($grid-mobile) {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin-bottom: $gutter;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-mobile;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &.state {
+      font-family: $header-font-family;
+      font-weight: 700;
+
+      &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        float: left;
+        margin-top: 4px;
+        margin-right: $medium-spacing;
+
+        @include grid-media($grid-mobile) {
+          width: 18px;
+          height: 18px;
+          margin-right: $medium-spacing/2;
+        }
+      }
+
+      &.identified {
+
+        &:before {
+          @include icon-warning;
+        }
+      }
+
+      &.reported {
+
+        &:before {
+          @include icon-exclamation;
+        }
+      }
+
+      &.fixed {
+
+        &:before {
+          @include icon-check;
+        }
+      }
+    }
+  }
+}

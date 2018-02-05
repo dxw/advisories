@@ -1,0 +1,39 @@
+body {
+  background: $body-background-colour;
+  transition: background-image 0.8s ease-in-out;
+}
+
+.visible-min-width {
+  display: none;
+  visibility: hidden;
+
+  @media screen and (max-width:$small-screen) {
+    display: inline-block;
+    visibility: visible;
+  }
+}
+
+.hidden-min-width {
+  display: inline-block;
+  visibility: visible;
+
+  @media screen and (max-width:$small-screen) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

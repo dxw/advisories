@@ -18,7 +18,7 @@
 		      	  </div>
 		          <!-- Logo -->
 		          <div class="brand_logo">
-		          	<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="dxw logo"/><span>dxw</span>security</a>
+		          	<a href="/"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.png" alt="dxw logo"/><span>dxw</span>advisories</a>
 		          </div>
 		          <!-- Logo end -->
 		          <div class="nav-collapse collapse">

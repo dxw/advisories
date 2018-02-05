@@ -1,0 +1,120 @@
+.single {
+
+  .inspection-content {
+    @include grid-column(8);
+
+    @include grid-media($grid-mobile) {
+      @include grid-column(2);
+      padding-bottom: 0;
+    }
+  }
+
+  .sidebar {
+    @include grid-column(4);
+
+    @include grid-media($grid-mobile) {
+      @include grid-column(2);
+    }
+  }
+
+  .criteria-list {
+    padding-left: 0;
+    margin-bottom: $gutter;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-mobile;
+    }
+
+    li {
+      list-style: none;
+      border-bottom: 1px solid #ddd;
+      padding-top: $medium-spacing;
+      padding-bottom:$gutter-medium;
+      padding-left: 40px;
+      background: url(#{$imagePath}/icon-cross.svg) left center no-repeat;
+      background-size: 22px 21px;
+
+      &:first-child {
+        border-top: 1px solid #ddd;
+      }
+    }
+  }
+
+  article.cvss-table {
+    margin-bottom: $gutter*2;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-mobile*2;
+    }
+  }
+
+  table.cvss {
+    margin-bottom: $gutter;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-mobile;
+    }
+
+    th {
+      width: 40%;
+    }
+
+    td.score {
+      font-family: $header-font-family;
+      font-weight: 700;
+    }
+  }
+}
+
+.warning {
+  margin-bottom: $gutter;
+
+  &:last-of-type {
+    margin-bottom: $gutter*2;
+  }
+
+  @include grid-media($grid-mobile) {
+    margin-bottom: $gutter-mobile;
+
+    &:last-of-type {
+      margin-bottom: $gutter-mobile*2;
+    }
+  }
+
+  button.anchor {
+    @extend h3;
+    margin-bottom: 0;
+
+    &:before {
+      content: '\25B6';
+      padding-right: 0.5em;
+    }
+
+    &.open {
+
+      &:before {
+        content: '\25BC';
+      }
+    }
+  }
+
+  .details {
+    display: none;
+    padding-top: $gutter;
+    padding-left: $gutter-medium*2;
+    margin-bottom: $gutter;
+
+    @include grid-media($grid-mobile) {
+      padding-top: $gutter-mobile;
+      margin-bottom: $gutter-mobile;
+    }
+  }
+}
+
+.report {
+  margin-bottom: $gutter*2;
+
+  @include grid-media($grid-mobile) {
+    margin-bottom: $gutter-mobile*2;
+  }
+}

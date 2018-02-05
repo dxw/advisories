@@ -1,0 +1,246 @@
+.global-footer {
+  padding: #{$gutter * 2} 0 0;
+  background: $dark-grey;
+  color: $lightest;
+  @extend small;
+
+  @media screen and (max-width: $small-screen) {
+    padding-top: #{$gutter-mobile * 2};
+  }
+
+  a {
+    color: $lightest;
+    border-bottom: 1px solid rgba($white, 0.2);
+    &:hover,
+    &:focus,
+    &:active {
+      border-bottom-color: rgba($white, 0.4);
+    }
+  }
+
+  ul {
+    padding-left: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+  
+  .global-footer-links {
+    @include flexbox;
+    flex-flow: row wrap;
+
+    @include grid-media($grid-mobile) {
+      display: inline-block;
+      width: 100%;
+    }
+
+    section {
+      @include grid-column(3);
+
+      @include grid-media($grid-mobile) {
+        @include grid-column(2);
+
+        &:first-of-type,
+        &:nth-of-type(2) {
+          margin-bottom: $padding-width;
+        }
+      }
+
+      @media screen and (max-width: $smaller-screen) {
+        @include grid-column(12);
+
+        &:nth-of-type(3) {
+          margin-bottom: $padding-width;
+        }
+      }
+    }
+
+    .footer-contact {
+
+      div[itemprop=address] {
+        margin-bottom: 0.7em;
+      }
+
+      span {
+        display: block;
+      }
+
+      span[itemprop=addressLocality], span[itemprop=postalCode] {
+        display: inline-block;
+      }
+    }
+  }
+
+  .global-footer-border {
+    padding: #{$gutter * 2} $padding-width;
+
+    @media screen and (max-width: $small-screen) {
+      padding-top: #{$gutter-mobile * 2};
+      padding-bottom: #{$gutter-mobile * 2}
+    }
+
+    hr {
+      margin-top: 0;
+    }
+  }
+
+  .global-footer-certificates {
+    @include grid-container;
+    @include flexbox;
+    padding-bottom: #{$gutter * 2};
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $small-screen) {
+      flex-direction: column;
+    }
+
+    .badges {
+      @include grid-column(5);
+      order: 1;
+
+      @media screen and (max-width: $small-screen) {
+        @include grid-column(12);
+      }
+
+      img {
+        max-height: 80px;
+        margin-right: #{$gutter / 2};
+
+        @media screen and (max-width: $small-screen) {
+          margin: 0 0 #{$gutter / 2};
+          display: block;
+        }
+      }
+    }
+
+    p {
+      @include grid-column(7);
+      order: 2;
+
+      @media screen and (max-width: $small-screen) {
+        @include grid-column(12);
+      }
+    }
+
+  }
+
+  .global-footer-copyright {
+    background: $black;
+    padding: #{$gutter * 2} 0;
+
+    @media screen and (max-width: $small-screen) {
+      padding-top: #{$gutter-mobile * 2};
+      padding-bottom: #{$gutter-mobile * 2};
+    }
+
+    .footer-legal {
+      @include clearfix;
+      padding-left: $padding-width;
+      padding-right: $padding-width;
+    }
+
+    .footer-social {
+      @include clearfix;
+      padding-left: $padding-width;
+      padding-right: $padding-width;
+      margin-bottom: $gutter;
+
+      @media screen and (max-width: $small-screen) {
+        margin-bottom: $gutter-mobile;
+        text-align: center;
+      }
+
+      a.dxw-logo {
+        float: left;
+        border-bottom: none;
+        display: inline-block;
+
+        @media screen and (max-width: $small-screen) {
+          float: none;
+          margin-bottom: $gutter-mobile;
+        }
+
+        img {
+          width: 220px;
+        }
+      }
+
+      ul {
+        width: auto;
+        float: right;
+        display: inline-block;
+
+        @media screen and (max-width: $small-screen) {
+          float: none;
+          display: block;
+        }
+      }
+
+      li {
+        display: inline-block;
+        width: 25%;
+        float: left;
+
+        @media screen and (max-width: $small-screen) {
+          width: auto;
+          float: none;
+        }
+
+        a {
+          width: 48px;
+          height: 48px;
+          display: inline-block;
+          margin: 0 0 0 $gutter/2;
+          background: $dark-grey;
+          border-radius: 50%;
+          border: 3px solid transparent;
+          transition: border-color 0.3s ease-out;
+          text-align: right;
+
+          &.twitter {
+
+            &:hover,
+            &:focus {
+              border-color: $twitter;
+            }
+          }
+
+          &.facebook {
+
+            &:hover,
+            &:focus {
+              border-color: $facebook;
+            }
+          }
+
+          &.linkedin {
+
+            &:hover,
+            &:focus {
+              border-color: $linkedin;
+            }
+          }
+
+          &.github {
+
+            &:hover,
+            &:focus {
+              border-color: $github;
+            }
+          }
+        }
+
+        svg {
+          text-align: center;
+          width: 42px;
+        }
+
+        span {
+          @include hide;
+        }
+      }
+    }
+  }
+}

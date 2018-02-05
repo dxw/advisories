@@ -1,6 +1,7 @@
 .DS_Store
 /wp-content/whippet-wp-config.php
 /wp-content/uploads
+wp-content/languages/
 /wp-content/node_modules
 /wp-content/node_debug.log
 /wp-content/npm-debug.log

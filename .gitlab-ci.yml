@@ -4,7 +4,7 @@
 .php71: &php71
   image: thedxw/php-testing:7.1
 
-.peridot: &peridot
+.peridot-api: &peridot-api
   before_script:
     # Set timezone
     - echo 'date.timezone = Pacific/Auckland' >> /usr/local/etc/php/conf.d/tz.ini
@@ -12,6 +12,13 @@
     - composer install
   script:
     - vendor/bin/peridot specs
+
+.peridot-theme: &peridot-theme
+  before_script:
+    - cd 'wp-content/themes/dxw-security-2017'
+    - composer install
+  script:
+    - vendor/bin/peridot spec
 
 .api_style: &api_style
   before_script:
@@ -22,18 +29,26 @@
 
 .theme_style: &theme_style
   before_script:
-    - cd 'wp-content/themes/dxw-advisories-2017'
+    - cd 'wp-content/themes/dxw-security-2017'
     - composer install
   script:
-    - vendor/bin/phpcs lib/helpers.php --standard=PSR2 --warning-severity=false
+    - vendor/bin/php-cs-fixer fix --dry-run -v --diff
 
-php_70_tests:
+php_70_tests_api:
   <<: *php70
-  <<: *peridot
+  <<: *peridot-api
 
-php_71_tests:
+php_70_tests_theme:
+  <<: *php70
+  <<: *peridot-theme
+
+php_71_tests_api:
   <<: *php71
-  <<: *peridot
+  <<: *peridot-api
+
+php_71_tests_theme:
+  <<: *php71
+  <<: *peridot-theme
 
 api_style:
   <<: *php71

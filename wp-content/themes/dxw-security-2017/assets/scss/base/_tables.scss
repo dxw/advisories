@@ -1,0 +1,88 @@
+$table-border: $medium-grey;
+
+table {
+  width: 100%;
+
+  caption {
+    @include hide;
+  }
+
+  th, td {
+    padding: 10px 15px 15px 15px;
+
+    @include grid-media($grid-mobile) {
+      padding: 5px 10px 10px 10px;
+    }
+  }
+
+  th {
+    font-family: $header-font-family;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  tbody {
+
+    tr {
+      border-bottom: 1px solid $table-border;
+
+      &:first-child {
+        border-top: 1px solid $table-border;
+      }
+    }
+  }
+}
+
+table.criteria-table {
+  margin-top: $gutter*2;
+
+  @include grid-media($grid-mobile) {
+    margin-top: $gutter-mobile*2;
+  }
+
+  th, td {
+
+    &.name {
+      width: 30%;
+    }
+  }
+
+  thead {
+    border-top: 1px solid $table-border;
+    border-bottom: 1px solid $table-border;
+
+    th {
+      @include font-size-map($h4-font-size);
+    }
+  }
+
+  tbody {
+
+    tr {
+
+      &:first-child {
+        border-top: none;
+      }
+
+      &:nth-child(odd) {
+        background: $light-grey;
+      }
+    }
+
+    td {
+
+      &.name {
+        padding-left: 40px;
+        background: url('#{$imagePath}/icon-cross.svg') no-repeat 10px 18px;
+        font-family: $header-font-family;
+        font-weight: 700;
+        background-size: 15px 15px;
+
+        @include grid-media($grid-mobile) {
+          padding-left: 35px;
+          background-position: 5px 10px;
+        }
+      }
+    }
+  }
+}

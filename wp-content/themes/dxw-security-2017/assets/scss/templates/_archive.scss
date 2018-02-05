@@ -1,0 +1,44 @@
+.feed-container {
+
+  article {
+    margin-bottom: $gutter-medium*2;
+    padding-bottom: $gutter-medium*2;
+    border-bottom: 1px solid $medium-grey;
+
+    @include grid-media($grid-mobile) {
+      margin-bottom: $gutter-medium;
+      padding-bottom: $gutter-medium;
+    }
+  }
+}
+
+.archive {
+    .search-form-container {
+        background-color: $light-grey;
+        label {
+            color: $black;
+        }
+        .form-field {
+            button {
+                @include button-background($brand-secondary, $lightest);
+                box-shadow: none;
+            }
+        }
+    }
+
+    .feed-container {
+        @include grid-column(8);
+
+        @include grid-media($grid-mobile) {
+          @include grid-column(2);
+        }
+    }
+
+    .sidebar {
+        @include grid-column(4);
+
+        @include grid-media($grid-mobile) {
+          @include grid-column(2);
+        }
+    }
+}

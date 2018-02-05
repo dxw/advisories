@@ -1,7 +1,7 @@
 version: "3"
 
 volumes:
-  mysql_data_dxwsec:
+  mysql_data_dxw-security:
 
 services:
   mailcatcher:
@@ -27,7 +27,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql_data_dxwsec:/var/lib/mysql
+      - mysql_data_dxw-security:/var/lib/mysql
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: foobar

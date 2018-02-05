@@ -15,6 +15,26 @@ Please use `develop/master` branches
 ## Ghost Inspector tests
 - TBC (Currently undergoing a redesign)
 
+## Setup & running
+- This project is setup via [WPC](https://github.com/dxw/wpc). To setup the project on first run, from the app root:
+
+```
+docker-compose up -d
+bin/setup
+```
+
+(If you get a mysql error the first time, mysql hasn't finished setting up - just run `bin/setup` again).
+
+To run the project after that, just:
+
+`docker-compose up -d`
+
+And to stop it:
+
+`docker-compose down`
+
+Admin username & password is `admin`.
+
 ## API
 
 The site exposes an JSON API of plugin inspections:

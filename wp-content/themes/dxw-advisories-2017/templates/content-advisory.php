@@ -98,7 +98,7 @@ Mitigations
 
 Disclosure policy
 ================
-dxw believes in responsible disclosure. Your attention is drawn to our disclosure policy: https://security.dxw.com/disclosure/
+dxw believes in responsible disclosure. Your attention is drawn to our disclosure policy: https://advisories.dxw.com/disclosure/
 
 Please contact us on security@dxw.com to acknowledge this report if you received it via a third party (for example, plugins@wordpress.org) as they generally cannot communicate with us on your behalf.
 

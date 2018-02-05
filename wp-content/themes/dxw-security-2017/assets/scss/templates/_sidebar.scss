@@ -1,0 +1,28 @@
+.sidebar {
+    section {
+        padding: $padding-width;
+        border: 1px solid $medium-grey;
+        border-top: 3px solid $dark-grey;
+        margin-bottom: $gutter*2;
+
+        @include grid-media($grid-mobile) {
+          margin-bottom: $gutter-mobile*2;
+        }
+        
+        &.widget {
+            border-top: 3px solid $accent-colour;
+        }
+    }
+}
+
+dl.inspection-details {
+
+    dt {
+        font-family: $header-font-family;
+        font-weight: 700;
+    }
+
+    dd {
+        margin-bottom: $medium-spacing;
+    }
+}

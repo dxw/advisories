@@ -1,0 +1,66 @@
+.recommendations {
+  margin-top: $gutter*2;
+
+  @include grid-media($grid-mobile) {
+    margin-top: $gutter-mobile*2;
+  }
+
+  article {
+    padding: $gutter 0;
+    border-bottom: 1px solid $medium-grey;
+
+    @include grid-media($grid-mobile) {
+      padding-top: $gutter-mobile;
+      padding-bottom: $gutter-mobile;
+    }
+
+    &:first-of-type {
+      border-top: 1px solid $medium-grey;
+    }
+
+    h3 {
+      line-height: 1.7;
+
+      &:before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-right: $gutter;
+      }
+
+      &.red {
+
+        &:before {
+          @include icon-warning;
+        }
+      }
+
+      &.orange {
+
+        &:before {
+          @include icon-exclamation;
+        }
+      }
+
+      &.green {
+
+        &:before {
+          @include icon-check;
+        }
+      }
+    }
+
+    p, ol, ul {
+      margin-bottom: $gutter;
+
+      @include grid-media($grid-mobile) {
+        margin-bottom: $gutter-mobile;
+      }
+    }
+
+    .rich-text {
+      padding-left: 60px;
+    }
+  }
+}
