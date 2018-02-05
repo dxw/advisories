@@ -11,7 +11,7 @@
                     <path fill="#fff" d="M57.8 0v65.4l18.7-10.9V10.9z" />
                 </svg>
                 <!--<![endif]-->
-                <span class="visually-hidden">dxw security</span>
+                <span class="visually-hidden">dxw advisories</span>
             </a>
         </div>
 
