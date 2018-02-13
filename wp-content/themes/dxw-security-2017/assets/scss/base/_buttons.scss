@@ -38,7 +38,7 @@
   text-decoration: none;
   border: none;
   @include button-background($brand-primary, $lightest);
-  padding: $gutter/2 $gutter $gutter-medium $gutter;
+  padding: $medium-spacing $gutter $gutter-medium $gutter;
   font-family: $base-font;
   @include font-size-map($body-font-size);
   cursor: pointer;
