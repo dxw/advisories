@@ -8,4 +8,6 @@ set -e
 ## to private repositories.
 ##
 
-whippet deps install
+if test -f whippet.json; then
+  whippet deps install
+fi

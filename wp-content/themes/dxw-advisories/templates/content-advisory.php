@@ -2,33 +2,35 @@
   <div class="container">
     <div class="row">
       <h1 class="span12"><?php the_title() ?></h1>
-      <div class="span12 cvss">
-        <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th class="score">Score</th>
-            <th>Vector</th>
-            <th>Complexity</th>
-            <th>Authentication</th>
-            <th>Confidentiality</th>
-            <th>Integrity</th>
-            <th>Availability</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="score <?php echo strtolower(get_cvss_severity()); ?>"><?php the_cvss_score(); ?><br><span><?php echo the_cvss_severity(); ?><span></td>
-            <td class="access_vector <?php echo strtolower(str_replace(' ', '_', get_field_label('access_vector'))); ?>"><?php the_field_label('access_vector'); ?></td>
-            <td class="access_complexity <?php echo strtolower(get_field_label('access_complexity')); ?>"><?php the_field_label('access_complexity'); ?></td>
-            <td class="authentication <?php echo strtolower(get_field_label('authentication')); ?>"><?php the_field_label('authentication'); ?></td>
-            <td class="confidentiality <?php echo strtolower(get_field_label('confidentiality')); ?>"><?php the_field_label('confidentiality'); ?></td>
-            <td class="integrity <?php echo strtolower(get_field_label('integrity')); ?>"><?php the_field_label('integrity'); ?></td>
-            <td class="availability <?php echo strtolower(get_field_label('availability')); ?>"><?php the_field_label('availability'); ?></td>
-          </tr>
-        </tbody>
-        </table>
-        <p class="about_score">You can read more about CVSS base scores on <a href="http://en.wikipedia.org/wiki/CVSS">Wikipedia</a> or in the <a href="http://www.first.org/cvss/cvss-guide">CVSS specification</a>.</p>
-      </div>
+      <?php if (!get_field('hide_cvss_score')) : ?>
+          <div class="span12 cvss">
+            <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="score">Score</th>
+                <th>Vector</th>
+                <th>Complexity</th>
+                <th>Authentication</th>
+                <th>Confidentiality</th>
+                <th>Integrity</th>
+                <th>Availability</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="score <?php echo strtolower(get_cvss_severity()); ?>"><?php the_cvss_score(); ?><br><span><?php echo the_cvss_severity(); ?><span></td>
+                <td class="access_vector <?php echo strtolower(str_replace(' ', '_', get_field_label('access_vector'))); ?>"><?php the_field_label('access_vector'); ?></td>
+                <td class="access_complexity <?php echo strtolower(get_field_label('access_complexity')); ?>"><?php the_field_label('access_complexity'); ?></td>
+                <td class="authentication <?php echo strtolower(get_field_label('authentication')); ?>"><?php the_field_label('authentication'); ?></td>
+                <td class="confidentiality <?php echo strtolower(get_field_label('confidentiality')); ?>"><?php the_field_label('confidentiality'); ?></td>
+                <td class="integrity <?php echo strtolower(get_field_label('integrity')); ?>"><?php the_field_label('integrity'); ?></td>
+                <td class="availability <?php echo strtolower(get_field_label('availability')); ?>"><?php the_field_label('availability'); ?></td>
+              </tr>
+            </tbody>
+            </table>
+            <p class="about_score">You can read more about CVSS base scores on <a href="http://en.wikipedia.org/wiki/CVSS">Wikipedia</a> or in the <a href="http://www.first.org/cvss/cvss-guide">CVSS specification</a>.</p>
+          </div>
+      <?php endif ?>
     </div>
   </div>
 </div>
