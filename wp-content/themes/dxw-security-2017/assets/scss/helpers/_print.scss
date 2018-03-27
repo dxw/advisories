@@ -1,0 +1,11 @@
+@media print {
+  body.single-advisories {
+    section.admin-tools-container, footer.global-footer, nav.header-navigation {
+      display: none;
+    }
+
+    p {
+      page-break-inside: avoid;
+    }
+  }
+}
