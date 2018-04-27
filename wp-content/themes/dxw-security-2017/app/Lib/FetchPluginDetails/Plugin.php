@@ -32,8 +32,8 @@ class Plugin
             $data['slug'] = $slug;
             $data['name'] = $response->name;
             $data['version'] = $response->version;
-            $data['author'] = implode(', ', array_keys($response->contributors));
-            $data['link'] = 'http://wordpress.org/plugins/'.$slug.'/';
+            $data['author'] = strip_tags($response->author);
+            $data['link'] = 'https://wordpress.org/plugins/'.$slug.'/';
 
             return $data;
         }

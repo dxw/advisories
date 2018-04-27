@@ -49,12 +49,14 @@
                 }
             },
             function (data, callback) {
-                console.log(data);
                 // Set fields
                 thus.setField('div[data-name="codex_link"] input', data['link'], force)
+                thus.setField('input[name=post_title]', data['name'])
                 thus.setField('div[data-name="name_of_plugin"] input', data['name'])
+                thus.setField('div[data-name="component"] input', data['name'])
                 thus.setField('div[data-name="slug"] input', data['slug'])
                 thus.setField('div[data-name="version_of_plugin"] input', data['version'])
+                thus.setField('div[data-name="version"] input', data['version'])
                 thus.setField('div[data-name="author"] input', data['author'])
                 thus.setField('div[data-name="description"] input', data['description'])
 
