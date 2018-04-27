@@ -36,7 +36,7 @@
 
 <div class="row">
     <section class="page-section inspection-content">
-
+        <?php if (!get_field('hide_cvss_score')) : ?>
         <article class="cvss-table">
             <h2>CVSS Summary</h2>
             <table class="cvss">
@@ -74,7 +74,8 @@
             </table>
             <small>You can read more about CVSS base scores on <a href="http://en.wikipedia.org/wiki/CVSS">Wikipedia</a> or in the <a href="http://www.first.org/cvss/cvss-guide">CVSS specification</a>.</small>
         </article>
-
+        <?php endif; ?>
+        
         <article class="report">
             <h2>Proof of concept</h2>
             <div class="rich-text">
