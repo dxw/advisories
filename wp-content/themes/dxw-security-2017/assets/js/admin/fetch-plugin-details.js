@@ -9,11 +9,12 @@
         var thus = this
 
         this.$('div[data-name="codex_link"] input').blur(function () {
-            var m = this.value.match(/https?:\/\/(?:en-gb\.)?wordpress.org\/plugins\/(.*)\//)
-            if (m) {
+            var isWordPressLink = this.value.match(/https?:\/\/(?:en-gb\.)?wordpress.org\/plugins\/(.*)\//)
+            var isSlug = this.value.match(/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/)
+            if (isWordPressLink) {
                 var filler = new DataFiller(jQuery)
-                filler.fill(m[1])
-            } else {
+                filler.fill(isWordPressLink[1])
+            } else if (isSlug) {
                 var filler = new DataFiller(jQuery)
                 filler.fill(this.value, true)
             }
