@@ -36,10 +36,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                     $responseContent = new stdClass();
                     $responseContent->name = 'Plugin name';
                     $responseContent->version = '1.1.1';
-                    $responseContent->contributors = [
-                        'author1' => 'about1',
-                        'author2' => 'about2'
-                    ];
+                    $responseContent->author = '<a href="http://author.website/">author1</a>';
                     $responseContent->sections = [
                         'description' => '<h1>A heading</h1><p>First para</p><p>Second para</p>'
                     ];
@@ -63,8 +60,8 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                         'slug' => $slug,
                         'name' => 'Plugin name',
                         'version' => '1.1.1',
-                        'author' => 'author1, author2',
-                        'link' => 'http://wordpress.org/plugins/foo/',
+                        'author' => 'author1',
+                        'link' => 'https://wordpress.org/plugins/foo/',
                     ]);
                 });
             });
@@ -75,10 +72,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                     $responseContent = new stdClass();
                     $responseContent->name = 'Plugin name';
                     $responseContent->version = '1.1.1';
-                    $responseContent->contributors = [
-                        'author1' => 'about1',
-                        'author2' => 'about2'
-                    ];
+                    $responseContent->author = '<a href="http://author.website/">author1</a>';
                     $responseContent->sections = [
                         'description' => '<h1>A heading</h1>'
                     ];
@@ -102,8 +96,8 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                         'slug' => $slug,
                         'name' => 'Plugin name',
                         'version' => '1.1.1',
-                        'author' => 'author1, author2',
-                        'link' => 'http://wordpress.org/plugins/foo/',
+                        'author' => 'author1',
+                        'link' => 'https://wordpress.org/plugins/foo/',
                     ]);
                 });
             });

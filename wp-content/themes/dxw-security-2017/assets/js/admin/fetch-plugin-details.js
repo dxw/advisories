@@ -9,11 +9,12 @@
         var thus = this
 
         this.$('div[data-name="codex_link"] input').blur(function () {
-            var m = this.value.match(/https?:\/\/(?:en-gb\.)?wordpress.org\/plugins\/(.*)\//)
-            if (m) {
+            var isWordPressLink = this.value.match(/https?:\/\/(?:en-gb\.)?wordpress.org\/plugins\/(.*)\//)
+            var isSlug = this.value.match(/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/)
+            if (isWordPressLink) {
                 var filler = new DataFiller(jQuery)
-                filler.fill(m[1])
-            } else {
+                filler.fill(isWordPressLink[1])
+            } else if (isSlug) {
                 var filler = new DataFiller(jQuery)
                 filler.fill(this.value, true)
             }
@@ -48,12 +49,14 @@
                 }
             },
             function (data, callback) {
-                console.log(data);
                 // Set fields
                 thus.setField('div[data-name="codex_link"] input', data['link'], force)
+                thus.setField('input[name=post_title]', data['name'])
                 thus.setField('div[data-name="name_of_plugin"] input', data['name'])
+                thus.setField('div[data-name="component"] input', data['name'])
                 thus.setField('div[data-name="slug"] input', data['slug'])
                 thus.setField('div[data-name="version_of_plugin"] input', data['version'])
+                thus.setField('div[data-name="version"] input', data['version'])
                 thus.setField('div[data-name="author"] input', data['author'])
                 thus.setField('div[data-name="description"] input', data['description'])
 
