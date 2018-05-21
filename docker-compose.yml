@@ -23,7 +23,7 @@ services:
       BEANSTALKD_PORT: 11300
 
   mysql:
-    image: mysql
+    image: mariadb:10
     ports:
       - "3306:3306"
     volumes:
