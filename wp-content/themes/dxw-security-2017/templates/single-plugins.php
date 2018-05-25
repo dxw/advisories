@@ -27,11 +27,12 @@
 
         <?php
             $plugin = new \Dxw\DxwSecurity2017\Lib\PluginVersionChecker();
-            if (count(h()->the_plugin_vulnerabilities()) || $plugin->is_old()) :
+            $posts = h()->the_plugin_vulnerabilities();
+            if (count($posts) || $plugin->is_old()) :
                 echo '<h2>Warnings</h2>';
             endif;
 
-            if (count(h()->the_plugin_vulnerabilities())) : ?>
+            if (count($posts)) : ?>
                 <section class="warning">
                     <button type="button" id="vulnerabilities" class="anchor">Version <?php the_field('version_of_plugin'); ?> of this plugin has known vulnerabilities</button>
                     <div id="vulnerabilities" class="details">
