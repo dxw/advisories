@@ -7,6 +7,7 @@ wp-content/languages/
 /wp-content/npm-debug.log
 
 /wp-content/plugins/dxw-sec-api/vendor
+/wp-content/plugins/classic-editor
 /wp-content/plugins/akismet
 /wp-content/plugins/advanced-custom-fields-pro
 /wp-content/plugins/co-authors-plus

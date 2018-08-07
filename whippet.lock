@@ -1,6 +1,11 @@
 {
-    "hash": "057f2b00680cd0766c9bc560217ae55ca6ef6256",
+    "hash": "605caa67551195a9996c8f70bd71f6c9e1f941d6",
     "plugins": [
+        {
+            "name": "classic-editor",
+            "src": "git@git.govpress.com:wordpress-plugins/classic-editor",
+            "revision": "02019b4f2bffe0944f4ccbc2913edb3a33eba346"
+        },
         {
             "name": "akismet",
             "src": "git@git.govpress.com:wordpress-plugins/akismet",
