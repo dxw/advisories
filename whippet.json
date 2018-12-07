@@ -3,6 +3,9 @@
         "plugins": "git@git.govpress.com:wordpress-plugins/"
     },
     "plugins": [
+        {
+            "name":"classic-editor"
+        },
         {"name": "akismet"},
         {"name": "advanced-custom-fields-pro"},
         {"name": "co-authors-plus"},
