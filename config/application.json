@@ -1,6 +1,6 @@
 {
     "wordpress": {
         "repository": "git@git.dxw.net:wordpress/snapshot",
-        "revision": "v5.0.3"
+        "revision": "v5.1"
     }
 }
