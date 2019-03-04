@@ -14,7 +14,7 @@
         {
             "name": "advanced-custom-fields-pro",
             "src": "git@git.govpress.com:wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "12b65a9ad7642e3f97f34c66c10e90baaf11b544"
+            "revision": "233e8b2a7cc9e545339354adacd3782ac010974b"
         },
         {
             "name": "co-authors-plus",
