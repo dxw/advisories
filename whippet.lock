@@ -4,27 +4,27 @@
         {
             "name": "classic-editor",
             "src": "git@git.govpress.com:wordpress-plugins/classic-editor",
-            "revision": "ada393b8490aa8cd3ef683849d64c15818bdb078"
+            "revision": "284a02bb4096e9b1730a2839aeeab1d25d3233ae"
         },
         {
             "name": "akismet",
             "src": "git@git.govpress.com:wordpress-plugins/akismet",
-            "revision": "9ea98aed8a4ab66e7530585c89f4222cff4d3176"
+            "revision": "fb9156a8675424d62d18c96f2c3fc46d62b9c57a"
         },
         {
             "name": "advanced-custom-fields-pro",
             "src": "git@git.govpress.com:wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "233e8b2a7cc9e545339354adacd3782ac010974b"
+            "revision": "69e06b620a1efcf6bd413f2519a6b113e440e221"
         },
         {
             "name": "co-authors-plus",
             "src": "git@git.govpress.com:wordpress-plugins/co-authors-plus",
-            "revision": "77b44061471cc2d3364a6494ddbbb4747ca14f57"
+            "revision": "71f507b0d77994fae27a475fe190dd7318987ab7"
         },
         {
             "name": "wp-to-twitter",
             "src": "git@git.govpress.com:wordpress-plugins/wp-to-twitter",
-            "revision": "74455c6d15cbbb3923c0b5b38a4d71a62a1c019b"
+            "revision": "ad683a8e94cb9716b25d549905181a10299f14d4"
         },
         {
             "name": "page-excerpt",
