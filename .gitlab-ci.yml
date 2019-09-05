@@ -57,3 +57,8 @@ api_style:
 theme_style:
   <<: *php71
   <<: *theme_style
+
+# validate json
+include:
+  - project: 'dxw/gitlab-ci-configs'
+    file: 'valid-json.gitlab-ci.yml'
