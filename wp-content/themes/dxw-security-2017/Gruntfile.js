@@ -12,6 +12,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean')
   grunt.loadNpmTasks('grunt-svgmin')
 
+  const sass = require('node-sass')
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
@@ -25,6 +27,7 @@ module.exports = function (grunt) {
 
     sass: {
       options: {
+        implementation: sass,
         outputStyle: 'compressed',
         sourceMap: true,
         includePaths: [
@@ -82,7 +85,7 @@ module.exports = function (grunt) {
     copy: {
       production: {
         files: {
-          'static/lib/jquery.min.js': 'bower_components/jquery/dist/jquery.min.js'
+          'static/lib/jquery.min.js': 'node_modules/jquery/dist/jquery.min.js'
         }
       }
     },
@@ -129,15 +132,6 @@ module.exports = function (grunt) {
     }
   })
 
-  grunt.registerTask('bower-install', 'Installs bower deps', function () {
-    var done = this.async()
-    var bower = require('bower')
-
-    bower.commands.install().on('end', function () {
-      done()
-    })
-  })
-
   // Hack to make `img` task work
   grunt.registerTask('img-mkdir', 'mkdir static/img', function () {
     var fs = require('fs')
@@ -155,7 +149,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'clean',
-    'bower-install',
     'img-mkdir',
     'img',
     'svgmin',

@@ -1,6 +1,0 @@
-{
-  "name": "my-theme",
-  "dependencies": {
-    "jquery": "~1.x.x"
-  }
-}
