@@ -17,16 +17,16 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
     }
 
     a {
+      color: inherit;
       display: inline-block;
       border-bottom: 0;
     }
 
     h1 {
-      width: 230px;
+      font-weight: normal;
       height: 48px;
-      background: url('#{$imagePath}/dxw-advisories-logo.svg') no-repeat 0 0;
-      text-indent: -9999px;
-      margin-bottom: 0;
+      background: url('#{$imagePath}/d-marque.png') no-repeat 0 0 / 48px;
+      padding-left: 60px;
     }
   }
 
@@ -154,7 +154,8 @@ body.single-post .menu-header ul {
       h1 {
         width: 32px;
         height: 42px;
-        background: url('#{$imagePath}/dxw-marker.svg') no-repeat 0 0;
+        background: url('#{$imagePath}/d-marque.png') no-repeat 0 0 / 42px;
+        text-indent: -9999px;
       }
     }
 
