@@ -20,12 +20,10 @@
   }
 
   h1, h2 {
-    color: $white;
     @include grid-column(10);
   }
 
   h2 {
     @extend h3;
-    font-family: $base-font;
   }
 }
