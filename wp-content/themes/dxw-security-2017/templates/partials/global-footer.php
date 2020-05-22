@@ -49,9 +49,6 @@
     <div class="global-footer-copyright">
         <div class="row">
             <div class="footer-social">
-                <a href="https://www.dxw.com" class="dxw-logo">
-                    <img src="<?php h()->assetPath('img/dxw-digital-logo-white.svg'); ?>" alt="dxw logo">
-                </a>
                 <ul>
                     <li>
                         <a href="https://twitter.com/dxw" class="twitter">

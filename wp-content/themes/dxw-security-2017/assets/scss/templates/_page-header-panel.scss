@@ -9,7 +9,6 @@
   }
   
   h1 {
-    color: $white;
     @include grid-column(12);
     margin-bottom: $medium-spacing;
 
@@ -30,7 +29,6 @@ body.single-advisories {
 
     h2 {
       font-family: $base-font;
-      color: $white;
       margin-bottom: 0;
     }
   }
