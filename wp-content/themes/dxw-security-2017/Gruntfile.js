@@ -3,14 +3,13 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-sass')
-  grunt.loadNpmTasks('grunt-img')
+  grunt.loadNpmTasks('grunt-image')
   grunt.loadNpmTasks('grunt-standard')
   grunt.loadNpmTasks('grunt-modernizr')
   grunt.loadNpmTasks('grunt-browserify')
   grunt.loadNpmTasks('grunt-exorcise')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-clean')
-  grunt.loadNpmTasks('grunt-svgmin')
 
   const sass = require('node-sass')
 
@@ -90,24 +89,14 @@ module.exports = function (grunt) {
       }
     },
 
-    img: {
-      dist: {
-        src: 'assets/img',
-        dest: 'static/img'
-      }
-    },
-
-    svgmin: {
-      options: {},
-      dist: {
-        files: [
-          {
-            expand: true,
-            cwd: 'assets/img/',
-            src: ['*.svg'],
-            dest: 'static/img/'
-          }
-        ]
+    image: {
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: 'assets/img',
+          src: ['**/*.{png,jpg,gif,svg,ico}'],
+          dest: 'static/img'
+        }]
       }
     },
 
@@ -132,14 +121,6 @@ module.exports = function (grunt) {
     }
   })
 
-  // Hack to make `img` task work
-  grunt.registerTask('img-mkdir', 'mkdir static/img', function () {
-    var fs = require('fs')
-
-    fs.mkdirSync('static')
-    fs.mkdirSync('static/img')
-  })
-
   grunt.renameTask('watch', '_watch')
 
   grunt.registerTask('watch', [
@@ -149,9 +130,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'clean',
-    'img-mkdir',
-    'img',
-    'svgmin',
+    'image',
     'sass',
     'standard',
     'copy',

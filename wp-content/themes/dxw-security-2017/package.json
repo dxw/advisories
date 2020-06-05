@@ -13,11 +13,10 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "~1.1.0",
     "grunt-exorcise": "^2.1.1",
-    "grunt-img": "~0.1.8",
+    "grunt-image": "~5.0.0",
     "grunt-modernizr": "^3.0.0",
     "grunt-sass": "^3.1.0",
     "grunt-standard": "^3.2.0",
-    "grunt-svgmin": "^6.0.0",
     "node-normalize-scss": "^3.0.0",
     "node-sass": "^4.0.0"
   }
