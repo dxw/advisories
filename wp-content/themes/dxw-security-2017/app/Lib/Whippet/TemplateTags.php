@@ -12,10 +12,8 @@ class TemplateTags
     public static function w_template_warning()
     {
         ?>
-        <div class="whippet alert template-warning" style="background: rgb(255,100,100); width: 100%; padding: 10px;"><h1>You're using a fallback template: <?php echo basename(\Dxw\DxwSecurity2017\Lib\Whippet\Layout::$wordpress_template);
-        ?></h1> <p>Did you really mean to? If you can, define a specific template and use it. Like single-post.php.</p></div>
+        <div class="whippet alert template-warning" style="background: rgb(255,100,100); width: 100%; padding: 10px;"><h1>You're using a fallback template: <?php echo basename(\Dxw\DxwSecurity2017\Lib\Whippet\Layout::$wordpress_template); ?></h1> <p>Did you really mean to? If you can, define a specific template and use it. Like single-post.php.</p></div>
         <?php
-
     }
 
     public function w_template_title()

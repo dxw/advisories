@@ -40,15 +40,15 @@ class Scripts implements \Dxw\Iguana\Registerable
         // This will not affect admin pages
         // This will break any plugin that requires a feature/behaviour in jQuery 2.x which is missing/different in jQuery 1.10.x
         wp_deregister_script('jquery');
-        wp_enqueue_script('jquery',   $this->getAssetPath('lib/jquery.min.js'));
+        wp_enqueue_script('jquery', $this->getAssetPath('lib/jquery.min.js'));
 
         // Because it's awesome
         wp_enqueue_script('modernizr', $this->getAssetPath('lib/modernizr.min.js'));
 
         // Pretty much everything else should be compiled by Grunt.
-        wp_enqueue_script('main',      $this->getAssetPath('main.min.js'), array('jquery', 'modernizr'), '', true);
+        wp_enqueue_script('main', $this->getAssetPath('main.min.js'), ['jquery', 'modernizr'], '', true);
 
-        wp_enqueue_style('main',      $this->getAssetPath('main.min.css'));
+        wp_enqueue_style('main', $this->getAssetPath('main.min.css'));
     }
 
     public function wpPrintScripts()
@@ -60,6 +60,5 @@ class Scripts implements \Dxw\Iguana\Registerable
 
         <link rel="icon" type="image/png" href="<?php $this->assetPath('img/shortcut-icon.png') ?>">
         <?php
-
     }
 }

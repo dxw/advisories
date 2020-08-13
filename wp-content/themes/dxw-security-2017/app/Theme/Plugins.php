@@ -35,8 +35,7 @@ class Plugins implements Registerable
     public function addNotice($plugin)
     {
         $pluginData = get_plugin_data(WP_PLUGIN_DIR.'/'.$plugin);
-        $pluginName = !empty($pluginData['Name']) ? $pluginData['Name'] : $plugin;
-        ?>
+        $pluginName = !empty($pluginData['Name']) ? $pluginData['Name'] : $plugin; ?>
         <div class="notice notice-warning">
             <p><strong><?php echo esc_html($pluginName) ?></strong> is a required plugin and is not active.
                 You must activate it for this theme to work.
@@ -44,7 +43,6 @@ class Plugins implements Registerable
             </p>
         </div>
         <?php
-
     }
 
     /**
@@ -52,7 +50,8 @@ class Plugins implements Registerable
      */
     private function findPluginsToActivate()
     {
-        $pluginsToActivate = array_diff($this->required,
+        $pluginsToActivate = array_diff(
+            $this->required,
             apply_filters('active_plugins', get_option('active_plugins'))
         );
         return $pluginsToActivate;

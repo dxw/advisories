@@ -53,12 +53,10 @@ class Helpers implements \Dxw\Iguana\Registerable
 
     public function the_short_recommendation($post_id = 0)
     {
-        $recommendation = $this->recommendation_data(get_field('recommendation', $post_id));
-        ?>
+        $recommendation = $this->recommendation_data(get_field('recommendation', $post_id)); ?>
 
         <p class="<?php echo $recommendation->slug ?> recommendation"><span class="name"><?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?> -</span> <?php echo $recommendation->name ?></p>
     <?php
-
     }
 
     public function the_recommendation()
@@ -72,23 +70,17 @@ class Helpers implements \Dxw\Iguana\Registerable
         } else {
             $assurance_level = 'Medium';
             $assurance = 'This plugin has been given a short, targeted code review.';
-        }
-        ?>
+        } ?>
         <header>
             <h2 class="<?php echo $recommendation->slug ?>"><?php echo $recommendation->name ?></h2>
-            <p class="review">Last revised: <time class="published" datetime="<?php echo get_the_time('c');
-        ?>"><?php echo get_the_date();
-        ?></time></p>
+            <p class="review">Last revised: <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time></p>
         </header>
         <div class="recommendation-description">
-            <p><strong>Confidence: <?php echo $assurance_level;
-        ?></strong>
-            <br><?php echo $assurance;
-        ?></p>
+            <p><strong>Confidence: <?php echo $assurance_level; ?></strong>
+            <br><?php echo $assurance; ?></p>
             <p><?php echo $recommendation->text ?> <a href="/about/plugin-inspections/#recommendations" class="recs">Read more about this recommendation.</a></p>
         </div>
     <?php
-
     }
 
     public function recommendation_data($recommendation)
@@ -116,13 +108,13 @@ class Helpers implements \Dxw\Iguana\Registerable
         return $data;
     }
 
-    public function get_field_label($field_key, $post_id = null, $options = array())
+    public function get_field_label($field_key, $post_id = null, $options = [])
     {
         global $post;
         $field = get_field_object($field_key, $post_id, $options);
 
         if (is_array($field['value'])) {
-            $labels = array();
+            $labels = [];
             foreach ($field['value'] as $i => $value) {
                 $labels[$value] = $field['choices'][$value];
             }
@@ -133,18 +125,18 @@ class Helpers implements \Dxw\Iguana\Registerable
         return isset($field['choices'][$field['value']]) ? $field['choices'][$field['value']] : '';
     }
 
-    public function the_field_label($field_key, $post_id = null, $options = array())
+    public function the_field_label($field_key, $post_id = null, $options = [])
     {
         echo $this->get_field_label($field_key, $post_id, $options);
     }
 
     public function the_other_versions()
     {
-        $posts = get_posts(array(
+        $posts = get_posts([
         'post_type' => 'plugins',
         'meta_key' => 'codex_link',
         'meta_value' => get_field('codex_link')
-        ));
+        ]);
 
         if (count($posts) <= 1) {
             ?> <dd>None listed</dd> <?php
@@ -155,39 +147,35 @@ class Helpers implements \Dxw\Iguana\Registerable
         foreach ($posts as $p) {
             if ($p->ID == get_the_id()) {
                 continue;
-            }
-            ?>
-            <dd><a href="<?php echo get_permalink($p);
-            ?>"><?php echo $p->post_title;
-            ?></a></dd>
+            } ?>
+            <dd><a href="<?php echo get_permalink($p); ?>"><?php echo $p->post_title; ?></a></dd>
             <?php
-
         }
     }
 
     public function get_plugin_vulnerabilities($codex_link, $version)
     {
-        return get_posts(array(
+        return get_posts([
         'post_type' => 'advisories',
-        'meta_query' => array(
+        'meta_query' => [
           'relation' => 'and',
-          array(
+          [
             'key' => 'codex_link',
             'value' => $codex_link,
             'compare' => '='
-          ),
-          array(
+          ],
+          [
             'key' => 'is_plugin',
             'value' => 'yes',
             'compare' => '='
-          ),
-          array(
+          ],
+          [
             'key' => 'version',
             'value' => explode(',', $version),
             'compare' => 'IN'
-          )
-        )
-        ));
+          ]
+        ]
+        ]);
     }
 
     public function the_plugin_vulnerabilities()

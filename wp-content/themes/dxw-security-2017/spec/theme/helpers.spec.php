@@ -149,5 +149,4 @@ describe(\Dxw\DxwSecurity2017\Theme\Helpers::class, function () {
             $this->helpers->the_cvss_severity();
         });
     });
-
 });

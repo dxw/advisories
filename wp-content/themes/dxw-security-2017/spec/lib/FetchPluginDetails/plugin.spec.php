@@ -103,5 +103,4 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
             });
         });
     });
-
 });
