@@ -1,0 +1,28 @@
+on:
+  - push
+  - pull_request
+
+env:
+  PLUGIN_NAME: dxw-sec-api
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4"
+          coverage: none
+          tools: composer
+
+      - name: Install dependencies
+        run: |
+          cd "wp-content/plugins/$PLUGIN_NAME"
+          composer --no-interaction install
+
+      - name: Run tests
+        run: |
+          cd "wp-content/plugins/$PLUGIN_NAME"
+          vendor/bin/peridot specs

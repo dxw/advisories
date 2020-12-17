@@ -24,5 +24,4 @@ describe(\Dxw\DxwSecurity2017\Lib\AdvisoryEmails\Form::class, function () {
             });
         });
     });
-
 });

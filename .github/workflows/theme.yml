@@ -1,0 +1,34 @@
+on:
+  - push
+  - pull_request
+
+env:
+  THEME_NAME: dxw-security-2017
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "7.4"
+          coverage: none
+          tools: composer
+
+      - name: Install dependencies
+        run: |
+          cd "wp-content/themes/$THEME_NAME"
+          composer --no-interaction install
+          yarn install
+
+      - name: Run linter
+        run: |
+          cd "wp-content/themes/$THEME_NAME"
+          vendor/bin/php-cs-fixer fix --dry-run --verbose --diff
+
+      - name: Run tests
+        run: |
+          cd "wp-content/themes/$THEME_NAME"
+          vendor/bin/peridot spec

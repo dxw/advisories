@@ -74,13 +74,13 @@ class PluginVersionChecker
 
     public function most_recent_version_on_dxwsec()
     {
-        $posts = get_posts(array(
+        $posts = get_posts([
             'post_type' => 'plugins',
             'meta_key' => 'codex_link',
             'meta_value' => $this->codex_link,
-        ));
+        ]);
 
-        $versions = array();
+        $versions = [];
 
         foreach ($posts as $p) {
             $versions[] = end(explode(',', get_field('version_of_plugin', $p->ID)));
@@ -106,20 +106,20 @@ class PluginVersionChecker
     public function get_link($version)
     {
         $posts = get_posts(
-            array(
+            [
                 'numberposts' => 1,
                 'post_type' => 'plugins',
-                'meta_query' => array(
-                    array(
+                'meta_query' => [
+                    [
                         'key' => 'codex_link',
                         'value' => $this->codex_link,
-                    ),
-                    array(
+                    ],
+                    [
                         'key' => 'version_of_plugin',
                         'value' => $version,
-                    ),
-                )
-            )
+                    ],
+                ]
+            ]
         );
 
         if (count($posts)) {
@@ -146,15 +146,15 @@ class PluginVersionChecker
     {
         $response = wp_remote_post(
             'http://api.wordpress.org/plugins/info/1.0/',
-            array(
-                'body' => array(
+            [
+                'body' => [
                     'action' => 'plugin_information',
-                    'request' => serialize((object)array(
+                    'request' => serialize((object)[
                         'slug' => $slug,
-                    )),
-                ),
-                )
-            );
+                    ]),
+                ],
+                ]
+        );
 
         return unserialize($response['body']);
     }

@@ -4,7 +4,6 @@ namespace Dxw\DxwSecurity2017\Lib\FetchPluginDetails;
 
 class Plugin
 {
-
     private $getter;
 
     public function __construct(WordPressApiGetter $getter)
@@ -20,7 +19,7 @@ class Plugin
             return(['ok' => false]);
         } else {
             $response = $result->unwrap();
-            $data = array();
+            $data = [];
             $bigDesc = $response->sections['description'];
             preg_match('/<p>(.*?)<\/p>/', $bigDesc, $m);
             if ($m) {

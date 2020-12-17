@@ -21,9 +21,9 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
                         [
                             'body' => [
                                 'action' => 'plugin_information',
-                                'request' => serialize((object)array(
+                                'request' => serialize((object)[
                                     'slug' => 'foo',
-                                ))
+                                ])
                             ],
                             'timeout' => 15
                         ]
@@ -55,9 +55,9 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
                     [
                         'body' => [
                             'action' => 'plugin_information',
-                            'request' => serialize((object)array(
+                            'request' => serialize((object)[
                                 'slug' => 'foo',
-                            ))
+                            ])
                         ],
                         'timeout' => 15
                     ]
@@ -78,5 +78,4 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
             ]);
         });
     });
-
 });

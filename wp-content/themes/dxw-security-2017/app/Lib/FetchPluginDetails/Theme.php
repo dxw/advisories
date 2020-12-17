@@ -31,11 +31,11 @@ class Theme implements \Dxw\Iguana\Registerable
 
     public function admin_enqueue_scripts()
     {
-        foreach (array(
+        foreach ([
             'fetch-plugin-details',
             'async',
-        ) as $script) {
-            wp_enqueue_script($script, get_theme_root_uri().'/dxw-security-2017/assets/js/admin/'.$script.'.js', array(), false, true);
+        ] as $script) {
+            wp_enqueue_script($script, get_theme_root_uri().'/dxw-security-2017/assets/js/admin/'.$script.'.js', [], false, true);
         }
     }
 

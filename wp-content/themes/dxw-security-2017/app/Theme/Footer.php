@@ -28,6 +28,5 @@ class Footer implements \Dxw\Iguana\Registerable
             })();
         </script>
         <?php
-
     }
 }

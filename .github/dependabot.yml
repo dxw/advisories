@@ -1,0 +1,18 @@
+version: 2
+updates:
+  - package-ecosystem: composer
+    directory: "/wp-content/themes/dxw-security-2017"
+    schedule:
+      interval: daily
+    versioning-strategy: increase
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: daily
+
+  - package-ecosystem: npm
+    directory: "/wp-content/themes/dxw-security-2017"
+    schedule:
+      interval: daily
+    versioning-strategy: increase

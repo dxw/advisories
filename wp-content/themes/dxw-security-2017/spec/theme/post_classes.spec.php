@@ -57,5 +57,4 @@ describe(\Dxw\DxwSecurity2017\Theme\PostClasses::class, function () {
             });
         });
     });
-
 });
