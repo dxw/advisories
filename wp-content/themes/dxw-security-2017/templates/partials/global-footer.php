@@ -6,9 +6,10 @@
                 <div itemscope itemtype="http://schema.org/Organization">
                      <span itemprop="name">dxw advisories</span>
                      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">8-9 Hoxton Square</span>
-                        <span itemprop="addressLocality">London</span>,
-                        <span itemprop="postalCode">N1 6NU</span>
+                        <span itemprop="streetAddress">Calls Landing</span>
+                        <span itemprop="streetAddress">36-38 The Calls</span>
+                        <span itemprop="addressLocality">Leeds</span>,
+                        <span itemprop="postalCode">LS2 7EW</span>
                      </div>
                      <span itemprop="telephone"><a href="tel:0345-257-7520"><span class="sr-only">Call us on </span>0345 257 7520</a></span>
                      <span itemprop="email"><a href="mailto:contact@govpress.com">contact@dxw.com</a></span>
@@ -85,7 +86,7 @@
                 </ul>
             </div>
             <div class="footer-legal">
-                <p>&copy; 2008 &ndash; <?php echo date('Y'); ?>. The Dextrous Web Ltd, trading as dxw. &#8220;dxw&#8221; is a registered trademark. All rights reserved. The Dextrous Web Ltd is a company registered in England &amp; Wales, No. 6617101. Registered address 8-9 Hoxton Square, London, N1 6NU.</p>
+                <p>&copy; 2008 &ndash; <?php echo date('Y'); ?>. The Dextrous Web Ltd, trading as dxw. &#8220;dxw&#8221; is a registered trademark. All rights reserved. The Dextrous Web Ltd is a company registered in England &amp; Wales, No. 6617101. Registered address Calls Landing, 36-38 The Calls, Leeds, LS2 7EW.</p>
             </div>
         </div>
     </div>
