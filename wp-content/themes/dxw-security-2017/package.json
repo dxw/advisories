@@ -1,10 +1,10 @@
 {
   "dependencies": {
-    "jquery": "~1.12.4"
+    "jquery": "~3.5.1"
   },
   "devDependencies": {
     "bourbon": "^4.3.4",
-    "bourbon-neat": "^2.0.0",
+    "bourbon-neat": "^4.0.0",
     "calc-polyfill": "^0.1.0",
     "grunt": "~1.1.0",
     "grunt-browserify": "^5.3.0",
@@ -18,6 +18,6 @@
     "grunt-sass": "^3.1.0",
     "grunt-standard": "^3.2.0",
     "node-normalize-scss": "^3.0.0",
-    "node-sass": "^4.0.0"
+    "node-sass": "^5.0.0"
   }
 }

@@ -6,3 +6,4 @@
 /.sass-cache
 /static/**/*.map
 /static/img/**/*.bak
+/.php_cs.cache

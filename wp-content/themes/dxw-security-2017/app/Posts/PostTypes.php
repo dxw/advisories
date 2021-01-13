@@ -24,7 +24,7 @@ class PostTypes implements \Dxw\Iguana\Registerable
                     'name' => 'Inspections',
                     'singular_name' => 'Inspection'
                 ],
-                'supports' => array('author', 'revisions', 'title'),
+                'supports' => ['author', 'revisions', 'title'],
                 'public' => true,
                 'has_archive' => true,
             ]
@@ -34,7 +34,6 @@ class PostTypes implements \Dxw\Iguana\Registerable
     public function manageEditPluginsColumns()
     {
         add_filter('manage_edit-plugins_columns', function ($columns) {
-
             $new_columns = [
                 'cb' => $columns['cb'],
                 'title' => $columns['title'],
@@ -51,7 +50,7 @@ class PostTypes implements \Dxw\Iguana\Registerable
     public function managePluginsColumn()
     {
         add_action('manage_plugins_posts_custom_column', function ($column, $post_id) {
-           switch ($column) {
+            switch ($column) {
             case 'result': echo h()->the_short_recommendation($post_id); break;
             case 'version': echo str_replace(',', ', ', get_field('version_of_plugin', $post_id)); break;
            }
@@ -69,7 +68,7 @@ class PostTypes implements \Dxw\Iguana\Registerable
                 ],
                 'public' => true,
                 'has_archive' => true,
-                'supports' => array('author', 'revisions', 'title'),
+                'supports' => ['author', 'revisions', 'title'],
             ]
         );
     }
@@ -87,7 +86,6 @@ class PostTypes implements \Dxw\Iguana\Registerable
     public function manageEditAdvisoriesColumns()
     {
         add_filter('manage_edit-advisories_columns', function ($columns) {
-
             $new_columns = [
                 'cb' => $columns['cb'],
                 'title' => $columns['title'],

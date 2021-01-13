@@ -20,5 +20,4 @@ describe(\Dxw\DxwSecurity2017\Lib\AdvisoryEmails\AjaxHandler::class, function ()
             $this->ajaxHandler->register();
         });
     });
-
 });

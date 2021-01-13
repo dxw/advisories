@@ -13,14 +13,14 @@ class AjaxHandler implements \Dxw\Iguana\Registerable
     {
         check_ajax_referer('send_email');
 
-        $targets = array(
+        $targets = [
           'email_hackers'    => 'wp-hackers@lists.automattic.com',
           'email_wp_plugins' => 'plugins@wordpress.org',
           'email_fd'         => 'fulldisclosure@seclists.org',
           'email_cve'        => 'cve-assign@mitre.org',
           'email_wpscan'     => 'wpscanteam@gmail.com',
           'email_dxw_wp_sec' => 'dxw-wp-security@lists.dxw.com',
-        );
+        ];
 
         $sanitised['subject'] = sanitize_text_field($_POST['subject']);
         $sanitised['body']    = ($_POST['body']);
@@ -37,7 +37,7 @@ class AjaxHandler implements \Dxw\Iguana\Registerable
             }
         }
 
-        if (!wp_mail($targets[$sanitised['target']], $sanitised['subject'], $sanitised['body'], array('From: dxw Security <security@dxw.com>'))) {
+        if (!wp_mail($targets[$sanitised['target']], $sanitised['subject'], $sanitised['body'], ['From: dxw Security <security@dxw.com>'])) {
             header("HTTP/1.1 500 Internal Server Error");
             echo "Failed: {$var} was empty.";
             return 0;
