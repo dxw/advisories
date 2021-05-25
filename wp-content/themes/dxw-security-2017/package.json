@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "jquery": "~3.5.1"
+    "jquery": "~3.6.0"
   },
   "devDependencies": {
     "bourbon": "^4.3.4",
