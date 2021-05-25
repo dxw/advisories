@@ -2122,11 +2122,6 @@ filenamify@^2.0.0:
     strip-outer "^1.0.0"
     trim-repeated "^1.0.0"
 
-filesize@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/filesize/-/filesize-6.1.0.tgz#e81bdaa780e2451d714d71c0d7a4f3238d37ad00"
-  integrity sha512-LpCHtPQ3sFx67z+uh2HnSyWSLLu5Jxo21795uRDuar/EOuYWXib5EmPaGIBuSnRqH2IODiKA2k5re/K9OnN/Yg==
-
 fill-range@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-4.0.0.tgz#d544811d428f98eb06a63dc402d2403c328c38f7"
@@ -2606,15 +2601,14 @@ grunt-exorcise@^2.1.1:
     exorcist "^0.4.0"
     resumer "0.0.0"
 
-grunt-image@~6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/grunt-image/-/grunt-image-6.3.1.tgz#704d44961060934fa45954d37a481696ea4cd662"
-  integrity sha512-/zOV2psqEoO1v19E/dNzzi6Xq63KCfUVo4MYD+qQvxAntjR3deYtDjdHCFJNe4REKWYIo/SRqrlF/Hh7awmifA==
+grunt-image@~6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/grunt-image/-/grunt-image-6.4.0.tgz#33be8ea6fbb026be3bb8fdd003d998e8c0fe0c30"
+  integrity sha512-lajztcwGj6eytHld0q6rkMO0+dbZoyvpzPmrGh78ed9Wx3FicgMGRPeZqAsjignlBW3cZyADlzpP358+LxYAhw==
   dependencies:
     chalk "^4.0.0"
     each-async "^1.1.1"
     exec-buffer "^3.2.0"
-    filesize "^6.1.0"
     gifsicle "^5.1.0"
     is-gif "^3.0.0"
     is-jpg "^2.0.0"
@@ -2625,6 +2619,7 @@ grunt-image@~6.3.1:
     mozjpeg "^7.0.0"
     optipng-bin "^7.0.0"
     pngquant-bin "^6.0.0"
+    pretty-bytes "^5.3.0"
     round10 "^1.0.3"
     svgo "^1.3.2"
     zopflipng-bin "^6.0.1"
@@ -4652,6 +4647,11 @@ prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
   integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
+pretty-bytes@^5.3.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.6.0.tgz#356256f643804773c82f64723fe78c92c62beaeb"
+  integrity sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
