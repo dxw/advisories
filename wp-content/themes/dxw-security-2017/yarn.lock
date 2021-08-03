@@ -2142,12 +2142,7 @@ fs.realpath@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
   integrity sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
 
-fsevents@~2.3.1:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
-  integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
-
-fsevents@^2.3.2:
+fsevents@^2.3.2, fsevents@~2.3.1:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
@@ -5305,9 +5300,9 @@ tar-stream@^1.5.2:
     xtend "^4.0.0"
 
 tar@^6.0.2:
-  version "6.0.5"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-6.0.5.tgz#bde815086e10b39f1dcd298e89d596e1535e200f"
-  integrity sha512-0b4HOimQHj9nXNEAA7zWwMM91Zhhba3pspja6sQbgTpynOJf+bkjBnfybNYzbpLbnwXnbyB4LOREvlyXLkCHSg==
+  version "6.1.4"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.4.tgz#9f0722b772a5e00dba7d52e1923b37a7ec3799b3"
+  integrity sha512-kcPWrO8S5ABjuZ/v1xQHP8xCEvj1dQ1d9iAb6Qs4jLYzaAIYWwST2IQpz7Ud8VNYRI+fGhFjrnzRKmRggKWg3g==
   dependencies:
     chownr "^2.0.0"
     fs-minipass "^2.0.0"
