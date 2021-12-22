@@ -24,7 +24,7 @@
         {
             "name": "wp-to-twitter",
             "src": "git@git.govpress.com:wordpress-plugins/wp-to-twitter",
-            "revision": "721cd8bcbf34f365499e4e9164aef431d3ef2ea2"
+            "revision": "8b4be084f94b48316e453f9d08e586dba17a4ad0"
         },
         {
             "name": "page-excerpt",
