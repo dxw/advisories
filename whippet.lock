@@ -14,7 +14,7 @@
         {
             "name": "advanced-custom-fields-pro",
             "src": "git@git.govpress.com:wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "25bac35bf286c36b2ea24deaa3bc0b0f3a745494"
+            "revision": "f61e97f3485904b75c90580068059f43eab516f2"
         },
         {
             "name": "co-authors-plus",
@@ -24,7 +24,7 @@
         {
             "name": "wp-to-twitter",
             "src": "git@git.govpress.com:wordpress-plugins/wp-to-twitter",
-            "revision": "721cd8bcbf34f365499e4e9164aef431d3ef2ea2"
+            "revision": "8b4be084f94b48316e453f9d08e586dba17a4ad0"
         },
         {
             "name": "page-excerpt",
