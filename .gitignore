@@ -89,6 +89,10 @@ tmp/
 .php-cs-fixer.cache
 .sass-cache/
 *.bak*
+wp-content/languages/
+/wp-content/node_modules
+/wp-content/node_debug.log
+/wp-content/npm-debug.log
 
 ## Whippet dependencies
 /wp-content/plugins/akismet
@@ -98,12 +102,3 @@ tmp/
 /wp-content/plugins/co-authors-plus
 /wp-content/plugins/wp-to-twitter
 /wp-content/plugins/page-excerpt
-
-.DS_Store
-/wp-content/whippet-wp-config.php
-wp-content/languages/
-/wp-content/node_modules
-/wp-content/node_debug.log
-/wp-content/npm-debug.log
-
-
