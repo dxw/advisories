@@ -22,3 +22,8 @@ updates:
   allow:
   - dependency-type: production
   open-pull-requests-limit: 0
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 0
