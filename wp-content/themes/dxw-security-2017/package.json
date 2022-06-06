@@ -6,7 +6,7 @@
     "bourbon": "^7.0.0",
     "bourbon-neat": "^4.0.0",
     "calc-polyfill": "^0.1.0",
-    "grunt": "~1.4.1",
+    "grunt": "~1.5.3",
     "grunt-browserify": "^6.0.0",
     "grunt-cli": "^1.4.3",
     "grunt-contrib-clean": "^2.0.0",
