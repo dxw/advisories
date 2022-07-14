@@ -9,7 +9,7 @@
         {
             "name": "akismet",
             "src": "git@git.govpress.com:wordpress-plugins/akismet",
-            "revision": "d2a7167ef58705a151a81aa5f00ea3b58374f1dc"
+            "revision": "2b3f95a81693c5daaa3d8fda569730af0b0534c1"
         },
         {
             "name": "advanced-custom-fields-pro",
