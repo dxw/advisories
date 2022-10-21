@@ -1,34 +1,34 @@
 {
-    "hash": "605caa67551195a9996c8f70bd71f6c9e1f941d6",
+    "hash": "c8a426016f158b69d1294dea833b58160d240e1a",
     "plugins": [
         {
             "name": "classic-editor",
-            "src": "git@git.govpress.com:wordpress-plugins/classic-editor",
+            "src": "git@github.com:dxw-wordpress-plugins/classic-editor",
             "revision": "9bdb1f1aa9356da1195b1fcd396d627f0d98f968"
         },
         {
             "name": "akismet",
-            "src": "git@git.govpress.com:wordpress-plugins/akismet",
-            "revision": "8a93866010787120548eddd06e7f57945cb4f197"
+            "src": "git@github.com:dxw-wordpress-plugins/akismet",
+            "revision": "b4e699323c12e75e3334938ce78a9009647e568a"
         },
         {
             "name": "advanced-custom-fields-pro",
-            "src": "git@git.govpress.com:wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "caa013e374e836a9af9f2668e4cfe71b107b73a8"
+            "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
+            "revision": "bb000a8ab06286fcebbec37af560930eb14073c6"
         },
         {
             "name": "co-authors-plus",
-            "src": "git@git.govpress.com:wordpress-plugins/co-authors-plus",
+            "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
             "revision": "305da47fcfa4d5f3c580992654d2e494b44e1b7f"
         },
         {
             "name": "wp-to-twitter",
-            "src": "git@git.govpress.com:wordpress-plugins/wp-to-twitter",
-            "revision": "3087500b9906688c0995cc274155c53bca55783e"
+            "src": "git@github.com:dxw-wordpress-plugins/wp-to-twitter",
+            "revision": "9ee07524f1540c452a2e8d8cc6c762ef22a11037"
         },
         {
             "name": "page-excerpt",
-            "src": "git@git.govpress.com:wordpress-plugins/page-excerpt",
+            "src": "git@github.com:dxw-wordpress-plugins/page-excerpt",
             "revision": "5e7aca2ae8a92ab43190a017c46543685d55b230"
         }
     ]
