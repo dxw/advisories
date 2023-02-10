@@ -25,7 +25,7 @@
       list-style: none;
     }
   }
-  
+
   .global-footer-links {
     @include flexbox;
     flex-flow: row wrap;
@@ -97,11 +97,15 @@
     }
 
     .badges {
-      @include grid-column(5);
+      @include grid-column(6);
       order: 1;
 
       @media screen and (max-width: $small-screen) {
         @include grid-column(12);
+      }
+
+      a {
+        border-bottom: 0px;
       }
 
       img {
@@ -116,7 +120,7 @@
     }
 
     p {
-      @include grid-column(7);
+      @include grid-column(6);
       order: 2;
 
       @media screen and (max-width: $small-screen) {

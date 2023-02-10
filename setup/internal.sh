@@ -75,7 +75,6 @@ wp menu item add-post Services 69 --title="Terms of service"
 wp menu location assign Services footer_first
 wp menu create Github
 wp menu item add-custom Github Whippet https://github.com/dxw/whippet
-wp menu item add-custom Github "Whippet Server" https://github.com/dxw/whippet-server
 wp menu item add-custom Github "2FA plugin" https://github.com/dxw/2fa
 wp menu item add-custom Github Iguana https://github.com/dxw/iguana
 wp menu location assign Github footer_second
