@@ -8,7 +8,7 @@ set -e
 ##############
 # Config
 ##############
-title="dxwsecurity"
+title="dxw advisories"
 theme=dxw-security-2017/templates
 plugins="advanced-custom-fields-pro co-authors-plus page-excerpt dxw-sec-api"
 content=/usr/src/app/setup/content
