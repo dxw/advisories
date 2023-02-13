@@ -4,7 +4,7 @@ In the course of delivering and hosting WordPress websites for the public sector
 We publish information about that work on this site.
 
 * [Production](https://security.dxw.com)
-* [Staging](https://security.staging.dxw.net)
+* [Staging](https://advisories.staging.dxw-govpress.dalmatian.dxw.net)
 
 Please use `develop/master` branches
 
