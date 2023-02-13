@@ -1,1 +1,2 @@
 brew "shellcheck"
+brew "nodenv"
