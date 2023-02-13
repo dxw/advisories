@@ -5,7 +5,7 @@ FLAGS=
 
 # Add -t flag iff STDIN is a TTY
 if [ -t 0 ]; then
-  FLAGS=-t
+	FLAGS=-t
 fi
 
 CONTAINER=$(docker-compose ps -q wordpress)
