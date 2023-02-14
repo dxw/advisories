@@ -9,5 +9,5 @@ set -e
 ##
 
 if test -f whippet.json; then
-  whippet deps install
+	whippet deps install
 fi
