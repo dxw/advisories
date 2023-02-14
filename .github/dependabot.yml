@@ -19,8 +19,6 @@ updates:
   directory: "/wp-content/themes/dxw-security-2017"
   schedule:
     interval: daily
-  allow:
-  - dependency-type: production
   open-pull-requests-limit: 0
 - package-ecosystem: composer
   directory: "/"

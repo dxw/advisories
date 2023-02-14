@@ -1,0 +1,66 @@
+#!/bin/sh
+set -e
+
+THEME_DIRECTORY="./wp-content/themes/dxw-security-2017"
+
+if ! type "docker" > /dev/null 2>&1; then
+	# shellcheck disable=SC2028
+	echo "\033[96mWarning:\033[0m Please install Docker: https://docs.docker.com/docker-for-mac/install/"
+	exit 1
+fi
+
+if ! type "docker-compose" > /dev/null 2>&1; then
+	# shellcheck disable=SC2028
+	echo "\033[96mWarning:\033[0m Please install Docker Compose: https://docs.docker.com/docker-for-mac/install/"
+	exit 1
+fi
+
+if ! type "php" > /dev/null 2>&1; then
+	# shellcheck disable=SC2028
+	echo "\033[96mWarning:\033[0m Please install PHP, one method is 'brew install php'"
+	exit 1
+fi
+
+if ! type "composer" > /dev/null 2>&1; then
+	# shellcheck disable=SC2028
+	echo "\033[96mWarning:\033[0m Please install Composer, 'brew install composer' or https://getcomposer.org/download/"
+	exit 1
+fi
+
+if [ -f Brewfile ] && [ "$(uname -s)" = "Darwin" ]; then
+	if ! brew bundle check >/dev/null 2>&1; then
+		echo "==> Installing Homebrew dependencies..."
+		brew bundle install --verbose --no-lock
+	fi
+fi
+
+if [ -f .node-version ]; then
+	eval "$(nodenv init -)"
+	if [ -z "$(nodenv version-name 2>/dev/null)" ]; then
+		echo "==> Installing Node..."
+		nodenv install --skip-existing
+		nodenv rehash
+	fi
+fi
+
+echo "===> Installing root Composer dependencies..."
+
+composer update
+
+echo "===> Installing WordPress plugins..."
+
+if test -f whippet.json 2>&1; then
+	if test -f whippet.lock 2>&1; then
+		vendor/bin/whippet deps install
+	else
+		vendor/bin/whippet deps update
+	fi
+fi
+
+echo "===> Installing theme Composer dependencies..."
+
+composer install -d $THEME_DIRECTORY
+
+echo "===> Installing theme NPM dependencies..."
+
+npm --prefix $THEME_DIRECTORY install

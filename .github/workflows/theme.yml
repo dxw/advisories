@@ -1,34 +1,36 @@
-on:
-  - push
-  - pull_request
+name: dxw advisories theme
 
-env:
-  THEME_NAME: dxw-security-2017
+on: push
+
+defaults:
+  run:
+    working-directory: wp-content/themes/dxw-security-2017
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
+  lint_and_test:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        php-versions: ['7.4']
     steps:
       - uses: actions/checkout@v3.3.0
-
-      - uses: shivammathur/setup-php@2.23.0
+      - name: Setup PHP
+        uses: shivammathur/setup-php@2.24.0
         with:
-          php-version: "7.4"
-          coverage: none
-          tools: composer
-
+          php-version: ${{ matrix.php-versions }}
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
       - name: Install dependencies
-        run: |
-          cd "wp-content/themes/$THEME_NAME"
-          composer --no-interaction install
-          yarn install
-
-      - name: Run linter
-        run: |
-          cd "wp-content/themes/$THEME_NAME"
-          vendor/bin/php-cs-fixer fix --dry-run --verbose --diff
-
-      - name: Run tests
-        run: |
-          cd "wp-content/themes/$THEME_NAME"
-          vendor/bin/peridot spec
+        run: composer install --no-interaction
+      - name: PHP CS fix
+        run: vendor/bin/php-cs-fixer fix --dry-run -v --diff
+      - name: Run Peridot tests
+        run: vendor/bin/peridot spec

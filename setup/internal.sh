@@ -8,7 +8,7 @@ set -e
 ##############
 # Config
 ##############
-title="dxwsecurity"
+title="dxw advisories"
 theme=dxw-security-2017/templates
 plugins="advanced-custom-fields-pro co-authors-plus page-excerpt dxw-sec-api"
 content=/usr/src/app/setup/content
@@ -18,47 +18,49 @@ wp core install --skip-email --admin_user=admin --admin_password=admin --admin_e
 # Plugins
 for plugin in $plugins
 do
-  if wp plugin is-installed $plugin
-  then
-    wp plugin activate $plugin
-  else
-    echo "\033[96mWarning:\033[0m Plugin '"$plugin"' could not be found. Have you installed it?"
-  fi
+	if wp plugin is-installed "$plugin"
+	then
+		wp plugin activate "$plugin"
+	else
+		# shellcheck disable=SC2028,SC2027,SC2086
+		echo "\033[96mWarning:\033[0m Plugin '"$plugin"' could not be found. Have you installed it?"
+	fi
 done
 
 # Theme
-if wp theme is-installed $theme
+if wp theme is-installed "$theme"
 then
 
-  wp theme activate $theme
+	wp theme activate "$theme"
 else
-  echo "\033[96mWarning:\033[0m Theme '"$theme"' could not be found. Have you installed it?"
+	# shellcheck disable=SC2028,SC2027,SC2086
+	echo "\033[96mWarning:\033[0m Theme '"$theme"' could not be found. Have you installed it?"
 fi
 
 # Content
 if [ "$(ls -A $content)" ]
 then
-  if wp plugin is-installed wordpress-importer
-  then
-    wp plugin activate wordpress-importer
-    for file in $content/*.xml
-    do
-      echo "Importing $file..."
-      wp import $file --authors=skip
-    done
-  else
-    echo "WordPress Importer not installed... installing now"
-    wp plugin install wordpress-importer --activate
-    for file in $content/*.xml
-    do
-      echo "Importing $file..."
-      wp import $file --authors=skip
-    done
-    wp plugin uninstall wordpress-importer --deactivate
-  fi
+	if wp plugin is-installed wordpress-importer
+	then
+		wp plugin activate wordpress-importer
+		for file in "$content"/*.xml
+		do
+			echo "Importing $file..."
+			wp import "$file" --authors=skip
+		done
+	else
+		echo "WordPress Importer not installed... installing now"
+		wp plugin install wordpress-importer --activate
+		for file in "$content"/*.xml
+		do
+			echo "Importing $file..."
+			wp import "$file" --authors=skip
+		done
+		wp plugin uninstall wordpress-importer --deactivate
+	fi
 
 else
-  echo "No content to be imported"
+	echo "No content to be imported"
 fi
 
 # Other setup
@@ -75,7 +77,6 @@ wp menu item add-post Services 69 --title="Terms of service"
 wp menu location assign Services footer_first
 wp menu create Github
 wp menu item add-custom Github Whippet https://github.com/dxw/whippet
-wp menu item add-custom Github "Whippet Server" https://github.com/dxw/whippet-server
 wp menu item add-custom Github "2FA plugin" https://github.com/dxw/2fa
 wp menu item add-custom Github Iguana https://github.com/dxw/iguana
 wp menu location assign Github footer_second
