@@ -41,7 +41,7 @@
     <div class="row global-footer-certificates">
         <p><?php echo get_theme_mod('digital_marketplace_text');?></p>
         <div class="badges">
-            <img src="<?php h()->assetPath('img/ci-ukas.png'); ?>" alt="UKAS Certification International" class="badge ukas">
+            <a href="<?php h()->assetPath('img/ukas.svg'); ?>"><img class="badge ukas" src="<?php h()->assetPath('img/ukas.svg'); ?>" alt="UKAS logo"></a>
             <img src="<?php h()->assetPath('img/ccs-certificate.png'); ?>" alt="Government Procurement Service" class="badge ccss">
             <a href="https://registry.blockmarktech.com/certificates/b59bbcc0-9eba-4980-895e-54d4a40ed6e3/" rel="external">
                 <img class="pre-footer__logos__cyber" src="<?php h()->assetPath('img/ce-mark.png'); ?>" alt="Cyber Essentials logo">
