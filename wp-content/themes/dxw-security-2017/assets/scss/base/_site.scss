@@ -1,6 +1,13 @@
 body {
   background: $body-background-colour;
   transition: background-image 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 .visible-min-width {
