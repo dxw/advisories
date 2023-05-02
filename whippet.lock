@@ -4,22 +4,22 @@
         {
             "name": "classic-editor",
             "src": "git@github.com:dxw-wordpress-plugins/classic-editor",
-            "revision": "9bdb1f1aa9356da1195b1fcd396d627f0d98f968"
+            "revision": "1eae0892ab3a851eebe7858b23e41c6ca6f26bb6"
         },
         {
             "name": "akismet",
             "src": "git@github.com:dxw-wordpress-plugins/akismet",
-            "revision": "b4e699323c12e75e3334938ce78a9009647e568a"
+            "revision": "3c1bd3a1383b1fb0cb403967c48c6b946c84b847"
         },
         {
             "name": "advanced-custom-fields-pro",
             "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "bb000a8ab06286fcebbec37af560930eb14073c6"
+            "revision": "d1251d252dfcea449a0870e774adf109f11020d7"
         },
         {
             "name": "co-authors-plus",
             "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
-            "revision": "305da47fcfa4d5f3c580992654d2e494b44e1b7f"
+            "revision": "ed10d1d7f973c882c8692563cad9bef946ba0065"
         },
         {
             "name": "wp-to-twitter",
