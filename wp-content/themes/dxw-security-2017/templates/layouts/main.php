@@ -4,6 +4,7 @@
 <!--[if gt IE 9]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
+    <script defer data-domain="advisories.dxw.com" src="https://plausible.io/js/script.js"></script>
 
     <?php wp_head(); ?>
 </head>
