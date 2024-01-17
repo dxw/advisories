@@ -12,11 +12,6 @@
             "revision": "aec9791a510b77a6b8b5fecc62df5efbd71faa49"
         },
         {
-            "name": "advanced-custom-fields-pro",
-            "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "493a3a0b3ea38129bed730776e27cbd72da21bba"
-        },
-        {
             "name": "co-authors-plus",
             "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
             "revision": "dd3555c3616d0116d3ac41c0d8ebd7c4d8e9fddd"
@@ -30,6 +25,11 @@
             "name": "page-excerpt",
             "src": "git@github.com:dxw-wordpress-plugins/page-excerpt",
             "revision": "5e7aca2ae8a92ab43190a017c46543685d55b230"
+        },
+        {
+            "name": "advanced-custom-fields-pro",
+            "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
+            "revision": "2ea05f7b27d3b354286f8ea01096537c811cd6d7"
         }
     ]
 }
