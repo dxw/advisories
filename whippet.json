@@ -3,13 +3,10 @@
         "plugins": "git@github.com:dxw-wordpress-plugins/"
     },
     "plugins": [
-        {
-            "name":"classic-editor"
-        },
-        {"name": "akismet"},
         {"name": "advanced-custom-fields-pro"},
+        {"name": "akismet"},
+        {"name": "classic-editor"},
         {"name": "co-authors-plus"},
-        {"name": "wp-to-twitter"},
         {"name": "page-excerpt"}
     ]
 }
