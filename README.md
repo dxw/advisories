@@ -17,6 +17,10 @@ Please use `develop/main` branches.
 - [Production](https://app.ghostinspector.com/suites/62504446fe7446ec5add4df6)
 - [Staging](https://app.ghostinspector.com/suites/623b40d4f29837f4fb8fd15e)
 
+## Analytics
+
+- Analytics for dxw Advisories is handled via our Plausible account
+
 ## Getting started
 
 Run the setup (first-time run only):
