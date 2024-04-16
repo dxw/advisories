@@ -11,6 +11,11 @@
             "homepage": "https://www.dxw.com/"
         }
     ],
+    "config": {
+        "platform": {
+            "php": "8.3"
+        }
+    },
     "require-dev": {
         "dxw/phar-install": "^1.0",
         "10up/wp_mock": "^0.3.0",
