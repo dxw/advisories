@@ -9,9 +9,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.5
+      - uses: actions/checkout@v4.1.6
 
-      - uses: shivammathur/setup-php@2.30.4
+      - uses: shivammathur/setup-php@2.30.5
         with:
           php-version: "7.4"
           coverage: none
