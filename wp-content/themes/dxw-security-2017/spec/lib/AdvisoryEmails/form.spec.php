@@ -13,7 +13,7 @@ describe(\Dxw\DxwSecurity2017\Lib\AdvisoryEmails\Form::class, function () {
 	describe('->displayIfSuperAdmin()', function () {
 		context('user is not super admin', function () {
 			it('does nothing', function () {
-				WP_Mock::wpFunction('is_super_admin', [
+				WP_Mock::userFunction('is_super_admin', [
 					'times' => 1,
 					'return' => false
 				]);

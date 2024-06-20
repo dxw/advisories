@@ -18,7 +18,6 @@
     },
     "require-dev": {
         "dxw/phar-install": "^1.0",
-        "10up/wp_mock": "^0.3.0",
         "mikey179/vfsstream": "^1.6",
         "dxw/php-cs-fixer-config": "^2.1",
         "kahlan/kahlan": "^5.2"
@@ -37,6 +36,7 @@
         "dxw/iguana-theme": "^1.0",
         "dxw/iguana-extras": "^1.0",
         "dxw/result": "^1.0",
-        "dxw/php-missing": "^1.0"
+        "dxw/php-missing": "^1.0",
+        "10up/wp_mock": "^1.0.1"
     }
 }

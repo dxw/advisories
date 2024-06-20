@@ -16,7 +16,7 @@ describe(\Dxw\DxwSecurity2017\Theme\TitleTag::class, function () {
 
 	describe('->register()', function () {
 		it('adds support for title tag', function () {
-			\WP_Mock::wpFunction('add_theme_support', [
+			\WP_Mock::userFunction('add_theme_support', [
 				'args' => ['title-tag'],
 				'times' => 1,
 			]);

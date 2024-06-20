@@ -24,7 +24,7 @@ describe(\Dxw\DxwSecurity2017\Theme\WordPressToTwitter::class, function () {
 	describe('->wpt_custom_shortcode()', function () {
 		it('returns the field label', function () {
 			$this->h = Mockery::Mock(stdClass::class);
-			WP_Mock::wpFunction('h', [
+			WP_Mock::userFunction('h', [
 				'times' => 1,
 				'return' => $this->h
 			]);

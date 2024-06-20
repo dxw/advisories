@@ -27,7 +27,7 @@ describe(\Dxw\DxwSecurity2017\Theme\PostClasses::class, function () {
 				global $post;
 				$post = new stdClass();
 				$post->ID = 123;
-				WP_Mock::wpFunction('get_field', [
+				WP_Mock::userFunction('get_field', [
 					'times' => 1,
 					'args' => [
 						'recommendation',
@@ -44,7 +44,7 @@ describe(\Dxw\DxwSecurity2017\Theme\PostClasses::class, function () {
 				global $post;
 				$post = new stdClass();
 				$post->ID = 123;
-				WP_Mock::wpFunction('get_field', [
+				WP_Mock::userFunction('get_field', [
 					'times' => 1,
 					'args' => [
 						'recommendation',

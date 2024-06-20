@@ -14,7 +14,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
 		context('response is wp_error', function () {
 			it('returns an error result', function () {
 				$this->error = Mockery::Mock(\WP_Error::class);
-				WP_Mock::wpFunction('wp_remote_post', [
+				WP_Mock::userFunction('wp_remote_post', [
 					'times' => 1,
 					'args' => [
 						'https://api.wordpress.org/plugins/info/1.0/',
@@ -30,7 +30,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
 					],
 					'return' => $this->error
 				]);
-				WP_Mock::wpFunction('is_wp_error', [
+				WP_Mock::userFunction('is_wp_error', [
 					'times' => 1,
 					'args' => [$this->error],
 					'return' => true
@@ -48,7 +48,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
 			$this->response = [
 				'body' => 'a:2:{i:0;s:5:"first";i:1;s:6:"second";}'
 			];
-			WP_Mock::wpFunction('wp_remote_post', [
+			WP_Mock::userFunction('wp_remote_post', [
 				'times' => 1,
 				'args' => [
 					'https://api.wordpress.org/plugins/info/1.0/',
@@ -64,7 +64,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
 				],
 				'return' => $this->response
 			]);
-			WP_Mock::wpFunction('is_wp_error', [
+			WP_Mock::userFunction('is_wp_error', [
 				'times' => 1,
 				'args' => [$this->response],
 				'return' => false

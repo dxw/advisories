@@ -16,17 +16,17 @@ describe(\Dxw\DxwSecurity2017\Theme\Media::class, function () {
 
 	describe('->register()', function () {
 		it('registers thumbnail sizes', function () {
-			\WP_Mock::wpFunction('set_post_thumbnail_size', [
+			\WP_Mock::userFunction('set_post_thumbnail_size', [
 				'args' => [150, 150, true],
 				'times' => 1
 			]);
 
-			\WP_Mock::wpFunction('add_image_size', [
+			\WP_Mock::userFunction('add_image_size', [
 				'args' => ['medium', 200, 200, true],
 				'times' => 1
 			]);
 
-			\WP_Mock::wpFunction('add_image_size', [
+			\WP_Mock::userFunction('add_image_size', [
 				'args' => ['large', 800, 300, true],
 				'times' => 1
 			]);

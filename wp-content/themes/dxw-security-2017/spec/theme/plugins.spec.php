@@ -3,7 +3,7 @@
 describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
 	beforeEach(function () {
 		\WP_Mock::setUp();
-		\WP_Mock::wpFunction('esc_html', [
+		\WP_Mock::userFunction('esc_html', [
 			'return' => function ($a) {
 				return '_'.$a.'_';
 			},
@@ -32,28 +32,28 @@ describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
 
 	describe('->checkDependencies()', function () {
 		it('flags any required plugins that aren\'t activated', function () {
-			WP_Mock::wpFunction('get_option', [
+			WP_Mock::userFunction('get_option', [
 				'args' => ['active_plugins'],
 				'times' => 1,
 				'return' => [
 					'some-other/plugin.php'
 				]
 			]);
-			WP_Mock::wpFunction('get_plugin_data', [
+			WP_Mock::userFunction('get_plugin_data', [
 				'args' => [WP_PLUGIN_DIR.'/path-to/a-required-plugin.php'],
 				'times' => 1,
 				'return' => [
 					'Name' => 'A plugin'
 				]
 			]);
-			WP_Mock::wpFunction('get_plugin_data', [
+			WP_Mock::userFunction('get_plugin_data', [
 				'args' => [WP_PLUGIN_DIR.'/advanced-custom-fields-pro/acf.php'],
 				'times' => 1,
 				'return' => [
 					'Name' => 'Advanced Custom Fields Pro'
 				]
 			]);
-			WP_Mock::wpFunction('admin_url', [
+			WP_Mock::userFunction('admin_url', [
 				'args' => ['plugins.php'],
 				'times' => 2,
 				'return' => 'http://localhost/wp-admin/plugins.php'
@@ -76,7 +76,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
 
 		context('when the plugins are already active', function () {
 			it('doesn\'t print anything', function () {
-				WP_Mock::wpFunction('get_option', [
+				WP_Mock::userFunction('get_option', [
 					'args' => ['active_plugins'],
 					'times' => 1,
 					'return' => [
@@ -99,7 +99,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
 
 		context('when there\'s no plugin data available', function () {
 			it('displays the path of the plugin instead', function () {
-				WP_Mock::wpFunction('get_option', [
+				WP_Mock::userFunction('get_option', [
 					'args' => ['active_plugins'],
 					'times' => 1,
 					'return' => [
@@ -107,14 +107,14 @@ describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
 						'advanced-custom-fields-pro/acf.php'
 					]
 				]);
-				WP_Mock::wpFunction('get_plugin_data', [
+				WP_Mock::userFunction('get_plugin_data', [
 					'args' => [WP_PLUGIN_DIR.'/path-to/a-required-plugin.php'],
 					'times' => 1,
 					'return' => [
 						'Name' => ''
 					]
 				]);
-				WP_Mock::wpFunction('admin_url', [
+				WP_Mock::userFunction('admin_url', [
 					'args' => ['plugins.php'],
 					'times' => 1,
 					'return' => 'http://localhost/wp-admin/plugins.php'

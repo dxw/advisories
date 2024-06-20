@@ -23,12 +23,12 @@ describe(\Dxw\DxwSecurity2017\Theme\Feeds::class, function () {
 
 	describe('->wp_head()', function () {
 		it('outputs two feed links', function () {
-			WP_Mock::wpFunction('get_bloginfo', [
+			WP_Mock::userFunction('get_bloginfo', [
 				'times' => 2,
 				'args' => 'name',
 				'return' => 'dxwsec'
 			]);
-			WP_Mock::wpFunction('get_post_type_archive_feed_link', [
+			WP_Mock::userFunction('get_post_type_archive_feed_link', [
 				'times' => 1,
 				'args' => [
 					'advisories',
@@ -36,12 +36,12 @@ describe(\Dxw\DxwSecurity2017\Theme\Feeds::class, function () {
 				],
 				'return' => 'feed_link_1'
 			]);
-			WP_Mock::wpFunction('esc_attr', [
+			WP_Mock::userFunction('esc_attr', [
 				'times' => 1,
 				'args' => 'feed_link_1',
 				'return' => '_feed_link_1_'
 			]);
-			WP_Mock::wpFunction('get_post_type_archive_feed_link', [
+			WP_Mock::userFunction('get_post_type_archive_feed_link', [
 				'times' => 1,
 				'args' => [
 					'plugins',
@@ -49,7 +49,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Feeds::class, function () {
 				],
 				'return' => 'feed_link_2'
 			]);
-			WP_Mock::wpFunction('esc_attr', [
+			WP_Mock::userFunction('esc_attr', [
 				'times' => 1,
 				'args' => 'feed_link_2',
 				'return' => '_feed_link_2_'

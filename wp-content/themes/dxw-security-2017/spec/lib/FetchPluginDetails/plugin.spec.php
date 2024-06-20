@@ -44,7 +44,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
 						->once()
 						->with($slug)
 						->andReturn($response);
-					WP_Mock::wpFunction('wp_die', [
+					WP_Mock::userFunction('wp_die', [
 						'times' => 0,
 					]);
 					$response->shouldReceive('isErr')
@@ -80,7 +80,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
 						->once()
 						->with($slug)
 						->andReturn($response);
-					WP_Mock::wpFunction('wp_die', [
+					WP_Mock::userFunction('wp_die', [
 						'times' => 0,
 					]);
 					$response->shouldReceive('isErr')

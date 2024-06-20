@@ -26,7 +26,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, function () {
 
 	describe('wp_ajax_fetch_plugin_details', function () {
 		it('calls check_ajax_referer first then echoes plugin details', function () {
-			WP_Mock::wpFunction('check_ajax_referer', [
+			WP_Mock::userFunction('check_ajax_referer', [
 				'times' => 1,
 				'args' => ['fetch_plugin_details'],
 				'return' => function () {
@@ -39,7 +39,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, function () {
 				->once()
 				->with('foo')
 				->andReturn(["a" => 1]);
-			WP_Mock::wpFunction('wp_die', [
+			WP_Mock::userFunction('wp_die', [
 				'times' => 1,
 			]);
 
@@ -52,10 +52,10 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, function () {
 
 	describe('admin_enqueue_scripts', function () {
 		it('enqueues each script', function () {
-			WP_Mock::wpFunction('get_theme_root_uri', [
+			WP_Mock::userFunction('get_theme_root_uri', [
 				'return' => 'http://foo/theme'
 			]);
-			WP_Mock::wpFunction('wp_enqueue_script', [
+			WP_Mock::userFunction('wp_enqueue_script', [
 				'times' => 1,
 				'args' => [
 					'fetch-plugin-details',
@@ -65,7 +65,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, function () {
 					true
 				]
 			]);
-			WP_Mock::wpFunction('wp_enqueue_script', [
+			WP_Mock::userFunction('wp_enqueue_script', [
 				'times' => 1,
 				'args' => [
 					'async',
@@ -81,7 +81,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, function () {
 
 	describe('language_attributes', function () {
 		it('appends a nonce', function () {
-			WP_Mock::wpFunction('wp_create_nonce', [
+			WP_Mock::userFunction('wp_create_nonce', [
 				'times' => 1,
 				'args' => 'fetch_plugin_details',
 				'return' => 'foo'

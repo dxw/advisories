@@ -23,13 +23,13 @@ describe(\Dxw\DxwSecurity2017\Theme\Widgets::class, function () {
 
 	describe('->widgetsInit()', function () {
 		it('registers any widgets in the theme ', function () {
-			\WP_Mock::wpFunction('__', [
+			\WP_Mock::userFunction('__', [
 				'return' => function ($a) {
 					return $a;
 				}
 			]);
 
-			\WP_Mock::wpFunction('register_sidebar', [
+			\WP_Mock::userFunction('register_sidebar', [
 				'args' => [[
 					'name' => __('Primary'),
 					'id' => 'sidebar-primary',
@@ -41,7 +41,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Widgets::class, function () {
 				'times' => 1,
 			]);
 
-			\WP_Mock::wpFunction('register_sidebar', [
+			\WP_Mock::userFunction('register_sidebar', [
 				'args' => [[
 					'name' => __('Advisories archive'),
 					'id' => 'sidebar-advisories',
@@ -53,7 +53,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Widgets::class, function () {
 				'times' => 1,
 			]);
 
-			\WP_Mock::wpFunction('register_sidebar', [
+			\WP_Mock::userFunction('register_sidebar', [
 				'args' => [[
 					'name' => __('Plugins archive'),
 					'id' => 'sidebar-plugins',

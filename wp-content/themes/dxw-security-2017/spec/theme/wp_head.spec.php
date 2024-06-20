@@ -41,7 +41,7 @@ describe(\Dxw\DxwSecurity2017\Theme\WpHead::class, function () {
 			];
 
 			foreach ($actions as $args) {
-				\WP_Mock::wpFunction('remove_action', [
+				\WP_Mock::userFunction('remove_action', [
 					'args' => $args,
 					'times' => 1
 				]);

@@ -3,7 +3,7 @@
 describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
 	beforeEach(function () {
 		\WP_Mock::setUp();
-		\WP_Mock::wpFunction('esc_url', [
+		\WP_Mock::userFunction('esc_url', [
 			'return' => function ($a) {
 				return '_'.$a.'_';
 			},
@@ -31,7 +31,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
 
 	describe('->getAssetPath()', function () {
 		it('gets the path of the assets', function () {
-			\WP_Mock::wpFunction('get_stylesheet_directory_uri', [
+			\WP_Mock::userFunction('get_stylesheet_directory_uri', [
 				'args' => [],
 				'return' => 'http://foo.bar.invalid/cat/dog'
 			]);
@@ -41,7 +41,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
 
 	describe('->assetPath()', function () {
 		it('echos the path of the assets', function () {
-			\WP_Mock::wpFunction('get_stylesheet_directory_uri', [
+			\WP_Mock::userFunction('get_stylesheet_directory_uri', [
 				'args' => [],
 				'return' => 'http://foo.bar.invalid/cat/dog',
 			]);
@@ -55,32 +55,32 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
 
 	describe('->wpEnqueueScripts()', function () {
 		it('enqueues some of the JavaScript files', function () {
-			\WP_Mock::wpFunction('get_stylesheet_directory_uri', [
+			\WP_Mock::userFunction('get_stylesheet_directory_uri', [
 				'args' => [],
 				'return' => 'http://a.invalid/zzz',
 			]);
 
-			\WP_Mock::wpFunction('wp_deregister_script', [
+			\WP_Mock::userFunction('wp_deregister_script', [
 				'args' => ['jquery'],
 				'times' => 1,
 			]);
 
-			\WP_Mock::wpFunction('wp_enqueue_script', [
+			\WP_Mock::userFunction('wp_enqueue_script', [
 				'args' => ['jquery', 'http://a.invalid/static/lib/jquery.min.js'],
 				'times' => 1,
 			]);
 
-			\WP_Mock::wpFunction('wp_enqueue_script', [
+			\WP_Mock::userFunction('wp_enqueue_script', [
 				'args' => ['modernizr', 'http://a.invalid/static/lib/modernizr.min.js'],
 				'times' => 1,
 			]);
 
-			\WP_Mock::wpFunction('wp_enqueue_script', [
+			\WP_Mock::userFunction('wp_enqueue_script', [
 				'args' => ['main', 'http://a.invalid/static/main.min.js', ['jquery', 'modernizr'], '', true],
 				'times' => 1,
 			]);
 
-			\WP_Mock::wpFunction('wp_enqueue_style', [
+			\WP_Mock::userFunction('wp_enqueue_style', [
 				'args' => ['main', 'http://a.invalid/static/main.min.css'],
 				'times' => 1,
 			]);
@@ -91,7 +91,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
 
 	describe('->wpPrintScripts()', function () {
 		it('prints some elements tags directly', function () {
-			\WP_Mock::wpFunction('get_stylesheet_directory_uri', [
+			\WP_Mock::userFunction('get_stylesheet_directory_uri', [
 				'args' => [],
 				'return' => 'http://a.invalid/zzz',
 			]);
