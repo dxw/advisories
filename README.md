@@ -21,6 +21,10 @@ Please use `develop/main` branches.
 
 - Analytics for dxw Advisories is handled via our Plausible account
 
+## PHP version
+
+This site builds on PHP 8.2 and deploys on PHP 8.3.
+
 ## Getting started
 
 Run the setup (first-time run only):
