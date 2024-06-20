@@ -4,14 +4,14 @@ namespace Dxw\DxwSecurity2017\Theme;
 
 class Footer implements \Dxw\Iguana\Registerable
 {
-    public function register()
-    {
-        add_action('wp_footer', [$this, 'wpFooter']);
-    }
+	public function register()
+	{
+		add_action('wp_footer', [$this, 'wpFooter']);
+	}
 
-    public function wpFooter()
-    {
-        ?>
+	public function wpFooter()
+	{
+		?>
         <script type="text/javascript">
             var _gaq = _gaq || [];
             var TRACKING_CODE = 'UA-29555961-5'; // Put the Google Analytics tracking code here
@@ -28,5 +28,5 @@ class Footer implements \Dxw\Iguana\Registerable
             })();
         </script>
         <?php
-    }
+	}
 }
