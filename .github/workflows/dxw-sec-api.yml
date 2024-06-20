@@ -25,4 +25,4 @@ jobs:
       - name: Run tests
         run: |
           cd "wp-content/plugins/$PLUGIN_NAME"
-          vendor/bin/peridot specs
+          vendor/bin/kahlan --spec=specs

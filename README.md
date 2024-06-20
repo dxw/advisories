@@ -91,7 +91,7 @@ curl -L https://security.dxw.com/wp-json/v1/inspections/twitter-widget-pro
 
 The API code is packaged as a plugin.
 
-To run the tests, run `vendor/bin/peridot specs` from the plugin directory.
+To run the tests, run `vendor/bin/kahlan specs` from the plugin directory.
 
 The first time you do this you'll need to `composer install` from the plugin
 directory.
