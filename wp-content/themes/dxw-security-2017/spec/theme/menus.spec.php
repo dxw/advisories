@@ -15,7 +15,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Menus::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->menus)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->menus)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
@@ -55,7 +55,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Menus::class, function () {
                     ]
                 ]);
                 $result = $this->menus->footerMenu($location);
-                expect($result)->to->equal(false);
+                expect($result)->toBe(false);
             });
         });
         context('location is in nav_menu_locations', function () {
@@ -95,7 +95,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Menus::class, function () {
                     ]
                 ]);
                 $result = $this->menus->footerMenu($location);
-                expect($result)->to->not->equal(false);
+                expect($result)->not->toBe(false);
             });
         });
     });

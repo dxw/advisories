@@ -20,7 +20,7 @@ describe(\Dxw\DxwSecurity2017\Lib\AdvisoryEmails\Form::class, function () {
                 ob_start();
                 $this->form->displayIfSuperAdmin();
                 $result = ob_get_clean();
-                expect($result)->to->equal('');
+                expect($result)->toBe('');
             });
         });
     });

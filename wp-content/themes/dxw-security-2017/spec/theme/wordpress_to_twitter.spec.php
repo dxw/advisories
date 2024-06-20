@@ -11,7 +11,7 @@ describe(\Dxw\DxwSecurity2017\Theme\WordPressToTwitter::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->wordPressToTwitter)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->wordPressToTwitter)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
@@ -33,7 +33,7 @@ describe(\Dxw\DxwSecurity2017\Theme\WordPressToTwitter::class, function () {
                 ->with('foo')
                 ->andReturn('bar');
             $result = $this->wordPressToTwitter->wpt_custom_shortcode('meta', 'post', 'foo');
-            expect($result)->to->equal('bar');
+            expect($result)->toBe('bar');
         });
     });
 });

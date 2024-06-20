@@ -12,7 +12,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->theme)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->theme)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
@@ -46,7 +46,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, function () {
             ob_start();
             $this->theme->wp_ajax_fetch_plugin_details();
             $result = ob_get_clean();
-            expect($result)->to->equal("checking referer {\"a\":1}\n");
+            expect($result)->toBe("checking referer {\"a\":1}\n");
         });
     });
 
@@ -87,7 +87,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Theme::class, function () {
                 'return' => 'foo'
             ]);
             $result = $this->theme->language_attributes('english');
-            expect($result)->to->equal('english data-nonce-fetch-plugin-details="foo" ');
+            expect($result)->toBe('english data-nonce-fetch-plugin-details="foo" ');
         });
     });
 });

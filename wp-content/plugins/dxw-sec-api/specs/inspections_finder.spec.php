@@ -42,37 +42,37 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
                 'filter' => 'raw',
             ];
 
-            \WP_Mock::wpFunction('get_posts', [
+            \WP_Mock::userFunction('get_posts', [
                 'return' => [$inspection],
             ]);
 
-            \WP_Mock::wpFunction('get_field', [
+            \WP_Mock::userFunction('get_field', [
                 'args' => ['version_of_plugin', 2644],
                 'return' => '2.2.3',
             ]);
 
-            \WP_Mock::wpFunction('get_permalink', [
+            \WP_Mock::userFunction('get_permalink', [
                 'args' => [2644],
                 'return' => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field',
             ]);
 
-            \WP_Mock::wpFunction('get_field', [
+            \WP_Mock::userFunction('get_field', [
                 'args' => ['recommendation', 2644],
                 'return' => 'green',
             ]);
 
             $finder = new \DxwSec\API\InspectionsFinder();
             $result = $finder->find('advanced-custom-fields-table-field');
-            expect($result)->to->be->an('array');
-            expect(count($result))->to->equal(1);
+            expect($result)->toBeAn('array');
+            expect(count($result))->toBe(1);
 
             $output = $result[0];
-            expect($output->name)->to->equal('Advanced Custom Fields: Table Field');
-            expect($output->slug)->to->equal('advanced-custom-fields-table-field');
-            expect($output->versions())->to->equal('2.2.3');
-            expect($output->date)->to->loosely->equal(date_create('2016-07-13 17:44:23', timezone_open('UTC')));
-            expect($output->url())->to->equal('https://security.dxw.com/plugins/advanced-custom-fields-table-field');
-            expect($output->result())->to->equal('No issues found');
+            expect($output->name)->toBe('Advanced Custom Fields: Table Field');
+            expect($output->slug)->toBe('advanced-custom-fields-table-field');
+            expect($output->versions())->toBe('2.2.3');
+            expect($output->date)->toEqual(date_create('2016-07-13 17:44:23', timezone_open('UTC')));
+            expect($output->url())->toBe('https://security.dxw.com/plugins/advanced-custom-fields-table-field');
+            expect($output->result())->toBe('No issues found');
         });
 
         it('searches the database for published inspections matching the slug', function () {
@@ -89,7 +89,7 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
                 ],
             ];
 
-            \WP_Mock::wpFunction('get_posts', [
+            \WP_Mock::userFunction('get_posts', [
                 'times' => 1,
                 'args' => [$args],
                 'return' => [],
@@ -100,12 +100,12 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
 
         context('when there are no matching inspections', function () {
             it('returns an empty array', function () {
-                \WP_Mock::wpFunction('get_posts', [
+                \WP_Mock::userFunction('get_posts', [
                     'return' => []
                 ]);
                 $finder = new \DxwSec\API\InspectionsFinder();
                 $result = $finder->find('slug-with-no-matches');
-                expect($result)->to->equal([]);
+                expect($result)->toBe([]);
             });
         });
     });

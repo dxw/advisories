@@ -11,7 +11,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Media::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->media)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->media)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {

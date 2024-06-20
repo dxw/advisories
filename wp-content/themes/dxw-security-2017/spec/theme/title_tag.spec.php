@@ -11,7 +11,7 @@ describe(\Dxw\DxwSecurity2017\Theme\TitleTag::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->titleTag)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->titleTag)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {

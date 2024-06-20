@@ -13,7 +13,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Helpers::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->helpers)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->helpers)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {

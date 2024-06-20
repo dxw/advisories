@@ -11,7 +11,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Footer::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->footer)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->footer)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
@@ -27,7 +27,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Footer::class, function () {
             $this->footer->wpFooter();
             $result = ob_get_contents();
             ob_end_clean();
-            expect($result)->to->be->equal(implode("\n", [
+            expect($result)->toBe(implode("\n", [
                 '        <script type="text/javascript">',
                 '            var _gaq = _gaq || [];',
                 "            var TRACKING_CODE = 'UA-29555961-5'; // Put the Google Analytics tracking code here",

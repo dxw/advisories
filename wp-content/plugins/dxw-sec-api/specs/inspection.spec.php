@@ -43,7 +43,11 @@ describe('\\DxwSec\\API\\Inspection', function () {
 
         $this->randomDate = function () {
             $timestamp = rand(0, time());
-            return strftime("%Y-%m-%d %H:%M:%S", $timestamp);
+
+            $dateObject = new DateTime();
+            $dateObject->setTimestamp($timestamp);
+            $formattedDate = $dateObject->format('Y-m-d H:i:s');
+            return $formattedDate;
         };
     });
 
@@ -51,7 +55,7 @@ describe('\\DxwSec\\API\\Inspection', function () {
         it('returns the post title of the inspection, stripped of whitespace', function () {
             $fake_post = $this->fakePost(['post_title' => '  My Awesome Plugin ']);
             $inspection = new DxwSec\API\Inspection($fake_post);
-            expect($inspection->name)->to->equal('My Awesome Plugin');
+            expect($inspection->name)->toBe('My Awesome Plugin');
         });
     });
 
@@ -59,19 +63,19 @@ describe('\\DxwSec\\API\\Inspection', function () {
         it('returns the slug of the inspection', function () {
             $fake_post = $this->fakePost(['post_name' => 'my-awesome-plugin']);
             $inspection = new DxwSec\API\Inspection($fake_post);
-            expect($inspection->slug)->to->equal('my-awesome-plugin');
+            expect($inspection->slug)->toBe('my-awesome-plugin');
         });
 
         it('strips any trailing numbers', function () {
             $fake_post = $this->fakePost(['post_name' => 'my-awesome-plugin-2']);
             $inspection = new DxwSec\API\Inspection($fake_post);
-            expect($inspection->slug)->to->equal('my-awesome-plugin');
+            expect($inspection->slug)->toBe('my-awesome-plugin');
         });
 
         it('strips multiple trailing numbers', function () {
             $fake_post = $this->fakePost(['post_name' => 'my-awesome-plugin-10']);
             $inspection = new DxwSec\API\Inspection($fake_post);
-            expect($inspection->slug)->to->equal('my-awesome-plugin');
+            expect($inspection->slug)->toBe('my-awesome-plugin');
         });
     });
 
@@ -87,13 +91,13 @@ describe('\\DxwSec\\API\\Inspection', function () {
         });
 
         it("returns versions from the post's custom field", function () {
-            \WP_Mock::wpFunction('get_field', [
+            \WP_Mock::userFunction('get_field', [
                 'args' => ['version_of_plugin', 2418],
                 'return' => '1.2.3',
             ]);
             $fake_post = $this->fakePost(['ID' => '2418']);
             $inspection = new DxwSec\API\Inspection($fake_post);
-            expect($inspection->versions())->to->equal('1.2.3');
+            expect($inspection->versions())->toBe('1.2.3');
         });
     });
 
@@ -101,7 +105,7 @@ describe('\\DxwSec\\API\\Inspection', function () {
         it('returns a datetime object from the string in the post', function () {
             $fake_post = $this->fakePost(['post_date' => '2016-07-13 17:44:23']);
             $inspection = new DxwSec\API\Inspection($fake_post);
-            expect($inspection->date)->to->loosely->equal(new DateTime('2016-07-13T17:44:23.000000Z'));
+            expect($inspection->date)->toEqual(new DateTime('2016-07-13T17:44:23.000000Z'));
         });
     });
 
@@ -119,11 +123,11 @@ describe('\\DxwSec\\API\\Inspection', function () {
         it('fetches the permalink for the post', function () {
             $fake_post = $this->fakePost(['ID' => '2317']);
             $inspection = new DxwSec\API\Inspection($fake_post);
-            \WP_Mock::wpFunction('get_permalink', [
+            \WP_Mock::userFunction('get_permalink', [
                 'args' => [2317],
                 'return' => 'https://security.dxw.com/plugins/my-awesome-plugin',
             ]);
-            expect($inspection->url())->to->equal('https://security.dxw.com/plugins/my-awesome-plugin');
+            expect($inspection->url())->toBe('https://security.dxw.com/plugins/my-awesome-plugin');
         });
     });
 
@@ -140,7 +144,7 @@ describe('\\DxwSec\\API\\Inspection', function () {
 
         context("when the post has a 'green' recommendation", function () {
             beforeEach(function () {
-                \WP_Mock::wpFunction('get_field', [
+                \WP_Mock::userFunction('get_field', [
                     'args' => ['recommendation', 2317],
                     'return' => 'green',
                 ]);
@@ -148,13 +152,13 @@ describe('\\DxwSec\\API\\Inspection', function () {
             it("reports no issues found", function () {
                 $fake_post = $this->fakePost(['ID' => '2317']);
                 $inspection = new DxwSec\API\Inspection($fake_post);
-                expect($inspection->result())->to->equal('No issues found');
+                expect($inspection->result())->toBe('No issues found');
             });
         });
 
         context("when the post has a 'yellow' recommendation", function () {
             beforeEach(function () {
-                \WP_Mock::wpFunction('get_field', [
+                \WP_Mock::userFunction('get_field', [
                     'args' => ['recommendation', 2317],
                     'return' => 'yellow',
                 ]);
@@ -162,13 +166,13 @@ describe('\\DxwSec\\API\\Inspection', function () {
             it("reports use with caution", function () {
                 $fake_post = $this->fakePost(['ID' => '2317']);
                 $inspection = new DxwSec\API\Inspection($fake_post);
-                expect($inspection->result())->to->equal('Use with caution');
+                expect($inspection->result())->toBe('Use with caution');
             });
         });
 
         context("when the post has a 'red' recommendation", function () {
             beforeEach(function () {
-                \WP_Mock::wpFunction('get_field', [
+                \WP_Mock::userFunction('get_field', [
                     'args' => ['recommendation', 2317],
                     'return' => 'red',
                 ]);
@@ -176,7 +180,7 @@ describe('\\DxwSec\\API\\Inspection', function () {
             it("reports potentially unsafe", function () {
                 $fake_post = $this->fakePost(['ID' => '2317']);
                 $inspection = new DxwSec\API\Inspection($fake_post);
-                expect($inspection->result())->to->equal('Potentially unsafe');
+                expect($inspection->result())->toBe('Potentially unsafe');
             });
         });
     });

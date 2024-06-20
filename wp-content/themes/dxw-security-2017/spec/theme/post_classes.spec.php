@@ -11,7 +11,7 @@ describe(\Dxw\DxwSecurity2017\Theme\PostClasses::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->postClasses)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->postClasses)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
@@ -36,7 +36,7 @@ describe(\Dxw\DxwSecurity2017\Theme\PostClasses::class, function () {
                     'return' => false
                 ]);
                 $result = $this->postClasses->recommendationStatusClass(['foo', 'bar']);
-                expect($result)->to->equal(['foo', 'bar']);
+                expect($result)->toBe(['foo', 'bar']);
             });
         });
         context('post does have recommendation field', function () {
@@ -53,7 +53,7 @@ describe(\Dxw\DxwSecurity2017\Theme\PostClasses::class, function () {
                     'return' => 'avoid'
                 ]);
                 $result = $this->postClasses->recommendationStatusClass(['foo', 'bar']);
-                expect($result)->to->equal(['foo', 'bar', 'avoid']);
+                expect($result)->toBe(['foo', 'bar', 'avoid']);
             });
         });
     });

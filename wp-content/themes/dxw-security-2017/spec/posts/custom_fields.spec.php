@@ -11,7 +11,7 @@ describe(\Dxw\DxwSecurity2017\Posts\CustomFields::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->customFields)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->customFields)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {

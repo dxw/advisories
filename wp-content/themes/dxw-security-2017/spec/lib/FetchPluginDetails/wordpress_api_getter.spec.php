@@ -39,9 +39,9 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
                     ->once()
                     ->andReturn('errormessage');
                 $result = $this->getter->getPluginInfo('foo');
-                expect($result)->to->be->instanceof(\Dxw\Result\Result::class);
-                expect($result->isErr())->to->equal(true);
-                expect($result->getErr())->to->equal('errormessage');
+                expect($result)->toBeAnInstanceOf(\Dxw\Result\Result::class);
+                expect($result->isErr())->toBe(true);
+                expect($result->getErr())->toBe('errormessage');
             });
         });
         it('returns the unserialized response', function () {
@@ -70,9 +70,9 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\WordPressApiGetter::class, 
                 'return' => false
             ]);
             $result = $this->getter->getPluginInfo('foo');
-            expect($result)->to->be->instanceof(\Dxw\Result\Result::class);
-            expect($result->isErr())->to->equal(false);
-            expect($result->unwrap())->to->equal([
+            expect($result)->toBeAnInstanceOf(\Dxw\Result\Result::class);
+            expect($result->isErr())->toBe(false);
+            expect($result->unwrap())->toBe([
                 'first',
                 'second'
             ]);

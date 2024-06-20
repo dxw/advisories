@@ -19,7 +19,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
 
     it('is registrable', function () {
         $plugins = new \Dxw\DxwSecurity2017\Theme\Plugins([]);
-        expect($plugins)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($plugins)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
@@ -66,12 +66,12 @@ describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
             $plugins->checkDependencies();
             $result = ob_get_contents();
             ob_end_clean();
-            expect($result)->to->contain('<div class="notice notice-warning">');
-            expect($result)->to->contain('<a href="http://localhost/wp-admin/plugins.php">Visit plugins page</a>');
-            expect($result)->to->contain('</div>');
+            expect($result)->toContain('<div class="notice notice-warning">');
+            expect($result)->toContain('<a href="http://localhost/wp-admin/plugins.php">Visit plugins page</a>');
+            expect($result)->toContain('</div>');
 
-            expect($result)->to->contain('<strong>_A plugin_</strong>');
-            expect($result)->to->contain('<strong>_Advanced Custom Fields Pro_</strong>');
+            expect($result)->toContain('<strong>_A plugin_</strong>');
+            expect($result)->toContain('<strong>_Advanced Custom Fields Pro_</strong>');
         });
 
         context('when the plugins are already active', function () {
@@ -93,7 +93,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
                 $plugins->checkDependencies();
                 $result = ob_get_contents();
                 ob_end_clean();
-                expect($result)->to->be->empty;
+                expect($result)->toBeEmpty();
             });
         });
 
@@ -128,7 +128,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Plugins::class, function () {
                 $result = ob_get_contents();
                 ob_end_clean();
 
-                expect($result)->to->contain('<strong>_path-to/a-required-plugin.php_</strong>');
+                expect($result)->toContain('<strong>_path-to/a-required-plugin.php_</strong>');
             });
         });
     });

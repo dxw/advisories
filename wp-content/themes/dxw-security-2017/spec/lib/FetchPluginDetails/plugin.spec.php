@@ -24,7 +24,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                     ->once()
                     ->andReturn(true);
                 $result = $this->plugin->getDetails($slug);
-                expect($result)->to->equal(["ok" => false]);
+                expect($result)->toBe(["ok" => false]);
             });
         });
 
@@ -54,7 +54,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                         ->once()
                         ->andReturn($responseContent);
                     $result = $this->plugin->getDetails($slug);
-                    expect($result)->to->equal([
+                    expect($result)->toBe([
                         'description' => 'First para',
                         'ok' => true,
                         'slug' => $slug,
@@ -90,7 +90,7 @@ describe(\Dxw\DxwSecurity2017\Lib\FetchPluginDetails\Plugin::class, function () 
                         ->once()
                         ->andReturn($responseContent);
                     $result = $this->plugin->getDetails($slug);
-                    expect($result)->to->equal([
+                    expect($result)->toBe([
                         'description' => '',
                         'ok' => true,
                         'slug' => $slug,

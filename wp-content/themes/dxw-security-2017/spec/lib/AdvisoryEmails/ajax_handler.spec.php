@@ -11,7 +11,7 @@ describe(\Dxw\DxwSecurity2017\Lib\AdvisoryEmails\AjaxHandler::class, function ()
     });
 
     it('is registrable', function () {
-        expect($this->ajaxHandler)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->ajaxHandler)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {

@@ -11,7 +11,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Feeds::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->feeds)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->feeds)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
@@ -57,10 +57,10 @@ describe(\Dxw\DxwSecurity2017\Theme\Feeds::class, function () {
             ob_start();
             $this->feeds->wp_head();
             $result = ob_get_clean();
-            expect($result)->to->have->string(
+            expect($result)->toContain(
                 '<link rel="alternate" type="application/atom+xml" title="dxwsec Advisory Feed" href="_feed_link_1_">'
             );
-            expect($result)->to->have->string(
+            expect($result)->toContain(
                 '<link rel="alternate" type="application/atom+xml" title="dxwsec Plugin Feed" href="_feed_link_2_">'
             );
         });

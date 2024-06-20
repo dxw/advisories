@@ -17,7 +17,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
     });
 
     it('is registrable', function () {
-        expect($this->scripts)->to->be->an->instanceof(\Dxw\Iguana\Registerable::class);
+        expect($this->scripts)->toBeAnInstanceOf(\Dxw\Iguana\Registerable::class);
     });
 
     describe('->register()', function () {
@@ -35,7 +35,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
                 'args' => [],
                 'return' => 'http://foo.bar.invalid/cat/dog'
             ]);
-            expect($this->scripts->getAssetPath('meow'))->to->be->equal('http://foo.bar.invalid/cat/static/meow');
+            expect($this->scripts->getAssetPath('meow'))->toBe('http://foo.bar.invalid/cat/static/meow');
         });
     });
 
@@ -49,7 +49,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
             $this->scripts->assetPath('meow');
             $result = ob_get_contents();
             ob_end_clean();
-            expect($result)->to->be->equal('_http://foo.bar.invalid/cat/static/meow_');
+            expect($result)->toBe('_http://foo.bar.invalid/cat/static/meow_');
         });
     });
 
@@ -99,7 +99,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
             $this->scripts->wpPrintScripts();
             $result = ob_get_contents();
             ob_end_clean();
-            expect($result)->to->be->equal(implode("\n", [
+            expect($result)->toBe(implode("\n", [
                 '        <meta name="viewport" content="width=device-width, initial-scale=1.0">',
                 '',
                 '        <link rel="apple-touch-icon-precomposed" href="_http://a.invalid/static/img/apple-touch-icon-precomposed.png_">',
