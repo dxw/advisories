@@ -11,14 +11,16 @@
             "homepage": "https://www.dxw.com/"
         }
     ],
+    "config": {
+        "platform": {
+            "php": "8.3"
+        }
+    },
     "require-dev": {
         "dxw/phar-install": "^1.0",
-        "10up/wp_mock": "^0.3.0",
         "mikey179/vfsstream": "^1.6",
-        "peridot-php/peridot": "^1.19",
-        "peridot-php/leo": "^1.6",
-        "peridot-php/peridot-dot-reporter": "^1.0",
-        "dxw/php-cs-fixer-config": "^1.0"
+        "dxw/php-cs-fixer-config": "^2.1",
+        "kahlan/kahlan": "^5.2"
     },
     "autoload": {
         "psr-4": {
@@ -34,6 +36,7 @@
         "dxw/iguana-theme": "^1.0",
         "dxw/iguana-extras": "^1.0",
         "dxw/result": "^1.0",
-        "dxw/php-missing": "^1.0"
+        "dxw/php-missing": "^1.0",
+        "10up/wp_mock": "^1.0.1"
     }
 }
