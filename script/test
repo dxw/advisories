@@ -15,4 +15,4 @@ echo "===> Validating Whippet files..."
 vendor/bin/whippet deps validate
 
 echo "===> Running theme unit tests..."
-$THEME_DIRECTORY/vendor/bin/kahlan --spec="$THEME_DIRECTORY/spec"
+$THEME_DIRECTORY/vendor/bin/peridot "$THEME_DIRECTORY/spec"

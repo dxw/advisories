@@ -31,7 +31,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
             $controller = new \DxwSec\API\InspectionsController($this->fakeJsonInspectionsFinder([$inspection]));
             $params = $this->fakeParams(array('slug' => 'my-awesome-plugin'));
             $result = $controller->show($params);
-            expect($result)->toBe([$inspection]);
+            expect($result)->to->equal([$inspection]);
         });
 
         it('calls a finder object with the slug', function () {
@@ -50,7 +50,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                 $controller = new \DxwSec\API\InspectionsController($this->fakeJsonInspectionsFinder([]));
                 $params = $this->fakeParams(array('slug' => 'foo'));
                 $result = $controller->show($params);
-                expect($result)->toBe([]);
+                expect($result)->to->equal([]);
             });
         });
     });

@@ -4,8 +4,6 @@ namespace DxwSec\API;
 
 class InspectionsController
 {
-    private $json_inspections_finder;
-
     public function __construct($json_inspections_finder)
     {
         $this->json_inspections_finder = $json_inspections_finder;
