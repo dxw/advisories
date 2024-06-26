@@ -9,11 +9,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.7
+      - uses: actions/checkout@v4.1.6
 
-      - uses: shivammathur/setup-php@2.31.0
+      - uses: shivammathur/setup-php@2.30.5
         with:
-          php-version: "8.2"
+          php-version: "7.4"
           coverage: none
           tools: composer
 
@@ -25,4 +25,4 @@ jobs:
       - name: Run tests
         run: |
           cd "wp-content/plugins/$PLUGIN_NAME"
-          vendor/bin/kahlan --spec=specs
+          vendor/bin/peridot specs

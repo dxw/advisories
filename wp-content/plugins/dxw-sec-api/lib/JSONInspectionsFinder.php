@@ -6,8 +6,6 @@ namespace DxwSec\API;
 /* that can be converted to JSON and sent as the response to an API call */
 class JSONInspectionsFinder
 {
-    private $inspections_finder;
-
     public function __construct($inspections_finder)
     {
         $this->inspections_finder = $inspections_finder;

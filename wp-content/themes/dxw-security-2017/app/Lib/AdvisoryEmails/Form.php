@@ -4,13 +4,13 @@ namespace Dxw\DxwSecurity2017\Lib\AdvisoryEmails;
 
 class Form
 {
-	public function displayIfSuperAdmin()
-	{
-		if (!is_super_admin()) {
-			return;
-		}
+    public function displayIfSuperAdmin()
+    {
+        if (!is_super_admin()) {
+            return;
+        }
 
-		global $post; ?>
+        global $post; ?>
         <section class="admin-tools-container">
             <h2>Admin tools</h2>
             <h3>Publish emails</h3>
@@ -43,16 +43,16 @@ Version: <?php echo get_field('version') ?>
 Homepage: <?php echo get_field('codex_link') ?>
 
 Advisory report: <?php if ($post->post_status == 'publish' || $post->post_status == 'private') {
-	the_permalink();
-} else {
-	echo "Awaiting publication";
-} ?>
+            the_permalink();
+        } else {
+            echo "Awaiting publication";
+        } ?>
 
 CVE: <?php if (get_field('cve') != '') {
-	echo get_field('cve');
-} else {
-	echo "Awaiting assignment";
-} ?>
+            echo get_field('cve');
+        } else {
+            echo "Awaiting assignment";
+        } ?>
 
 CVSS: <?php h()->the_cvss_score(); ?> (<?php echo h()->the_cvss_severity(); ?>; AV:<?php echo substr(h()->get_field_label('access_vector'), 0, 1); ?>/AC:<?php echo substr(h()->get_field_label('access_complexity'), 0, 1); ?>/Au:<?php echo substr(h()->get_field_label('authentication'), 0, 1); ?>/C:<?php echo substr(h()->get_field_label('confidentiality'), 0, 1); ?>/I:<?php echo substr(h()->get_field_label('integrity'), 0, 1); ?>/A:<?php echo substr(h()->get_field_label('availability'), 0, 1); ?>)
 
@@ -89,19 +89,19 @@ Timeline
 Discovered by dxw:
 ================
 <?php if (function_exists('coauthors')) {
-	coauthors();
-} else {
-	the_author();
-} ?>
+            coauthors();
+        } else {
+            the_author();
+        } ?>
 
 Please visit advisories.dxw.com for more information.
             </textarea>
 
             <h3>Text version for CVE requests</h3>
             <a class="email-button icon-mail-open" href="mailto:cve-assign@mitre.org?subject=<?php echo "CVE request: " . preg_replace("/^Private: /", "", get_the_title());
-		if (get_field('is_plugin') == 'yes') {
-			echo " (WordPress plugin)";
-		} ?>">Click for a blank email with the right subject</a>
+        if (get_field('is_plugin') == 'yes') {
+            echo " (WordPress plugin)";
+        } ?>">Click for a blank email with the right subject</a>
             <textarea class="plain_text cve_email">
 Vulnerability
 ================
@@ -120,10 +120,10 @@ Version: <?php echo get_field('version') ?>
 Homepage: <?php echo get_field('codex_link') ?>
 
 Advisory ID: <?php if ($post->post_status == 'publish' || $post->post_status == 'private') {
-	h()->the_advisory_id();
-} else {
-	echo "Awaiting publication";
-} ?>
+            h()->the_advisory_id();
+        } else {
+            echo "Awaiting publication";
+        } ?>
 
 CVSS: <?php h()->the_cvss_score(); ?> (<?php echo h()->the_cvss_severity(); ?>; AV:<?php echo substr(h()->get_field_label('access_vector'), 0, 1); ?>/AC:<?php echo substr(h()->get_field_label('access_complexity'), 0, 1); ?>/Au:<?php echo substr(h()->get_field_label('authentication'), 0, 1); ?>/C:<?php echo substr(h()->get_field_label('confidentiality'), 0, 1); ?>/I:<?php echo substr(h()->get_field_label('integrity'), 0, 1); ?>/A:<?php echo substr(h()->get_field_label('availability'), 0, 1); ?>)
 
@@ -131,12 +131,12 @@ CVSS: <?php h()->the_cvss_score(); ?> (<?php echo h()->the_cvss_severity(); ?>; 
 Discovered by:
 ================
   <?php if (function_exists('coauthors')) {
-  	coauthors();
-  } else {
-  	the_author();
-  } ?>
+            coauthors();
+        } else {
+            the_author();
+        } ?>
             </textarea>
         </section>
         <?php
-	}
+    }
 }
