@@ -80,7 +80,7 @@ describe('\\DxwSec\\API\\JSONInspectionsFinder', function () {
             $finder = $this->fakeInspectionsFinder($inspections);
             $json_finder = new \DxwSec\API\JSONInspectionsFinder($finder);
             $result = $json_finder->find('advanced-custom-fields-table-field');
-            expect($result)->to->equal($inspection_output);
+            expect($result)->toBe($inspection_output);
         });
 
         it('calls an inspections finder with the given slug', function () {
@@ -99,7 +99,7 @@ describe('\\DxwSec\\API\\JSONInspectionsFinder', function () {
                 $finder = $this->fakeInspectionsFinder([]);
                 $json_finder = new \DxwSec\API\JSONInspectionsFinder($finder);
                 $result = $json_finder->find('slug-with-no-matches');
-                expect($result)->to->equal([]);
+                expect($result)->toBe([]);
             });
         });
     });
