@@ -15,7 +15,7 @@ services:
       - "11300:11300"
 
   beanstalkd_console:
-    image: agaveapi/beanstalkd-console
+    image: schickling/beanstalkd-console
     ports:
       - "2080:80"
     environment:
