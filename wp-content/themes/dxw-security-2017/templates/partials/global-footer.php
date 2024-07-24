@@ -6,10 +6,10 @@
                 <div itemscope itemtype="http://schema.org/Organization">
                      <span itemprop="name">dxw advisories</span>
                      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                        <span itemprop="streetAddress">Calls Landing</span>
-                        <span itemprop="streetAddress">36-38 The Calls</span>
+                        <span itemprop="streetAddress">Studio 1.05c</span>
+                        <span itemprop="streetAddress">4 The Boulevard</span>
                         <span itemprop="addressLocality">Leeds</span>,
-                        <span itemprop="postalCode">LS2 7EW</span>
+                        <span itemprop="postalCode">LS10 1PZ</span>
                      </div>
                      <span itemprop="telephone"><a href="tel:0345-257-7520"><span class="sr-only">Call us on </span>0345 257 7520</a></span>
                      <span itemprop="email"><a href="mailto:contact@govpress.com">contact@dxw.com</a></span>
