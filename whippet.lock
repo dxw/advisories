@@ -4,27 +4,27 @@
         {
             "name": "advanced-custom-fields-pro",
             "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "6787b2ec63334f1f4c0eb46a60c6c4d98ccd8eba"
+            "revision": "cb8969f4779fcfe7658e5db83d14925d8df7eace"
         },
         {
             "name": "akismet",
             "src": "git@github.com:dxw-wordpress-plugins/akismet",
-            "revision": "3f80b98c6d0bd8555ae76dcc16ce6d1067c2499d"
+            "revision": "21bbcc97b63b8344622798b8daf9a7dd5f25baac"
         },
         {
             "name": "classic-editor",
             "src": "git@github.com:dxw-wordpress-plugins/classic-editor",
-            "revision": "b17fa95549d98fbe216ab5a2f6473157788c7e59"
+            "revision": "dba7b7514d549d8169ad51dca2107b981040b3ad"
         },
         {
             "name": "co-authors-plus",
             "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
-            "revision": "dae883732115242b21b6841e0ead25bd205ba87d"
+            "revision": "6e6b49ff93c44cdd9d69873e414f9ace6fc6ecdc"
         },
         {
             "name": "page-excerpt",
             "src": "git@github.com:dxw-wordpress-plugins/page-excerpt",
-            "revision": "675f4c8fbe04aa006823f970757eb5ece8e8f3de"
+            "revision": "150fe6f26955a306d318b57354d11bc5f8a4868a"
         }
     ]
 }
