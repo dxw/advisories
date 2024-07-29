@@ -91,7 +91,7 @@
                 </ul>
             </div>
             <div class="footer-legal">
-                <p>&copy; 2008 &ndash; <?php echo date('Y'); ?>. The Dextrous Web Ltd, trading as dxw. &#8220;dxw&#8221; is a registered trademark. All rights reserved. The Dextrous Web Ltd is a company registered in England &amp; Wales, No. 6617101. Registered address Calls Landing, 36-38 The Calls, Leeds, LS2 7EW.</p>
+                <p>&copy; 2008 &ndash; <?php echo date('Y'); ?>. The Dextrous Web Ltd, trading as dxw. &#8220;dxw&#8221; is a registered trademark. All rights reserved. The Dextrous Web Ltd is a company registered in England &amp; Wales, No. 6617101. Registered address Studio 1.05c, 4 The Boulevard, Leeds, LS10 1PZ.</p>
             </div>
         </div>
     </div>
