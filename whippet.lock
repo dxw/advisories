@@ -1,30 +1,30 @@
 {
-    "hash": "230097a3d63ac768d747c08625bdd24a74c0bad7",
+    "hash": "f30ab9eeae7c76adf21fa9e9e1634ab2a19e56d8",
     "plugins": [
         {
             "name": "advanced-custom-fields-pro",
             "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "7d42074d841d35d9e3f0cea550cd8647df14532b"
+            "revision": "cb8969f4779fcfe7658e5db83d14925d8df7eace"
         },
         {
             "name": "akismet",
             "src": "git@github.com:dxw-wordpress-plugins/akismet",
-            "revision": "3fa6c1e56f173c7ac5ece68d7baf50c59d988cae"
+            "revision": "21bbcc97b63b8344622798b8daf9a7dd5f25baac"
         },
         {
             "name": "classic-editor",
             "src": "git@github.com:dxw-wordpress-plugins/classic-editor",
-            "revision": "1eae0892ab3a851eebe7858b23e41c6ca6f26bb6"
+            "revision": "dba7b7514d549d8169ad51dca2107b981040b3ad"
         },
         {
             "name": "co-authors-plus",
             "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
-            "revision": "951a2cd999a3d46dd3e451e51b6f78dcf379c2fa"
+            "revision": "6e6b49ff93c44cdd9d69873e414f9ace6fc6ecdc"
         },
         {
             "name": "page-excerpt",
             "src": "git@github.com:dxw-wordpress-plugins/page-excerpt",
-            "revision": "5e7aca2ae8a92ab43190a017c46543685d55b230"
+            "revision": "150fe6f26955a306d318b57354d11bc5f8a4868a"
         }
     ]
 }
