@@ -203,6 +203,14 @@
           transition: border-color 0.3s ease-out;
           text-align: right;
 
+          &.bsky {
+
+            &:hover,
+            &:focus {
+              border-color: $bsky;
+            }
+          }
+
           &.twitter {
 
             &:hover,
