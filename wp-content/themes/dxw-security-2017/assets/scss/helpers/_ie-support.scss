@@ -30,6 +30,10 @@
             background-repeat: no-repeat;
             background-position: center center;
 
+            &.bsky {
+              background-image: url('#{$imagePath}/icon-bsky.png');
+            }
+
             &.twitter {
               background-image: url('#{$imagePath}/icon-twitter.png');
             }
