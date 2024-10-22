@@ -4,17 +4,16 @@ $fontPath: "../assets/fonts";
 
 // Typography
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Cardo:400,400i&display=swap');
 
 $system-font-family: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', Sans-Serif;
 // Use system-font-family for iOS/ Android devices. Listed are: Apple iOS system font, iOS San Francisco, Apple San Francisco, Android, Windows Phone;
 $font-family-sans: 'Poppins', $system-font-family;
 $header-font-family: $font-family-sans;
-$font-family-serif: 'Cardo', $system-font-family;
+$font-family-serif: 'Poppins', $system-font-family;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $base-font: $font-family-serif;
-$base-line-height: 1.4;
-$header-line-height: 1.4;
+$base-line-height: 1.6;
+$header-line-height: 1.6;
 $print-font-size: 18px;
 
 // Base site
