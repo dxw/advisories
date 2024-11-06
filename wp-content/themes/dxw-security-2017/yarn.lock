@@ -4332,8 +4332,8 @@ require-uncached@^1.0.3:
     resolve-from "^1.0.0"
 
 requirejs@^2.3.6:
-  version "2.3.6"
-  resolved "https://registry.npmjs.org/requirejs/-/requirejs-2.3.6.tgz"
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/requirejs/-/requirejs-2.3.7.tgz#0b22032e51a967900e0ae9f32762c23a87036bd0"
 
 resolve-dir@^1.0.0, resolve-dir@^1.0.1:
   version "1.0.1"
