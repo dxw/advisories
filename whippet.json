@@ -7,6 +7,7 @@
         {"name": "akismet", "ref": "v5"},
         {"name": "classic-editor", "ref": "v1"},
         {"name": "co-authors-plus", "ref": "v3"},
-        {"name": "page-excerpt", "ref": "v1"}
+        {"name": "page-excerpt", "ref": "v1"},
+        {"name": "two-factor", "ref": "v0"}
     ]
 }
