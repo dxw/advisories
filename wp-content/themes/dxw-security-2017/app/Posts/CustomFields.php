@@ -13,6 +13,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
 
 	public function addPageTemplatesFields()
 	{
+		if (!function_exists('acf_add_local_field_group')) {
+			return;
+		}
+
 		acf_add_local_field_group([
 			'key' => 'group_59427d8ae4e29',
 			'title' => 'Page introduction',
