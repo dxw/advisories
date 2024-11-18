@@ -319,6 +319,10 @@ class CustomFields implements \Dxw\Iguana\Registerable
 
 	public function addHomePageFields()
 	{
+		if (!function_exists('acf_add_local_field_group')) {
+			return;
+		}
+
 		acf_add_local_field_group([
 			'key' => 'group_5971ca59db830',
 			'title' => 'Homepage services',
