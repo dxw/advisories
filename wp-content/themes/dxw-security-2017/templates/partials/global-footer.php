@@ -43,10 +43,10 @@
         <div class="badges">
             <a href="<?php h()->assetPath('img/ukas.svg'); ?>"><img class="badge ukas" src="<?php h()->assetPath('img/ukas.svg'); ?>" alt="UKAS logo"></a>
             <img src="<?php h()->assetPath('img/ccs-certificate.png'); ?>" alt="Government Procurement Service" class="badge ccss">
-            <a href="https://registry.blockmarktech.com/certificates/34ee73d3-9928-4e85-9f29-79c8ae00fea9/" rel="external">
+            <a href="https://registry.blockmarktech.com/certificates/fe6a3790-9019-4df0-8d32-f894397b03d2/" rel="external">
                 <img class="pre-footer__logos__cyber" src="<?php h()->assetPath('img/ce-mark.png'); ?>" alt="Cyber Essentials logo">
             </a>
-            <a href="https://registry.blockmarktech.com/certificates/229da3fa-23a1-4f94-a9e1-0a0b7de97cc6/" rel="external">
+            <a href="https://registry.blockmarktech.com/certificates/ced635fc-ba0c-4e59-905c-508dd66dff1b/" rel="external">
                 <img class="pre-footer__logos__cyber" src="<?php h()->assetPath('img/ce-plus-mark.png'); ?>" alt="Cyber Essentials Plus logo">
             </a>
         </div>
