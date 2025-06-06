@@ -34,7 +34,7 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
                 'post_modified_gmt' => '2016-08-08 18:26:16',
                 'post_content_filtered' => null,
                 'post_parent' => 0,
-                'guid' => 'https://security.dxw.com/?post_type=plugins&#038;p=2644',
+                'guid' => 'https://advisories.dxw.com/?post_type=plugins&#038;p=2644',
                 'menu_order' => 0,
                 'post_type' => 'plugins',
                 'post_mime_type' => null,
@@ -53,7 +53,7 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
 
             \WP_Mock::userFunction('get_permalink', [
                 'args' => [2644],
-                'return' => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field',
+                'return' => 'https://advisories.dxw.com/plugins/advanced-custom-fields-table-field',
             ]);
 
             \WP_Mock::userFunction('get_field', [
@@ -71,7 +71,7 @@ describe('\\DxwSec\\API\\InspectionsFinder', function () {
             expect($output->slug)->toBe('advanced-custom-fields-table-field');
             expect($output->versions())->toBe('2.2.3');
             expect($output->date)->toEqual(date_create('2016-07-13 17:44:23', timezone_open('UTC')));
-            expect($output->url())->toBe('https://security.dxw.com/plugins/advanced-custom-fields-table-field');
+            expect($output->url())->toBe('https://advisories.dxw.com/plugins/advanced-custom-fields-table-field');
             expect($output->result())->toBe('No issues found');
         });
 

@@ -39,14 +39,14 @@
 	<wp:author><wp:author_id>23</wp:author_id><wp:author_login><![CDATA[dxwsupport]]></wp:author_login><wp:author_email><![CDATA[systems@dxw.com]]></wp:author_email><wp:author_display_name><![CDATA[dxwsupport]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
 
-	
+
 
 	<item>
 		<title>About</title>
 		<link>https://security.staging.dxw.net/about/</link>
 		<pubDate>Wed, 19 Jun 2013 15:32:25 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?page_id=22</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=22</guid>
 		<description></description>
 		<content:encoded><![CDATA[Our clients, who are mostly in central government, are understandably concerned about information security, and the resilience of the websites they commission. As a result, we often undertake <a title="Plugin inspections" href="https://security.staging.dxw.net/about/plugin-inspections/">inspections</a> and <a title="Plugin reviews" href="https://security.staging.dxw.net/about/plugin-reviews/">code reviews</a> of plugins, as well as penetration testing. This work produces results that we felt would be useful to the WordPress community at large, so we built this website to share them.
 
@@ -93,7 +93,7 @@ This site is in its very early days, and should be considered a beta.  In the m
 		<link>https://security.staging.dxw.net/about/plugin-inspections/</link>
 		<pubDate>Wed, 19 Jun 2013 15:33:09 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?page_id=26</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=26</guid>
 		<description></description>
 		<content:encoded><![CDATA[<h2>How we inspect plugins</h2>
 During a plugin inspection, the tester scans the codebase of the plugin for particular keywords that relate to the inspection criteria given below. Matches are then manually reviewed to check for issues of concern. When a match is being reviewed, the code path leading to and/or from the match is often reviewed as well, along with the immediately surrounding code. An inspection is an attempt to obtain some assurance about the quality of a plugin without going to the time and expense of a plugin review.
@@ -499,7 +499,7 @@ Note: this is not in itself a failure criterion, but is often a factor when cons
 		<link>https://security.staging.dxw.net/about/plugin-reviews/</link>
 		<pubDate>Wed, 19 Jun 2013 17:03:46 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?page_id=40</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=40</guid>
 		<description></description>
 		<content:encoded><![CDATA[<h2>How we review plugins</h2>
 During a plugin review, the tester code reviews the plugin, line by line, actively attempting to find ways in which the plugin could be exploited. A review is a concerted attempt to prove that a plugin is vulnerable to attack, allowing a usage recommendation to be given with high confidence.
@@ -651,7 +651,7 @@ While testers should, in general, follow the criteria in this section when makin
 		<link>https://security.staging.dxw.net/terms/</link>
 		<pubDate>Wed, 19 Jun 2013 19:18:12 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?page_id=69</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=69</guid>
 		<description></description>
 		<content:encoded><![CDATA[We are The Dextrous Web Ltd, trading as dxw. We are a limited company registered in England &amp; Wales, no. 6617101, at8-9 Hoxton Square, London, N1 6NU.
 <ol>
@@ -662,7 +662,7 @@ While testers should, in general, follow the criteria in this section when makin
  	<li>All other services we may offer are covered by their own terms.</li>
  	<li>Any information we may provide to you (whether by email or otherwise) that we have not made available to the public is, unless otherwise stated, given to you in confidence. Any such information is provided at our absolute discretion. The fact we have given information on one occasion does not mean that we will on others.</li>
 </ol>
-In addition to this document, you may wish to read our <a title="Disclosure policy" href="http://security.dxw.com/disclosure/">disclosure policy</a>, and our documentation for plugin <a title="Plugin inspections" href="http://security.dxw.com/about/plugin-inspections/">inspections</a> and <a title="Plugin reviews" href="http://security.dxw.com/about/plugin-reviews/">reviews</a>.]]></content:encoded>
+In addition to this document, you may wish to read our <a title="Disclosure policy" href="http://advisories.dxw.com/disclosure/">disclosure policy</a>, and our documentation for plugin <a title="Plugin inspections" href="http://advisories.dxw.com/about/plugin-inspections/">inspections</a> and <a title="Plugin reviews" href="http://advisories.dxw.com/about/plugin-reviews/">reviews</a>.]]></content:encoded>
 		<excerpt:encoded><![CDATA[This page describes the terms under which you may use this website.]]></excerpt:encoded>
 		<wp:post_id>69</wp:post_id>
 		<wp:post_date><![CDATA[2013-06-19 19:18:12]]></wp:post_date>
@@ -687,7 +687,7 @@ In addition to this document, you may wish to read our <a title="Disclosure poli
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/terms/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/terms/]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -695,7 +695,7 @@ In addition to this document, you may wish to read our <a title="Disclosure poli
 		<link>https://security.staging.dxw.net/disclosure/</link>
 		<pubDate>Wed, 19 Jun 2013 19:40:54 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?page_id=71</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=71</guid>
 		<description></description>
 		<content:encoded><![CDATA[We will always work privately with vendors or software authors where possible in order that time can be spent resolving a security problem before its publication. However, we do also believe that publishing information about security vulnerabilities is a necessary and positive measure that helps to keep users' data safe.
 
@@ -734,7 +734,7 @@ Accordingly, our disclosure policy is as follows. Upon identifying a security vu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/disclosure/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/disclosure/]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -742,7 +742,7 @@ Accordingly, our disclosure policy is as follows. Upon identifying a security vu
 		<link>https://security.staging.dxw.net/?page_id=167</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?page_id=167</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=167</guid>
 		<description></description>
 		<content:encoded><![CDATA[What do we do?
 

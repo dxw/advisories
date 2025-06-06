@@ -44,7 +44,7 @@ describe('\\DxwSec\\API\\JSONInspectionsFinder', function () {
                     'name' => 'Advanced Custom Fields: Table Field',
                     'slug' => 'advanced-custom-fields-table-field',
                     'versions' => '1.2.0',
-                    'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field2/',
+                    'url'  => 'https://advisories.dxw.com/plugins/advanced-custom-fields-table-field2/',
                     'date' => new DateTime('2016-09-01 14:00:17.000000', new DateTimeZone('Etc/UTC')),
                     'result' => 'use with caution',
                 )),
@@ -52,7 +52,7 @@ describe('\\DxwSec\\API\\JSONInspectionsFinder', function () {
                     'name' => 'Advanced Custom Fields: Table Field',
                     'slug' => 'advanced-custom-fields-table-field',
                     'versions' => '1.1.0,1.1.1',
-                    'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field/',
+                    'url'  => 'https://advisories.dxw.com/plugins/advanced-custom-fields-table-field/',
                     'date' => new DateTime('2016-07-13 17:44:23.000000', new DateTimeZone('Etc/UTC')),
                     'result' => 'no issues found'
                 ))
@@ -64,7 +64,7 @@ describe('\\DxwSec\\API\\JSONInspectionsFinder', function () {
                     'slug' => 'advanced-custom-fields-table-field',
                     'versions' => '1.2.0',
                     'date' => '2016-09-01T14:00:17+00:00',
-                    'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field2/',
+                    'url'  => 'https://advisories.dxw.com/plugins/advanced-custom-fields-table-field2/',
                     'result' => 'use with caution',
                 ),
                 array(
@@ -72,7 +72,7 @@ describe('\\DxwSec\\API\\JSONInspectionsFinder', function () {
                     'slug' => 'advanced-custom-fields-table-field',
                     'versions' => '1.1.0,1.1.1',
                     'date' => '2016-07-13T17:44:23+00:00',
-                    'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field/',
+                    'url'  => 'https://advisories.dxw.com/plugins/advanced-custom-fields-table-field/',
                     'result' => 'no issues found',
                 )
             );
