@@ -4,6 +4,13 @@ namespace Dxw\DxwSecurity2017\Lib;
 
 class PluginVersionChecker
 {
+	private int $id;
+	private array $versions;
+	private string $version;
+	private string $codex_link;
+	private bool $is_codex;
+	private string $slug;
+
 	public function __construct()
 	{
 		$this->id = (int)get_the_ID();
@@ -17,6 +24,7 @@ class PluginVersionChecker
 			$this->slug = $m[1];
 		} else {
 			$this->is_codex = false;
+			$this->slug = '';
 		}
 	}
 
@@ -95,7 +103,10 @@ class PluginVersionChecker
 	*/
 	public function most_recent_version_on_wporg()
 	{
-		$response = $this->get_plugin_information($this->slug);
+		$response = '';
+		if (!empty($this->slug)) {
+			$response = $this->get_plugin_information($this->slug);
+		}
 		if (isset($response->error) || empty($response)) {
 			return null;
 		}
