@@ -3,7 +3,7 @@
 In the course of delivering and hosting WordPress websites for the public sector, we undertake a significant quantity of assurance work, to ensure that the sites we build and the plugins they rely on are secure.
 We publish information about that work on this site.
 
-* [Production](https://security.dxw.com)
+* [Production](https://advisories.dxw.com)
 * [Staging](https://advisories.staging.dxw-govpress.dalmatian.dxw.net)
 
 Please use `develop/main` branches.
@@ -68,13 +68,13 @@ The site exposes an JSON API of plugin inspections:
 ### Usage
 
 ```bash
-curl -L https://security.dxw.com/wp-json/v1/inspections/{{plugin slug}}
+curl -L https://advisories.dxw.com/wp-json/v1/inspections/{{plugin slug}}
 ```
 
 For example:
 
 ```bash
-curl -L https://security.dxw.com/wp-json/v1/inspections/twitter-widget-pro
+curl -L https://advisories.dxw.com/wp-json/v1/inspections/twitter-widget-pro
 ```
 
 ### Example output
