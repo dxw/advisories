@@ -113,7 +113,7 @@ class Helpers implements \Dxw\Iguana\Registerable
 		global $post;
 		$field = get_field_object($field_key, $post_id, $options);
 
-		if (is_array($field['value'])) {
+		if (!empty($field) && is_array($field['value'])) {
 			$labels = [];
 			foreach ($field['value'] as $i => $value) {
 				$labels[$value] = $field['choices'][$value];
@@ -122,7 +122,7 @@ class Helpers implements \Dxw\Iguana\Registerable
 			return $labels;
 		}
 
-		return isset($field['choices'][$field['value']]) ? $field['choices'][$field['value']] : '';
+		return (!empty($field) && isset($field['choices'][$field['value']])) ? $field['choices'][$field['value']] : '';
 	}
 
 	public function the_field_label($field_key, $post_id = null, $options = [])
