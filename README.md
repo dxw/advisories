@@ -8,10 +8,6 @@ We publish information about that work on this site.
 
 Please use `develop/main` branches.
 
-## Project management
-- [Trello](https://trello.com/b/Yl4BLYGS/security-dxw-com)
-
-
 ## Ghost Inspector tests
 
 - [Production](https://app.ghostinspector.com/suites/62504446fe7446ec5add4df6)
