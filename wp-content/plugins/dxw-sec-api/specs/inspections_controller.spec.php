@@ -25,7 +25,7 @@ describe('\\DxwSec\\API\\InspectionsController', function () {
                 'name' => 'Advanced Custom Fields: Table Field',
                 'slug' => 'advanced-custom-fields-table-field',
                 'date' => '2016-07-13T17:44:23',
-                'url'  => 'https://security.dxw.com/plugins/advanced-custom-fields-table-field/',
+                'url'  => 'https://advisories.dxw.com/plugins/advanced-custom-fields-table-field/',
                 'result' => 'use with caution',
             );
             $controller = new \DxwSec\API\InspectionsController($this->fakeJsonInspectionsFinder([$inspection]));

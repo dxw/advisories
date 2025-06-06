@@ -32,7 +32,7 @@ describe('\\DxwSec\\API\\Inspection', function () {
                 'post_modified_gmt' => $this->randomDate(),
                 'post_content_filtered' => null,
                 'post_parent' => 0,
-                'guid' => 'https://security.dxw.com/?post_type=plugins&#038;p='.$values['ID'],
+                'guid' => 'https://advisories.dxw.com/?post_type=plugins&#038;p='.$values['ID'],
                 'menu_order' => 0,
                 'post_type' => 'plugins',
                 'post_mime_type' => null,
@@ -125,9 +125,9 @@ describe('\\DxwSec\\API\\Inspection', function () {
             $inspection = new DxwSec\API\Inspection($fake_post);
             \WP_Mock::userFunction('get_permalink', [
                 'args' => [2317],
-                'return' => 'https://security.dxw.com/plugins/my-awesome-plugin',
+                'return' => 'https://advisories.dxw.com/plugins/my-awesome-plugin',
             ]);
-            expect($inspection->url())->toBe('https://security.dxw.com/plugins/my-awesome-plugin');
+            expect($inspection->url())->toBe('https://advisories.dxw.com/plugins/my-awesome-plugin');
         });
     });
 
