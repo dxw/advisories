@@ -27,27 +27,27 @@
 
 <channel>
 	<title>dxwsecurity</title>
-	<link>https://security.dxw.com</link>
+	<link>https://advisories.dxw.com</link>
 	<description></description>
 	<pubDate>Mon, 14 Aug 2017 08:45:53 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
-	<wp:base_site_url>https://security.dxw.com</wp:base_site_url>
-	<wp:base_blog_url>https://security.dxw.com</wp:base_blog_url>
+	<wp:base_site_url>https://advisories.dxw.com</wp:base_site_url>
+	<wp:base_blog_url>https://advisories.dxw.com</wp:base_blog_url>
 
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[harry]]></wp:author_login><wp:author_email><![CDATA[harry@dxw.com]]></wp:author_email><wp:author_display_name><![CDATA[Harry Metcalfe]]></wp:author_display_name><wp:author_first_name><![CDATA[Harry]]></wp:author_first_name><wp:author_last_name><![CDATA[Metcalfe]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>10</wp:author_id><wp:author_login><![CDATA[dxwduncan]]></wp:author_login><wp:author_email><![CDATA[duncan@dxw.com]]></wp:author_email><wp:author_display_name><![CDATA[Duncan Stuart]]></wp:author_display_name><wp:author_first_name><![CDATA[Duncan]]></wp:author_first_name><wp:author_last_name><![CDATA[Stuart]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>23</wp:author_id><wp:author_login><![CDATA[dxwsupport]]></wp:author_login><wp:author_email><![CDATA[systems@dxw.com]]></wp:author_email><wp:author_display_name><![CDATA[dxwsupport]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
 
-	
+
 
 	<item>
 		<title>Glyn Wintle</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=212</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=212</link>
 		<pubDate>Tue, 25 Jun 2013 10:46:55 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=guest-author&#038;p=212</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=guest-author&#038;p=212</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -114,10 +114,10 @@
 	</item>
 	<item>
 		<title>Lee Maguire</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=274</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=274</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=guest-author&#038;p=274</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=guest-author&#038;p=274</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -160,10 +160,10 @@
 	</item>
 	<item>
 		<title>Harry Metcalfe</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=275</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=275</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=guest-author&#038;p=275</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=guest-author&#038;p=275</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -206,10 +206,10 @@
 	</item>
 	<item>
 		<title>Lily Dart</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=276</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=276</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=guest-author&#038;p=276</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=guest-author&#038;p=276</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -252,10 +252,10 @@
 	</item>
 	<item>
 		<title>Andrew Nacin</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=277</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=277</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=guest-author&#038;p=277</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=guest-author&#038;p=277</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -298,10 +298,10 @@
 	</item>
 	<item>
 		<title>Tom Adams</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=278</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=278</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=guest-author&#038;p=278</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=guest-author&#038;p=278</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -343,15 +343,15 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/?post_type=guest-author&p=278]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/?post_type=guest-author&p=278]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>Duncan Stuart</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=1250</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=1250</link>
 		<pubDate>Tue, 15 Apr 2014 15:50:12 +0000</pubDate>
 		<dc:creator><![CDATA[dxwduncan]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=guest-author&#038;p=1250</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=guest-author&#038;p=1250</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -417,15 +417,15 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/?post_type=guest-author&p=1250]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/?post_type=guest-author&p=1250]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>Rob Skilling</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=2650</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=2650</link>
 		<pubDate>Thu, 22 Sep 2016 15:49:28 +0000</pubDate>
 		<dc:creator><![CDATA[dxwsupport]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=guest-author&#038;p=2650</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=guest-author&#038;p=2650</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -633,10 +633,10 @@ Tested with ACF PRO v5. Not tested with v4.]]></wp:meta_value>
 	</item>
 	<item>
 		<title>Robbie Paul</title>
-		<link>https://security.dxw.com/?post_type=guest-author&#038;p=2651</link>
+		<link>https://advisories.dxw.com/?post_type=guest-author&#038;p=2651</link>
 		<pubDate>Thu, 22 Sep 2016 15:50:20 +0000</pubDate>
 		<dc:creator><![CDATA[dxwsupport]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=guest-author&#038;p=2651</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=guest-author&#038;p=2651</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>

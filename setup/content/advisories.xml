@@ -27,13 +27,13 @@
 
 <channel>
 	<title>dxwsecurity</title>
-	<link>https://security.dxw.com</link>
+	<link>https://advisories.dxw.com</link>
 	<description></description>
 	<pubDate>Mon, 14 Aug 2017 08:24:51 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
-	<wp:base_site_url>https://security.dxw.com</wp:base_site_url>
-	<wp:base_blog_url>https://security.dxw.com</wp:base_blog_url>
+	<wp:base_site_url>https://advisories.dxw.com</wp:base_site_url>
+	<wp:base_blog_url>https://advisories.dxw.com</wp:base_blog_url>
 
 	<wp:author><wp:author_id>6</wp:author_id><wp:author_login><![CDATA[glyn]]></wp:author_login><wp:author_email><![CDATA[glynwintle@yahoo.com]]></wp:author_email><wp:author_display_name><![CDATA[Glyn Wintle]]></wp:author_display_name><wp:author_first_name><![CDATA[Glyn]]></wp:author_first_name><wp:author_last_name><![CDATA[Wintle]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[harry]]></wp:author_login><wp:author_email><![CDATA[harry@dxw.com]]></wp:author_email><wp:author_display_name><![CDATA[Harry Metcalfe]]></wp:author_display_name><wp:author_first_name><![CDATA[Harry]]></wp:author_first_name><wp:author_last_name><![CDATA[Metcalfe]]></wp:author_last_name></wp:author>
@@ -41,14 +41,14 @@
 	<wp:author><wp:author_id>10</wp:author_id><wp:author_login><![CDATA[dxwduncan]]></wp:author_login><wp:author_email><![CDATA[duncan@dxw.com]]></wp:author_email><wp:author_display_name><![CDATA[Duncan Stuart]]></wp:author_display_name><wp:author_first_name><![CDATA[Duncan]]></wp:author_first_name><wp:author_last_name><![CDATA[Stuart]]></wp:author_last_name></wp:author>
 
 
-	
+
 
 	<item>
 		<title>WordPress 3.5.2 contains a plain text content injection vulnerability</title>
-		<link>https://security.dxw.com/advisories/wordpress-3-5-1-contains-a-plain-text-content-injection-vulnerability/</link>
+		<link>https://advisories.dxw.com/advisories/wordpress-3-5-1-contains-a-plain-text-content-injection-vulnerability/</link>
 		<pubDate>Wed, 17 Jul 2013 10:27:02 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=advisories&#038;p=15</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=advisories&#038;p=15</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -211,10 +211,10 @@ The issue has been reported to WordPress’s developers, and will be addressed i
 	</item>
 	<item>
 		<title>WordPress 3.5.2 does not hash user_activation_key in the database</title>
-		<link>https://security.dxw.com/advisories/wordpress-3-5-2-does-not-hash-user_activation_key-in-the-database/</link>
+		<link>https://advisories.dxw.com/advisories/wordpress-3-5-2-does-not-hash-user_activation_key-in-the-database/</link>
 		<pubDate>Wed, 17 Jul 2013 10:21:32 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=advisories&#038;p=91</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=advisories&#038;p=91</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -390,10 +390,10 @@ The issue has been reported to WordPress's developers, and will be addressed in 
 	</item>
 	<item>
 		<title>SQL injections in BuddyPress 1.2.9</title>
-		<link>https://security.dxw.com/advisories/sql-injections-in-buddypress-1-2-9/</link>
+		<link>https://advisories.dxw.com/advisories/sql-injections-in-buddypress-1-2-9/</link>
 		<pubDate>Thu, 20 Jun 2013 17:02:35 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=advisories&#038;p=94</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=advisories&#038;p=94</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -559,10 +559,10 @@ The query string is mapped to a parameter named $activity_ids which is appended
 	</item>
 	<item>
 		<title>Several SQL injections in BuddyPress 1.7.1</title>
-		<link>https://security.dxw.com/advisories/several-sql-injections-in-buddypress-1-7-1/</link>
+		<link>https://advisories.dxw.com/advisories/several-sql-injections-in-buddypress-1-7-1/</link>
 		<pubDate>Mon, 01 Jul 2013 13:14:03 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=advisories&#038;p=101</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=advisories&#038;p=101</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -761,15 +761,15 @@ The method bp_has_members function is defined in buddypress/bp-members/bp-member
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[http://security.dxw.com/advisories/several-sql-injections-in-buddypress-1-7-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://advisories.dxw.com/advisories/several-sql-injections-in-buddypress-1-7-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[http://security.dxw.com/advisories/several-sql-injections-in-buddypress-1-7-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://advisories.dxw.com/advisories/several-sql-injections-in-buddypress-1-7-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:121:"Several SQL injections in BuddyPress 1.7.1 http://security.dxw.com/advisories/several-sql-injections-in-buddypress-1-7-1/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:121:"Several SQL injections in BuddyPress 1.7.1 http://advisories.dxw.com/advisories/several-sql-injections-in-buddypress-1-7-1/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -778,10 +778,10 @@ The method bp_has_members function is defined in buddypress/bp-members/bp-member
 	</item>
 	<item>
 		<title>Cross-site scripting vulnerability in ZooEffect Plugin for Video player, Photo Gallery Slideshow jQuery and audio / music / podcast - HTML, version 1.08</title>
-		<link>https://security.dxw.com/advisories/cross-site-scripting-vulnerability-in-zooeffect-plugin-for-video-player-photo-gallery-slideshow-jquery-and-audio-music-podcast-html-version-1-08/</link>
+		<link>https://advisories.dxw.com/advisories/cross-site-scripting-vulnerability-in-zooeffect-plugin-for-video-player-photo-gallery-slideshow-jquery-and-audio-music-podcast-html-version-1-08/</link>
 		<pubDate>Mon, 01 Jul 2013 11:25:23 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=advisories&#038;p=172</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=advisories&#038;p=172</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -880,15 +880,15 @@ This attack may not be possible in some browsers which escape HTML in URLs.]]></
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[http://security.dxw.com/advisories/cross-site-scripting-vulnerability-in-zooeffect-plugin-for-video-player-photo-gallery-slideshow-jquery-and-audio-music-podcast-html-version-1-08/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://advisories.dxw.com/advisories/cross-site-scripting-vulnerability-in-zooeffect-plugin-for-video-player-photo-gallery-slideshow-jquery-and-audio-music-podcast-html-version-1-08/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[http://security.dxw.com/advisories/cross-site-scripting-vulnerability-in-zooeffect-plugin-for-video-player-photo-gallery-slideshow-jquery-and-audio-music-podcast-html-version-1-08/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://advisories.dxw.com/advisories/cross-site-scripting-vulnerability-in-zooeffect-plugin-for-video-player-photo-gallery-slideshow-jquery-and-audio-music-podcast-html-version-1-08/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:259:"Cross-site scripting vulnerability in WordPress ZooEffect Plugin, version 1.08 http://security.dxw.com/advisories/cross-site-scripting-vulnerability-in-zooeffect-plugin-for-video-player-photo-gallery-slideshow-jquery-and-audio-music-podcast-html-version-1-08/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:259:"Cross-site scripting vulnerability in WordPress ZooEffect Plugin, version 1.08 http://advisories.dxw.com/advisories/cross-site-scripting-vulnerability-in-zooeffect-plugin-for-video-player-photo-gallery-slideshow-jquery-and-audio-music-podcast-html-version-1-08/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[is_plugin]]></wp:meta_key>
@@ -961,10 +961,10 @@ This attack may not be possible in some browsers which escape HTML in URLs.]]></
 	</item>
 	<item>
 		<title>Blind SQL injection in Google Analytics Dashboard could cause denial of service or expose database</title>
-		<link>https://security.dxw.com/advisories/sql-injection-in-google-analytics-dashboard-could-cause-denial-of-service/</link>
+		<link>https://advisories.dxw.com/advisories/sql-injection-in-google-analytics-dashboard-could-cause-denial-of-service/</link>
 		<pubDate>Tue, 25 Jun 2013 09:28:58 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=advisories&#038;p=195</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=advisories&#038;p=195</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1137,10 +1137,10 @@ The vulnerable query is in <a href="http://plugins.trac.wordpress.org/browser/go
 	</item>
 	<item>
 		<title>Cross-site scripting vulnerability in The Events Calendar version 3.0</title>
-		<link>https://security.dxw.com/advisories/cross-site-scripting-vulnerability-in-the-events-calendar-version-3-0/</link>
+		<link>https://advisories.dxw.com/advisories/cross-site-scripting-vulnerability-in-the-events-calendar-version-3-0/</link>
 		<pubDate>Mon, 15 Jul 2013 11:39:08 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=advisories&#038;p=305</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=advisories&#038;p=305</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1304,10 +1304,10 @@ The offending code is in lib/template-classes/month.php at line 75.]]></wp:meta_
 	</item>
 	<item>
 		<title>XSS via CSRF in Citizen Space 1.0</title>
-		<link>https://security.dxw.com/advisories/xss-via-csrf-in-citizen-space-1-0/</link>
+		<link>https://advisories.dxw.com/advisories/xss-via-csrf-in-citizen-space-1-0/</link>
 		<pubDate>Fri, 19 Jul 2013 15:55:39 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">http://security.dxw.com/?post_type=advisories&#038;p=339</guid>
+		<guid isPermaLink="false">http://advisories.dxw.com/?post_type=advisories&#038;p=339</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1472,15 +1472,15 @@ Special mention to the vendor, Delib, who responded extremely quickly and releas
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-via-csrf-in-citizen-space-1-0/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-via-csrf-in-citizen-space-1-0/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-via-csrf-in-citizen-space-1-0/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-via-csrf-in-citizen-space-1-0/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:104:"XSS via CSRF in Citizen Space 1.0 https://security.dxw.com/advisories/xss-via-csrf-in-citizen-space-1-0/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:104:"XSS via CSRF in Citizen Space 1.0 https://advisories.dxw.com/advisories/xss-via-csrf-in-citizen-space-1-0/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -1489,10 +1489,10 @@ Special mention to the vendor, Delib, who responded extremely quickly and releas
 	</item>
 	<item>
 		<title>Directory traversal in NextGEN Gallery 2.0.0</title>
-		<link>https://security.dxw.com/advisories/directory-traversal-in-nextgen-gallery-2-0-0/</link>
+		<link>https://advisories.dxw.com/advisories/directory-traversal-in-nextgen-gallery-2-0-0/</link>
 		<pubDate>Thu, 08 Aug 2013 14:45:59 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=445</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=445</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1667,10 +1667,10 @@ Special mention to the vendor, Delib, who responded extremely quickly and releas
 	</item>
 	<item>
 		<title>Stored XSS vulnerability in BP Group Documents 1.2.1</title>
-		<link>https://security.dxw.com/advisories/stored-xss-vulnerability-in-bp-group-documents-1-2-1/</link>
+		<link>https://advisories.dxw.com/advisories/stored-xss-vulnerability-in-bp-group-documents-1-2-1/</link>
 		<pubDate>Tue, 18 Feb 2014 17:05:42 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=612</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=612</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1826,10 +1826,10 @@ Special mention to the vendor, Delib, who responded extremely quickly and releas
 	</item>
 	<item>
 		<title>Moving any file PHP user has access to in BP Group Documents 1.2.1</title>
-		<link>https://security.dxw.com/advisories/moving-any-file-php-user-has-access-to-in-bp-group-documents-1-2-1/</link>
+		<link>https://advisories.dxw.com/advisories/moving-any-file-php-user-has-access-to-in-bp-group-documents-1-2-1/</link>
 		<pubDate>Tue, 18 Feb 2014 17:03:08 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=613</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=613</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1991,10 +1991,10 @@ This will cause the wp-config.php file to be moved to a location within wp-conte
 	</item>
 	<item>
 		<title>CSRF vulnerability in BP Group Documents 1.2.1</title>
-		<link>https://security.dxw.com/advisories/csrf-vulnerability-in-bp-group-documents-1-2-1/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-vulnerability-in-bp-group-documents-1-2-1/</link>
 		<pubDate>Tue, 18 Feb 2014 17:04:54 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=618</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=618</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2157,10 +2157,10 @@ This will cause the wp-config.php file to be moved to a location within wp-conte
 	</item>
 	<item>
 		<title>CSRF and XSS in Post Expirator 2.1.1</title>
-		<link>https://security.dxw.com/advisories/csrf-and-xss-in-post-expirator-2-1-1/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-and-xss-in-post-expirator-2-1-1/</link>
 		<pubDate>Tue, 18 Feb 2014 18:59:33 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=695</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=695</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2319,15 +2319,15 @@ This will cause the wp-config.php file to be moved to a location within wp-conte
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-xss-in-post-expirator-2-1-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-xss-in-post-expirator-2-1-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-xss-in-post-expirator-2-1-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-xss-in-post-expirator-2-1-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:110:"CSRF and XSS in Post Expirator 2.1.1 https://security.dxw.com/advisories/csrf-and-xss-in-post-expirator-2-1-1/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:110:"CSRF and XSS in Post Expirator 2.1.1 https://advisories.dxw.com/advisories/csrf-and-xss-in-post-expirator-2-1-1/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -2340,10 +2340,10 @@ This will cause the wp-config.php file to be moved to a location within wp-conte
 	</item>
 	<item>
 		<title>End-user exploitable local file inclusion vulnerability in Ajax Pagination (twitter Style) 1.1</title>
-		<link>https://security.dxw.com/advisories/end-user-exploitable-local-file-inclusion-vulnerability-in-ajax-pagination-twitter-style-1-1/</link>
+		<link>https://advisories.dxw.com/advisories/end-user-exploitable-local-file-inclusion-vulnerability-in-ajax-pagination-twitter-style-1-1/</link>
 		<pubDate>Tue, 18 Feb 2014 17:53:30 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=808</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=808</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2512,15 +2512,15 @@ paged=2&amp;action=ajax_navigation&amp;loop=../../../wp-login</pre>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/end-user-exploitable-local-file-inclusion-vulnerability-in-ajax-pagination-twitter-style-1-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/end-user-exploitable-local-file-inclusion-vulnerability-in-ajax-pagination-twitter-style-1-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/end-user-exploitable-local-file-inclusion-vulnerability-in-ajax-pagination-twitter-style-1-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/end-user-exploitable-local-file-inclusion-vulnerability-in-ajax-pagination-twitter-style-1-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:224:"End-user exploitable local file inclusion vulnerability in Ajax Pagination (twitter Style) 1.1 https://security.dxw.com/advisories/end-user-exploitable-local-file-inclusion-vulnerability-in-ajax-pagination-twitter-style-1-1/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:224:"End-user exploitable local file inclusion vulnerability in Ajax Pagination (twitter Style) 1.1 https://advisories.dxw.com/advisories/end-user-exploitable-local-file-inclusion-vulnerability-in-ajax-pagination-twitter-style-1-1/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -2533,10 +2533,10 @@ paged=2&amp;action=ajax_navigation&amp;loop=../../../wp-login</pre>
 	</item>
 	<item>
 		<title>Sensitive Data Exposure in WP Document Revisions</title>
-		<link>https://security.dxw.com/advisories/sensitive-data-exposure-in-wp-document-revisions/</link>
+		<link>https://advisories.dxw.com/advisories/sensitive-data-exposure-in-wp-document-revisions/</link>
 		<pubDate>Mon, 13 Jul 2015 16:30:26 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1129</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1129</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2708,10 +2708,10 @@ File names are usually not constructed in the way that a good password is constr
 	</item>
 	<item>
 		<title>CSRF leading to persistent XSS in MetroStyle Responsive All Purpose Wordpress Theme</title>
-		<link>https://security.dxw.com/advisories/csrf-leading-to-persistent-xss-in-metrostyle-responsive-all-purpose-wordpress-theme/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-leading-to-persistent-xss-in-metrostyle-responsive-all-purpose-wordpress-theme/</link>
 		<pubDate>Mon, 13 Jul 2015 16:32:25 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1259</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1259</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2886,10 +2886,10 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 	</item>
 	<item>
 		<title>Ruby-saml parsing exploit which will authorise any information an attacker provides</title>
-		<link>https://security.dxw.com/advisories/ruby-saml-parsing-exploit-which-will-authorise-any-information-an-attacker-provides/</link>
+		<link>https://advisories.dxw.com/advisories/ruby-saml-parsing-exploit-which-will-authorise-any-information-an-attacker-provides/</link>
 		<pubDate>Thu, 15 Jan 2015 18:18:49 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1868</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1868</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -2980,7 +2980,7 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
       &lt;!-- valid signature goes here --&gt;
     &lt;/object&gt;
    &lt;/Signature&gt;
-  &lt;Status&gt;&lt;StatusCodeValue="urn:oasis:names:tc:SAML:2.0:status:Success"/&gt;&lt;/Status&gt; 
+  &lt;Status&gt;&lt;StatusCodeValue="urn:oasis:names:tc:SAML:2.0:status:Success"/&gt;&lt;/Status&gt;
   &lt;Assertion ID="id37107539382212981725632006"&gt;..the valid assertion&lt;/Assertion&gt;
   &lt;Assertion ID="eeeevillll"&gt;..the evil assertion&lt;/Assertion&gt;
 &lt;/response&gt;</pre>
@@ -3138,10 +3138,10 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 	</item>
 	<item>
 		<title>Ruby XPath parsing can execute shell commands on the host</title>
-		<link>https://security.dxw.com/advisories/ruby-xpath-parsing-can-execute-shell-commands-on-the-host/</link>
+		<link>https://advisories.dxw.com/advisories/ruby-xpath-parsing-can-execute-shell-commands-on-the-host/</link>
 		<pubDate>Mon, 19 Jan 2015 16:53:40 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1880</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1880</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -3311,10 +3311,10 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 	</item>
 	<item>
 		<title>Stored XSS in Watu PRO Play allows unauthenticated attackers to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/stored-xss-in-watu-pro-play-allows-unauthenticated-attacker-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/stored-xss-in-watu-pro-play-allows-unauthenticated-attacker-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Wed, 26 Aug 2015 14:00:36 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2452</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2452</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -3486,15 +3486,15 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/stored-xss-in-watu-pro-play-allows-unauthenticated-attacker-to-do-almost-anything-an-admin-can/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/stored-xss-in-watu-pro-play-allows-unauthenticated-attacker-to-do-almost-anything-an-admin-can/]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>CSRF in ezFlippr would allow unauthenticated attackers to cause admins to delete flipbooks</title>
-		<link>https://security.dxw.com/?post_type=advisories&#038;p=3103</link>
+		<link>https://advisories.dxw.com/?post_type=advisories&#038;p=3103</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=3103</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=3103</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -3654,10 +3654,10 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 	</item>
 	<item>
 		<title>CSRF and blind SQL injection in GD Star Rating 1.9.22</title>
-		<link>https://security.dxw.com/advisories/csrf-and-blind-sql-injection-in-gd-star-rating-1-9-22/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-and-blind-sql-injection-in-gd-star-rating-1-9-22/</link>
 		<pubDate>Tue, 18 Feb 2014 21:09:07 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=424</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=424</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -3830,15 +3830,15 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-csrf-and-blind-sql-injection-in-gd-star-rating-1-9-22/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-csrf-and-blind-sql-injection-in-gd-star-rating-1-9-22/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-csrf-and-blind-sql-injection-in-gd-star-rating-1-9-22/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-csrf-and-blind-sql-injection-in-gd-star-rating-1-9-22/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:153:"XSS, CSRF and blind SQL injection in GD Star Rating 1.9.22 https://security.dxw.com/advisories/xss-csrf-and-blind-sql-injection-in-gd-star-rating-1-9-22/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:153:"XSS, CSRF and blind SQL injection in GD Star Rating 1.9.22 https://advisories.dxw.com/advisories/xss-csrf-and-blind-sql-injection-in-gd-star-rating-1-9-22/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -3855,10 +3855,10 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 	</item>
 	<item>
 		<title>CSRF/XSS vulnerability in Twitget 3.3.1</title>
-		<link>https://security.dxw.com/advisories/csrfxss-vulnerability-in-twitget-3-3-1/</link>
+		<link>https://advisories.dxw.com/advisories/csrfxss-vulnerability-in-twitget-3-3-1/</link>
 		<pubDate>Tue, 18 Mar 2014 14:23:22 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=435</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=435</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4029,15 +4029,15 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrfxss-vulnerability-in-twitget-3-3-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrfxss-vulnerability-in-twitget-3-3-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrfxss-vulnerability-in-twitget-3-3-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrfxss-vulnerability-in-twitget-3-3-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:115:"CSRF/XSS vulnerability in Twitget 3.3.1 https://security.dxw.com/advisories/csrfxss-vulnerability-in-twitget-3-3-1/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:115:"CSRF/XSS vulnerability in Twitget 3.3.1 https://advisories.dxw.com/advisories/csrfxss-vulnerability-in-twitget-3-3-1/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -4050,10 +4050,10 @@ The key payload here is "om_metro_site_logo_text=%3Cscript%3Ealert(1)%3C%2Fscrip
 	</item>
 	<item>
 		<title>CSRF vulnerability in WP HTML Sitemap 1.2</title>
-		<link>https://security.dxw.com/advisories/csrf-vulnerability-in-wp-html-sitemap-1-2/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-vulnerability-in-wp-html-sitemap-1-2/</link>
 		<pubDate>Wed, 26 Feb 2014 11:23:21 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=457</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=457</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4226,15 +4226,15 @@ Line 202 of inc/AdminPage.php says "// check whether form was just submitted" bu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-vulnerability-in-wp-html-sitemap-1-2/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-vulnerability-in-wp-html-sitemap-1-2/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-vulnerability-in-wp-html-sitemap-1-2/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-vulnerability-in-wp-html-sitemap-1-2/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:120:"CSRF vulnerability in WP HTML Sitemap 1.2 https://security.dxw.com/advisories/csrf-vulnerability-in-wp-html-sitemap-1-2/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:120:"CSRF vulnerability in WP HTML Sitemap 1.2 https://advisories.dxw.com/advisories/csrf-vulnerability-in-wp-html-sitemap-1-2/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -4247,10 +4247,10 @@ Line 202 of inc/AdminPage.php says "// check whether form was just submitted" bu
 	</item>
 	<item>
 		<title>Admin XSS and SQLi in mTouch Quiz 3.0.6</title>
-		<link>https://security.dxw.com/advisories/admin-xss-and-sqli-in-mtouch-quiz-3-0-6/</link>
+		<link>https://advisories.dxw.com/advisories/admin-xss-and-sqli-in-mtouch-quiz-3-0-6/</link>
 		<pubDate>Fri, 21 Feb 2014 11:39:05 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=525</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=525</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4417,15 +4417,15 @@ Line 202 of inc/AdminPage.php says "// check whether form was just submitted" bu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/admin-xss-and-sqli-in-mtouch-quiz-3-0-6/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/admin-xss-and-sqli-in-mtouch-quiz-3-0-6/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/admin-xss-and-sqli-in-mtouch-quiz-3-0-6/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/admin-xss-and-sqli-in-mtouch-quiz-3-0-6/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:116:"Admin XSS and SQLi in mTouch Quiz 3.0.6 https://security.dxw.com/advisories/admin-xss-and-sqli-in-mtouch-quiz-3-0-6/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:116:"Admin XSS and SQLi in mTouch Quiz 3.0.6 https://advisories.dxw.com/advisories/admin-xss-and-sqli-in-mtouch-quiz-3-0-6/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -4438,10 +4438,10 @@ Line 202 of inc/AdminPage.php says "// check whether form was just submitted" bu
 	</item>
 	<item>
 		<title>Administrator-exploitable blind SQLi in WordPress 3.8.1</title>
-		<link>https://security.dxw.com/advisories/sqli-in-wordpress-3-6-1/</link>
+		<link>https://advisories.dxw.com/advisories/sqli-in-wordpress-3-6-1/</link>
 		<pubDate>Mon, 17 Mar 2014 12:00:58 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=603</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=603</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4607,15 +4607,15 @@ The line in question is line 230 of wp-includes/bookmark.php (in WordPress 3.8.1
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/sqli-in-wordpress-3-6-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/sqli-in-wordpress-3-6-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/sqli-in-wordpress-3-6-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/sqli-in-wordpress-3-6-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:116:"Administrator-exploitable blind SQLi in WordPress 3.8.1 https://security.dxw.com/advisories/sqli-in-wordpress-3-6-1/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:116:"Administrator-exploitable blind SQLi in WordPress 3.8.1 https://advisories.dxw.com/advisories/sqli-in-wordpress-3-6-1/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -4624,10 +4624,10 @@ The line in question is line 230 of wp-includes/bookmark.php (in WordPress 3.8.1
 	</item>
 	<item>
 		<title>Arbitrary code execution by admins in File Gallery 1.7.7</title>
-		<link>https://security.dxw.com/advisories/arbitrary-code-execution-by-admins-in-file-gallery-1-7-7/</link>
+		<link>https://advisories.dxw.com/advisories/arbitrary-code-execution-by-admins-in-file-gallery-1-7-7/</link>
 		<pubDate>Mon, 17 Mar 2014 19:54:15 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=638</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=638</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4796,15 +4796,15 @@ The line in question is line 230 of wp-includes/bookmark.php (in WordPress 3.8.1
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/arbitrary-code-execution-by-admins-in-file-gallery-1-7-7/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/arbitrary-code-execution-by-admins-in-file-gallery-1-7-7/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/arbitrary-code-execution-by-admins-in-file-gallery-1-7-7/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/arbitrary-code-execution-by-admins-in-file-gallery-1-7-7/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:150:"Arbitrary code execution by admins in File Gallery 1.7.7 https://security.dxw.com/advisories/arbitrary-code-execution-by-admins-in-file-gallery-1-7-7/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:150:"Arbitrary code execution by admins in File Gallery 1.7.7 https://advisories.dxw.com/advisories/arbitrary-code-execution-by-admins-in-file-gallery-1-7-7/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -4817,10 +4817,10 @@ The line in question is line 230 of wp-includes/bookmark.php (in WordPress 3.8.1
 	</item>
 	<item>
 		<title>XSS and CSRF in User Domain Whitelist v1.4</title>
-		<link>https://security.dxw.com/advisories/xss-and-csrf-in-user-domain-whitelist-v1-4/</link>
+		<link>https://advisories.dxw.com/advisories/xss-and-csrf-in-user-domain-whitelist-v1-4/</link>
 		<pubDate>Wed, 19 Feb 2014 13:53:51 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=654</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=654</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4981,15 +4981,15 @@ Once the admin is cajoled into visiting a link of the attacker's choosing (via s
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-and-csrf-in-user-domain-whitelist-v1-4/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-and-csrf-in-user-domain-whitelist-v1-4/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-and-csrf-in-user-domain-whitelist-v1-4/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-and-csrf-in-user-domain-whitelist-v1-4/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:122:"XSS and CSRF in User Domain Whitelist v1.4 https://security.dxw.com/advisories/xss-and-csrf-in-user-domain-whitelist-v1-4/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:122:"XSS and CSRF in User Domain Whitelist v1.4 https://advisories.dxw.com/advisories/xss-and-csrf-in-user-domain-whitelist-v1-4/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -5002,10 +5002,10 @@ Once the admin is cajoled into visiting a link of the attacker's choosing (via s
 	</item>
 	<item>
 		<title>XSS in Duplicate Post 2.4.1</title>
-		<link>https://security.dxw.com/advisories/xss-in-duplicate-post-2-4-1/</link>
+		<link>https://advisories.dxw.com/advisories/xss-in-duplicate-post-2-4-1/</link>
 		<pubDate>Wed, 26 Feb 2014 11:39:10 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=676</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=676</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -5158,15 +5158,15 @@ http://localhost/wp-admin/options-general.php?action=duplicate_post_save_as_new_
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-in-duplicate-post-2-4-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-in-duplicate-post-2-4-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-in-duplicate-post-2-4-1/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-in-duplicate-post-2-4-1/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:92:"XSS in Duplicate Post 2.4.1 https://security.dxw.com/advisories/xss-in-duplicate-post-2-4-1/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:92:"XSS in Duplicate Post 2.4.1 https://advisories.dxw.com/advisories/xss-in-duplicate-post-2-4-1/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -5183,10 +5183,10 @@ http://localhost/wp-admin/options-general.php?action=duplicate_post_save_as_new_
 	</item>
 	<item>
 		<title>Stored XSS and CSRF vulnerabilities in Subscribe To Comments Reloaded 140129</title>
-		<link>https://security.dxw.com/advisories/stored-xss-and-csrf-vulnerabilities-in-subscribe-to-comments-reloaded-140129/</link>
+		<link>https://advisories.dxw.com/advisories/stored-xss-and-csrf-vulnerabilities-in-subscribe-to-comments-reloaded-140129/</link>
 		<pubDate>Tue, 18 Feb 2014 19:37:16 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=770</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=770</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -5342,15 +5342,15 @@ An alert will be displayed on this plugin's settings page.]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/stored-xss-and-csrf-vulnerabilities-in-subscribe-to-comments-reloaded-140129/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/stored-xss-and-csrf-vulnerabilities-in-subscribe-to-comments-reloaded-140129/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/stored-xss-and-csrf-vulnerabilities-in-subscribe-to-comments-reloaded-140129/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/stored-xss-and-csrf-vulnerabilities-in-subscribe-to-comments-reloaded-140129/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:200:"[REVISED] Stored XSS and CSRF vulnerabilities in Subscribe To Comments Reloaded 140129 https://security.dxw.com/advisories/stored-xss-and-csrf-vulnerabilities-in-subscribe-to-comments-reloaded-140129/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:200:"[REVISED] Stored XSS and CSRF vulnerabilities in Subscribe To Comments Reloaded 140129 https://advisories.dxw.com/advisories/stored-xss-and-csrf-vulnerabilities-in-subscribe-to-comments-reloaded-140129/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[cve]]></wp:meta_key>
@@ -5367,10 +5367,10 @@ An alert will be displayed on this plugin's settings page.]]></wp:meta_value>
 	</item>
 	<item>
 		<title>CSRF in Google Analytics MU 2.3</title>
-		<link>https://security.dxw.com/advisories/csrf-in-google-analytics-mu-2-3/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-in-google-analytics-mu-2-3/</link>
 		<pubDate>Wed, 26 Feb 2014 11:18:37 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=995</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=995</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -5527,15 +5527,15 @@ There should be a nonce check around line 71 of google-analytics-mu.php and a no
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-in-google-analytics-mu-2-3/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-in-google-analytics-mu-2-3/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-in-google-analytics-mu-2-3/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-in-google-analytics-mu-2-3/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:110:"[REVISED] CSRF in Google Analytics MU 2.3 https://security.dxw.com/advisories/csrf-in-google-analytics-mu-2-3/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:110:"[REVISED] CSRF in Google Analytics MU 2.3 https://advisories.dxw.com/advisories/csrf-in-google-analytics-mu-2-3/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -5544,10 +5544,10 @@ There should be a nonce check around line 71 of google-analytics-mu.php and a no
 	</item>
 	<item>
 		<title>CSRF in Disable Comments 1.0.3</title>
-		<link>https://security.dxw.com/advisories/csrf-in-disable-comments-1-0-3/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-in-disable-comments-1-0-3/</link>
 		<pubDate>Mon, 31 Mar 2014 18:04:34 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1037</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1037</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -5714,15 +5714,15 @@ There should be a nonce check around line 71 of google-analytics-mu.php and a no
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-in-disable-comments-1-0-3/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-in-disable-comments-1-0-3/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-in-disable-comments-1-0-3/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-in-disable-comments-1-0-3/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:98:"CSRF in Disable Comments 1.0.3 https://security.dxw.com/advisories/csrf-in-disable-comments-1-0-3/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:98:"CSRF in Disable Comments 1.0.3 https://advisories.dxw.com/advisories/csrf-in-disable-comments-1-0-3/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -5735,10 +5735,10 @@ There should be a nonce check around line 71 of google-analytics-mu.php and a no
 	</item>
 	<item>
 		<title>CSRF and stored XSS in Quick Page/Post Redirect Plugin</title>
-		<link>https://security.dxw.com/advisories/csrf-and-stored-xss-in-quick-pagepost-redirect-plugin/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-quick-pagepost-redirect-plugin/</link>
 		<pubDate>Mon, 24 Mar 2014 10:05:00 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1091</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1091</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -5906,15 +5906,15 @@ There should be a nonce check around line 71 of google-analytics-mu.php and a no
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-stored-xss-in-quick-pagepost-redirect-plugin/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-quick-pagepost-redirect-plugin/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-stored-xss-in-quick-pagepost-redirect-plugin/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-quick-pagepost-redirect-plugin/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:145:"CSRF and stored XSS in Quick Page/Post Redirect Plugin https://security.dxw.com/advisories/csrf-and-stored-xss-in-quick-pagepost-redirect-plugin/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:145:"CSRF and stored XSS in Quick Page/Post Redirect Plugin https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-quick-pagepost-redirect-plugin/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -5927,10 +5927,10 @@ There should be a nonce check around line 71 of google-analytics-mu.php and a no
 	</item>
 	<item>
 		<title>CSRF in Member Approval 131109 permits unapproved registrations</title>
-		<link>https://security.dxw.com/advisories/csrf-in-member-approval-131109-permits-unapproved-registrations/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-in-member-approval-131109-permits-unapproved-registrations/</link>
 		<pubDate>Thu, 10 Apr 2014 11:27:09 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1172</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1172</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -6098,15 +6098,15 @@ Note: no admin action is necessary assuming the attacker can persuade an admin t
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-in-member-approval-131109-permits-unapproved-registrations/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-in-member-approval-131109-permits-unapproved-registrations/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-in-member-approval-131109-permits-unapproved-registrations/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-in-member-approval-131109-permits-unapproved-registrations/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:164:"CSRF in Member Approval 131109 permits unapproved registrations https://security.dxw.com/advisories/csrf-in-member-approval-131109-permits-unapproved-registrations/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:164:"CSRF in Member Approval 131109 permits unapproved registrations https://advisories.dxw.com/advisories/csrf-in-member-approval-131109-permits-unapproved-registrations/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -6119,10 +6119,10 @@ Note: no admin action is necessary assuming the attacker can persuade an admin t
 	</item>
 	<item>
 		<title>XSS in Unconfirmed 1.2.3</title>
-		<link>https://security.dxw.com/advisories/xss-in-unconfirmed-1-2-3/</link>
+		<link>https://advisories.dxw.com/advisories/xss-in-unconfirmed-1-2-3/</link>
 		<pubDate>Thu, 10 Apr 2014 10:24:08 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1195</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1195</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -6282,15 +6282,15 @@ Note: no admin action is necessary assuming the attacker can persuade an admin t
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-in-unconfirmed-1-2-3/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-in-unconfirmed-1-2-3/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-in-unconfirmed-1-2-3/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-in-unconfirmed-1-2-3/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:86:"XSS in Unconfirmed 1.2.3 https://security.dxw.com/advisories/xss-in-unconfirmed-1-2-3/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:86:"XSS in Unconfirmed 1.2.3 https://advisories.dxw.com/advisories/xss-in-unconfirmed-1-2-3/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -6303,10 +6303,10 @@ Note: no admin action is necessary assuming the attacker can persuade an admin t
 	</item>
 	<item>
 		<title>CSRF in JW Player for Flash &amp; HTML5 Video 2.1.3 permits deletion of players</title>
-		<link>https://security.dxw.com/advisories/jw-player-for-flash-html5-video/</link>
+		<link>https://advisories.dxw.com/advisories/jw-player-for-flash-html5-video/</link>
 		<pubDate>Thu, 10 Apr 2014 10:31:17 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1201</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1201</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -6470,15 +6470,15 @@ Note: no admin action is necessary assuming the attacker can persuade an admin t
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/jw-player-for-flash-html5-video/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/jw-player-for-flash-html5-video/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/jw-player-for-flash-html5-video/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/jw-player-for-flash-html5-video/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:144:"CSRF in JW Player for Flash & HTML5 Video 2.1.2 permits deletion of players https://security.dxw.com/advisories/jw-player-for-flash-html5-video/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:144:"CSRF in JW Player for Flash & HTML5 Video 2.1.2 permits deletion of players https://advisories.dxw.com/advisories/jw-player-for-flash-html5-video/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -6491,10 +6491,10 @@ Note: no admin action is necessary assuming the attacker can persuade an admin t
 	</item>
 	<item>
 		<title>CSRF in Featured Comments 1.2.1 allows an attacker to set and unset comment statuses</title>
-		<link>https://security.dxw.com/advisories/csrf-in-featured-comments-1-2-1-allows-an-attacker-to-set-and-unset-comment-statuses/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-in-featured-comments-1-2-1-allows-an-attacker-to-set-and-unset-comment-statuses/</link>
 		<pubDate>Fri, 23 May 2014 10:54:49 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1360</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1360</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -6674,10 +6674,10 @@ Note: no admin action is necessary assuming the attacker can persuade an admin t
 	</item>
 	<item>
 		<title>Local File Inclusion in Theme My Login 6.3.9 provides access to arbitrary files and could facilitate arbitrary code execution</title>
-		<link>https://security.dxw.com/advisories/lfi-in-theme-my-login/</link>
+		<link>https://advisories.dxw.com/advisories/lfi-in-theme-my-login/</link>
 		<pubDate>Wed, 25 Jun 2014 16:49:20 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1390</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1390</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -6849,15 +6849,15 @@ Please note that while the <a href="https://wordpress.org/plugins/theme-my-login
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/lfi-in-theme-my-login/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/lfi-in-theme-my-login/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/lfi-in-theme-my-login/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/lfi-in-theme-my-login/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_failed]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:6:"author";b:0;s:8:"sentence";s:177:"Local File Inclusion in Theme My Login 6.3.9 provides access to arbitrary files and could facilitate arbitrary code #u https://security.dxw.com/advisories/lfi-in-theme-my-login/";s:5:"error";s:171:"403 Forbidden: The request is understood, but has been refused by Twitter. Possible reasons: too many Tweets, same Tweet submitted twice, Tweet longer than 140 characters.";s:4:"code";i:403;s:9:"timestamp";i:1404130085;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:5:{s:6:"author";b:0;s:8:"sentence";s:177:"Local File Inclusion in Theme My Login 6.3.9 provides access to arbitrary files and could facilitate arbitrary code #u https://advisories.dxw.com/advisories/lfi-in-theme-my-login/";s:5:"error";s:171:"403 Forbidden: The request is understood, but has been refused by Twitter. Possible reasons: too many Tweets, same Tweet submitted twice, Tweet longer than 140 characters.";s:4:"code";i:403;s:9:"timestamp";i:1404130085;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -6870,10 +6870,10 @@ Please note that while the <a href="https://wordpress.org/plugins/theme-my-login
 	</item>
 	<item>
 		<title>CSRF and stored XSS in Simple Share Buttons Adder 4.4 allows attackers to execute javascript</title>
-		<link>https://security.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/</link>
 		<pubDate>Wed, 25 Jun 2014 17:24:24 +0000</pubDate>
 		<dc:creator><![CDATA[dxwduncan]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1407</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1407</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -7050,15 +7050,15 @@ Please note that while the <a href="https://wordpress.org/plugins/theme-my-login
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:140:"CSRF and stored XSS in Simple Share Buttons Adder 4.4 https://security.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:140:"CSRF and stored XSS in Simple Share Buttons Adder 4.4 https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -7071,10 +7071,10 @@ Please note that while the <a href="https://wordpress.org/plugins/theme-my-login
 	</item>
 	<item>
 		<title>Reflected XSS in Fourteen Extended allows arbitrary javascript to be run in administrator session</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/</link>
 		<pubDate>Mon, 07 Jul 2014 16:10:54 +0000</pubDate>
 		<dc:creator><![CDATA[dxwduncan]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1472</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1472</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -7244,15 +7244,15 @@ An alert should pop up saying "XSS".]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/crsfxss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/crsfxss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/crsfxss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/crsfxss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{i:0;s:221:"CRSF/XSS in Fourteen Extended allows arbitrary javascript to be run in administrator session https://security.dxw.com/advisories/crsfxss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/";i:1;s:226:"Reflected XSS in Fourteen Extended allows arbitrary javascript to be run in administrator session https://security.dxw.com/advisories/crsfxss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:2:{i:0;s:221:"CRSF/XSS in Fourteen Extended allows arbitrary javascript to be run in administrator session https://advisories.dxw.com/advisories/crsfxss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/";i:1;s:226:"Reflected XSS in Fourteen Extended allows arbitrary javascript to be run in administrator session https://advisories.dxw.com/advisories/crsfxss-in-fourteen-extended-allows-arbitrary-javascript-to-be-run-in-administrator-session/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -7269,10 +7269,10 @@ An alert should pop up saying "XSS".]]></wp:meta_value>
 	</item>
 	<item>
 		<title>CSRF and XSS in Improved user search allow execution of arbitrary javascript in WordPress admin area</title>
-		<link>https://security.dxw.com/advisories/csrf-and-xss-in-improved-user-search-allow-execution-of-arbitrary-javascript-in-wordpress-admin-area/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-and-xss-in-improved-user-search-allow-execution-of-arbitrary-javascript-in-wordpress-admin-area/</link>
 		<pubDate>Wed, 30 Jul 2014 10:13:27 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1497</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1497</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -7447,15 +7447,15 @@ Note that no interaction with the malicious page is necessary, as the form itsel
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-xss-in-improved-user-search-allow-execution-of-arbitrary-javascript-in-wordpress-admin-area/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-xss-in-improved-user-search-allow-execution-of-arbitrary-javascript-in-wordpress-admin-area/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-xss-in-improved-user-search-allow-execution-of-arbitrary-javascript-in-wordpress-admin-area/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-xss-in-improved-user-search-allow-execution-of-arbitrary-javascript-in-wordpress-admin-area/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:238:"CSRF and XSS in Improved user search allow execution of arbitrary javascript in WordPress admin area https://security.dxw.com/advisories/csrf-and-xss-in-improved-user-search-allow-execution-of-arbitrary-javascript-in-wordpress-admin-area/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:238:"CSRF and XSS in Improved user search allow execution of arbitrary javascript in WordPress admin area https://advisories.dxw.com/advisories/csrf-and-xss-in-improved-user-search-allow-execution-of-arbitrary-javascript-in-wordpress-admin-area/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -7468,10 +7468,10 @@ Note that no interaction with the malicious page is necessary, as the form itsel
 	</item>
 	<item>
 		<title>Admin-only local file inclusion and arbitrary code execution in Subscribe to Comments 2.1.2</title>
-		<link>https://security.dxw.com/advisories/admin-only-local-file-inclusion-and-arbitrary-code-execution-in-subscribe-to-comments-2-1-2/</link>
+		<link>https://advisories.dxw.com/advisories/admin-only-local-file-inclusion-and-arbitrary-code-execution-in-subscribe-to-comments-2-1-2/</link>
 		<pubDate>Mon, 13 Jul 2015 15:50:44 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=484</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=484</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -7655,10 +7655,10 @@ If administrators can upload PHP files (or any file which can contain "&lt;?php 
 	</item>
 	<item>
 		<title>CSRF and arbitrary file deletion in BuddyPress Activity Plus 1.5</title>
-		<link>https://security.dxw.com/advisories/csrf-and-arbitrary-file-deletion-in-buddypress-activity-plus-1-5/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-and-arbitrary-file-deletion-in-buddypress-activity-plus-1-5/</link>
 		<pubDate>Mon, 13 Jul 2015 17:04:58 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=559</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=559</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -7840,7 +7840,7 @@ If this is not possible, ensure that the PHP user on the server does not have pe
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-and-arbitrary-file-deletion-in-buddypress-activity-plus-1-5/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-and-arbitrary-file-deletion-in-buddypress-activity-plus-1-5/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -7849,10 +7849,10 @@ If this is not possible, ensure that the PHP user on the server does not have pe
 	</item>
 	<item>
 		<title>Comment form CSRF in WordPress 4.2.2 allows admin impersonation via comments</title>
-		<link>https://security.dxw.com/advisories/comment-form-csrf-allows-admin-impersonation-via-comments-in-wordpress-4-2-2/</link>
+		<link>https://advisories.dxw.com/advisories/comment-form-csrf-allows-admin-impersonation-via-comments-in-wordpress-4-2-2/</link>
 		<pubDate>Tue, 14 Jul 2015 14:39:28 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1086</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1086</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -8031,15 +8031,15 @@ EDIT: this issue has been known about since 2009, but it appears that no fix is 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/comment-form-csrf-allows-admin-impersonation-via-comments-in-wordpress-4-2-2/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/comment-form-csrf-allows-admin-impersonation-via-comments-in-wordpress-4-2-2/]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>Information disclosure vulnerability in WordPress Mobile Pack allows anybody to read password protected posts</title>
-		<link>https://security.dxw.com/advisories/information-disclosure-vulnerability-in-wordpress-mobile-pack-allows-anybody-to-read-password-protected-posts/</link>
+		<link>https://advisories.dxw.com/advisories/information-disclosure-vulnerability-in-wordpress-mobile-pack-allows-anybody-to-read-password-protected-posts/</link>
 		<pubDate>Mon, 18 Aug 2014 16:04:12 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1544</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1544</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -8232,15 +8232,15 @@ Example output:
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/information-disclosure-vulnerability-in-wordpress-mobile-pack-allows-anybody-to-read-password-protected-posts/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/information-disclosure-vulnerability-in-wordpress-mobile-pack-allows-anybody-to-read-password-protected-posts/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/information-disclosure-vulnerability-in-wordpress-mobile-pack-allows-anybody-to-read-password-protected-posts/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/information-disclosure-vulnerability-in-wordpress-mobile-pack-allows-anybody-to-read-password-protected-posts/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:256:"Information disclosure vulnerability in WordPress Mobile Pack allows anybody to read password protected posts https://security.dxw.com/advisories/information-disclosure-vulnerability-in-wordpress-mobile-pack-allows-anybody-to-read-password-protected-posts/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:256:"Information disclosure vulnerability in WordPress Mobile Pack allows anybody to read password protected posts https://advisories.dxw.com/advisories/information-disclosure-vulnerability-in-wordpress-mobile-pack-allows-anybody-to-read-password-protected-posts/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -8253,10 +8253,10 @@ Example output:
 	</item>
 	<item>
 		<title>Blind SQLi vulnerability in Content Audit could allow a privileged attacker to exfiltrate password hashes</title>
-		<link>https://security.dxw.com/advisories/blind-sqli-vulnerability-in-content-audit-could-allow-a-privileged-attacker-to-exfiltrate-password-hashes/</link>
+		<link>https://advisories.dxw.com/advisories/blind-sqli-vulnerability-in-content-audit-could-allow-a-privileged-attacker-to-exfiltrate-password-hashes/</link>
 		<pubDate>Thu, 21 Aug 2014 10:51:47 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1562</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1562</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -8451,15 +8451,15 @@ Steps to take to verify that this issue exists:
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/blind-sqli-vulnerability-in-content-audit-could-allow-a-privileged-attacker-to-exfiltrate-password-hashes/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/blind-sqli-vulnerability-in-content-audit-could-allow-a-privileged-attacker-to-exfiltrate-password-hashes/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/blind-sqli-vulnerability-in-content-audit-could-allow-a-privileged-attacker-to-exfiltrate-password-hashes/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/blind-sqli-vulnerability-in-content-audit-could-allow-a-privileged-attacker-to-exfiltrate-password-hashes/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:248:"Blind SQLi vulnerability in Content Audit could allow a privileged attacker to exfiltrate password hashes https://security.dxw.com/advisories/blind-sqli-vulnerability-in-content-audit-could-allow-a-privileged-attacker-to-exfiltrate-password-hashes/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:248:"Blind SQLi vulnerability in Content Audit could allow a privileged attacker to exfiltrate password hashes https://advisories.dxw.com/advisories/blind-sqli-vulnerability-in-content-audit-could-allow-a-privileged-attacker-to-exfiltrate-password-hashes/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -8472,10 +8472,10 @@ Steps to take to verify that this issue exists:
 	</item>
 	<item>
 		<title>Advanced Access Manager allows admin users to write arbitrary files and execute arbitrary php</title>
-		<link>https://security.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/</link>
+		<link>https://advisories.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/</link>
 		<pubDate>Wed, 20 Aug 2014 19:18:21 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1600</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1600</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -8658,15 +8658,15 @@ This attack could be scripted to allow upload of binary files, including executa
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:2:{i:0;s:285:"Advanced Access Manager allows admin users to write arbitrary text to arbitrary locations which could lead to https://security.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/";i:1;s:269:"Advanced Access Manager allows admin users to write arbitrary files and execute arbitrary php https://security.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:2:{i:0;s:285:"Advanced Access Manager allows admin users to write arbitrary text to arbitrary locations which could lead to https://advisories.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/";i:1;s:269:"Advanced Access Manager allows admin users to write arbitrary files and execute arbitrary php https://advisories.dxw.com/advisories/advanced-access-manager-allows-admin-users-to-write-arbitrary-text-to-arbitrary-locations-which-could-lead-to-arbitrary-code-execution-etc/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -8679,10 +8679,10 @@ This attack could be scripted to allow upload of binary files, including executa
 	</item>
 	<item>
 		<title>CSRF/XSS vulnerablity in Login Widget With Shortcode allows unauthenticated attackers to do anything an admin can do</title>
-		<link>https://security.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/</link>
+		<link>https://advisories.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/</link>
 		<pubDate>Mon, 15 Sep 2014 14:19:09 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1625</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1625</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -8855,15 +8855,15 @@ This attack could be scripted to allow upload of binary files, including executa
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:269:"CSRF/XSS vulnerablity in Login Widget With Shortcode allows unauthenticated attackers to do anything an admin can do https://security.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:269:"CSRF/XSS vulnerablity in Login Widget With Shortcode allows unauthenticated attackers to do anything an admin can do https://advisories.dxw.com/advisories/csrfxss-vulnerablity-in-login-widget-with-shortcode-allows-unauthenticated-attackers-to-do-anything-an-admin-can-do/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -8876,10 +8876,10 @@ This attack could be scripted to allow upload of binary files, including executa
 	</item>
 	<item>
 		<title>Vulnerability in WP-Ban allows visitors to bypass the IP blacklist in some configurations</title>
-		<link>https://security.dxw.com/advisories/vulnerability-in-wp-ban-allows-visitors-to-bypass-the-ip-blacklist-in-some-configurations/</link>
+		<link>https://advisories.dxw.com/advisories/vulnerability-in-wp-ban-allows-visitors-to-bypass-the-ip-blacklist-in-some-configurations/</link>
 		<pubDate>Thu, 04 Sep 2014 15:21:34 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1634</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1634</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -9061,15 +9061,15 @@ If a reverse-proxy is used, check the "I am using a reverse proxy" box in the pl
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/vulnerability-in-wp-ban-allows-visitors-to-bypass-the-ip-blacklist-in-some-configurations/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/vulnerability-in-wp-ban-allows-visitors-to-bypass-the-ip-blacklist-in-some-configurations/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/vulnerability-in-wp-ban-allows-visitors-to-bypass-the-ip-blacklist-in-some-configurations/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/vulnerability-in-wp-ban-allows-visitors-to-bypass-the-ip-blacklist-in-some-configurations/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:216:"Vulnerability in WP-Ban allows visitors to bypass the IP blacklist in some configurations https://security.dxw.com/advisories/vulnerability-in-wp-ban-allows-visitors-to-bypass-the-ip-blacklist-in-some-configurations/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:216:"Vulnerability in WP-Ban allows visitors to bypass the IP blacklist in some configurations https://advisories.dxw.com/advisories/vulnerability-in-wp-ban-allows-visitors-to-bypass-the-ip-blacklist-in-some-configurations/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -9082,10 +9082,10 @@ If a reverse-proxy is used, check the "I am using a reverse proxy" box in the pl
 	</item>
 	<item>
 		<title>Reflected XSS in WooCommerce allows attackers ability to do almost anything an admin user can do</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/</link>
 		<pubDate>Mon, 15 Sep 2014 16:32:09 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1652</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1652</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -9259,15 +9259,15 @@ Note that this will not work in a browser with reflected XSS prevention (e.g. 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:269:"Reflected XSS in WooCommerce - excelling eCommerce allows attackers ability to do almost anything an admin user can https://security.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:269:"Reflected XSS in WooCommerce - excelling eCommerce allows attackers ability to do almost anything an admin user can https://advisories.dxw.com/advisories/reflected-xss-in-woocommerce-excelling-ecommerce-allows-attackers-ability-to-do-almost-anything-an-admin-user-can-do/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -9288,10 +9288,10 @@ Note that this will not work in a browser with reflected XSS prevention (e.g. 
 	</item>
 	<item>
 		<title>CSRF and stored XSS in Wordpress Content Slide allow an attacker to have full admin privileges</title>
-		<link>https://security.dxw.com/advisories/csrf-and-stored-xss-in-wordpress-content-slide-allow-an-attacker-to-have-full-admin-privileges/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-wordpress-content-slide-allow-an-attacker-to-have-full-admin-privileges/</link>
 		<pubDate>Wed, 07 Jan 2015 15:02:06 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1786</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1786</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -9477,10 +9477,10 @@ At the time of publishing no fix is available and the plugin has been removed fr
 	</item>
 	<item>
 		<title>Publicly exploitable command injection in ruby-saml library can lead to arbitrary command execution</title>
-		<link>https://security.dxw.com/advisories/publicly-exploitable-command-injection-in-ruby-saml-0-7-2-library-can-root-the-host/</link>
+		<link>https://advisories.dxw.com/advisories/publicly-exploitable-command-injection-in-ruby-saml-0-7-2-library-can-root-the-host/</link>
 		<pubDate>Thu, 15 Jan 2015 17:09:27 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1855</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1855</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -9574,7 +9574,7 @@ end</pre>
 <p class="western">This value is then appended into a XPath request in response.rb</p>
 
 <pre class="western">REXML::XPath.first(document,
- "/p:Response/a:Assertion[@ID='#{document.signed_element_id}']#{subelt}", 
+ "/p:Response/a:Assertion[@ID='#{document.signed_element_id}']#{subelt}",
  { "p" =&gt; PROTOCOL, "a" =&gt; ASSERTION })</pre>
 <p class="western">We exploit this XPath injection to execute an XPath that contains</p>
 
@@ -9674,15 +9674,15 @@ end</pre>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/publicly-exploitable-command-injection-in-ruby-saml-0-7-2-library-can-root-the-host/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/publicly-exploitable-command-injection-in-ruby-saml-0-7-2-library-can-root-the-host/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/publicly-exploitable-command-injection-in-ruby-saml-0-7-2-library-can-root-the-host/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/publicly-exploitable-command-injection-in-ruby-saml-0-7-2-library-can-root-the-host/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:198:"Publicly exploitable command injection in ruby-saml library can root the host https://security.dxw.com/advisories/publicly-exploitable-command-injection-in-ruby-saml-0-7-2-library-can-root-the-host/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:198:"Publicly exploitable command injection in ruby-saml library can root the host https://advisories.dxw.com/advisories/publicly-exploitable-command-injection-in-ruby-saml-0-7-2-library-can-root-the-host/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -9691,10 +9691,10 @@ end</pre>
 	</item>
 	<item>
 		<title>CSRF in Contact Form DB allows attacker to delete all stored form submissions</title>
-		<link>https://security.dxw.com/advisories/csrf-in-contact-form-db-allows-attacker-to-delete-all-stored-form-submissions/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-in-contact-form-db-allows-attacker-to-delete-all-stored-form-submissions/</link>
 		<pubDate>Tue, 17 Feb 2015 15:52:38 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1936</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1936</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -9868,15 +9868,15 @@ end</pre>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-in-contact-form-db-allows-attacker-to-delete-all-stored-form-submissions/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-in-contact-form-db-allows-attacker-to-delete-all-stored-form-submissions/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrf-in-contact-form-db-allows-attacker-to-delete-all-stored-form-submissions/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrf-in-contact-form-db-allows-attacker-to-delete-all-stored-form-submissions/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:192:"CSRF in Contact Form DB allows attacker to delete all stored form submissions https://security.dxw.com/advisories/csrf-in-contact-form-db-allows-attacker-to-delete-all-stored-form-submissions/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:192:"CSRF in Contact Form DB allows attacker to delete all stored form submissions https://advisories.dxw.com/advisories/csrf-in-contact-form-db-allows-attacker-to-delete-all-stored-form-submissions/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -9889,10 +9889,10 @@ end</pre>
 	</item>
 	<item>
 		<title>Reflected XSS in Citizen Space allows attackers to view sensitive information of the attacker&#039;s choosing</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-citizen-space-allows-attackers-to-view-sensitive-information-of-the-attackers-choosing/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-citizen-space-allows-attackers-to-view-sensitive-information-of-the-attackers-choosing/</link>
 		<pubDate>Wed, 04 Mar 2015 20:16:02 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1972</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1972</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -10086,7 +10086,7 @@ https://delib.zendesk.com/hc/en-us/articles/203432149-How-do-I-integrate-Citizen
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/reflected-xss-in-citizen-space-allows-attackers-to-view-sensitive-information-of-the-attackers-choosing/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/reflected-xss-in-citizen-space-allows-attackers-to-view-sensitive-information-of-the-attackers-choosing/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -10095,10 +10095,10 @@ https://delib.zendesk.com/hc/en-us/articles/203432149-How-do-I-integrate-Citizen
 	</item>
 	<item>
 		<title>Reflected XSS in GD bbPress Attachments allows an attacker to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-gd-bbpress-attachments-allows-an-attacker-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-gd-bbpress-attachments-allows-an-attacker-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Wed, 01 Jul 2015 15:35:57 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1990</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1990</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -10291,10 +10291,10 @@ http://localhost/wp-admin/edit.php?post_type=forum&amp;page=gdbbpress_attachment
 	</item>
 	<item>
 		<title>Local File Include vulnerability in GD bbPress Attachments allows attackers to include arbitrary PHP files</title>
-		<link>https://security.dxw.com/advisories/local-file-include-vulnerability-in-gd-bbpress-attachments-allows-attackers-to-include-arbitrary-php-files/</link>
+		<link>https://advisories.dxw.com/advisories/local-file-include-vulnerability-in-gd-bbpress-attachments-allows-attackers-to-include-arbitrary-php-files/</link>
 		<pubDate>Wed, 01 Jul 2015 15:36:10 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1991</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1991</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -10495,10 +10495,10 @@ http://localhost/wp-admin/edit.php?post_type=forum&amp;page=gdbbpress_attachment
 	</item>
 	<item>
 		<title>Blind SQL Injection in WP Symposium allows unauthenticated attackers to access sensitive data</title>
-		<link>https://security.dxw.com/advisories/blind-sql-injection-in-wp-symposium-allows-unauthenticated-attackers-to-access-sensitive-data/</link>
+		<link>https://advisories.dxw.com/advisories/blind-sql-injection-in-wp-symposium-allows-unauthenticated-attackers-to-access-sensitive-data/</link>
 		<pubDate>Tue, 14 Jul 2015 16:22:27 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2000</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2000</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -10684,7 +10684,7 @@ action=getTopic&amp;topic_id=1 AND SLEEP(5)&amp;group_id=0
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/blind-sql-injection-in-wp-symposium-allows-unauthenticated-attackers-to-access-sensitive-data/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/blind-sql-injection-in-wp-symposium-allows-unauthenticated-attackers-to-access-sensitive-data/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -10693,10 +10693,10 @@ action=getTopic&amp;topic_id=1 AND SLEEP(5)&amp;group_id=0
 	</item>
 	<item>
 		<title>CSRF/XSS vulnerability in Private Only could allow an attacker to do almost anything an admin user can</title>
-		<link>https://security.dxw.com/advisories/csrfxss-vulnerability-in-private-only-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can/</link>
+		<link>https://advisories.dxw.com/advisories/csrfxss-vulnerability-in-private-only-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can/</link>
 		<pubDate>Thu, 09 Jul 2015 16:03:37 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2026</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2026</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -10872,7 +10872,7 @@ action=getTopic&amp;topic_id=1 AND SLEEP(5)&amp;group_id=0
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/csrfxss-vulnerability-in-private-only-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/csrfxss-vulnerability-in-private-only-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -10881,10 +10881,10 @@ action=getTopic&amp;topic_id=1 AND SLEEP(5)&amp;group_id=0
 	</item>
 	<item>
 		<title>Publicly exploitable XSS in WordPress plugin Navis Documentcloud</title>
-		<link>https://security.dxw.com/advisories/publicly-exploitable-xss-in-wordpress-plugin-navis-documentcloud/</link>
+		<link>https://advisories.dxw.com/advisories/publicly-exploitable-xss-in-wordpress-plugin-navis-documentcloud/</link>
 		<pubDate>Tue, 31 Mar 2015 13:10:01 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2046</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2046</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -11092,10 +11092,10 @@ If this is not possible, upgrade to version 0.1.1 or later.]]></wp:meta_value>
 	</item>
 	<item>
 		<title>Stored XSS in Plotly allows less privileged users to insert arbitrary JavaScript into posts</title>
-		<link>https://security.dxw.com/advisories/stored-xss-in-plotly-allows-less-privileged-users-to-insert-arbitrary-javascript-into-posts/</link>
+		<link>https://advisories.dxw.com/advisories/stored-xss-in-plotly-allows-less-privileged-users-to-insert-arbitrary-javascript-into-posts/</link>
 		<pubDate>Thu, 09 Jul 2015 16:39:41 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2163</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2163</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -11278,10 +11278,10 @@ N.B. If all accounts are trusted, or all accounts have the <a href="https://cod
 	</item>
 	<item>
 		<title>Reflected XSS in The Events Calendar: Eventbrite Tickets allows unauthenticated users to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-the-events-calendar-eventbrite-tickets-allows-unauthenticated-users-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-the-events-calendar-eventbrite-tickets-allows-unauthenticated-users-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Thu, 09 Jul 2015 17:34:29 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2172</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2172</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -11476,10 +11476,10 @@ http://localhost/wp-admin/edit.php?post_type=tribe_events&amp;page=import-eventb
 	</item>
 	<item>
 		<title>The OAuth2 Complete plugin for WordPress uses a pseudorandom number generator which is non-cryptographically secure</title>
-		<link>https://security.dxw.com/advisories/the-oauth2-complete-plugin-for-wordpress-uses-a-pseudorandom-number-generator-which-is-non-cryptographically-secure/</link>
+		<link>https://advisories.dxw.com/advisories/the-oauth2-complete-plugin-for-wordpress-uses-a-pseudorandom-number-generator-which-is-non-cryptographically-secure/</link>
 		<pubDate>Wed, 22 Jul 2015 15:29:19 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=1266</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=1266</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -11679,7 +11679,7 @@ If this is not possible then ensure that you are using a recent version of php (
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/the-oauth2-complete-plugin-for-wordpress-uses-a-pseudorandom-number-generator-which-is-non-cryptographically-secure/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/the-oauth2-complete-plugin-for-wordpress-uses-a-pseudorandom-number-generator-which-is-non-cryptographically-secure/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -11688,10 +11688,10 @@ If this is not possible then ensure that you are using a recent version of php (
 	</item>
 	<item>
 		<title>Reflected XSS in Flickr Justified Gallery could allows unauthenticated attackers to do almost anything an admin can do</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-flickr-justified-gallery-could-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can-do/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-flickr-justified-gallery-could-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can-do/</link>
 		<pubDate>Wed, 22 Jul 2015 16:50:33 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2318</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2318</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -11867,7 +11867,7 @@ For this to happen, the administrator would have to be tricked into clicking on 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/reflected-xss-in-flickr-justified-gallery-could-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can-do/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/reflected-xss-in-flickr-justified-gallery-could-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can-do/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -11876,10 +11876,10 @@ For this to happen, the administrator would have to be tricked into clicking on 
 	</item>
 	<item>
 		<title>Stored XSS in Google Analytics by Yoast Premium allows privileged users to attack other users</title>
-		<link>https://security.dxw.com/advisories/xss-in-google-analytics-by-yoast-premium-by-privileged-users/</link>
+		<link>https://advisories.dxw.com/advisories/xss-in-google-analytics-by-yoast-premium-by-privileged-users/</link>
 		<pubDate>Wed, 22 Jul 2015 11:59:29 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2325</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2325</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -12063,15 +12063,15 @@ If all users have the 'unfiltered_html' capability, or there is only one admin, 
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/xss-in-google-analytics-by-yoast-premium-by-privileged-users/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/xss-in-google-analytics-by-yoast-premium-by-privileged-users/]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>Full Path Disclosure vulnerability in JM Twitter Cards reveals the location of the WordPress installation on the server</title>
-		<link>https://security.dxw.com/advisories/full-path-disclosure-vulnerability-in-jm-twitter-cards-reveals-the-location-of-the-wordpress-installation-on-the-server/</link>
+		<link>https://advisories.dxw.com/advisories/full-path-disclosure-vulnerability-in-jm-twitter-cards-reveals-the-location-of-the-wordpress-installation-on-the-server/</link>
 		<pubDate>Thu, 30 Jul 2015 15:50:01 +0000</pubDate>
 		<dc:creator><![CDATA[dxwduncan]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2375</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2375</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -12276,7 +12276,7 @@ If this is not possible, ensure that display_errors is turned off on a site run
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/full-path-disclosure-vulnerability-in-jm-twitter-cards-reveals-the-location-of-the-wordpress-installation-on-the-server/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/full-path-disclosure-vulnerability-in-jm-twitter-cards-reveals-the-location-of-the-wordpress-installation-on-the-server/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -12285,10 +12285,10 @@ If this is not possible, ensure that display_errors is turned off on a site run
 	</item>
 	<item>
 		<title>Reflected XSS in iframe allows unauthenticated users to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-iframe-allows-unauthenticated-users-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-iframe-allows-unauthenticated-users-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Wed, 05 Aug 2015 16:26:10 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2391</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2391</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -12470,7 +12470,7 @@ If this is not possible, ensure that the 'get_params_from_url' argument is neve
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/reflected-xss-in-iframe-allows-unauthenticated-users-to-do-almost-anything-an-admin-can/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/reflected-xss-in-iframe-allows-unauthenticated-users-to-do-almost-anything-an-admin-can/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -12479,10 +12479,10 @@ If this is not possible, ensure that the 'get_params_from_url' argument is neve
 	</item>
 	<item>
 		<title>Stored XSS in iframe allows less privileged users to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/stored-xss-in-iframe-allows-less-privileged-users-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/stored-xss-in-iframe-allows-less-privileged-users-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Wed, 05 Aug 2015 16:26:03 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2393</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2393</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -12654,7 +12654,7 @@ The vendor has released version 4.0 in which onload is disabled, but the other '
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/stored-xss-in-iframe-allows-less-privileged-users-to-do-almost-anything-an-admin-can/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/stored-xss-in-iframe-allows-less-privileged-users-to-do-almost-anything-an-admin-can/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -12663,10 +12663,10 @@ The vendor has released version 4.0 in which onload is disabled, but the other '
 	</item>
 	<item>
 		<title>Stored XSS in Watu PRO allows unauthenticated attackers to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/stored-xss-in-watu-pro-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/stored-xss-in-watu-pro-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Tue, 11 Aug 2015 14:48:11 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2436</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2436</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -12845,10 +12845,10 @@ The vendor has released version 4.0 in which onload is disabled, but the other '
 	</item>
 	<item>
 		<title>CSRF in Watu PRO allows unauthenticated attackers to delete quizzes</title>
-		<link>https://security.dxw.com/advisories/csrf-in-watu-pro-allows-unauthenticated-attackers-to-delete-quizzes/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-in-watu-pro-allows-unauthenticated-attackers-to-delete-quizzes/</link>
 		<pubDate>Tue, 11 Aug 2015 14:48:14 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2439</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2439</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -13040,10 +13040,10 @@ http://localhost/wp-admin/admin.php?page=watupro_exams&amp;action=delete&amp;qui
 	</item>
 	<item>
 		<title>CSRF/stored XSS in Quiz And Survey Master (Formerly Quiz Master Next) allows unauthenticated attackers to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/csrfstored-xss-in-quiz-and-survey-master-formerly-quiz-master-next-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/csrfstored-xss-in-quiz-and-survey-master-formerly-quiz-master-next-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Wed, 07 Dec 2016 20:37:38 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2500</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2500</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -13224,7 +13224,7 @@ However, in <span class="s1">js/admin_question.js on line 205, we see this line
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/?post_type=advisories&p=2500]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/?post_type=advisories&p=2500]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slug]]></wp:meta_key>
@@ -13233,10 +13233,10 @@ However, in <span class="s1">js/admin_question.js on line 205, we see this line
 	</item>
 	<item>
 		<title>CSRF/XSS in Responsive Poll allows unauthenticated attackers to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/csrfxss-in-responsive-poll-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/csrfxss-in-responsive-poll-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Wed, 07 Dec 2016 20:25:19 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2510</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2510</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -13412,15 +13412,15 @@ Then visit http://localhost/wp-admin/admin.php?page=polls&amp;action=edit&amp;e
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/?post_type=advisories&p=2510]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/?post_type=advisories&p=2510]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>Arbitrary file deletion vulnerability in Image Slider allows authenticated users to delete files</title>
-		<link>https://security.dxw.com/advisories/arbitrary-file-deletion-vulnerability-in-image-slider-allows-authenticated-users-to-delete-files/</link>
+		<link>https://advisories.dxw.com/advisories/arbitrary-file-deletion-vulnerability-in-image-slider-allows-authenticated-users-to-delete-files/</link>
 		<pubDate>Thu, 08 Dec 2016 17:14:26 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2530</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2530</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -13604,15 +13604,15 @@ If WordPress is being run as root (or if the web user has permission to write to
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/?post_type=advisories&p=2530]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/?post_type=advisories&p=2530]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>Reflected XSS in Social Pug - Easy Social Share Buttons could allow an attacker to do almost anything an admin user can</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-social-pug-easy-social-share-buttons-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-social-pug-easy-social-share-buttons-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can/</link>
 		<pubDate>Wed, 07 Dec 2016 20:17:38 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2604</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2604</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -13787,10 +13787,10 @@ If WordPress is being run as root (or if the web user has permission to write to
 	</item>
 	<item>
 		<title>Reflected XSS in MailChimp for WordPress could allow an attacker to do almost anything an admin user can</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-mailchimp-for-wordpress-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-mailchimp-for-wordpress-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can/</link>
 		<pubDate>Wed, 07 Dec 2016 20:05:04 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2621</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2621</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -13966,10 +13966,10 @@ If WordPress is being run as root (or if the web user has permission to write to
 	</item>
 	<item>
 		<title>Stored XSS in Advanced Custom Fields: Table Field allows authenticated users to do almost anything an admin user can</title>
-		<link>https://security.dxw.com/advisories/xss-in-advanced-custom-fields-table-field-could-allow-authenticated-users-to-do-almost-anything-an-admin-user-can/</link>
+		<link>https://advisories.dxw.com/advisories/xss-in-advanced-custom-fields-table-field-could-allow-authenticated-users-to-do-almost-anything-an-admin-user-can/</link>
 		<pubDate>Wed, 13 Jul 2016 17:40:54 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2648</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2648</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -14148,10 +14148,10 @@ Tested with ACF PRO v5. Not tested with v4.]]></wp:meta_value>
 	</item>
 	<item>
 		<title>CSRF vulnerability in Multisite Post Duplicator could allow an attacker to do almost anything an admin user can do</title>
-		<link>https://security.dxw.com/advisories/csrf-vulnerability-in-multisite-post-duplicator-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can-do/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-vulnerability-in-multisite-post-duplicator-could-allow-an-attacker-to-do-almost-anything-an-admin-user-can-do/</link>
 		<pubDate>Fri, 09 Dec 2016 14:28:11 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2696</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2696</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -14334,10 +14334,10 @@ This could also be used to view content not meant to be published.]]></wp:meta_
 	</item>
 	<item>
 		<title>copy-me vulnerable to CSRF allowing unauthenticated attacker to copy posts</title>
-		<link>https://security.dxw.com/advisories/copy-me-vulnerable-to-csrf-allowing-unauthenticated-attacker-to-copy-posts/</link>
+		<link>https://advisories.dxw.com/advisories/copy-me-vulnerable-to-csrf-allowing-unauthenticated-attacker-to-copy-posts/</link>
 		<pubDate>Wed, 07 Dec 2016 18:21:03 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2701</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2701</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -14513,10 +14513,10 @@ This could also be used to view content not meant to be published.]]></wp:meta_
 	</item>
 	<item>
 		<title>SQL Injection in Post Indexer allows super admins to read the contents of the database</title>
-		<link>https://security.dxw.com/advisories/sql-injection-in-post-indexer-allows-super-admins-to-read-the-contents-of-the-database/</link>
+		<link>https://advisories.dxw.com/advisories/sql-injection-in-post-indexer-allows-super-admins-to-read-the-contents-of-the-database/</link>
 		<pubDate>Thu, 17 Nov 2016 14:52:18 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2705</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2705</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -14729,15 +14729,15 @@ To exploit this vulnerability you need to be a super admin.
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/sql-injection-in-post-indexer-allows-super-admins-to-read-the-contents-of-the-database/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/sql-injection-in-post-indexer-allows-super-admins-to-read-the-contents-of-the-database/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/sql-injection-in-post-indexer-allows-super-admins-to-read-the-contents-of-the-database/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/sql-injection-in-post-indexer-allows-super-admins-to-read-the-contents-of-the-database/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:210:"SQL Injection in Post Indexer allows super admins to read the contents of the database https://security.dxw.com/advisories/sql-injection-in-post-indexer-allows-super-admins-to-read-the-contents-of-the-database/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:210:"SQL Injection in Post Indexer allows super admins to read the contents of the database https://advisories.dxw.com/advisories/sql-injection-in-post-indexer-allows-super-admins-to-read-the-contents-of-the-database/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -14750,10 +14750,10 @@ To exploit this vulnerability you need to be a super admin.
 	</item>
 	<item>
 		<title>Unserialisation in Post Indexer could allow man-in-the-middle to execute arbitrary code (in some circumstances)</title>
-		<link>https://security.dxw.com/advisories/unserialisation-in-post-indexer-could-allow-man-in-the-middle-to-execute-arbitrary-code-in-some-circumstances/</link>
+		<link>https://advisories.dxw.com/advisories/unserialisation-in-post-indexer-could-allow-man-in-the-middle-to-execute-arbitrary-code-in-some-circumstances/</link>
 		<pubDate>Thu, 17 Nov 2016 14:52:24 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2712</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2712</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -14935,15 +14935,15 @@ There is a class called <code>ProcessLocker</code> in this plugin with an explo
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/unserialisation-in-post-indexer-could-allow-man-in-the-middle-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/unserialisation-in-post-indexer-could-allow-man-in-the-middle-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/unserialisation-in-post-indexer-could-allow-man-in-the-middle-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/unserialisation-in-post-indexer-could-allow-man-in-the-middle-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:258:"Unserialisation in Post Indexer could allow man-in-the-middle to execute arbitrary code (in some circumstances) https://security.dxw.com/advisories/unserialisation-in-post-indexer-could-allow-man-in-the-middle-to-execute-arbitrary-code-in-some-circumstances/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:258:"Unserialisation in Post Indexer could allow man-in-the-middle to execute arbitrary code (in some circumstances) https://advisories.dxw.com/advisories/unserialisation-in-post-indexer-could-allow-man-in-the-middle-to-execute-arbitrary-code-in-some-circumstances/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -14956,10 +14956,10 @@ There is a class called <code>ProcessLocker</code> in this plugin with an explo
 	</item>
 	<item>
 		<title>Unserialization vulnerability in Relevanssi Premium could allow admins to execute arbitrary code (in some circumstances)</title>
-		<link>https://security.dxw.com/advisories/unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/</link>
+		<link>https://advisories.dxw.com/advisories/unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/</link>
 		<pubDate>Thu, 17 Nov 2016 20:44:13 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2747</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2747</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -15132,15 +15132,15 @@ If logged in as an admin on any site you can go to settings, Relevanssi Premium,
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:261:"Unserialization vulnerability in Relevanssi Premium could allow admins to execute arbitrary code (in some https://security.dxw.com/advisories/unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:261:"Unserialization vulnerability in Relevanssi Premium could allow admins to execute arbitrary code (in some https://advisories.dxw.com/advisories/unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -15149,10 +15149,10 @@ If logged in as an admin on any site you can go to settings, Relevanssi Premium,
 	</item>
 	<item>
 		<title>SQL injection and unserialization vulnerability in Relevanssi Premium could allow admins to execute arbitrary code (in some circumstances)</title>
-		<link>https://security.dxw.com/advisories/sql-injection-and-unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/</link>
+		<link>https://advisories.dxw.com/advisories/sql-injection-and-unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/</link>
 		<pubDate>Thu, 17 Nov 2016 20:44:16 +0000</pubDate>
 		<dc:creator><![CDATA[glyn]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2750</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2750</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -15333,15 +15333,15 @@ If a logged in admin user is tricked into going to an attacker controlled websit
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/sql-injection-and-unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/sql-injection-and-unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/sql-injection-and-unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/sql-injection-and-unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:288:"SQL injection and unserialization vulnerability in Relevanssi Premium could allow admins to execute arbitrary code https://security.dxw.com/advisories/sql-injection-and-unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:288:"SQL injection and unserialization vulnerability in Relevanssi Premium could allow admins to execute arbitrary code https://advisories.dxw.com/advisories/sql-injection-and-unserialization-vulnerability-in-relevanssi-premium-could-allow-admins-to-execute-arbitrary-code-in-some-circumstances/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -15350,10 +15350,10 @@ If a logged in admin user is tricked into going to an attacker controlled websit
 	</item>
 	<item>
 		<title>Stop User Enumeration does not stop user enumeration</title>
-		<link>https://security.dxw.com/advisories/stop-user-enumeration-does-not-stop-user-enumeration/</link>
+		<link>https://advisories.dxw.com/advisories/stop-user-enumeration-does-not-stop-user-enumeration/</link>
 		<pubDate>Wed, 04 Jan 2017 08:19:29 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2932</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2932</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -15539,10 +15539,10 @@ The REST API (new in WordPress 4.7):
 	</item>
 	<item>
 		<title>CSRF/stored XSS in WordPress Firewall 2 allows unauthenticated attackers to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/csrfstored-xss-in-wordpress-firewall-2-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/csrfstored-xss-in-wordpress-firewall-2-allows-unauthenticated-attackers-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Thu, 16 Mar 2017 19:09:52 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2945</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2945</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -15712,10 +15712,10 @@ In a real attack, forms can be submitted automatically and spear-phishing attack
 	</item>
 	<item>
 		<title>Reflected XSS in Relevanssi Premium when using relevanssi_didyoumean() could allow unauthenticated attacker to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/reflected-xss-in-relevanssi-premium-when-using-relevanssi_didyoumean-could-allow-unauthenticated-attacker-to-do-almost-anything-an-admin-can/</link>
+		<link>https://advisories.dxw.com/advisories/reflected-xss-in-relevanssi-premium-when-using-relevanssi_didyoumean-could-allow-unauthenticated-attacker-to-do-almost-anything-an-admin-can/</link>
 		<pubDate>Mon, 13 Feb 2017 14:46:58 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2976</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2976</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -15891,10 +15891,10 @@ That function tokenises the search query, and passes each token to a "spellchec
 	</item>
 	<item>
 		<title>Stored XSS in Relevanssi could allow an unauthenticated attacker to do almost anything an admin can do</title>
-		<link>https://security.dxw.com/advisories/stored-xss-in-relevanssi-could-allow-an-unauthenticated-attacker-to-do-almost-anything-an-admin-can-do/</link>
+		<link>https://advisories.dxw.com/advisories/stored-xss-in-relevanssi-could-allow-an-unauthenticated-attacker-to-do-almost-anything-an-admin-can-do/</link>
 		<pubDate>Wed, 15 Feb 2017 15:09:00 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=2990</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=2990</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -16077,10 +16077,10 @@ The fact that the queries are stored means that we can evade the XSS prevention 
 	</item>
 	<item>
 		<title>CSRF/Stored XSS in MSMC - Redirect After Comment could allow unauthenticated individuals to do almost anything</title>
-		<link>https://security.dxw.com/advisories/csrf-stored-xss-in-msmc-redirect-after-comment/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-stored-xss-in-msmc-redirect-after-comment/</link>
 		<pubDate>Mon, 20 Mar 2017 12:57:22 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=3062</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=3062</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -16257,10 +16257,10 @@ Step 3 is unnecessary in browsers without XSS filtering (i.e. Firefox).]]></wp:m
 	</item>
 	<item>
 		<title>Path traversal vulnerability in Gallery may allow admins to read most files on the filesystem</title>
-		<link>https://security.dxw.com/advisories/path-traversal-vulnerability-in-gallery-may-allow-admins-to-read-most-files-on-the-filesystem/</link>
+		<link>https://advisories.dxw.com/advisories/path-traversal-vulnerability-in-gallery-may-allow-admins-to-read-most-files-on-the-filesystem/</link>
 		<pubDate>Mon, 20 Mar 2017 17:22:44 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=3073</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=3073</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -16437,10 +16437,10 @@ If the www user has write access to /etc this could break Apache. But in most ca
 	</item>
 	<item>
 		<title>Path traversal in Photo Gallery may allow admins to read most files on the filesystem</title>
-		<link>https://security.dxw.com/advisories/path-traversal-in-photo-gallery-may-allow-admins-to-read-most-files-on-the-filesystem/</link>
+		<link>https://advisories.dxw.com/advisories/path-traversal-in-photo-gallery-may-allow-admins-to-read-most-files-on-the-filesystem/</link>
 		<pubDate>Fri, 16 Jun 2017 18:52:30 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=3107</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=3107</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -16619,10 +16619,10 @@ The number of ../ you need to add to the URL will vary, and the web server ma
 	</item>
 	<item>
 		<title>Reflected XSS in WordPress Download Manager could allow an attacker to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/xss-download-manager/</link>
+		<link>https://advisories.dxw.com/advisories/xss-download-manager/</link>
 		<pubDate>Fri, 16 Jun 2017 17:43:50 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=3114</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=3114</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -16800,10 +16800,10 @@ The number of ../ you need to add to the URL will vary, and the web server ma
 	</item>
 	<item>
 		<title>Stored XSS in Salutation Responsive WordPress + BuddyPress Theme could allow logged-in users to do almost anything an admin can</title>
-		<link>https://security.dxw.com/advisories/stored-xss-salutation-theme/</link>
+		<link>https://advisories.dxw.com/advisories/stored-xss-salutation-theme/</link>
 		<pubDate>Mon, 31 Jul 2017 10:47:12 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=3123</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=3123</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -16991,15 +16991,15 @@ For comparison, if the same user account enters <code>&lt;img src=x onerror=al
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/stored-xss-salutation-theme/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/stored-xss-salutation-theme/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_jd_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.dxw.com/advisories/stored-xss-salutation-theme/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[https://advisories.dxw.com/advisories/stored-xss-salutation-theme/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_jd_wp_twitter]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:179:"Stored XSS in Salutation Responsive WordPress   BuddyPress Theme could allow logged-in users to do almost anything https://security.dxw.com/advisories/stored-xss-salutation-theme/";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:179:"Stored XSS in Salutation Responsive WordPress   BuddyPress Theme could allow logged-in users to do almost anything https://advisories.dxw.com/advisories/stored-xss-salutation-theme/";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_status_message]]></wp:meta_key>
@@ -17008,10 +17008,10 @@ For comparison, if the same user account enters <code>&lt;img src=x onerror=al
 	</item>
 	<item>
 		<title>Stop User Enumeration allows user enumeration via the REST API</title>
-		<link>https://security.dxw.com/advisories/stop-user-enumeration-rest-api/</link>
+		<link>https://advisories.dxw.com/advisories/stop-user-enumeration-rest-api/</link>
 		<pubDate>Tue, 25 Jul 2017 08:25:24 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=3152</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=3152</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -17184,10 +17184,10 @@ For comparison, if the same user account enters <code>&lt;img src=x onerror=al
 	</item>
 	<item>
 		<title>CSRF in YouTube (WordPress plugin) could allow unauthenticated attacker to change any setting within the plugin</title>
-		<link>https://security.dxw.com/advisories/csrf-in-youtube-plugin/</link>
+		<link>https://advisories.dxw.com/advisories/csrf-in-youtube-plugin/</link>
 		<pubDate>Tue, 25 Jul 2017 08:16:12 +0000</pubDate>
 		<dc:creator><![CDATA[tomdxw]]></dc:creator>
-		<guid isPermaLink="false">https://security.dxw.com/?post_type=advisories&#038;p=3192</guid>
+		<guid isPermaLink="false">https://advisories.dxw.com/?post_type=advisories&#038;p=3192</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
