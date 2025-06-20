@@ -6,6 +6,11 @@ class OptionsPage implements \Dxw\Iguana\Registerable
 {
 	public function register()
 	{
+		add_action('acf/init', [$this, 'add_options_page']);
+	}
+
+	public function add_options_page(): void
+	{
 		if (function_exists('acf_add_options_sub_page')) {
 			acf_add_options_sub_page('Banner');
 		}
