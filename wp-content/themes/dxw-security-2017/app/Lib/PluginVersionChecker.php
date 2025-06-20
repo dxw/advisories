@@ -4,6 +4,13 @@ namespace Dxw\DxwSecurity2017\Lib;
 
 class PluginVersionChecker
 {
+	private int $id;
+	private array $versions;
+	private string $version;
+	private string $is_codex;
+	private string $codex_link;
+	private string $slug;
+
 	public function __construct()
 	{
 		$this->id = (int)get_the_ID();
@@ -83,7 +90,8 @@ class PluginVersionChecker
 		$versions = [];
 
 		foreach ($posts as $p) {
-			$versions[] = end(explode(',', get_field('version_of_plugin', $p->ID)));
+			$version_list = explode(',', get_field('version_of_plugin', $p->ID));
+			$versions[] = end($version_list);
 		}
 
 		usort($versions, 'version_compare');
