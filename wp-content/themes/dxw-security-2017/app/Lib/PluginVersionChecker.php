@@ -90,7 +90,8 @@ class PluginVersionChecker
 		$versions = [];
 
 		foreach ($posts as $p) {
-			$versions[] = end(explode(',', get_field('version_of_plugin', $p->ID)));
+			$version_list = explode(',', get_field('version_of_plugin', $p->ID));
+			$versions[] = end($version_list);
 		}
 
 		usort($versions, 'version_compare');
