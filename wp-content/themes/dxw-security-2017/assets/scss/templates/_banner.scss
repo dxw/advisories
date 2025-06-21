@@ -2,9 +2,6 @@
   background: $accent-secondary;
   color: $darkest;
   text-align: center;
-  .columns {
-    padding-bottom: 5px; //otherwise we can't see the shadow around button
-  }
 
   .button {
     @include button-light($brand-primary, $lightest);
