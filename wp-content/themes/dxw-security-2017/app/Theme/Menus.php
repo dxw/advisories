@@ -27,7 +27,7 @@ class Menus implements \Dxw\Iguana\Registerable
 		wp_nav_menu([
 			'theme_location' => $location,
 			'container' => false,
-			'items_wrap' => '<h5>'.esc_html($menuObj->name).'</h5><ul id="%1$s" class="%2$s">%3$s</ul>'
+			'items_wrap' => '<h2>'.esc_html($menuObj->name).'</h2><ul id="%1$s" class="%2$s">%3$s</ul>'
 		]);
 	}
 }
