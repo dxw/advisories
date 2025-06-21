@@ -30,7 +30,7 @@
     input[type="search"] {
       width: 75%;
       float: left;
-
+      margin-bottom: -1px;
       @media screen and (max-width:$tiny-screen) {
         width: 70%;
       }
