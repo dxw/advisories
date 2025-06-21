@@ -11,14 +11,14 @@ $dxw-blue: #004876; // dark blue
 $dxw-light-blue: #009abf;
 $dxw-ivory: #f9f8f5;
 
-// dxw security palette
-$dxwsec-purple: #69488e;
-$dxwsec-turquoise: #09615d;
-$dxwsec-red: #cc0000;
-$dxwsec-yellow: #fab614;
-$dxwsec-orange: #f26d04;
-$dxwsec-orange-dark: #d34202;
-$dxwsec-green: #1d8046;
+// Advisories palette
+$advisories-purple: #69488e;
+$advisories-turquoise: #09615d;
+$advisories-red: #cc0000;
+$advisories-yellow: #fab614;
+$advisories-orange: #f26d04;
+$advisories-orange-dark: #d34202;
+$advisories-green: #1d8046;
 
 // greys
 $black: #243746;
@@ -40,15 +40,15 @@ $github: #4078c0;
 
 // Theme colours
 $brand-primary: $black;
-$brand-secondary: $dxwsec-purple;
+$brand-secondary: $advisories-purple;
 $accent-colour: $dxw-orange;
 
 $lightest: $white;
 $darkest: $black;
 
 // Errors and notifications
-$highlight: $dxwsec-yellow;
-$error: $dxwsec-red;
+$highlight: $advisories-yellow;
+$error: $advisories-red;
 $success: $dxw-green;
 $info: $dxw-blue;
-$alert: $dxwsec-orange-dark;
+$alert: $advisories-orange-dark;
