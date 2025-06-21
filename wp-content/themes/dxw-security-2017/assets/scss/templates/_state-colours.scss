@@ -13,17 +13,17 @@
 .red,
 .unsafe,
 .high {
-  color: $dxwsec-red;
+  color: $advisories-red;
 }
 
 .orange,
 .caution,
 .medium {
-  color: $dxwsec-orange-dark;
+  color: $advisories-orange-dark;
 }
 
 .green,
 .good,
 .low {
-  color: $dxwsec-green;
+  color: $advisories-green;
 }

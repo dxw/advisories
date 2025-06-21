@@ -1,8 +1,8 @@
 .alert {
   margin-top: $gutter;
   padding: $gutter/2 $gutter/2 $gutter-medium $gutter;
-  background: lighten($dxwsec-yellow, 35%);
-  border-left: 3px solid $dxwsec-yellow;
+  background: lighten($advisories-yellow, 35%);
+  border-left: 3px solid $advisories-yellow;
 
   @include grid-media($grid-mobile) {
     margin-top: $gutter-mobile;
