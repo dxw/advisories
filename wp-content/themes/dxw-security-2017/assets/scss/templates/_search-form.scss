@@ -1,5 +1,5 @@
 .search-form-container {
-  background: $brand-secondary;
+  background: $accent-primary;
   padding-top: $gutter*2;
   padding-bottom: $gutter*2;
 
@@ -11,7 +11,7 @@
   label {
     @include grid-column(4);
     margin-top: 9px;
-    color: $lightest;
+    color: $black;
 
     @include grid-media($grid-mobile) {
       @include grid-column(2);
@@ -38,7 +38,7 @@
 
     button {
       width: 25%;
-      @include button-light($medium-grey, $brand-secondary);
+      @include button-light($brand-primary, $lightest);
       padding-left: $gutter;
       padding-right: $gutter;
       float: right;
