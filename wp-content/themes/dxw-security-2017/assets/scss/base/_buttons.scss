@@ -51,10 +51,12 @@ button {
   padding: 0;
   cursor: pointer;
   outline: 0;
+ border-radius: 40px;
 }
 
 .button {
   @extend %button;
+  border-radius: 40px;
 }
 
 .button-white {
