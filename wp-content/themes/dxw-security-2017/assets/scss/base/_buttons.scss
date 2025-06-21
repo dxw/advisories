@@ -1,7 +1,6 @@
 // Buttons
 @mixin button-background($background, $text) {
   background: $background;
-  box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
   color: $text;
   &:hover,
   &:focus {
@@ -14,14 +13,12 @@
   &:focus {
     background: darken($background, 20);
     outline: 2px solid $highlight;
-    box-shadow: 4px 4px 1px rgba(0,0,0,0.2);
   }
 }
 
 @mixin button-light($background, $text) {
   background: $background;
   color: $text;
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
 
   &:hover,
   &:focus {
