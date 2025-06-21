@@ -9,6 +9,7 @@ $dxw-purple: #7473c0;
 $dxw-turquoise: #00a0b0;
 $dxw-blue: #004876; // dark blue
 $dxw-light-blue: #009abf;
+$dxw-ivory: #f9f8f5;
 
 // dxw security palette
 $dxwsec-purple: #69488e;
@@ -26,8 +27,8 @@ $dark-grey: #4c535a;
 $grey: #95989a;
 $slight-grey: #e0e0e0;
 $medium-grey: #eeeeee;
-$light-grey: #f2f2f2;
-$white: #f9f8f5;
+$light-grey: $dxw-ivory;
+$white: #ffffff;
 
 // Social media
 $bsky: #1185Fe;
