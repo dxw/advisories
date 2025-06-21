@@ -14,13 +14,13 @@
 
 .archive {
     .search-form-container {
-        background-color: $light-grey;
+        background-color: $accent-primary;
         label {
             color: $black;
         }
         .form-field {
             button {
-                @include button-background($brand-secondary, $lightest);
+                @include button-background($brand-primary, $lightest);
                 box-shadow: none;
             }
         }

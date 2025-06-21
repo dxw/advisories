@@ -1,17 +1,16 @@
 .search {
     .search-form-container {
-        background-color: $light-grey;
+        background-color: $accent-primary;
         label {
             color: $black;
         }
         .form-field {
             button {
-                background-color: $advisories-purple;
+                background-color: $brand-primary;
                 color: $white;
             }
         }
     }
-    
     .feed-container {
         @include grid-column(12);
 
