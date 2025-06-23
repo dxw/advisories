@@ -9,3 +9,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 * Add Cache-Control headers to site
+* Add Strict-Transport-Policy header to site when served on non-local environments

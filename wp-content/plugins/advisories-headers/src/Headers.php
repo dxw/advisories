@@ -35,11 +35,19 @@ class Headers
 	}
 
 	/**
+	 * Add a Strict Transport Security header.
+	 *
+	 * This header is copied from the current Playbook configuration, which
+	 * does not (yet) include subdomains.
+	 *
 	 * @param string[] $headers
 	 * @return string[]
 	 */
 	public function addStrictTransportPolicy(array $headers): array
 	{
+		if (wp_get_environment_type() !== 'local') {
+			$headers['Strict-Transport-Security'] = 'max-age=31536000';
+		}
 		return $headers;
 	}
 }

@@ -77,10 +77,21 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	});
 
 	describe('->addStrictTransportPolicy()', function () {
-		it('does nothing', function () {
-			$expected = [];
-			$result = $this->headers->addStrictTransportPolicy([]);
-			expect($result)->toEqual($expected);
+		context('on local environments', function () {
+			it('does nothing', function () {
+				allow('wp_get_environment_type')->toBeCalled()->andReturn('local');
+				$expected = [];
+				$result = $this->headers->addStrictTransportPolicy([]);
+				expect($result)->toEqual($expected);
+			});
+		});
+		context('on non-local environments', function () {
+			it('adds an STS header without subdomains', function () {
+				allow('wp_get_environment_type')->toBeCalled()->andReturn('staging');
+				$expected = ['Strict-Transport-Security' => 'max-age=31536000'];
+				$result = $this->headers->addStrictTransportPolicy([]);
+				expect($result)->toEqual($expected);
+			});
 		});
 	});
 });
