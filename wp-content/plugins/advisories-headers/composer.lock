@@ -4,104 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "986ff1f9de5f5f6a94f908c1e730deb9",
-    "packages": [
-        {
-            "name": "aura/autoload",
-            "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/auraphp/Aura.Autoload.git",
-                "reference": "306a7f8d3cb58fb6f94bcff1dddf20c543f68668"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/auraphp/Aura.Autoload/zipball/306a7f8d3cb58fb6f94bcff1dddf20c543f68668",
-                "reference": "306a7f8d3cb58fb6f94bcff1dddf20c543f68668",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "aura": {
-                    "type": "library"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Aura\\Autoload\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Aura.Autoload Contributors",
-                    "homepage": "https://github.com/auraphp/Aura.Autoload/contributors"
-                }
-            ],
-            "description": "Provides a PSR-4 compliant autoloader implementation.",
-            "homepage": "https://github.com/auraphp/Aura.Autoload",
-            "keywords": [
-                "PSR-4",
-                "SPL autoloader",
-                "autoload",
-                "autoloader",
-                "class loader"
-            ],
-            "support": {
-                "issues": "https://github.com/auraphp/Aura.Autoload/issues",
-                "source": "https://github.com/auraphp/Aura.Autoload/tree/2.x"
-            },
-            "time": "2016-10-03T19:36:19+00:00"
-        },
-        {
-            "name": "dxw/iguana",
-            "version": "v1.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dxw/iguana.git",
-                "reference": "5e2a7f409750d63c6d81c467cae40fc0fb163dbe"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dxw/iguana/zipball/5e2a7f409750d63c6d81c467cae40fc0fb163dbe",
-                "reference": "5e2a7f409750d63c6d81c467cae40fc0fb163dbe",
-                "shasum": ""
-            },
-            "require": {
-                "aura/autoload": "^2.0",
-                "php": "^7.4|^8.1"
-            },
-            "require-dev": {
-                "10up/wp_mock": "^0.3.0",
-                "dxw/php-cs-fixer-config": "^2.0",
-                "mikey179/vfsstream": "^1.6",
-                "phpunit/phpunit": "^9.6"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Dxw\\Iguana\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Dependency injection framework for WordPress",
-            "homepage": "https://github.com/dxw/iguana",
-            "support": {
-                "issues": "https://github.com/dxw/iguana/issues",
-                "source": "https://github.com/dxw/iguana/tree/v1.3.2"
-            },
-            "time": "2023-08-10T08:51:42+00:00"
-        }
-    ],
+    "content-hash": "98ef42f42f6d81776c2389b23317f490",
+    "packages": [],
     "packages-dev": [
         {
             "name": "amphp/amp",
@@ -637,42 +541,6 @@
                 "source": "https://github.com/doctrine/deprecations/tree/1.1.5"
             },
             "time": "2025-04-07T20:06:18+00:00"
-        },
-        {
-            "name": "dxw/phar-install",
-            "version": "v1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dxw/phar-install.git",
-                "reference": "36eb78be91d433546bc90194db6f4de754a542de"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dxw/phar-install/zipball/36eb78be91d433546bc90194db6f4de754a542de",
-                "reference": "36eb78be91d433546bc90194db6f4de754a542de",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/phar-install"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mallory Adams",
-                    "email": "mallory@dxw.com",
-                    "homepage": "https://www.dxw.com"
-                }
-            ],
-            "homepage": "https://github.com/dxw/phar-install",
-            "support": {
-                "issues": "https://github.com/dxw/phar-install/issues",
-                "source": "https://github.com/dxw/phar-install/tree/master"
-            },
-            "time": "2020-04-06T09:47:56+00:00"
         },
         {
             "name": "dxw/php-cs-fixer-config",
