@@ -1,6 +1,4 @@
 {
-    "name": "dxw/wordpress-plugin-template",
-    "homepage": "https://github.com/dxw/wordpress-plugin-template",
     "type": "wordpress-plugin",
     "license": "MIT",
     "config": {
@@ -10,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WordPressPlugin\\": "src/"
+            "Dxw\\AdvisoriesHeaders\\": "src/"
         }
     },
     "require-dev": {
