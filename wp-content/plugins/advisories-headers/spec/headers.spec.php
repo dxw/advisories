@@ -6,9 +6,22 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	});
 
 	describe('->register()', function () {
-		it('does not register actions or filter', function () {
+		it('does registers filters for wp_headers', function () {
+			allow('add_filter')->toBeCalled();
+			expect('add_filter')->toBeCalled()->with(
+				'wp_headers',
+				[$this->headers, 'addCacheControl']
+			);
 			$this->headers->register();
 			expect(true)->toBeTruthy();
+		});
+	});
+
+	describe('->addCacheControl()', function () {
+		it('does nothing', function () {
+			$headers = [];
+			$result = $this->headers->addCacheControl($headers);
+			expect($result)->toEqual($headers);
 		});
 	});
 });
