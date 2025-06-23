@@ -10,6 +10,7 @@ class Headers
 	public function register(): void
 	{
 		add_filter('wp_headers', [$this, 'addCacheControl']);
+		add_filter('wp_headers', [$this, 'addStrictTransportPolicy']);
 	}
 
 	/**
@@ -30,6 +31,15 @@ class Headers
 		} else {
 			$headers['Cache-Control'] = 'public, max-age=' . $this->ttl_long;
 		}
+		return $headers;
+	}
+
+	/**
+	 * @param string[] $headers
+	 * @return string[]
+	 */
+	public function addStrictTransportPolicy(array $headers): array
+	{
 		return $headers;
 	}
 }
