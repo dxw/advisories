@@ -50,7 +50,8 @@
                 <section class="warning">
                     <button type="button" id="old-versions" class="anchor">Old version</button>
                     <div id="old-versions" class="details">
-                        <p>This recommendation applies to version <?php echo end(explode(',',get_field('version_of_plugin'))) ?> of this plugin, but the most recent version is <?php echo esc_html($plugin->most_recent_version()) ?>. These findings may no longer be correct.</p>
+                        <?php $version_list = explode(',',get_field('version_of_plugin')); ?>
+                        <p>This recommendation applies to version <?php echo end($version_list) ?> of this plugin, but the most recent version is <?php echo esc_html($plugin->most_recent_version()) ?>. These findings may no longer be correct.</p>
                         <?php if ($plugin->have_latest()) : ?>
                             <p><a href="<?php echo esc_html($plugin->our_most_recent_link()) ?>">View the recommendation for version <?php echo esc_html($plugin->our_most_recent_version()) ?> of this plugin instead</a></p>
                         <?php endif ?>
