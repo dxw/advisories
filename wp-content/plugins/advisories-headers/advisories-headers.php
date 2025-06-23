@@ -1,21 +1,22 @@
 <?php
 
 /**
- * WordPress Plugin
+ * Advisories headers
  *
- * @package     WordPressPlugin
+ * @package     AdvisoriesHeaders
  * @author      dxw
- * @copyright   2020
+ * @copyright   2025
  * @license     MIT
  *
  * @wordpress-plugin
- * Plugin Name: WordPress Plugin
- * Plugin URI: https://github.com/dxw/wordpress-plugin
- * Description: TODO
+ * Plugin Name: Advisories Headers
+ * Plugin URI: https://github.com/dxw/advisories
+ * Description: HTTP headers for the dxw Advisories site
  * Author: dxw
  * Version: 0.1.0
  * Network: True
  */
 
-$registrar = require __DIR__.'/src/load.php';
-$registrar->register();
+require_once plugin_dir_path(__FILE__) . '/src/Headers.php';
+$headers = new \Dxw\AdvisoriesHeaders\Headers();
+$headers->register();
