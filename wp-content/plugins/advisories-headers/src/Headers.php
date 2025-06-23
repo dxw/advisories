@@ -11,6 +11,7 @@ class Headers
 	{
 		add_filter('wp_headers', [$this, 'addCacheControl']);
 		add_filter('wp_headers', [$this, 'addStrictTransportPolicy']);
+		add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
 	}
 
 	/**
@@ -50,4 +51,15 @@ class Headers
 		}
 		return $headers;
 	}
+
+	/**
+	 *
+	 * @param string[] $headers
+	 * @return string[]
+	 */
+	public function addContentSecurityPolicy(array $headers): array
+	{
+		return $headers;
+	}
+
 }

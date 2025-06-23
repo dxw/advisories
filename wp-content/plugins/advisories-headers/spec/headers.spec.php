@@ -8,7 +8,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	describe('->register()', function () {
 		it('does registers filters for wp_headers', function () {
 			allow('add_filter')->toBeCalled();
-			expect('add_filter')->toBeCalled()->times(2);
+			expect('add_filter')->toBeCalled()->times(3);
 			expect('add_filter')->toBeCalled()->once()->with(
 				'wp_headers',
 				[$this->headers, 'addCacheControl']
@@ -16,6 +16,10 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 			expect('add_filter')->toBeCalled()->once()->with(
 				'wp_headers',
 				[$this->headers, 'addStrictTransportPolicy']
+			);
+			expect('add_filter')->toBeCalled()->once()->with(
+				'wp_headers',
+				[$this->headers, 'addContentSecurityPolicy']
 			);
 			$this->headers->register();
 			expect(true)->toBeTruthy();
@@ -92,6 +96,14 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				$result = $this->headers->addStrictTransportPolicy([]);
 				expect($result)->toEqual($expected);
 			});
+		});
+	});
+
+	describe('->addContentSecurityPolicy()', function () {
+		it('does nothing', function () {
+			$expected = [];
+			$result = $this->headers->addContentSecurityPolicy([]);
+			expect($result)->toEqual($expected);
 		});
 	});
 });
