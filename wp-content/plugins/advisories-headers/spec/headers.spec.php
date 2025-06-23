@@ -100,10 +100,26 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	});
 
 	describe('->addContentSecurityPolicy()', function () {
-		it('does nothing', function () {
-			$expected = [];
-			$result = $this->headers->addContentSecurityPolicy([]);
-			expect($result)->toEqual($expected);
+		context('on localhost with no SSL', function () {
+			it('adds a CSP which only allows CORS between this site and Plausible or wordpress.org', function () {
+				allow('get_site_url')->toBeCalled()->andReturn('http://localhost');
+				$policy = "default-src 'self'; script-src 'self' 'unsafe-inline' data: https://plausible.io ";
+				$policy .= "https://wordpress.org; connect-src 'self' data: https://plausible.io https://wordpress.org; ";
+				$policy .= "img-src 'self' data: https://plausible.io https://wordpress.org; style-src 'self' ";
+				$policy .= "'unsafe-inline'; font-src 'self' data: https://wordpress.org; object-src 'none'; media-src ";
+				$policy .= "'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; manifest-src 'self'; ";
+				$policy .= "base-uri 'self'; form-action 'self'; frame-ancestors 'none';";
+				$expected = ['Content-Security-Policy' => $policy];
+				$result = $this->headers->addContentSecurityPolicy([]);
+				expect($result)->toEqual($expected);
+			});
+		});
+		context('on any other URL', function () {
+			it('adds a CSP which includes upgrade-insecure-requests', function () {
+				allow('get_site_url')->toBeCalled()->andReturn('https://example.com');
+				$result = $this->headers->addContentSecurityPolicy([])['Content-Security-Policy'];
+				expect(explode('; ', $result))->toContain('upgrade-insecure-requests;');
+			});
 		});
 	});
 });

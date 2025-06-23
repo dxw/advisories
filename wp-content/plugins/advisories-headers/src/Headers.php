@@ -53,12 +53,38 @@ class Headers
 	}
 
 	/**
+	 * Add a Content Security Policy.
+	 *
+	 * This policy is quite strict, it disallows everything except Plausible
+	 * (which we use for analytics) and wordpress.org (which provides some
+	 * basic functionality via an API).
 	 *
 	 * @param string[] $headers
 	 * @return string[]
 	 */
 	public function addContentSecurityPolicy(array $headers): array
 	{
+		$policy = [
+			"default-src 'self';",
+			"script-src 'self' 'unsafe-inline' data: https://plausible.io https://wordpress.org;",
+			"connect-src 'self' data: https://plausible.io https://wordpress.org;",
+			"img-src 'self' data: https://plausible.io https://wordpress.org;",
+			"style-src 'self' 'unsafe-inline';",
+			"font-src 'self' data: https://wordpress.org;",
+			"object-src 'none';",  // <object> and <embed>
+			"media-src 'none';",  // <video>, <audio> and <track>
+			"frame-src 'none';",
+			"child-src 'none';",  // web workers
+			"worker-src 'none';",
+			"manifest-src 'self';",
+			"base-uri 'self';",
+			"form-action 'self';",
+			"frame-ancestors 'none';",
+		];
+		if (get_site_url() !== 'http://localhost') {
+			array_push($policy, "upgrade-insecure-requests;");
+		}
+		$headers['Content-Security-Policy'] = implode(' ', $policy);
 		return $headers;
 	}
 
