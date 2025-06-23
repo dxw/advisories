@@ -84,7 +84,10 @@ module.exports = function (grunt) {
     copy: {
       production: {
         files: {
-          'static/lib/jquery.min.js': 'node_modules/jquery/dist/jquery.min.js'
+          'static/lib/jquery.min.js': 'node_modules/jquery/dist/jquery.min.js',
+          'static/font/poppins-v23-latin-ext-regular.woff2': 'assets/font/poppins-v23-latin-ext-regular.woff2',
+          'static/font/poppins-v23-latin-ext-600.woff2': 'assets/font/poppins-v23-latin-ext-600.woff2',
+          'static/font/poppins-v23-latin-ext-700.woff2': 'assets/font/poppins-v23-latin-ext-700.woff2'
         }
       }
     },

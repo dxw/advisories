@@ -1,9 +1,29 @@
 // Paths - use like this : #{$imagePath}
 $imagePath: "img";
-$fontPath: "../assets/fonts";
+$fontPath: "font";
 
 // Typography
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap");
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$fontPath}/poppins-v23-latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$fontPath}/poppins-v23-latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('#{$fontPath}/poppins-v23-latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 $system-font-family: -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', Sans-Serif;
 // Use system-font-family for iOS/ Android devices. Listed are: Apple iOS system font, iOS San Francisco, Apple San Francisco, Android, Windows Phone;
