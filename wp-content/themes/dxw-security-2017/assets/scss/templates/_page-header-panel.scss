@@ -1,8 +1,9 @@
 .page-header-panel {
   background: $brand-secondary;
   color: $white;
-  padding-top: $gutter;
-  padding-bottom: $gutter;
+  padding-top: $gutter * 2;
+  padding-bottom: $gutter * 2;
+  min-height: 150px;
 
   @media screen and (max-width:$small-screen) {
     padding-top: $gutter-mobile;
