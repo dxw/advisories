@@ -3,8 +3,10 @@
   background: $background;
   color: $text;
   &:hover,
+  &:active,
   &:focus {
     color: $text;
+    text-decoration: underline 2px;
   }
   &:hover {
     background: darken($background, 15);
