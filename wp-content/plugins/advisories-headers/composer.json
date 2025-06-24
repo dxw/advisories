@@ -1,0 +1,23 @@
+{
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "config": {
+      "platform": {
+        "php": "8.2"
+      }
+    },
+    "autoload": {
+        "psr-4": {
+            "Dxw\\AdvisoriesHeaders\\": "src/"
+        }
+    },
+    "require-dev": {
+        "dxw/php-cs-fixer-config": "^2.0",
+        "kahlan/kahlan": "^6",
+        "vimeo/psalm": "^5.14",
+        "humanmade/psalm-plugin-wordpress": "^3.1"
+    },
+    "require": {
+        "php": "^8.2"
+    }
+}

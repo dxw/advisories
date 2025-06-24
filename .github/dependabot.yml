@@ -15,6 +15,11 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 0
+- package-ecosystem: composer
+  directory: "/wp-content/plugins/advisories-headers"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 0
 - package-ecosystem: npm
   directory: "/wp-content/themes/dxw-security-2017"
   schedule:
