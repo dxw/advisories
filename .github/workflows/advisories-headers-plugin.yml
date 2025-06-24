@@ -33,4 +33,4 @@ jobs:
       - run: |
           vendor/bin/php-cs-fixer fix --dry-run -v --diff
           vendor/bin/kahlan
-          vendor/bin/psalm
+          vendor/bin/psalm --find-unused-psalm-suppress
