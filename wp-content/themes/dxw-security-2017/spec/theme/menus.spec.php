@@ -90,7 +90,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Menus::class, function () {
 						[
 							'theme_location' => $location,
 							'container' => false,
-							'items_wrap' => '<h5>_objectName_</h5><ul id="%1$s" class="%2$s">%3$s</ul>'
+							'items_wrap' => '<h2>_objectName_</h2><ul id="%1$s" class="%2$s">%3$s</ul>'
 						]
 					]
 				]);

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="global-footer-links">
             <section class="footer-contact">
-                <h5>Contact</h5>
+                <h2>Contact</h2>
                 <div itemscope itemtype="http://schema.org/Organization">
                      <span itemprop="name">dxw advisories</span>
                      <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
