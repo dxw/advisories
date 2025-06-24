@@ -7,7 +7,7 @@ defaults:
     working-directory: wp-content/plugins/advisories-headers
 
 jobs:
-  kahlan:
+  lint-and-test:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
@@ -30,52 +30,7 @@ jobs:
             ${{ runner.os }}-composer-
       - name: Install dependencies
         run: composer install --no-interaction
-      - run: vendor/bin/kahlan
-  psalm:
-    runs-on: ubuntu-24.04
-    strategy:
-      matrix:
-        php-versions: ['8.2']
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-versions }}
-      - name: Get Composer Cache Directory
-        id: composer-cache
-        run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
-      - uses: actions/cache@v4
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
-      - name: Install dependencies
-        run: composer install --no-interaction
-      - run: vendor/bin/psalm
-  php-cs-fixer:
-    runs-on: ubuntu-24.04
-    strategy:
-      matrix:
-        php-versions: ['8.2']
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php-versions }}
-      - name: Get Composer Cache Directory
-        id: composer-cache
-        run: |
-          echo "::set-output name=dir::$(composer config cache-files-dir)"
-      - uses: actions/cache@v4
-        with:
-          path: ${{ steps.composer-cache.outputs.dir }}
-          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-composer-
-      - name: Install dependencies
-        run: composer install --no-interaction
-      - run: vendor/bin/php-cs-fixer fix --dry-run -v --diff
+      - run: |
+          vendor/bin/php-cs-fixer fix --dry-run -v --diff
+          vendor/bin/kahlan
+          vendor/bin/psalm
