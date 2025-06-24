@@ -46,7 +46,7 @@ class Headers
 	 */
 	public function addStrictTransportPolicy(array $headers): array
 	{
-		if (wp_get_environment_type() !== 'local') {
+		if (wp_get_environment_type() !== 'local' && get_site_url() !== 'http://localhost') {
 			$headers['Strict-Transport-Security'] = 'max-age=31536000';
 		}
 		return $headers;
