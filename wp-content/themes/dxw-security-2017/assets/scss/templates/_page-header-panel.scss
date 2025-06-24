@@ -1,5 +1,5 @@
 .page-header-panel {
-  background: $accent-colour;
+  background: $brand-secondary;
   padding-top: $gutter;
   padding-bottom: $gutter;
 
@@ -7,7 +7,7 @@
     padding-top: $gutter-mobile;
     padding-bottom: $gutter-mobile;
   }
-  
+
   h1 {
     @include grid-column(12);
     margin-bottom: $medium-spacing;

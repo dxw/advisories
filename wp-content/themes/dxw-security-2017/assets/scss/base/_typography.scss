@@ -127,7 +127,7 @@ pre {
 }
 
 code {
-  background: $slight-grey;
+  background: $dxw-ivory;
 }
 
 // Links
@@ -243,4 +243,8 @@ img {
 .action-button {
   text-align: center;
   margin-top: $gutter*2;
+}
+
+p {
+  text-align: justify;
 }

@@ -99,14 +99,17 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
 			$this->scripts->wpPrintScripts();
 			$result = ob_get_contents();
 			ob_end_clean();
-			expect($result)->toBe(implode("\n", [
-				'        <meta name="viewport" content="width=device-width, initial-scale=1.0">',
-				'',
-				'        <link rel="apple-touch-icon-precomposed" href="_http://a.invalid/static/img/apple-touch-icon-precomposed.png_">',
-				'',
-				'        <link rel="icon" type="image/png" href="_http://a.invalid/static/img/shortcut-icon.png_">',
-				'        ',
-			]));
+			$expectedTags = [
+				'<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+				'<link rel="icon" type="image/png" href="_http://a.invalid/static/img/favicon-96x96.png_" sizes="96x96" />',
+				'<link rel="icon" type="image/svg+xml" href="_http://a.invalid/static/img/favicon.svg_" />',
+				'<link rel="shortcut icon" href="_http://a.invalid/static/img/favicon.ico_" />',
+				'<link rel="apple-touch-icon" sizes="180x180" href="_http://a.invalid/static/img/apple-touch-icon.png_" />',
+				'<link rel="manifest" href="_http://a.invalid/static/img/site.webmanifest_" />',
+			];
+			foreach ($expectedTags as $expected) {
+				expect($result)->toContain($expected);
+			}
 		});
 	});
 });
