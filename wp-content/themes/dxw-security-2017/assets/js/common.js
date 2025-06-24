@@ -1,6 +1,5 @@
 /* globals jQuery */
 
-require('./components/ToggleMenu')
 require('./components/StickyNavigation')
 require('./components/ProgressiveDisclosure')
 
