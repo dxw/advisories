@@ -2,6 +2,10 @@
   background: $accent-secondary;
   color: $darkest;
   text-align: center;
+  .row {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
 
   .button {
     @include button-light($brand-primary, $lightest);
