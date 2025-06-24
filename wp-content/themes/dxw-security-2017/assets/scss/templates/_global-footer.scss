@@ -72,6 +72,29 @@
         display: block;
       }
 
+      span[itemprop=name] {
+        &:hover,
+        &:focus,
+        &:active {
+          background: radial-gradient(
+            circle at 100%,
+              #69488e,
+              #7473c0 50%,
+              #a7a4df 75%,
+          );
+          background-size: 200% auto;
+          color: #000;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: animatedTextGradient 1.5s linear infinite;
+          @keyframes animatedTextGradient {
+            to {
+              background-position: 200% center;
+            }
+          }
+        }
+      }
+
       span[itemprop=addressLocality], span[itemprop=postalCode] {
         display: inline-block;
       }
