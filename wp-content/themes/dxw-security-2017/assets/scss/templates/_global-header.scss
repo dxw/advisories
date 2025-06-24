@@ -20,6 +20,13 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
       color: inherit;
       display: inline-block;
       border-bottom: 0;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $link-hover-colour;
+        border-bottom-color: rgba($link-hover-colour, 0.4);
+        text-decoration: none;
+      }
     }
 
     h1 {
