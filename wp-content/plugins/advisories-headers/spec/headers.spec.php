@@ -84,6 +84,16 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('on local environments', function () {
 			it('does nothing', function () {
 				allow('wp_get_environment_type')->toBeCalled()->andReturn('local');
+				allow('get_site_url')->toBeCalled()->andReturn('https://example.com');
+				$expected = [];
+				$result = $this->headers->addStrictTransportPolicy([]);
+				expect($result)->toEqual($expected);
+			});
+		});
+		context('on localhost with no SSL cert', function () {
+			it('does nothing', function () {
+				allow('wp_get_environment_type')->toBeCalled()->andReturn('local');
+				allow('get_site_url')->toBeCalled()->andReturn('http://localhost');
 				$expected = [];
 				$result = $this->headers->addStrictTransportPolicy([]);
 				expect($result)->toEqual($expected);
@@ -92,6 +102,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('on non-local environments', function () {
 			it('adds an STS header without subdomains', function () {
 				allow('wp_get_environment_type')->toBeCalled()->andReturn('staging');
+				allow('get_site_url')->toBeCalled()->andReturn('https://example.com');
 				$expected = ['Strict-Transport-Security' => 'max-age=31536000'];
 				$result = $this->headers->addStrictTransportPolicy([]);
 				expect($result)->toEqual($expected);
