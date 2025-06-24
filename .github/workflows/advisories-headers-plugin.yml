@@ -1,13 +1,13 @@
-name: dxw advisories theme
+name: Advisories headers plugin
 
 on: push
 
 defaults:
   run:
-    working-directory: wp-content/themes/dxw-security-2017
+    working-directory: wp-content/plugins/advisories-headers
 
 jobs:
-  lint_and_test:
+  lint-and-test:
     runs-on: ubuntu-24.04
     strategy:
       matrix:
@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup PHP
-        uses: shivammathur/setup-php@2.34.1
+        uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
       - name: Get Composer Cache Directory
@@ -30,7 +30,7 @@ jobs:
             ${{ runner.os }}-composer-
       - name: Install dependencies
         run: composer install --no-interaction
-      - name: PHP CS fix
-        run: vendor/bin/php-cs-fixer fix --dry-run -v --diff
-      - name: Run Kahlan tests
-        run: vendor/bin/kahlan spec
+      - run: |
+          vendor/bin/php-cs-fixer fix --dry-run -v --diff
+          vendor/bin/kahlan
+          vendor/bin/psalm --find-unused-psalm-suppress

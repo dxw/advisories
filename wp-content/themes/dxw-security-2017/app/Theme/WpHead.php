@@ -4,9 +4,12 @@ namespace Dxw\DxwSecurity2017\Theme;
 
 class WpHead implements \Dxw\Iguana\Registerable
 {
+	private static $GB_LANG = "en-GB";
+
 	public function register()
 	{
 		add_action('init', [$this, 'init']);
+		add_filter('language_attributes', [$this, 'customLanguageAttribute']);
 	}
 
 	public function init()
@@ -27,5 +30,12 @@ class WpHead implements \Dxw\Iguana\Registerable
 		remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 		remove_action('wp_head', 'rest_output_link_wp_head', 10);
 		remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
+	}
+
+	public function customLanguageAttribute($output)
+	{
+		$output = preg_replace('/lang=".*?"/i', '', $output);
+		$output .= 'lang="' . esc_attr(self::$GB_LANG) . '"';
+		return $output;
 	}
 }

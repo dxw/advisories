@@ -4,6 +4,10 @@
   color: $lightest;
   @extend small;
 
+  h2 {
+    @include font-size-map($h5-font-size);
+  }
+
   @media screen and (max-width: $small-screen) {
     padding-top: #{$gutter-mobile * 2};
   }

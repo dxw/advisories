@@ -17,6 +17,7 @@ describe(\Dxw\DxwSecurity2017\Theme\WpHead::class, function () {
 	describe('->register()', function () {
 		it('adds actions', function () {
 			\WP_Mock::expectActionAdded('init', [$this->wpHead, 'init']);
+			\WP_Mock::expectFilterAdded('language_attributes', [$this->wpHead, 'customLanguageAttribute']);
 			$this->wpHead->register();
 		});
 	});
@@ -47,6 +48,13 @@ describe(\Dxw\DxwSecurity2017\Theme\WpHead::class, function () {
 				]);
 			}
 			$this->wpHead->init();
+		});
+	});
+
+	describe('->customLanguageAttribute()', function () {
+		it('changes the lang attribute to en-GB', function () {
+			$output = $this->wpHead->customLanguageAttribute('lang="CY"');
+			expect($output)->toEqual('lang="en-GB"');
 		});
 	});
 });
