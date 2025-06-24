@@ -41,6 +41,8 @@
   cursor: pointer;
   outline: 0;
   transition: all 0.3s ease-in-out;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 button {
@@ -50,12 +52,12 @@ button {
   padding: 0;
   cursor: pointer;
   outline: 0;
- border-radius: 40px;
+  border-radius: 35px;
 }
 
 .button {
   @extend %button;
-  border-radius: 40px;
+  border-radius: 35px;
 }
 
 .button-white {
