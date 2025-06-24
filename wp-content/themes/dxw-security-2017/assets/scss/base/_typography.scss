@@ -142,6 +142,7 @@ a {
   &:active {
     color: $link-hover-colour;
     border-bottom-color: rgba($link-hover-colour, 0.4);
+    text-decoration: underline 2px;
   }
 
   &.call-to-action {
@@ -160,6 +161,7 @@ button {
   &:focus,
   &:active {
     color: $link-hover-colour;
+    text-decoration: underline 2px;
   }
 }
 
