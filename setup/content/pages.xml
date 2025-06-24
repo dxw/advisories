@@ -27,13 +27,13 @@
 
 <channel>
 	<title>dxwsecurity</title>
-	<link>https://security.staging.dxw.net</link>
+	<link>http://localhost</link>
 	<description>WordPress security advisories, audit and assurance</description>
 	<pubDate>Mon, 14 Aug 2017 10:38:01 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
-	<wp:base_site_url>https://security.staging.dxw.net</wp:base_site_url>
-	<wp:base_blog_url>https://security.staging.dxw.net</wp:base_blog_url>
+	<wp:base_site_url>http://localhost</wp:base_site_url>
+	<wp:base_blog_url>http://localhost</wp:base_blog_url>
 
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[harry]]></wp:author_login><wp:author_email><![CDATA[harry@dxw.com]]></wp:author_email><wp:author_display_name><![CDATA[Harry Metcalfe]]></wp:author_display_name><wp:author_first_name><![CDATA[Harry]]></wp:author_first_name><wp:author_last_name><![CDATA[Metcalfe]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>23</wp:author_id><wp:author_login><![CDATA[dxwsupport]]></wp:author_login><wp:author_email><![CDATA[systems@dxw.com]]></wp:author_email><wp:author_display_name><![CDATA[dxwsupport]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
@@ -43,12 +43,12 @@
 
 	<item>
 		<title>About</title>
-		<link>https://security.staging.dxw.net/about/</link>
+		<link>http://localhost/about/</link>
 		<pubDate>Wed, 19 Jun 2013 15:32:25 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
 		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=22</guid>
 		<description></description>
-		<content:encoded><![CDATA[Our clients, who are mostly in central government, are understandably concerned about information security, and the resilience of the websites they commission. As a result, we often undertake <a title="Plugin inspections" href="https://security.staging.dxw.net/about/plugin-inspections/">inspections</a> and <a title="Plugin reviews" href="https://security.staging.dxw.net/about/plugin-reviews/">code reviews</a> of plugins, as well as penetration testing. This work produces results that we felt would be useful to the WordPress community at large, so we built this website to share them.
+		<content:encoded><![CDATA[Our clients, who are mostly in central government, are understandably concerned about information security, and the resilience of the websites they commission. As a result, we often undertake <a title="Plugin inspections" href="http://localhost/about/plugin-inspections/">inspections</a> and <a title="Plugin reviews" href="http://localhost/about/plugin-reviews/">code reviews</a> of plugins, as well as penetration testing. This work produces results that we felt would be useful to the WordPress community at large, so we built this website to share them.
 
 While dxw specialises in the public sector, we are available to conduct WordPress-related assurance work for any client with similar requirements. We do plan to expand the services we offer in this area.
 
@@ -77,7 +77,7 @@ This site is in its very early days, and should be considered a beta.  In the m
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.staging.dxw.net/about/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://localhost/about/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[introduction]]></wp:meta_key>
@@ -90,7 +90,7 @@ This site is in its very early days, and should be considered a beta.  In the m
 	</item>
 	<item>
 		<title>Plugin inspections</title>
-		<link>https://security.staging.dxw.net/about/plugin-inspections/</link>
+		<link>http://localhost/about/plugin-inspections/</link>
 		<pubDate>Wed, 19 Jun 2013 15:33:09 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
 		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=26</guid>
@@ -134,7 +134,7 @@ While testers should, in general, follow the criteria in this section when makin
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.staging.dxw.net/about/plugin-inspections/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://localhost/about/plugin-inspections/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[introduction]]></wp:meta_key>
@@ -496,7 +496,7 @@ Note: this is not in itself a failure criterion, but is often a factor when cons
 	</item>
 	<item>
 		<title>Plugin reviews</title>
-		<link>https://security.staging.dxw.net/about/plugin-reviews/</link>
+		<link>http://localhost/about/plugin-reviews/</link>
 		<pubDate>Wed, 19 Jun 2013 17:03:46 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
 		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=40</guid>
@@ -537,7 +537,7 @@ While testers should, in general, follow the criteria in this section when makin
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.staging.dxw.net/about/plugin-reviews/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://localhost/about/plugin-reviews/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[introduction]]></wp:meta_key>
@@ -648,7 +648,7 @@ While testers should, in general, follow the criteria in this section when makin
 	</item>
 	<item>
 		<title>Terms of service</title>
-		<link>https://security.staging.dxw.net/terms/</link>
+		<link>http://localhost/terms/</link>
 		<pubDate>Wed, 19 Jun 2013 19:18:12 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
 		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=69</guid>
@@ -692,7 +692,7 @@ In addition to this document, you may wish to read our <a title="Disclosure poli
 	</item>
 	<item>
 		<title>Disclosure policy</title>
-		<link>https://security.staging.dxw.net/disclosure/</link>
+		<link>http://localhost/disclosure/</link>
 		<pubDate>Wed, 19 Jun 2013 19:40:54 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
 		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=71</guid>
@@ -739,7 +739,7 @@ Accordingly, our disclosure policy is as follows. Upon identifying a security vu
 	</item>
 	<item>
 		<title>Services</title>
-		<link>https://security.staging.dxw.net/?page_id=167</link>
+		<link>http://localhost/?page_id=167</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
 		<guid isPermaLink="false">http://advisories.dxw.com/?page_id=167</guid>
@@ -771,15 +771,15 @@ Why are we good at it?]]></content:encoded>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wpt_short_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.staging.dxw.net/?page_id=167]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://localhost/?page_id=167]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
 		<title>Home</title>
-		<link>https://security.staging.dxw.net/</link>
+		<link>http://localhost/</link>
 		<pubDate>Thu, 03 Aug 2017 10:01:17 +0000</pubDate>
 		<dc:creator><![CDATA[dxwsupport]]></dc:creator>
-		<guid isPermaLink="false">https://security.staging.dxw.net/?page_id=3052</guid>
+		<guid isPermaLink="false">http://localhost/?page_id=3052</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -826,7 +826,7 @@ Why are we good at it?]]></content:encoded>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[services_0_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.staging.dxw.net/plugins/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://localhost/plugins/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_services_0_link]]></wp:meta_key>
@@ -858,7 +858,7 @@ Why are we good at it?]]></content:encoded>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[services_1_link]]></wp:meta_key>
-			<wp:meta_value><![CDATA[https://security.staging.dxw.net/advisories/]]></wp:meta_value>
+			<wp:meta_value><![CDATA[http://localhost/advisories/]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_services_1_link]]></wp:meta_key>
@@ -891,10 +891,10 @@ Why are we good at it?]]></content:encoded>
 	</item>
 	<item>
 		<title>Contact us</title>
-		<link>https://security.staging.dxw.net/contact-us/</link>
+		<link>http://localhost/contact-us/</link>
 		<pubDate>Mon, 07 Aug 2017 11:20:19 +0000</pubDate>
 		<dc:creator><![CDATA[dxwsupport]]></dc:creator>
-		<guid isPermaLink="false">https://security.staging.dxw.net/?page_id=3064</guid>
+		<guid isPermaLink="false">http://localhost/?page_id=3064</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
