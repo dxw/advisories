@@ -35,9 +35,19 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				expect($result)->toEqual($expected);
 			});
 		});
+		context('if the page is a preview page', function () {
+			it('does not cache the page', function () {
+				allow('is_user_logged_in')->toBeCalled()->andReturn(false);
+				allow('is_preview')->toBeCalled()->andReturn(true);
+				$expected = ['Cache-Control' => 'no-cache, private'];
+				$result = $this->headers->addCacheControl([]);
+				expect($result)->toEqual($expected);
+			});
+		});
 		context('if the user is not logged in and the request is a search query', function () {
 			it('caches the page with a short TTL', function () {
 				allow('is_user_logged_in')->toBeCalled()->andReturn(false);
+				allow('is_preview')->toBeCalled()->andReturn(false);
 				allow('is_search')->toBeCalled()->andReturn(true);
 				allow('is_front_page')->toBeCalled()->andReturn(false);
 				allow('is_archive')->toBeCalled()->andReturn(true);
@@ -49,6 +59,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('if the user is not logged in and the page is the homepage', function () {
 			it('caches the page with a short TTL', function () {
 				allow('is_user_logged_in')->toBeCalled()->andReturn(false);
+				allow('is_preview')->toBeCalled()->andReturn(false);
 				allow('is_search')->toBeCalled()->andReturn(false);
 				allow('is_front_page')->toBeCalled()->andReturn(true);
 				$expected = ['Cache-Control' => 'public, max-age=1800'];
@@ -59,6 +70,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('if the user is not logged in and the page is an archive page', function () {
 			it('caches the page with a short TTL', function () {
 				allow('is_user_logged_in')->toBeCalled()->andReturn(false);
+				allow('is_preview')->toBeCalled()->andReturn(false);
 				allow('is_search')->toBeCalled()->andReturn(false);
 				allow('is_front_page')->toBeCalled()->andReturn(false);
 				allow('is_archive')->toBeCalled()->andReturn(true);
@@ -70,6 +82,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('if the user is not logged in and the page is not the homepage or an archive page', function () {
 			it('does caches the page with a long TTL', function () {
 				allow('is_user_logged_in')->toBeCalled()->andReturn(false);
+				allow('is_preview')->toBeCalled()->andReturn(false);
 				allow('is_search')->toBeCalled()->andReturn(false);
 				allow('is_front_page')->toBeCalled()->andReturn(false);
 				allow('is_archive')->toBeCalled()->andReturn(false);
