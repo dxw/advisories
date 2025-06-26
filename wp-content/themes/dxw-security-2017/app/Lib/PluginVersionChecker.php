@@ -9,7 +9,7 @@ class PluginVersionChecker
 	private string $version;
 	private bool $is_codex;
 	private string $codex_link;
-	private string $slug;
+	private string $slug = '';
 
 	public function __construct()
 	{
