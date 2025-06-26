@@ -25,7 +25,7 @@ class Headers
 	 */
 	public function addCacheControl(array $headers): array
 	{
-		if (is_user_logged_in()) {
+		if (is_user_logged_in() || is_preview()) {
 			$headers['Cache-Control'] = 'no-cache, private';
 		} elseif (is_front_page() || is_archive() || is_search()) {
 			$headers['Cache-Control'] = 'public, max-age=' . $this->ttl_short;
