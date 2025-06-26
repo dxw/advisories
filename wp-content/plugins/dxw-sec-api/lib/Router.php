@@ -18,6 +18,12 @@ class Router
         register_rest_route('v1', 'inspections/(?P<slug>'.$this->slug_regex.')', [
             'methods' => 'GET',
             'callback' => [$this->inspections_controller, 'show'],
+            'permission_callback' => [$this, 'checkPermission'],
         ]);
+    }
+
+    public function checkPermission(): bool
+    {
+        return true;
     }
 }
