@@ -2,6 +2,11 @@
 @mixin button-background($background, $text) {
   background: $background;
   color: $text;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: keep-all;
+
   &:hover,
   &:active,
   &:focus {
