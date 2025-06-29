@@ -4,7 +4,7 @@
             <div class="form-field">
                 <input type="hidden" name="post_type" value="advisories">
                 <input type="search" aria-label="Search advisories" value="<?php echo get_search_query() ?>" name="s" id="s">
-                <button value="Search" class="button">Search</button>
+                <button value="Search" class="button">Search advisories</button>
             </div>
         </form>
     </div>
