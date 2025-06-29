@@ -10,6 +10,7 @@
   }
   &:hover {
     background: darken($background, 15);
+    border-bottom: 0;
   }
   &:active,
   &:focus {
