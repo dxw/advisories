@@ -19,10 +19,11 @@
       text-align: center;
 
       &.current {
-
         a {
           color: $base-font-colour;
           cursor: default;
+          text-decoration: underline;
+          text-decoration-thickness: 2px;
         }
       }
 
@@ -37,6 +38,10 @@
     a {
       margin-right: 10px;
       border-bottom: 0;
+      &:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+      }
     }
   }
 
