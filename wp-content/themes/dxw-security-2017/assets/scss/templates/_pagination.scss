@@ -35,7 +35,13 @@
       }
     }
 
+
+    .underline {
+      text-decoration: underline;
+    }
+
     a {
+      text-decoration: none;
       margin-right: 10px;
       border-bottom: 0;
       &:hover {

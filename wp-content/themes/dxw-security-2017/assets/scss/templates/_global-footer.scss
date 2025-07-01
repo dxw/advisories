@@ -16,11 +16,24 @@
 
   a {
     color: $lightest;
-    border-bottom: 1px dashed rgba($white, 0.2);
-    &:hover,
-    &:focus,
-    &:active {
-      border-bottom: 2px solid rgba($white, 0.4);
+
+    &:hover {
+      color: $white;
+      text-decoration-thickness: calc(max(3px, 0.15em));
+    }
+
+    &:focus {
+    	outline: 2px solid $lightest;
+    	outline-offset: 2px;
+    }
+
+    &:focus:not(:focus-visible) {
+    	outline: 0;
+    }
+
+    &:focus-visible {
+    	outline: 2px solid $lightest;
+    	outline-offset: 2px;
     }
   }
 

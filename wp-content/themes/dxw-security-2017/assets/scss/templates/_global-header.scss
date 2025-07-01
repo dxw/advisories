@@ -17,15 +17,11 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
     }
 
     a {
-      color: inherit;
-      display: inline-block;
-      border-bottom: 0;
+      text-decoration: none;
       &:hover,
       &:focus,
       &:active {
-        color: $link-hover-colour;
-        border-bottom-color: rgba($link-hover-colour, 0.4);
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
 
@@ -84,6 +80,7 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
         a {
           color: $brand-primary;
           border-bottom-color: $brand-primary;
+          text-decoration: none;
 
           @media screen and (max-width:$small-screen) {
             border-left-color: $brand-primary;
@@ -92,7 +89,7 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
       }
 
       a {
-        padding-bottom: 11px;
+        padding-bottom: 5px;
         border-bottom: 5px solid transparent;
 
         @media screen and (max-width:$small-screen) {

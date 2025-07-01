@@ -8,8 +8,8 @@ jQuery(function ($) {
 
   // Change previous/next navigation in pager
  $(function () {
-   $('.arrow.previous a').html('<span class="hidden-min-width">Previous<span class="sr-only"> page</span></span>');
-   $('.arrow.next a').html('<span class="hidden-min-width">Next<span class="sr-only"> page</span></span>');
+   $('.arrow.previous a').html('<span class="hidden-min-width underline">Previous<span class="sr-only"> page</span></span>');
+   $('.arrow.next a').html('<span class="hidden-min-width underline">Next<span class="sr-only"> page</span></span>');
  })
 
 })
