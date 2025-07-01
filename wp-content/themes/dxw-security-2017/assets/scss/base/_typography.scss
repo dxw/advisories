@@ -127,21 +127,21 @@ pre {
 }
 
 code {
-  background: $slight-grey;
+  background: $dxw-ivory;
 }
 
 // Links
 a {
   color: $link-colour;
   text-decoration: none;
-  border-bottom: 3px solid rgba($link-colour, 0.2);
+  border-bottom: 1px dotted rgba($link-colour, 0.2);
   transition: all 0.2s ease-in-out;
 
   &:hover,
   &:focus,
   &:active {
     color: $link-hover-colour;
-    border-bottom-color: rgba($link-hover-colour, 0.4);
+    border-bottom: 2px solid rgba($link-hover-colour, 1.0);
   }
 
   &.call-to-action {
@@ -160,6 +160,7 @@ button {
   &:focus,
   &:active {
     color: $link-hover-colour;
+    border-bottom-color: 2px rgba($link-hover-colour, 1.0);
   }
 }
 

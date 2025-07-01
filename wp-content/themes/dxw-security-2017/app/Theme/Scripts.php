@@ -55,10 +55,11 @@ class Scripts implements \Dxw\Iguana\Registerable
 	{
 		?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="apple-touch-icon-precomposed" href="<?php $this->assetPath('img/apple-touch-icon-precomposed.png') ?>">
-
-        <link rel="icon" type="image/png" href="<?php $this->assetPath('img/shortcut-icon.png') ?>">
+        <link rel="icon" type="image/png" href="<?php $this->assetPath('img/favicon-96x96.png') ?>" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="<?php $this->assetPath('img/favicon.svg') ?>" />
+        <link rel="shortcut icon" href="<?php $this->assetPath('img/favicon.ico') ?>" />
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php $this->assetPath('img/apple-touch-icon.png') ?>" />
+        <link rel="manifest" href="<?php $this->assetPath('img/site.webmanifest') ?>" />
         <?php
 	}
 }

@@ -1,4 +1,5 @@
 .sidebar {
+    background: $lightest;
     section {
         padding: $padding-width;
         border: 1px solid $medium-grey;
@@ -8,9 +9,9 @@
         @include grid-media($grid-mobile) {
           margin-bottom: $gutter-mobile*2;
         }
-        
+
         &.widget {
-            border-top: 3px solid $accent-colour;
+            border-top: 3px solid $accent-primary;
         }
     }
 }

@@ -1,5 +1,7 @@
 <?php get_template_part('partials/page-header'); ?>
 
+<?php get_template_part('partials/global-search-form'); ?>
+
 <?php get_template_part('partials/page-introduction'); ?>
 
 <div class="row">

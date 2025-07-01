@@ -1,7 +1,7 @@
 section.admin-tools-container {
   padding: $padding-width;
   border: 1px solid $medium-grey;
-  border-top: 3px solid $dxwsec-red;
+  border-top: 3px solid $advisories-red;
   margin: $gutter*2 0;
 
   @include grid-media($grid-mobile) {
@@ -77,7 +77,7 @@ section.admin-tools-container {
 
   .email_results {
     @extend .alert;
-    border-left-color: $dxwsec-green;
+    border-left-color: $advisories-green;
     background: $light-grey;
   }
 

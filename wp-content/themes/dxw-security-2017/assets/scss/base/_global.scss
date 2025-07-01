@@ -42,7 +42,7 @@ $body-background-colour: $lightest;
 
 // Links
 $link-colour: $brand-primary;
-$link-hover-colour: darken($link-colour, 15);
+$link-hover-colour: $brand-secondary;
 $link-visited-colour: #4c2c92;
 
 // Buttons

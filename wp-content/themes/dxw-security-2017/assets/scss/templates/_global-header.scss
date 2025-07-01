@@ -20,6 +20,13 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
       color: inherit;
       display: inline-block;
       border-bottom: 0;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $link-hover-colour;
+        border-bottom-color: rgba($link-hover-colour, 0.4);
+        text-decoration: none;
+      }
     }
 
     h1 {
@@ -44,8 +51,6 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
 .menu-header {
 
   @media screen and (max-width:$small-screen) {
-    display: none;
-
     &.expanded {
       width: 100%;
       display: inline-block;
@@ -69,11 +74,6 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
       @include font-size-map($header-nav-font-size);
 
       &:first-child {
-        margin-left: 0;
-      }
-
-      @media screen and (max-width:$small-screen) {
-        display: block;
         margin-left: 0;
       }
 
@@ -115,23 +115,6 @@ body.single-post .menu-header ul {
 
   li.current_page_parent {
     @extend li.current-page-ancestor;
-  }
-}
-
-.navigation-toggle {
-  width: 32px;
-  position: absolute;
-  top: 15px;
-  right: $gutter;
-
-  @media screen and (max-width:$tiny-screen) {
-    top: 10px;
-  }
-
-  svg {
-    path {
-      fill: $brand-primary;
-    }
   }
 }
 

@@ -1,13 +1,15 @@
 .page-header-panel {
-  background: $accent-colour;
-  padding-top: $gutter;
-  padding-bottom: $gutter;
+  background: $brand-secondary;
+  color: $white;
+  padding-top: $gutter * 2;
+  padding-bottom: $gutter * 2;
+  min-height: 150px;
 
   @media screen and (max-width:$small-screen) {
     padding-top: $gutter-mobile;
     padding-bottom: $gutter-mobile;
   }
-  
+
   h1 {
     @include grid-column(12);
     margin-bottom: $medium-spacing;

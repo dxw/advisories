@@ -1,7 +1,9 @@
 .global-footer {
   padding: #{$gutter * 2} 0 0;
-  background: $dark-grey;
+  background: $dxw-blue;
   color: $lightest;
+  font-size: clamp(14px,18px, 24px);
+  line-height: $base-line-height * 1.1;
   @extend small;
 
   h2 {
@@ -14,11 +16,11 @@
 
   a {
     color: $lightest;
-    border-bottom: 1px solid rgba($white, 0.2);
+    border-bottom: 1px dashed rgba($white, 0.2);
     &:hover,
     &:focus,
     &:active {
-      border-bottom-color: rgba($white, 0.4);
+      border-bottom: 2px solid rgba($white, 0.4);
     }
   }
 
@@ -68,6 +70,29 @@
 
       span {
         display: block;
+      }
+
+      span[itemprop=name] {
+        &:hover,
+        &:focus,
+        &:active {
+          background: radial-gradient(
+            circle at 100%,
+              #69488e,
+              #7473c0 50%,
+              #a7a4df 75%,
+          );
+          background-size: 200% auto;
+          color: #000;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: animatedTextGradient 1.5s linear infinite;
+          @keyframes animatedTextGradient {
+            to {
+              background-position: 200% center;
+            }
+          }
+        }
       }
 
       span[itemprop=addressLocality], span[itemprop=postalCode] {
@@ -201,7 +226,7 @@
           height: 48px;
           display: inline-block;
           margin: 0 0 0 $gutter/2;
-          background: $dark-grey;
+          background: $dxw-blue;
           border-radius: 50%;
           border: 3px solid transparent;
           transition: border-color 0.3s ease-out;

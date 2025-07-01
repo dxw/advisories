@@ -1,54 +1,48 @@
 // dxw palette
-$dxw-light-green: #3bc492;
 $dxw-green: #006874;
-$dxw-orange: #ff8d6b;
-$dxw-yellow: #ffb259;
-$dxw-red: #9f1f1f;
-$dxw-pink: #b15fa2;
-$dxw-purple: #7473c0;
-$dxw-turquoise: #00a0b0;
-$dxw-blue: #004876; // dark blue
-$dxw-light-blue: #009abf;
+$dxw-pink: #ffb1b9;
+$dxw-purple: #69488e;
+$dxw-teal: #80c7bc;
+$dxw-blue: #004876;
+$dxw-navy: #243746;
 $dxw-ivory: #f9f8f5;
+$dxw-cream: #f3f1e9;
 
-// dxw security palette
-$dxwsec-purple: #69488e;
-$dxwsec-turquoise: #09615d;
-$dxwsec-red: #cc0000;
-$dxwsec-yellow: #fab614;
-$dxwsec-orange: #f26d04;
-$dxwsec-orange-dark: #d34202;
-$dxwsec-green: #1d8046;
+// Advisories palette
+$advisories-purple: $dxw-purple;
+$advisories-red: #cc0000;
+$advisories-yellow: #fab614;
+$advisories-orange-dark: #d34202;
+$advisories-green: #1d8046;
 
 // greys
-$black: #243746;
-$placeholder-grey: #505456;
+$black: $dxw-navy;
 $dark-grey: #4c535a;
 $grey: #95989a;
-$slight-grey: #e0e0e0;
-$medium-grey: #eeeeee;
+$medium-grey: $dxw-cream;
 $light-grey: $dxw-ivory;
 $white: #ffffff;
 
 // Social media
 $bsky: #1185Fe;
-$twitter: #1da1f2;
-$facebook: #3b5998;
+$twitter: #000000;
+$facebook: #1877f2;
 $linkedin: #0077b5;
-$google: #dd4b39;
-$github: #4078c0;
+$google: #ea4335;
+$github: #1a7f37;
 
 // Theme colours
 $brand-primary: $black;
-$brand-secondary: $dxwsec-purple;
-$accent-colour: $dxw-orange;
+$brand-secondary: $dxw-purple;
+$accent-primary: $dxw-teal;
+$accent-secondary: $dxw-pink;
 
 $lightest: $white;
 $darkest: $black;
 
 // Errors and notifications
-$highlight: $dxwsec-yellow;
-$error: $dxwsec-red;
+$highlight: $advisories-yellow;
+$error: $advisories-red;
 $success: $dxw-green;
 $info: $dxw-blue;
-$alert: $dxwsec-orange-dark;
+$alert: $advisories-orange-dark;
