@@ -27,7 +27,7 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
 
     h1 {
       font-weight: normal;
-      height: 48px;
+      margin-bottom: 15px;
       background: url('#{$imagePath}/d-marque.png') no-repeat 0 0 / 48px;
       padding-left: 60px;
     }
