@@ -19,52 +19,6 @@
           box-sizing: $type;
 }
 
-// Triangle arrow
-@mixin arrow($width: 10px, $direction: up, $vertical: 0, $horizontal: 50%, $color: red) {
-
-  width: $width;
-  height: $width;
-  content: '';
-  position: absolute;
-
-  // Right
-  @if $direction == right {
-    top: $vertical;
-    right: $horizontal;
-    border-top: $width solid transparent;
-    border-bottom: $width solid transparent;
-    border-left: $width solid $color;
-  }
-
-  // Left
-  @if $direction == left {
-    top: $vertical;
-    left: $horizontal;
-    border-top: $width solid transparent;
-    border-bottom: $width solid transparent;
-    border-right: $width solid $color;
-  }
-
-  // Up
-  @if $direction == up {
-    top: $vertical;
-    left: $horizontal;
-    border-left: $width solid transparent;
-    border-right: $width solid transparent;
-    border-bottom: $width solid $color;
-  }
-
-  // Down
-  @if $direction == down {
-    bottom: $vertical;
-    left: $horizontal;
-    border-left: $width solid transparent;
-    border-right: $width solid transparent;
-    border-top: $width solid $color;
-  }
-
-}
-
 // Flexbox
 @mixin flexbox {
   display: -webkit-box;
