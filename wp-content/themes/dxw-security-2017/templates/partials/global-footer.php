@@ -41,13 +41,13 @@
     <div class="row global-footer-certificates">
         <p><?php echo get_theme_mod('digital_marketplace_text');?></p>
         <div class="badges">
-            <a href="<?php h()->assetPath('img/ukas.svg'); ?>"><img class="badge ukas" src="<?php h()->assetPath('img/ukas.svg'); ?>" alt="UKAS logo"></a>
-            <img src="<?php h()->assetPath('img/ccs-certificate.png'); ?>" alt="Government Procurement Service" class="badge ccss">
+            <a href="<?php h()->assetPath('img/ukas.svg'); ?>"><img class="badge ukas" loading="lazy" src="<?php h()->assetPath('img/ukas.svg'); ?>" alt="UKAS logo"></a>
+            <img loading="lazy" src="<?php h()->assetPath('img/ccs-certificate.png'); ?>" alt="Government Procurement Service" class="badge ccss">
             <a href="https://registry.blockmarktech.com/certificates/fe6a3790-9019-4df0-8d32-f894397b03d2/" rel="external">
-                <img class="pre-footer__logos__cyber" src="<?php h()->assetPath('img/ce-mark.png'); ?>" alt="Cyber Essentials logo">
+                <img class="pre-footer__logos__cyber" loading="lazy" src="<?php h()->assetPath('img/ce-mark.png'); ?>" alt="Cyber Essentials logo">
             </a>
             <a href="https://registry.blockmarktech.com/certificates/ced635fc-ba0c-4e59-905c-508dd66dff1b/" rel="external">
-                <img class="pre-footer__logos__cyber" src="<?php h()->assetPath('img/ce-plus-mark.png'); ?>" alt="Cyber Essentials Plus logo">
+                <img class="pre-footer__logos__cyber" loading="lazy" src="<?php h()->assetPath('img/ce-plus-mark.png'); ?>" alt="Cyber Essentials Plus logo">
             </a>
         </div>
     </div>
