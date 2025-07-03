@@ -16,10 +16,11 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
 
     <?php get_template_part('partials/global-header'); ?>
 
-    <main class="main" role="main">
+    <main class="main" id="main-content" role="main">
         <?php h()->w_requested_template(); ?>
     </main>
 
