@@ -59,7 +59,7 @@
       &:focus {
         z-index: 3;
         background: darken($brand-primary, 20);
-        outline: 2px solid $highlight;
+        outline: 2px solid $brand-primary;
       }
 
       @media screen and (max-width:$small-screen) {

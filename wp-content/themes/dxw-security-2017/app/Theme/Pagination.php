@@ -2,46 +2,27 @@
 
 namespace Dxw\DxwSecurity2017\Theme;
 
-class Pagination
+class Pagination implements \Dxw\Iguana\Registerable
 {
-	public function __construct(\Dxw\Iguana\Theme\Helpers $helpers)
+	public function register(): void
 	{
-		$helpers->registerFunction('pagination', [$this, 'pagination']);
+		add_filter('paginate_links_output', [$this, 'makeCurrentPageClickable'], 10, 1);
 	}
 
-	public function pagination($q = null, $return = false)
+	public function makeCurrentPageClickable(string $html): string
 	{
-		global $wp_query;
-		global $paged;
+		$current = max(1, get_query_var('paged'));
+		$span = sprintf(
+			'<span aria-current="page" class="page-numbers current"><span class="sr-only">Page</span>%d</span>',
+			$current
+		);
 
-		if ($q === null) {
-			$q = $wp_query;
-		}
+		$link = sprintf(
+			'<a class="page-numbers current" href="%s" aria-current="page">%d</a>',
+			esc_url(get_pagenum_link($current)),
+			$current
+		);
 
-		if (count($q->posts) === 1) {
-			return;
-		}
-
-		$args = $q->query;
-
-		$max = intval($q->max_num_pages);
-		$paged = get_query_var('paged') ? absint(get_query_var('paged')) : 1;
-
-		// Stop execution if there's only 1 page
-		if ($max <= 1) {
-			return;
-		}
-
-		$pagination = new \Dxw\Pagination($paged, $max, 2, 1, function ($n) use ($args) {
-			$args['paged'] = $n;
-
-			return add_query_arg($args, get_bloginfo('url'));
-		});
-
-		if ($return) {
-			return $pagination->render();
-		} else {
-			echo $pagination->render();
-		}
+		return str_replace($span, $link, $html);
 	}
 }
