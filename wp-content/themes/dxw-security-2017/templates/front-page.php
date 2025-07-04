@@ -30,31 +30,23 @@
     <div class="row">
 
         <section class="homepage-feed-container feed-container">
-            <h4>Recent plugin recommendations</h4>
+            <h2>Recent plugin recommendations</h2>
             <?php global $post;
                 $args = array('post_type' => 'Plugins');
                 $custom_posts = get_posts($args);
                 foreach($custom_posts as $post) : setup_postdata($post); ?>
-                <article class="short-review">
-                    <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
-                    <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
-                    <?php h()->the_short_recommendation(); ?>
-                </article>
+                <?php get_template_part('partials/article-list-item'); ?>
             <?php endforeach; ?>
             <a href="/plugins" class="button">All plugin recommendations</a>
         </section>
 
         <section class="homepage-feed-container feed-container">
-            <h4>Recent advisories</h4>
+            <h2>Recent advisories</h2>
             <?php global $post;
                 $args = array('post_type' => 'Advisories');
                 $custom_posts = get_posts($args);
                 foreach($custom_posts as $post) : setup_postdata($post); ?>
-                <article class="short-review">
-                    <a href="<?php the_permalink();?>"><?php the_title(); ?></a>
-                    <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
-                    <p class="score <?php echo strtolower(h()->get_cvss_severity()); ?>">Severity: <span class="score"><?php h()->the_cvss_severity(); ?></span></p>
-                </article>
+                <?php get_template_part('partials/article-list-item'); ?>
             <?php endforeach; ?>
             <a href="/advisories" class="button">All advisories</a>
         </section>
