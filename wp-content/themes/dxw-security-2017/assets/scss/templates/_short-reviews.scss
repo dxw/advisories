@@ -3,6 +3,10 @@
   a {
     font-family: $header-font-family;
     font-weight: 600;
+    text-decoration: none;
+    &:hover,&:focus,&:active {
+      text-decoration: underline;
+    }
   }
 
   time.published {
