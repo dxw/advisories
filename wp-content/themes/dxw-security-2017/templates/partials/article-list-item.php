@@ -1,5 +1,9 @@
 <article class="short-review">
+    <?php if ( is_home() || is_front_page() ) : ?>
+    <h3><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h3>
+    <?php else : ?>
     <h2><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h2>
+    <?php endif; ?>
     <time class="published" datetime="<?php echo get_the_time('c'); ?>"><?php echo get_the_date(); ?></time>
     <?php global $post;
     if($post->post_type == 'plugins') : ?>

@@ -151,12 +151,18 @@
       }
 
       a {
+        display: inline-block;
         border-bottom: 0px;
+        min-width: 24px;
+        min-height: 24px;
+        padding: 4px;
+        line-height: 1;
       }
 
       img {
-        max-height: 80px;
+        max-height: 100px;
         margin-right: #{$gutter / 2};
+        // display: block;
 
         @media screen and (max-width: $small-screen) {
           margin: 0 0 #{$gutter / 2};
