@@ -3,6 +3,10 @@
   a {
     font-family: $header-font-family;
     font-weight: 600;
+    text-decoration: none;
+    &:hover,&:focus,&:active {
+      text-decoration: underline;
+    }
   }
 
   time.published {
@@ -22,6 +26,7 @@
       font-family: $font-family-sans;
       &.excerpt {
         margin: $medium-spacing/2 0;
+        font-weight: 400;
       }
       &:before {
         content: none;
