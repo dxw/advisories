@@ -10,81 +10,28 @@
     margin: auto;
     text-align: center;
 
-    @media screen and (max-width:$small-screen) {
-      width: 100%;
+    ul {
+      list-style-type: none;
     }
 
-    li {
-      display: inline-block;
-      text-align: center;
-
-      &.current {
-
-        a {
-          color: $base-font-colour;
-          cursor: default;
-        }
-      }
-
-      &.arrow {
-        &.disabled {
-          display: none;
-          visibility: hidden;
-        }
-      }
+    .page-numbers.current {
+      font-weight: 600;
+      text-decoration-thickness: 1.5px;
     }
 
-    a {
-      margin-right: 10px;
-      border-bottom: 0;
-    }
-  }
+    .page-numbers {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 30px;
+      min-height: 30px;
+      padding: 6px 6px;
+      margin: 2px;
 
-  .previous,
-  .next {
-    position: relative;
-
-    a {
-      margin-right: 0;
-      display: block;
-    }
-  }
-
-  .next {
-
-    a {
-      margin-left: $gutter*2;
-      padding-right: $gutter*2;
-
-      &:after {
-        background: url('#{$imagePath}/icon-chevron-right.svg') no-repeat center right;
-        right: 0;
+      li {
+        display: inline-block;
+        text-align: center;
       }
     }
   }
-
-  .previous {
-
-    a {
-      margin-right: $gutter*2;
-      padding-left: $gutter*2;
-
-      &:before {
-        background: url('#{$imagePath}/icon-chevron-left.svg') no-repeat center left;
-        left: 0;
-      }
-    }
-  }
-
-  .previous a:before,
-  .next a:after {
-    content: '';
-    display: inline-block;
-    width: 19px;
-    height: 33px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
 }

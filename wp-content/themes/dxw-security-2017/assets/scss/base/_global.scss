@@ -8,6 +8,7 @@ $fontPath: "font";
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('#{$fontPath}/poppins-v23-latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
@@ -15,6 +16,7 @@ $fontPath: "font";
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: url('#{$fontPath}/poppins-v23-latin-ext-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 @font-face {
@@ -22,6 +24,7 @@ $fontPath: "font";
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('#{$fontPath}/poppins-v23-latin-ext-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -42,7 +45,7 @@ $body-background-colour: $lightest;
 
 // Links
 $link-colour: $brand-primary;
-$link-hover-colour: darken($link-colour, 15);
+$link-hover-colour: $brand-secondary;
 $link-visited-colour: #4c2c92;
 
 // Buttons

@@ -30,6 +30,7 @@
       padding: $gutter*2 $gutter*2 $gutter*2.5 $gutter*2;
       border-bottom: none;
       color: $base-font-colour;
+      text-decoration: none;
 
       h3 {
         color: $brand-primary;
@@ -47,6 +48,7 @@
 
       &:hover {
         background-color: $brand-primary;
+        text-decoration: underline;
         color: $lightest;
         h3 {
           color: $lightest;
@@ -68,9 +70,5 @@
         margin-bottom: $gutter-mobile*2;
       }
     }
-  }
-
-  a.button {
-    margin-bottom: 5px; // Added bottom margin so the bottom shadow is visible
   }
 }

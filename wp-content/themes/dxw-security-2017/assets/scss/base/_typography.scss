@@ -1,6 +1,6 @@
 $body-font-size: (null: 18px, $small-screen: 16px);
 $h1-font-size: (null: 36px, $small-screen: 30px);
-$h2-font-size: (null: 30px, $small-screen: 25px);
+$h2-font-size: (null: 28px, $small-screen: 25px);
 $h3-font-size: (null: 24px, $small-screen: 23px);
 $h4-font-size: (null: 24px, $small-screen: 17px);
 $h5-font-size: (null: 20px, $small-screen: 15px);
@@ -127,21 +127,31 @@ pre {
 }
 
 code {
-  background: $slight-grey;
+  background: $dxw-ivory;
 }
 
 // Links
 a {
   color: $link-colour;
-  text-decoration: none;
-  border-bottom: 3px solid rgba($link-colour, 0.2);
   transition: all 0.2s ease-in-out;
 
-  &:hover,
-  &:focus,
-  &:active {
+  &:hover {
     color: $link-hover-colour;
-    border-bottom-color: rgba($link-hover-colour, 0.4);
+    text-decoration-thickness: calc(max(3px, 0.15em));
+  }
+
+  &:focus {
+  	outline: 2px solid;
+  	outline-offset: 2px;
+  }
+
+  &:focus:not(:focus-visible) {
+  	outline: 0;
+  }
+
+  &:focus-visible {
+  	outline: 2px solid;
+  	outline-offset: 2px;
   }
 
   &.call-to-action {
@@ -160,13 +170,8 @@ button {
   &:focus,
   &:active {
     color: $link-hover-colour;
+    border-bottom-color: 2px rgba($link-hover-colour, 1.0);
   }
-}
-
-h1, h2, h3, h4, h5, h6, nav {
-    a {
-        border-bottom: 0;
-    }
 }
 
 hr {

@@ -1,13 +1,14 @@
 .page-banner {
-  background: $brand-secondary;
-  color: $lightest;
+  background: $accent-secondary;
+  color: $darkest;
   text-align: center;
-  .columns {
-    padding-bottom: 5px; //otherwise we can't see the shadow around button
+  .row {
+    padding-left: $gutter;
+    padding-right: $gutter;
   }
 
   .button {
-    @include button-light($white, $brand-secondary);
+    @include button-light($brand-primary, $lightest);
     margin-top: $gutter*2;
 
     @include grid-media($grid-mobile) {

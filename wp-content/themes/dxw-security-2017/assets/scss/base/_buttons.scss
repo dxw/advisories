@@ -1,27 +1,31 @@
 // Buttons
 @mixin button-background($background, $text) {
   background: $background;
-  box-shadow: 2px 2px 1px rgba(0,0,0,0.2);
   color: $text;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: keep-all;
+
   &:hover,
+  &:active,
   &:focus {
     color: $text;
+    text-decoration: underline 2px;
   }
   &:hover {
     background: darken($background, 15);
+    border-bottom: 0;
   }
   &:active,
   &:focus {
     background: darken($background, 20);
-    outline: 2px solid $highlight;
-    box-shadow: 4px 4px 1px rgba(0,0,0,0.2);
   }
 }
 
 @mixin button-light($background, $text) {
   background: $background;
   color: $text;
-  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
 
   &:hover,
   &:focus {
@@ -44,6 +48,8 @@
   cursor: pointer;
   outline: 0;
   transition: all 0.3s ease-in-out;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 button {
@@ -53,10 +59,12 @@ button {
   padding: 0;
   cursor: pointer;
   outline: 0;
+  border-radius: 35px;
 }
 
 .button {
   @extend %button;
+  border-radius: 35px;
 }
 
 .button-white {

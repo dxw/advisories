@@ -1,7 +1,9 @@
 .global-footer {
   padding: #{$gutter * 2} 0 0;
-  background: $dark-grey;
+  background: $dxw-blue;
   color: $lightest;
+  font-size: clamp(14px,18px, 24px);
+  line-height: $base-line-height * 1.1;
   @extend small;
 
   h2 {
@@ -14,11 +16,24 @@
 
   a {
     color: $lightest;
-    border-bottom: 1px solid rgba($white, 0.2);
-    &:hover,
-    &:focus,
-    &:active {
-      border-bottom-color: rgba($white, 0.4);
+
+    &:hover {
+      color: $white;
+      text-decoration-thickness: calc(max(3px, 0.15em));
+    }
+
+    &:focus {
+    	outline: 2px solid $lightest;
+    	outline-offset: 2px;
+    }
+
+    &:focus:not(:focus-visible) {
+    	outline: 0;
+    }
+
+    &:focus-visible {
+    	outline: 2px solid $lightest;
+    	outline-offset: 2px;
     }
   }
 
@@ -70,6 +85,29 @@
         display: block;
       }
 
+      span[itemprop=name] {
+        &:hover,
+        &:focus,
+        &:active {
+          background: radial-gradient(
+            circle at 100%,
+              #69488e,
+              #7473c0 50%,
+              #a7a4df 75%,
+          );
+          background-size: 200% auto;
+          color: #000;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: animatedTextGradient 1.5s linear infinite;
+          @keyframes animatedTextGradient {
+            to {
+              background-position: 200% center;
+            }
+          }
+        }
+      }
+
       span[itemprop=addressLocality], span[itemprop=postalCode] {
         display: inline-block;
       }
@@ -96,6 +134,10 @@
     flex-direction: row;
     flex-wrap: wrap;
 
+    a{
+      text-decoration: none;
+    }
+
     @media screen and (max-width: $small-screen) {
       flex-direction: column;
     }
@@ -109,12 +151,18 @@
       }
 
       a {
+        display: inline-block;
         border-bottom: 0px;
+        min-width: 24px;
+        min-height: 24px;
+        padding: 4px;
+        line-height: 1;
       }
 
       img {
-        max-height: 80px;
+        max-height: 100px;
         margin-right: #{$gutter / 2};
+        // display: block;
 
         @media screen and (max-width: $small-screen) {
           margin: 0 0 #{$gutter / 2};
@@ -201,7 +249,7 @@
           height: 48px;
           display: inline-block;
           margin: 0 0 0 $gutter/2;
-          background: $dark-grey;
+          background: $dxw-blue;
           border-radius: 50%;
           border: 3px solid transparent;
           transition: border-color 0.3s ease-out;

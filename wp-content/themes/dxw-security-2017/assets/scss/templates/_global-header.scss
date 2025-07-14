@@ -17,14 +17,17 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
     }
 
     a {
-      color: inherit;
-      display: inline-block;
-      border-bottom: 0;
+      text-decoration: none;
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
     }
 
     h1 {
       font-weight: normal;
-      height: 48px;
+      margin-bottom: 15px;
       background: url('#{$imagePath}/d-marque.png') no-repeat 0 0 / 48px;
       padding-left: 60px;
     }
@@ -44,8 +47,6 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
 .menu-header {
 
   @media screen and (max-width:$small-screen) {
-    display: none;
-
     &.expanded {
       width: 100%;
       display: inline-block;
@@ -72,11 +73,6 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
         margin-left: 0;
       }
 
-      @media screen and (max-width:$small-screen) {
-        display: block;
-        margin-left: 0;
-      }
-
       &.current_page_item,
       &.current-menu-item,
       &.current-page-ancestor {
@@ -84,6 +80,7 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
         a {
           color: $brand-primary;
           border-bottom-color: $brand-primary;
+          text-decoration: none;
 
           @media screen and (max-width:$small-screen) {
             border-left-color: $brand-primary;
@@ -92,7 +89,7 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
       }
 
       a {
-        padding-bottom: 11px;
+        padding-bottom: 5px;
         border-bottom: 5px solid transparent;
 
         @media screen and (max-width:$small-screen) {
@@ -115,23 +112,6 @@ body.single-post .menu-header ul {
 
   li.current_page_parent {
     @extend li.current-page-ancestor;
-  }
-}
-
-.navigation-toggle {
-  width: 32px;
-  position: absolute;
-  top: 15px;
-  right: $gutter;
-
-  @media screen and (max-width:$tiny-screen) {
-    top: 10px;
-  }
-
-  svg {
-    path {
-      fill: $brand-primary;
-    }
   }
 }
 

@@ -1,5 +1,5 @@
 .search-form-container {
-  background: $brand-secondary;
+  background: $accent-primary;
   padding-top: $gutter*2;
   padding-bottom: $gutter*2;
 
@@ -11,7 +11,7 @@
   label {
     @include grid-column(4);
     margin-top: 9px;
-    color: $lightest;
+    color: $black;
 
     @include grid-media($grid-mobile) {
       @include grid-column(2);
@@ -21,29 +21,46 @@
   }
 
   .form-field {
-    @include grid-column(8);
+    @include grid-column(12);
 
     @include grid-media($grid-mobile) {
       @include grid-column(2);
     }
+    margin-top: 2px;  // Allow space for outlines on search input focus.
+    margin-bottom: 2px;  // Allow space for outlines on search input focus.
 
     input[type="search"] {
+      position: relative;
       width: 75%;
+      height: 50px;
       float: left;
-
+      margin-right: 0;
+      z-index: 3;
+      line-height: 1.5;
       @media screen and (max-width:$tiny-screen) {
         width: 70%;
       }
+      border-radius: 40px 0 0 40px;
+      text-indent: 1em;
     }
 
     button {
+      position: relative;
       width: 25%;
-      @include button-light($medium-grey, $brand-secondary);
+      height: 50px;
+      @include button-light($brand-primary, $lightest);
       padding-left: $gutter;
       padding-right: $gutter;
       float: right;
-      box-shadow: none;
       line-height: 1.5;
+      border-radius: 0 40px 40px 0;
+
+      &:active,
+      &:focus {
+        z-index: 3;
+        background: darken($brand-primary, 20);
+        outline: 2px solid $brand-primary;
+      }
 
       @media screen and (max-width:$small-screen) {
         padding-bottom: 11px;

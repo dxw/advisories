@@ -84,6 +84,8 @@ module.exports = function (grunt) {
     copy: {
       production: {
         files: {
+          'static/img/favicon.ico': 'assets/img/favicon.ico',
+          'static/img/site.webmanifest': 'assets/img/site.webmanifest',
           'static/lib/jquery.min.js': 'node_modules/jquery/dist/jquery.min.js',
           'static/font/poppins-v23-latin-ext-regular.woff2': 'assets/font/poppins-v23-latin-ext-regular.woff2',
           'static/font/poppins-v23-latin-ext-600.woff2': 'assets/font/poppins-v23-latin-ext-600.woff2',
@@ -97,7 +99,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: 'assets/img',
-          src: ['**/*.{png,jpg,gif,svg,ico}'],
+          src: ['**/*.{png,jpg,gif,svg}'],
           dest: 'static/img'
         }]
       }
