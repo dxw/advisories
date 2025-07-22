@@ -72,10 +72,10 @@
                     </tr>
                 </tbody>
             </table>
-            <small>You can read more about CVSS base scores on <a href="http://en.wikipedia.org/wiki/CVSS">Wikipedia</a> or in the <a href="http://www.first.org/cvss/cvss-guide">CVSS specification</a>.</small>
+            <small>You can read more about CVSS base scores on <a href="http://en.wikipedia.org/wiki/CVSS">Wikipedia</a> or in the <a href="https://www.first.org/cvss/v2/guide">CVSS specification</a>.</small>
         </article>
         <?php endif; ?>
-        
+
         <article class="report">
             <h2>Proof of concept</h2>
             <div class="rich-text">
