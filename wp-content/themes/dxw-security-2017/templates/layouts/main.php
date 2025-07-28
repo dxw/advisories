@@ -16,7 +16,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <?php get_template_part('partials/global-header'); ?>
 
