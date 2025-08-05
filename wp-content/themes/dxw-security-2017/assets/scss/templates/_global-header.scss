@@ -111,7 +111,7 @@ $header-nav-font-size: (null: 20px, $medium-screen: 17px, $small-screen: 17px);
 body.single-post .menu-header ul {
 
   li.current_page_parent {
-    @extend li.current-page-ancestor;
+    @extend li, .current-page-ancestor;
   }
 }
 

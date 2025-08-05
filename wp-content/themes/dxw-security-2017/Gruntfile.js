@@ -5,17 +5,14 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-sass')
   grunt.loadNpmTasks('grunt-image')
   grunt.loadNpmTasks('grunt-standard')
-  grunt.loadNpmTasks('grunt-modernizr')
   grunt.loadNpmTasks('grunt-browserify')
-  grunt.loadNpmTasks('grunt-exorcise')
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-clean')
 
-  const sass = require('node-sass')
+  const sass = require('sass')
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-
     clean: {
       production: {
         src: [
@@ -27,36 +24,13 @@ module.exports = function (grunt) {
     sass: {
       options: {
         implementation: sass,
-        outputStyle: 'compressed',
         sourceMap: true,
-        includePaths: [
-          require('bourbon').includePaths,
-          require('bourbon-neat').includePaths,
-          require('node-normalize-scss').includePaths
-        ]
+        outputStyle: 'compressed'
       },
       production: {
         files: {
           'static/main.min.css': 'assets/scss/main.scss'
         }
-      }
-    },
-
-    modernizr: {
-      production: {
-        'crawl': false,
-        'customTests': [],
-        'dest': 'static/lib/modernizr.min.js',
-        'tests': [
-          'flexbox',
-          'svgasimg'
-        ],
-        'options': [
-          'html5printshiv',
-          'html5shiv',
-          'setClasses'
-        ],
-        'uglify': true
       }
     },
 
@@ -69,14 +43,6 @@ module.exports = function (grunt) {
       production: {
         files: {
           'static/main.min.js': 'assets/js/main.js'
-        }
-      }
-    },
-
-    exorcise: {
-      production: {
-        files: {
-          'static/main.min.js.map': 'static/main.min.js'
         }
       }
     },
@@ -112,7 +78,7 @@ module.exports = function (grunt) {
       },
       js: {
         files: ['assets/js/*.js', 'assets/js/*/*.js'],
-        tasks: ['standard', 'browserify', 'exorcise']
+        tasks: ['standard', 'browserify']
       }
     },
 
@@ -139,8 +105,6 @@ module.exports = function (grunt) {
     'sass',
     'standard',
     'copy',
-    'browserify',
-    'exorcise',
-    'modernizr'
+    'browserify'
   ])
 }

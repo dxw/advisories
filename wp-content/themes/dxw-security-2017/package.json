@@ -3,21 +3,15 @@
     "jquery": "~3.7.1"
   },
   "devDependencies": {
-    "bourbon": "^7.0.0",
-    "bourbon-neat": "^4.0.0",
-    "calc-polyfill": "^0.1.0",
-    "grunt": "~1.5.3",
+    "grunt": "~1.6.1",
     "grunt-browserify": "^6.0.0",
-    "grunt-cli": "^1.4.3",
+    "grunt-cli": "^1.5.0",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "~1.1.0",
-    "grunt-exorcise": "^2.1.1",
     "grunt-image": "~6.4.0",
-    "grunt-modernizr": "^3.0.2",
-    "grunt-sass": "^3.1.0",
+    "grunt-sass": "^4.0.0",
     "grunt-standard": "^3.2.0",
-    "node-normalize-scss": "^8.1.2",
-    "node-sass": "^8.0.0"
+    "sass": "^1.89.2"
   }
 }
