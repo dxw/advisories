@@ -2,7 +2,6 @@
 
 'use strict'
 
-require('calc-polyfill/calc.min.js')
 require('./common')
 
 jQuery(function ($) {
@@ -11,7 +10,6 @@ jQuery(function ($) {
       return
     }
     var nonce = $('#send_email_nonce').val()
-    console.log(nonce)
     var data = {
       action: 'send_email',
       target: $(e.target).attr('id'),
@@ -19,7 +17,6 @@ jQuery(function ($) {
       body: $($(e.target).data('body')).val(),
       _ajax_nonce: nonce
     }
-    console.log(data)
     $('.email_results').removeClass('alert')
     $.post('/wp-admin/admin-ajax.php', data, function (data, status, xhr) {
       $('.email_results').html(data)
