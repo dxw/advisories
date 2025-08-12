@@ -6,6 +6,7 @@ class Headers
 {
 	private int $ttl_short = 1800;  // 30 mins..
 	private int $ttl_long = 86400;  // 1 day.
+	public const NONCE_NAME = 'csp';
 
 	public function register(): void
 	{
@@ -19,6 +20,14 @@ class Headers
 		add_filter('style_loader_tag', [$this, 'addCSPStyleAttributes'], 99999, 1);
 		add_action('wp_enqueue_scripts', [$this, 'removeGlobalStyles'], 99999, 0);
 		add_filter('wp_img_tag_add_auto_sizes', [$this, 'removeAutoImageSizes'], 99999, 0);
+	}
+
+	/**
+	 * Generate a nonce to use in a content security policy header.
+	 */
+	private function getCSPNonce(): string
+	{
+		return wp_create_nonce(self::NONCE_NAME);
 	}
 
 	/**
@@ -44,7 +53,7 @@ class Headers
 	public function addCSPScriptAttributes(array $attributes): array
 	{
 		if (!isset($attributes['nonce'])) {
-			$attributes['nonce'] = esc_attr(wp_create_nonce('csp'));
+			$attributes['nonce'] = esc_attr($this->getCSPNonce());
 		}
 		return $attributes;
 	}
@@ -58,7 +67,7 @@ class Headers
 	public function addCSPStyleAttributes(string $tag): string
 	{
 		if (str_contains($tag, '<style') && !str_contains($tag, 'nonce=')) {
-			$nonce = wp_create_nonce('csp');
+			$nonce = $this->getCSPNonce();
 			$tag = str_replace('<style', '<style nonce="' . esc_attr($nonce) . '"', $tag);
 		}
 		return $tag;
@@ -116,10 +125,10 @@ class Headers
 	{
 		$policy = [
 			"default-src 'self';",
-			"script-src 'self' 'nonce-" . esc_attr(wp_create_nonce('csp')) . "' data: https://plausible.io https://wordpress.org;",
+			"script-src 'self' 'nonce-" . esc_attr($this->getCSPNonce()) . "' data: https://plausible.io https://wordpress.org;",
 			"connect-src 'self' data: https://plausible.io https://wordpress.org;",
 			"img-src 'self' data: https://plausible.io https://wordpress.org https://secure.gravatar.com;",
-			"style-src 'self' 'nonce-" . esc_attr(wp_create_nonce('csp')) . "';",
+			"style-src 'self' 'nonce-" . esc_attr($this->getCSPNonce()) . "';",
 			"font-src 'self' data: https://wordpress.org;",
 			"object-src 'none';",  // <object> and <embed>
 			"media-src 'none';",  // <video>, <audio> and <track>
