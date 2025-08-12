@@ -71,12 +71,7 @@ describe(\Dxw\DxwSecurity2017\Theme\Scripts::class, function () {
 			]);
 
 			\WP_Mock::userFunction('wp_enqueue_script', [
-				'args' => ['modernizr', 'http://a.invalid/static/lib/modernizr.min.js'],
-				'times' => 1,
-			]);
-
-			\WP_Mock::userFunction('wp_enqueue_script', [
-				'args' => ['main', 'http://a.invalid/static/main.min.js', ['jquery', 'modernizr'], '', true],
+				'args' => ['main', 'http://a.invalid/static/main.min.js', ['jquery'], '', true],
 				'times' => 1,
 			]);
 
