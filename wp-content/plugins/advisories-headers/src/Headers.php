@@ -14,6 +14,19 @@ class Headers
 		if (!is_admin()) {
 			add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
 		}
+		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
+		add_filter('wp_inline_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
+	}
+
+	/**
+	 * Add a nonce to all <script> tags that are enqueued in Wordpress.
+	 */
+	public function addCSPScriptAttributes(array $attributes): array
+	{
+		if (!isset($attributes['nonce'])) {
+			$attributes['nonce'] = esc_attr(wp_create_nonce('csp'));
+		}
+		return $attributes;
 	}
 
 	/**
@@ -68,7 +81,7 @@ class Headers
 	{
 		$policy = [
 			"default-src 'self';",
-			"script-src 'self' 'unsafe-inline' data: https://plausible.io https://wordpress.org;",
+			"script-src 'self' 'nonce-" . esc_attr(wp_create_nonce('csp')) . "' data: https://plausible.io https://wordpress.org;",
 			"connect-src 'self' data: https://plausible.io https://wordpress.org;",
 			"img-src 'self' data: https://plausible.io https://wordpress.org https://secure.gravatar.com;",
 			"style-src 'self' 'unsafe-inline';",

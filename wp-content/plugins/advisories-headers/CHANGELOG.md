@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Add Gravatar to img-src in CSP
 * Only supply a CSP on the front-end of the site
+* Remove 'unsafe-inline' from script-src in CSP and add a nonce to all scripts
 
 
 ## [v1.0.1] - 2025-06-26
