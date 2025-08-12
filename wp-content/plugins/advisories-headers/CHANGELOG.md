@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 * Add Gravatar to img-src in CSP
+* Only supply a CSP on the front-end of the site
 
 
 ## [v1.0.1] - 2025-06-26
