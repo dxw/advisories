@@ -6,23 +6,43 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	});
 
 	describe('->register()', function () {
-		it('does registers filters for wp_headers', function () {
-			allow('add_filter')->toBeCalled();
-			expect('add_filter')->toBeCalled()->times(3);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addCacheControl']
-			);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addStrictTransportPolicy']
-			);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addContentSecurityPolicy']
-			);
-			$this->headers->register();
-			expect(true)->toBeTruthy();
+		context('when rendering the admin dashboard', function () {
+			it('it registers filters for wp_headers without a CSP', function () {
+				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('add_filter')->toBeCalled();
+				expect('add_filter')->toBeCalled()->times(2);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addCacheControl']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addStrictTransportPolicy']
+				);
+				$this->headers->register();
+				expect(true)->toBeTruthy();
+			});
+		});
+		context('when rendering the frontend', function () {
+			it('it registers filters for wp_headers including a CSP', function () {
+				allow('is_admin')->toBeCalled()->andReturn(false);
+				allow('add_filter')->toBeCalled();
+				expect('add_filter')->toBeCalled()->times(3);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addCacheControl']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addStrictTransportPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addContentSecurityPolicy']
+				);
+				$this->headers->register();
+				expect(true)->toBeTruthy();
+			});
 		});
 	});
 

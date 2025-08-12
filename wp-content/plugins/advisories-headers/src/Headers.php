@@ -11,7 +11,9 @@ class Headers
 	{
 		add_filter('wp_headers', [$this, 'addCacheControl']);
 		add_filter('wp_headers', [$this, 'addStrictTransportPolicy']);
-		add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
+		if (!is_admin()) {
+			add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
+		}
 	}
 
 	/**
