@@ -6,6 +6,7 @@ class Headers
 {
 	private int $ttl_short = 1800;  // 30 mins..
 	private int $ttl_long = 86400;  // 1 day.
+	public const NONCE_NAME = 'csp';
 
 	public function register(): void
 	{
@@ -19,12 +20,21 @@ class Headers
 	}
 
 	/**
+	 * Generate a nonce to use in a content security policy header.
+	 */
+	private function getCSPNonce(): string
+	{
+		return wp_create_nonce(self::NONCE_NAME);
+	}
+
+
+	/**
 	 * Add a nonce to all <script> tags that are enqueued in Wordpress.
 	 */
 	public function addCSPScriptAttributes(array $attributes): array
 	{
 		if (!isset($attributes['nonce'])) {
-			$attributes['nonce'] = esc_attr(wp_create_nonce('csp'));
+			$attributes['nonce'] = esc_attr($this->getCSPNonce());
 		}
 		return $attributes;
 	}
@@ -81,7 +91,7 @@ class Headers
 	{
 		$policy = [
 			"default-src 'self';",
-			"script-src 'self' 'nonce-" . esc_attr(wp_create_nonce('csp')) . "' data: https://plausible.io https://wordpress.org;",
+			"script-src 'self' 'nonce-" . esc_attr($this->getCSPNonce()) . "' data: https://plausible.io https://wordpress.org;",
 			"connect-src 'self' data: https://plausible.io https://wordpress.org;",
 			"img-src 'self' data: https://plausible.io https://wordpress.org https://secure.gravatar.com;",
 			"style-src 'self' 'unsafe-inline';",
