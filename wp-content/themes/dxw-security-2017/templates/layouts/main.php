@@ -11,7 +11,13 @@
         echo esc_attr(get_bloginfo('name') . ' - ' . get_bloginfo('description'));
     }
     ?>" />
-    <script defer data-domain="advisories.dxw.com" src="https://plausible.io/js/script.js"></script>
+    <?php
+        wp_print_script_tag([
+            'defer' => true,
+            'data-domain' => 'advisories.dxw.com',
+            'src' => 'https://plausible.io/js/script.js'
+        ]);
+    ?>
 
     <?php wp_head(); ?>
 </head>
