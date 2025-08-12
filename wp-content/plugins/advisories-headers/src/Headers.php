@@ -16,6 +16,7 @@ class Headers
 		}
 		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('wp_inline_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
+		add_filter('style_loader_tag', [$this, 'addCSPStyleAttributes'], 99999, 1);
 	}
 
 	/**
@@ -27,6 +28,21 @@ class Headers
 			$attributes['nonce'] = esc_attr(wp_create_nonce('csp'));
 		}
 		return $attributes;
+	}
+
+	/**
+	 * Add a nonce to all <style> tags that are enqueued in Wordpress.
+	 *
+	 * Note that this misses some styles that are written directly into the
+	 * output buffer.
+	 */
+	public function addCSPStyleAttributes(string $tag): string
+	{
+		if (str_contains($tag, '<style') && !str_contains($tag, 'nonce=')) {
+			$nonce = wp_create_nonce('csp');
+			$tag = str_replace('<style', '<style nonce="' . esc_attr($nonce) . '"', $tag);
+		}
+		return $tag;
 	}
 
 	/**
@@ -84,7 +100,7 @@ class Headers
 			"script-src 'self' 'nonce-" . esc_attr(wp_create_nonce('csp')) . "' data: https://plausible.io https://wordpress.org;",
 			"connect-src 'self' data: https://plausible.io https://wordpress.org;",
 			"img-src 'self' data: https://plausible.io https://wordpress.org https://secure.gravatar.com;",
-			"style-src 'self' 'unsafe-inline';",
+			"style-src 'self' 'nonce-" . esc_attr(wp_create_nonce('csp')) . "';",
 			"font-src 'self' data: https://wordpress.org;",
 			"object-src 'none';",  // <object> and <embed>
 			"media-src 'none';",  // <video>, <audio> and <track>
