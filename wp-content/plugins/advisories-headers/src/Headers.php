@@ -68,7 +68,7 @@ class Headers
 			"default-src 'self';",
 			"script-src 'self' 'unsafe-inline' data: https://plausible.io https://wordpress.org;",
 			"connect-src 'self' data: https://plausible.io https://wordpress.org;",
-			"img-src 'self' data: https://plausible.io https://wordpress.org;",
+			"img-src 'self' data: https://plausible.io https://wordpress.org https://secure.gravatar.com;",
 			"style-src 'self' 'unsafe-inline';",
 			"font-src 'self' data: https://wordpress.org;",
 			"object-src 'none';",  // <object> and <embed>

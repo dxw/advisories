@@ -129,7 +129,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				allow('get_site_url')->toBeCalled()->andReturn('http://localhost');
 				$policy = "default-src 'self'; script-src 'self' 'unsafe-inline' data: https://plausible.io ";
 				$policy .= "https://wordpress.org; connect-src 'self' data: https://plausible.io https://wordpress.org; ";
-				$policy .= "img-src 'self' data: https://plausible.io https://wordpress.org; style-src 'self' ";
+				$policy .= "img-src 'self' data: https://plausible.io https://wordpress.org https://secure.gravatar.com; style-src 'self' ";
 				$policy .= "'unsafe-inline'; font-src 'self' data: https://wordpress.org; object-src 'none'; media-src ";
 				$policy .= "'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; manifest-src 'self'; ";
 				$policy .= "base-uri 'self'; form-action 'self'; frame-ancestors 'none';";
