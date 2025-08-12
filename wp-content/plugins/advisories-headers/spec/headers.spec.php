@@ -9,8 +9,10 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('when rendering the admin dashboard', function () {
 			it('it registers filters for wp_headers without a CSP', function () {
 				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('add_action')->toBeCalled();
+				expect('add_action')->toBeCalled()->times(1);
 				allow('add_filter')->toBeCalled();
-				expect('add_filter')->toBeCalled()->times(5);
+				expect('add_filter')->toBeCalled()->times(6);
 				expect('add_filter')->toBeCalled()->once()->with(
 					'wp_headers',
 					[$this->headers, 'addCacheControl']
@@ -34,6 +36,18 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 					[$this->headers, 'addCSPStyleAttributes'],
 					99999
 				);
+				expect('add_action')->toBeCalled()->once()->with(
+					'wp_enqueue_scripts',
+					[$this->headers, 'removeGlobalStyles'],
+					99999,
+					0
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_img_tag_add_auto_sizes',
+					[$this->headers, 'removeAutoImageSizes'],
+					99999,
+					0
+				);
 				$this->headers->register();
 				expect(true)->toBeTruthy();
 			});
@@ -41,8 +55,9 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('when rendering the frontend', function () {
 			it('it registers filters for wp_headers including a CSP', function () {
 				allow('is_admin')->toBeCalled()->andReturn(false);
+				allow('add_action')->toBeCalled();
 				allow('add_filter')->toBeCalled();
-				expect('add_filter')->toBeCalled()->times(6);
+				expect('add_filter')->toBeCalled()->times(7);
 				expect('add_filter')->toBeCalled()->once()->with(
 					'wp_headers',
 					[$this->headers, 'addCacheControl']
@@ -65,9 +80,41 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 					[$this->headers, 'addCSPScriptAttributes'],
 					99999
 				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'style_loader_tag',
+					[$this->headers, 'addCSPStyleAttributes'],
+					99999
+				);
+				expect('add_action')->toBeCalled()->with(
+					'wp_enqueue_scripts',
+					[$this->headers, 'removeGlobalStyles'],
+					99999,
+					0
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_img_tag_add_auto_sizes',
+					[$this->headers, 'removeAutoImageSizes'],
+					99999,
+					0
+				);
 				$this->headers->register();
 				expect(true)->toBeTruthy();
 			});
+		});
+	});
+
+	describe('removeAutoImageSizes->()', function () {
+		it('returns false', function () {
+			expect($this->headers->removeAutoImageSizes())->toBeFalsy();
+		});
+	});
+
+	describe('->removeGlobalStyles()', function () {
+		it('removes some styles added by WP Core', function () {
+			allow('wp_dequeue_style')->toBeCalled();
+			expect('wp_dequeue_style')->toBeCalled()->once()->with('global-styles');
+			expect('wp_dequeue_style')->toBeCalled()->once()->with('classic-theme-styles');
+			$this->headers->removeGlobalStyles();
 		});
 	});
 

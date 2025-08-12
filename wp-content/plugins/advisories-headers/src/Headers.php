@@ -17,6 +17,25 @@ class Headers
 		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('wp_inline_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('style_loader_tag', [$this, 'addCSPStyleAttributes'], 99999, 1);
+		add_action('wp_enqueue_scripts', [$this, 'removeGlobalStyles'], 99999, 0);
+		add_filter('wp_img_tag_add_auto_sizes', [$this, 'removeAutoImageSizes'], 99999, 0);
+	}
+
+	/**
+	 * Remove style tag from WordPress core that defines contain-intrinsic-size.
+	 */
+	public function removeAutoImageSizes(): bool
+	{
+		return false;
+	}
+
+	/**
+	 * Remove enqueued styles from WordPress core to which we cannot add a nonce.
+	 */
+	public function removeGlobalStyles(): void
+	{
+		wp_dequeue_style('global-styles');
+		wp_dequeue_style('classic-theme-styles');
 	}
 
 	/**
