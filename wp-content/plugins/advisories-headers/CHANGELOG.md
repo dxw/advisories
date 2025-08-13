@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+* Add Gravatar to img-src in CSP
+* Only supply a CSP on the front-end of the site
+* Remove 'unsafe-inline' from script-src in CSP and add a nonce to all scripts
+* Remove 'unsafe-inline' from style-src in CSP and add a nonce to all scripts
+* Remove 'contain-intrinsic-size' provided by WordPress Core
+* Remove some enqueued styles from WordPress Core where we cannot add a nonce
+
 ## [v1.0.1] - 2025-06-26
 
 ### Changed

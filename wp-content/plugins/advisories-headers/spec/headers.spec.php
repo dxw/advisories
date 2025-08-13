@@ -6,23 +6,166 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	});
 
 	describe('->register()', function () {
-		it('does registers filters for wp_headers', function () {
-			allow('add_filter')->toBeCalled();
-			expect('add_filter')->toBeCalled()->times(3);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addCacheControl']
-			);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addStrictTransportPolicy']
-			);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addContentSecurityPolicy']
-			);
-			$this->headers->register();
-			expect(true)->toBeTruthy();
+		context('when rendering the admin dashboard', function () {
+			it('it registers filters for wp_headers without a CSP', function () {
+				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('add_action')->toBeCalled();
+				expect('add_action')->toBeCalled()->times(1);
+				allow('add_filter')->toBeCalled();
+				expect('add_filter')->toBeCalled()->times(6);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addCacheControl']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addStrictTransportPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_inline_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'style_loader_tag',
+					[$this->headers, 'addCSPStyleAttributes'],
+					99999
+				);
+				expect('add_action')->toBeCalled()->once()->with(
+					'wp_enqueue_scripts',
+					[$this->headers, 'removeGlobalStyles'],
+					99999,
+					0
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_img_tag_add_auto_sizes',
+					[$this->headers, 'removeAutoImageSizes'],
+					99999,
+					0
+				);
+				$this->headers->register();
+				expect(true)->toBeTruthy();
+			});
+		});
+		context('when rendering the frontend', function () {
+			it('it registers filters for wp_headers including a CSP', function () {
+				allow('is_admin')->toBeCalled()->andReturn(false);
+				allow('add_action')->toBeCalled();
+				allow('add_filter')->toBeCalled();
+				expect('add_filter')->toBeCalled()->times(7);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addCacheControl']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addStrictTransportPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addContentSecurityPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_inline_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'style_loader_tag',
+					[$this->headers, 'addCSPStyleAttributes'],
+					99999
+				);
+				expect('add_action')->toBeCalled()->with(
+					'wp_enqueue_scripts',
+					[$this->headers, 'removeGlobalStyles'],
+					99999,
+					0
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_img_tag_add_auto_sizes',
+					[$this->headers, 'removeAutoImageSizes'],
+					99999,
+					0
+				);
+				$this->headers->register();
+				expect(true)->toBeTruthy();
+			});
+		});
+	});
+
+	describe('removeAutoImageSizes->()', function () {
+		it('returns false', function () {
+			expect($this->headers->removeAutoImageSizes())->toBeFalsy();
+		});
+	});
+
+	describe('->removeGlobalStyles()', function () {
+		it('removes some styles added by WP Core', function () {
+			allow('wp_dequeue_style')->toBeCalled();
+			expect('wp_dequeue_style')->toBeCalled()->once()->with('global-styles');
+			expect('wp_dequeue_style')->toBeCalled()->once()->with('classic-theme-styles');
+			$this->headers->removeGlobalStyles();
+		});
+	});
+
+	describe('addCSPScriptAttributes->()', function () {
+		context('a nonce is already set', function () {
+			it('does nothing', function () {
+				$input = ['src' => 'https://example.com', 'nonce' => '12345', 'foo' => 'bar'];
+				$result = $this->headers->addCSPScriptAttributes($input);
+				expect($result)->toEqual($input);
+			});
+		});
+		context('a nonce is not set', function () {
+			it('adds a nonce', function () {
+				allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+				allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+					return $val;
+				});
+				$input = ['src' => 'https://example.com', 'foo' => 'bar'];
+				$expected = ['src' => 'https://example.com', 'nonce' => '012345', 'foo' => 'bar'];
+				$result = $this->headers->addCSPScriptAttributes($input);
+				expect($result)->toEqual($expected);
+			});
+		});
+	});
+
+	describe('addCSPStyleAttributes->()', function () {
+		context('the tag is not a style tag', function () {
+			it('does nothing', function () {
+				$input = '<link rel="stylesheet" href="https://example.com"';
+				$result = $this->headers->addCSPStyleAttributes($input);
+				expect($result)->toEqual($input);
+			});
+		});
+		context('the tag is a style tag and a nonce is already set', function () {
+			it('does nothing', function () {
+				$input = '<style nonce="012345" foo="bar">';
+				$result = $this->headers->addCSPStyleAttributes($input);
+				expect($result)->toEqual($input);
+			});
+		});
+		context('the tag is a style tag and a nonce is not set', function () {
+			it('adds a nonce', function () {
+				allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+				allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+					return $val;
+				});
+				$input = '<style foo="bar">';
+				$expected = '<style nonce="012345" foo="bar">';
+				$result = $this->headers->addCSPStyleAttributes($input);
+				expect($result)->toEqual($expected);
+			});
 		});
 	});
 
@@ -126,11 +269,15 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	describe('->addContentSecurityPolicy()', function () {
 		context('on localhost with no SSL', function () {
 			it('adds a CSP which only allows CORS between this site and Plausible or wordpress.org', function () {
+				allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+				allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+					return $val;
+				});
 				allow('get_site_url')->toBeCalled()->andReturn('http://localhost');
-				$policy = "default-src 'self'; script-src 'self' 'unsafe-inline' data: https://plausible.io ";
+				$policy = "default-src 'self'; script-src 'self' 'nonce-012345' data: https://plausible.io ";
 				$policy .= "https://wordpress.org; connect-src 'self' data: https://plausible.io https://wordpress.org; ";
-				$policy .= "img-src 'self' data: https://plausible.io https://wordpress.org; style-src 'self' ";
-				$policy .= "'unsafe-inline'; font-src 'self' data: https://wordpress.org; object-src 'none'; media-src ";
+				$policy .= "img-src 'self' data: https://plausible.io https://wordpress.org https://secure.gravatar.com; style-src 'self' ";
+				$policy .= "'nonce-012345'; font-src 'self' data: https://wordpress.org; object-src 'none'; media-src ";
 				$policy .= "'none'; frame-src 'none'; child-src 'none'; worker-src 'none'; manifest-src 'self'; ";
 				$policy .= "base-uri 'self'; form-action 'self'; frame-ancestors 'none';";
 				$expected = ['Content-Security-Policy' => $policy];
@@ -140,6 +287,10 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		});
 		context('on any other URL', function () {
 			it('adds a CSP which includes upgrade-insecure-requests', function () {
+				allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+				allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+					return $val;
+				});
 				allow('get_site_url')->toBeCalled()->andReturn('https://example.com');
 				$result = $this->headers->addContentSecurityPolicy([])['Content-Security-Policy'];
 				expect(explode('; ', $result))->toContain('upgrade-insecure-requests;');
