@@ -6,23 +6,127 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	});
 
 	describe('->register()', function () {
-		it('does registers filters for wp_headers', function () {
-			allow('add_filter')->toBeCalled();
-			expect('add_filter')->toBeCalled()->times(3);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addCacheControl']
-			);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addStrictTransportPolicy']
-			);
-			expect('add_filter')->toBeCalled()->once()->with(
-				'wp_headers',
-				[$this->headers, 'addContentSecurityPolicy']
-			);
-			$this->headers->register();
-			expect(true)->toBeTruthy();
+		context('when rendering the admin dashboard', function () {
+			it('it registers filters for wp_headers without a CSP', function () {
+				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('is_login')->toBeCalled()->andReturn(false);
+				allow('add_filter')->toBeCalled();
+				expect('add_filter')->toBeCalled()->times(5);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addCacheControl']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addStrictTransportPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_inline_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'get_avatar',
+					[$this->headers, 'removeGravatarSupport'],
+				);
+				$this->headers->register();
+				expect(true)->toBeTruthy();
+			});
+		});
+		context('when rendering the login page', function () {
+			it('it registers filters for wp_headers without a CSP', function () {
+				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('is_login')->toBeCalled()->andReturn(true);
+				allow('add_filter')->toBeCalled();
+				expect('add_filter')->toBeCalled()->times(5);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addCacheControl']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addStrictTransportPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_inline_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'get_avatar',
+					[$this->headers, 'removeGravatarSupport'],
+				);
+				$this->headers->register();
+				expect(true)->toBeTruthy();
+			});
+		});
+		context('when rendering the frontend', function () {
+			it('it registers filters for wp_headers including a CSP', function () {
+				allow('is_admin')->toBeCalled()->andReturn(false);
+				allow('is_login')->toBeCalled()->andReturn(false);
+				allow('add_filter')->toBeCalled();
+				expect('add_filter')->toBeCalled()->times(6);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addCacheControl']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addStrictTransportPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addContentSecurityPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_inline_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'get_avatar',
+					[$this->headers, 'removeGravatarSupport'],
+				);
+				$this->headers->register();
+				expect(true)->toBeTruthy();
+			});
+		});
+	});
+
+	describe('addCSPScriptAttributes->()', function () {
+		context('a nonce is already set', function () {
+			it('does nothing', function () {
+				$input = ['src' => 'https://example.com', 'nonce' => '12345', 'foo' => 'bar'];
+				$result = $this->headers->addCSPScriptAttributes($input);
+				expect($result)->toEqual($input);
+			});
+		});
+		context('a nonce is not set', function () {
+			it('adds a nonce', function () {
+				allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+				allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+					return $val;
+				});
+				$input = ['src' => 'https://example.com', 'foo' => 'bar'];
+				$expected = ['src' => 'https://example.com', 'nonce' => '012345', 'foo' => 'bar'];
+				$result = $this->headers->addCSPScriptAttributes($input);
+				expect($result)->toEqual($expected);
+			});
 		});
 	});
 
@@ -126,8 +230,12 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	describe('->addContentSecurityPolicy()', function () {
 		context('on localhost with no SSL', function () {
 			it('adds a CSP which only allows CORS between this site and Plausible or wordpress.org', function () {
+				allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+				allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+					return $val;
+				});
 				allow('get_site_url')->toBeCalled()->andReturn('http://localhost');
-				$policy = "default-src 'self'; script-src 'self' 'unsafe-inline' data: https://plausible.io ";
+				$policy = "default-src 'self'; script-src 'self' 'nonce-012345' data: https://plausible.io ";
 				$policy .= "https://wordpress.org; connect-src 'self' data: https://plausible.io https://wordpress.org; ";
 				$policy .= "img-src 'self' data: https://plausible.io https://wordpress.org; style-src 'self' ";
 				$policy .= "'unsafe-inline'; font-src 'self' data: https://wordpress.org; object-src 'none'; media-src ";
@@ -140,6 +248,10 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		});
 		context('on any other URL', function () {
 			it('adds a CSP which includes upgrade-insecure-requests', function () {
+				allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+				allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+					return $val;
+				});
 				allow('get_site_url')->toBeCalled()->andReturn('https://example.com');
 				$result = $this->headers->addContentSecurityPolicy([])['Content-Security-Policy'];
 				expect(explode('; ', $result))->toContain('upgrade-insecure-requests;');

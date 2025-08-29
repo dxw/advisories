@@ -6,12 +6,48 @@ class Headers
 {
 	private int $ttl_short = 1800;  // 30 mins..
 	private int $ttl_long = 86400;  // 1 day.
+	public const NONCE_NAME = 'csp';
 
 	public function register(): void
 	{
 		add_filter('wp_headers', [$this, 'addCacheControl']);
 		add_filter('wp_headers', [$this, 'addStrictTransportPolicy']);
-		add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
+		if (!is_admin() && !is_login()) {
+			add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
+		}
+		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
+		add_filter('wp_inline_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
+		add_filter('get_avatar', [$this, 'removeGravatarSupport'], 10, 1);
+	}
+
+	/**
+	 * Return an empty string where HTML for a gravatar should be.
+	 *
+	 * This allows us to remove all third party calls to gravatar.com.
+	 */
+	public function removeGravatarSupport(string $html): string
+	{
+		return '';
+	}
+
+	/**
+	 * Generate a nonce to use in a content security policy header.
+	 */
+	private function getCSPNonce(): string
+	{
+		return wp_create_nonce(self::NONCE_NAME);
+	}
+
+
+	/**
+	 * Add a nonce to all <script> tags that are enqueued in Wordpress.
+	 */
+	public function addCSPScriptAttributes(array $attributes): array
+	{
+		if (!isset($attributes['nonce'])) {
+			$attributes['nonce'] = esc_attr($this->getCSPNonce());
+		}
+		return $attributes;
 	}
 
 	/**
@@ -66,7 +102,7 @@ class Headers
 	{
 		$policy = [
 			"default-src 'self';",
-			"script-src 'self' 'unsafe-inline' data: https://plausible.io https://wordpress.org;",
+			"script-src 'self' 'nonce-" . esc_attr($this->getCSPNonce()) . "' data: https://plausible.io https://wordpress.org;",
 			"connect-src 'self' data: https://plausible.io https://wordpress.org;",
 			"img-src 'self' data: https://plausible.io https://wordpress.org;",
 			"style-src 'self' 'unsafe-inline';",
