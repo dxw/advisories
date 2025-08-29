@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 * Remove all support for user avatars
+* Remove gravatar.com from the CSP
 
 ## [v1.1.0] - 2025-08-29
 

@@ -104,7 +104,7 @@ class Headers
 			"default-src 'self';",
 			"script-src 'self' 'nonce-" . esc_attr($this->getCSPNonce()) . "' data: https://plausible.io https://wordpress.org;",
 			"connect-src 'self' data: https://plausible.io https://wordpress.org;",
-			"img-src 'self' data: https://plausible.io https://wordpress.org https://secure.gravatar.com;",
+			"img-src 'self' data: https://plausible.io https://wordpress.org;",
 			"style-src 'self' 'unsafe-inline';",
 			"font-src 'self' data: https://wordpress.org;",
 			"object-src 'none';",  // <object> and <embed>
