@@ -9,6 +9,35 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('when rendering the admin dashboard', function () {
 			it('it registers filters for wp_headers without a CSP', function () {
 				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('is_login')->toBeCalled()->andReturn(false);
+				allow('add_filter')->toBeCalled();
+				expect('add_filter')->toBeCalled()->times(4);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addCacheControl']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_headers',
+					[$this->headers, 'addStrictTransportPolicy']
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'wp_inline_script_attributes',
+					[$this->headers, 'addCSPScriptAttributes'],
+					99999
+				);
+				$this->headers->register();
+				expect(true)->toBeTruthy();
+			});
+		});
+		context('when rendering the login page', function () {
+			it('it registers filters for wp_headers without a CSP', function () {
+				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('is_login')->toBeCalled()->andReturn(true);
 				allow('add_filter')->toBeCalled();
 				expect('add_filter')->toBeCalled()->times(4);
 				expect('add_filter')->toBeCalled()->once()->with(
@@ -36,6 +65,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 		context('when rendering the frontend', function () {
 			it('it registers filters for wp_headers including a CSP', function () {
 				allow('is_admin')->toBeCalled()->andReturn(false);
+				allow('is_login')->toBeCalled()->andReturn(false);
 				allow('add_filter')->toBeCalled();
 				expect('add_filter')->toBeCalled()->times(5);
 				expect('add_filter')->toBeCalled()->once()->with(

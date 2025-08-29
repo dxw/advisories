@@ -12,7 +12,7 @@ class Headers
 	{
 		add_filter('wp_headers', [$this, 'addCacheControl']);
 		add_filter('wp_headers', [$this, 'addStrictTransportPolicy']);
-		if (!is_admin()) {
+		if (!is_admin() && !is_login()) {
 			add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
 		}
 		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
