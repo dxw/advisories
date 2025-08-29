@@ -17,6 +17,17 @@ class Headers
 		}
 		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('wp_inline_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
+		add_filter('get_avatar', [$this, 'removeGravatarSupport'], 10, 1);
+	}
+
+	/**
+	 * Return an empty string where HTML for a gravatar should be.
+	 *
+	 * This allows us to remove all third party calls to gravatar.com.
+	 */
+	public function removeGravatarSupport(string $html): string
+	{
+		return '';
 	}
 
 	/**

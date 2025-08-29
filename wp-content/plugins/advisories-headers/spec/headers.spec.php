@@ -11,7 +11,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				allow('is_admin')->toBeCalled()->andReturn(true);
 				allow('is_login')->toBeCalled()->andReturn(false);
 				allow('add_filter')->toBeCalled();
-				expect('add_filter')->toBeCalled()->times(4);
+				expect('add_filter')->toBeCalled()->times(5);
 				expect('add_filter')->toBeCalled()->once()->with(
 					'wp_headers',
 					[$this->headers, 'addCacheControl']
@@ -29,6 +29,10 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 					'wp_inline_script_attributes',
 					[$this->headers, 'addCSPScriptAttributes'],
 					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'get_avatar',
+					[$this->headers, 'removeGravatarSupport'],
 				);
 				$this->headers->register();
 				expect(true)->toBeTruthy();
@@ -39,7 +43,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				allow('is_admin')->toBeCalled()->andReturn(true);
 				allow('is_login')->toBeCalled()->andReturn(true);
 				allow('add_filter')->toBeCalled();
-				expect('add_filter')->toBeCalled()->times(4);
+				expect('add_filter')->toBeCalled()->times(5);
 				expect('add_filter')->toBeCalled()->once()->with(
 					'wp_headers',
 					[$this->headers, 'addCacheControl']
@@ -58,6 +62,10 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 					[$this->headers, 'addCSPScriptAttributes'],
 					99999
 				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'get_avatar',
+					[$this->headers, 'removeGravatarSupport'],
+				);
 				$this->headers->register();
 				expect(true)->toBeTruthy();
 			});
@@ -67,7 +75,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				allow('is_admin')->toBeCalled()->andReturn(false);
 				allow('is_login')->toBeCalled()->andReturn(false);
 				allow('add_filter')->toBeCalled();
-				expect('add_filter')->toBeCalled()->times(5);
+				expect('add_filter')->toBeCalled()->times(6);
 				expect('add_filter')->toBeCalled()->once()->with(
 					'wp_headers',
 					[$this->headers, 'addCacheControl']
@@ -89,6 +97,10 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 					'wp_inline_script_attributes',
 					[$this->headers, 'addCSPScriptAttributes'],
 					99999
+				);
+				expect('add_filter')->toBeCalled()->once()->with(
+					'get_avatar',
+					[$this->headers, 'removeGravatarSupport'],
 				);
 				$this->headers->register();
 				expect(true)->toBeTruthy();
