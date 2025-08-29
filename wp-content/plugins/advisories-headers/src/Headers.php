@@ -12,9 +12,7 @@ class Headers
 	{
 		add_filter('wp_headers', [$this, 'addCacheControl']);
 		add_filter('wp_headers', [$this, 'addStrictTransportPolicy']);
-		if (!is_admin() && !is_login()) {
-			add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
-		}
+		add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
 		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('wp_inline_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('get_avatar', [$this, 'removeGravatarSupport'], 10, 1);
@@ -88,7 +86,7 @@ class Headers
 	}
 
 	/**
-	 * Add a Content Security Policy.
+	 * Conditionally add a Content Security Policy.
 	 *
 	 * This policy is quite strict, it disallows everything except Plausible
 	 * (which we use for analytics) and wordpress.org (which provides some
@@ -99,6 +97,9 @@ class Headers
 	 */
 	public function addContentSecurityPolicy(array $headers): array
 	{
+		if (is_admin() || is_login()) {
+			return $headers;
+		}
 		$policy = [
 			"default-src 'self';",
 			"script-src 'self' 'nonce-" . esc_attr($this->getCSPNonce()) . "' data: https://plausible.io https://wordpress.org;",
