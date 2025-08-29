@@ -13,7 +13,7 @@
  * Plugin URI: https://github.com/dxw/advisories
  * Description: HTTP headers for the dxw Advisories site
  * Author: dxw
- * Version: 1.1.0
+ * Version: 2.0.0
  * Network: True
  */
 
