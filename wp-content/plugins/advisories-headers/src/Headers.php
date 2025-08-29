@@ -38,7 +38,6 @@ class Headers
 		return wp_create_nonce(self::NONCE_NAME);
 	}
 
-
 	/**
 	 * Add a nonce to all <script> tags that are enqueued in Wordpress.
 	 */
