@@ -97,7 +97,14 @@ class Headers
 	 */
 	public function addContentSecurityPolicy(array $headers): array
 	{
-		if (is_admin() || is_login()) {
+		// Note that as of WP Core 6.8 is_login() matches any part of the
+		// /wp-login.php suffix. This means that it will match pages like '/'.
+		// Until that is fixed we need to check the script name manually.
+		// See: https://core.trac.wordpress.org/ticket/63896#ticket
+		if (array_key_exists('SCRIPT_NAME', $_SERVER) && $_SERVER['SCRIPT_NAME'] === '/wp-login.php') {
+			return $headers;
+		}
+		if (is_admin()) {
 			return $headers;
 		}
 		$policy = [

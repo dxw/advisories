@@ -162,10 +162,26 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	describe('->addContentSecurityPolicy()', function () {
 		beforeEach(function () {
 			allow('is_admin')->toBeCalled()->andReturn(false);
-			allow('is_login')->toBeCalled()->andReturn(false);
 			allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
 			allow('esc_attr')->toBeCalled()->andRun(function ($val) {
 				return $val;
+			});
+			$_SERVER = [];
+		});
+		context('on any admin dashboard page', function () {
+			it('does nothing', function () {
+				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('get_site_url')->toBeCalled()->andReturn('http://example.com');
+				$result = $this->headers->addContentSecurityPolicy([]);
+				expect($result)->toEqual([]);
+			});
+		});
+		context('on the login page', function () {
+			it('does nothing', function () {
+				$_SERVER['SCRIPT_NAME'] = '/wp-login.php';
+				allow('get_site_url')->toBeCalled()->andReturn('http://example.com');
+				$result = $this->headers->addContentSecurityPolicy([]);
+				expect($result)->toEqual([]);
 			});
 		});
 		context('on localhost with no SSL', function () {
@@ -182,7 +198,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				expect($result)->toEqual($expected);
 			});
 		});
-		context('on any other URL', function () {
+		context('on any non-localhost domain', function () {
 			it('adds a CSP which includes upgrade-insecure-requests', function () {
 				allow('get_site_url')->toBeCalled()->andReturn('https://example.com');
 				$result = $this->headers->addContentSecurityPolicy([])['Content-Security-Policy'];

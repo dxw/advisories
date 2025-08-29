@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Fixed
+
+* CSPs are now generated for the front page and any path that partially matches '/wp-login.php
+
 ## Changed
 
 * Apply SRP more strictly to CSP header method
