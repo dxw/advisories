@@ -12,9 +12,7 @@ class Headers
 	{
 		add_filter('wp_headers', [$this, 'addCacheControl']);
 		add_filter('wp_headers', [$this, 'addStrictTransportPolicy']);
-		if (!is_admin() && !is_login()) {
-			add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
-		}
+		add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
 		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('wp_inline_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('get_avatar', [$this, 'removeGravatarSupport'], 10, 1);
@@ -37,7 +35,6 @@ class Headers
 	{
 		return wp_create_nonce(self::NONCE_NAME);
 	}
-
 
 	/**
 	 * Add a nonce to all <script> tags that are enqueued in Wordpress.
@@ -89,7 +86,7 @@ class Headers
 	}
 
 	/**
-	 * Add a Content Security Policy.
+	 * Conditionally add a Content Security Policy.
 	 *
 	 * This policy is quite strict, it disallows everything except Plausible
 	 * (which we use for analytics) and wordpress.org (which provides some
@@ -100,6 +97,16 @@ class Headers
 	 */
 	public function addContentSecurityPolicy(array $headers): array
 	{
+		// Note that as of WP Core 6.8 is_login() matches any part of the
+		// /wp-login.php suffix. This means that it will match pages like '/'.
+		// Until that is fixed we need to check the script name manually.
+		// See: https://core.trac.wordpress.org/ticket/63896#ticket
+		if (array_key_exists('SCRIPT_NAME', $_SERVER) && $_SERVER['SCRIPT_NAME'] === '/wp-login.php') {
+			return $headers;
+		}
+		if (is_admin()) {
+			return $headers;
+		}
 		$policy = [
 			"default-src 'self';",
 			"script-src 'self' 'nonce-" . esc_attr($this->getCSPNonce()) . "' data: https://plausible.io https://wordpress.org;",
