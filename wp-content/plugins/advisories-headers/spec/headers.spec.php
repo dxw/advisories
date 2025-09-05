@@ -6,9 +6,9 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	});
 
 	describe('->register()', function () {
-		it('does registers filters for wp_headers', function () {
+		it('it registers filters', function () {
 			allow('add_filter')->toBeCalled();
-			expect('add_filter')->toBeCalled()->times(3);
+			expect('add_filter')->toBeCalled()->times(6);
 			expect('add_filter')->toBeCalled()->once()->with(
 				'wp_headers',
 				[$this->headers, 'addCacheControl']
@@ -21,8 +21,44 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				'wp_headers',
 				[$this->headers, 'addContentSecurityPolicy']
 			);
+			expect('add_filter')->toBeCalled()->once()->with(
+				'wp_script_attributes',
+				[$this->headers, 'addCSPScriptAttributes'],
+				99999
+			);
+			expect('add_filter')->toBeCalled()->once()->with(
+				'wp_inline_script_attributes',
+				[$this->headers, 'addCSPScriptAttributes'],
+				99999
+			);
+			expect('add_filter')->toBeCalled()->once()->with(
+				'get_avatar',
+				[$this->headers, 'removeGravatarSupport'],
+			);
 			$this->headers->register();
 			expect(true)->toBeTruthy();
+		});
+	});
+
+	describe('addCSPScriptAttributes->()', function () {
+		context('a nonce is already set', function () {
+			it('does nothing', function () {
+				$input = ['src' => 'https://example.com', 'nonce' => '12345', 'foo' => 'bar'];
+				$result = $this->headers->addCSPScriptAttributes($input);
+				expect($result)->toEqual($input);
+			});
+		});
+		context('a nonce is not set', function () {
+			it('adds a nonce', function () {
+				allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+				allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+					return $val;
+				});
+				$input = ['src' => 'https://example.com', 'foo' => 'bar'];
+				$expected = ['src' => 'https://example.com', 'nonce' => '012345', 'foo' => 'bar'];
+				$result = $this->headers->addCSPScriptAttributes($input);
+				expect($result)->toEqual($expected);
+			});
 		});
 	});
 
@@ -124,10 +160,34 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 	});
 
 	describe('->addContentSecurityPolicy()', function () {
+		beforeEach(function () {
+			allow('is_admin')->toBeCalled()->andReturn(false);
+			allow('wp_create_nonce')->toBeCalled()->with('csp')->andReturn('012345');
+			allow('esc_attr')->toBeCalled()->andRun(function ($val) {
+				return $val;
+			});
+			$_SERVER = [];
+		});
+		context('on any admin dashboard page', function () {
+			it('does nothing', function () {
+				allow('is_admin')->toBeCalled()->andReturn(true);
+				allow('get_site_url')->toBeCalled()->andReturn('http://example.com');
+				$result = $this->headers->addContentSecurityPolicy([]);
+				expect($result)->toEqual([]);
+			});
+		});
+		context('on the login page', function () {
+			it('does nothing', function () {
+				$_SERVER['SCRIPT_NAME'] = '/wp-login.php';
+				allow('get_site_url')->toBeCalled()->andReturn('http://example.com');
+				$result = $this->headers->addContentSecurityPolicy([]);
+				expect($result)->toEqual([]);
+			});
+		});
 		context('on localhost with no SSL', function () {
 			it('adds a CSP which only allows CORS between this site and Plausible or wordpress.org', function () {
 				allow('get_site_url')->toBeCalled()->andReturn('http://localhost');
-				$policy = "default-src 'self'; script-src 'self' 'unsafe-inline' data: https://plausible.io ";
+				$policy = "default-src 'self'; script-src 'self' 'nonce-012345' data: https://plausible.io ";
 				$policy .= "https://wordpress.org; connect-src 'self' data: https://plausible.io https://wordpress.org; ";
 				$policy .= "img-src 'self' data: https://plausible.io https://wordpress.org; style-src 'self' ";
 				$policy .= "'unsafe-inline'; font-src 'self' data: https://wordpress.org; object-src 'none'; media-src ";
@@ -138,7 +198,7 @@ describe(\Dxw\AdvisoriesHeaders\Headers::class, function () {
 				expect($result)->toEqual($expected);
 			});
 		});
-		context('on any other URL', function () {
+		context('on any non-localhost domain', function () {
 			it('adds a CSP which includes upgrade-insecure-requests', function () {
 				allow('get_site_url')->toBeCalled()->andReturn('https://example.com');
 				$result = $this->headers->addContentSecurityPolicy([])['Content-Security-Policy'];
