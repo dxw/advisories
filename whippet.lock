@@ -1,10 +1,15 @@
 {
-    "hash": "2c5608f3f5277f03877b12f07fa22f5c89927431",
+    "hash": "5fbf8c18546db8e03c29e37d3625033a56d99845",
     "plugins": [
+        {
+            "name": "advanced-custom-fields-pro",
+            "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
+            "revision": "871ba506c36f85d30c0a17e470a5c8afb8ba2cf0"
+        },
         {
             "name": "akismet",
             "src": "git@github.com:dxw-wordpress-plugins/akismet",
-            "revision": "1e38fd260aa96e47a3c130fb691521d577d8641e"
+            "revision": "f381147af2010e3e0d1011679dc59a2406333326"
         },
         {
             "name": "classic-editor",
@@ -14,7 +19,7 @@
         {
             "name": "co-authors-plus",
             "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
-            "revision": "6939817e8feed817923a79b8532a38eb5b1f7d98"
+            "revision": "7fbc826ab850c394734b383ebff64b934fce560a"
         },
         {
             "name": "page-excerpt",
@@ -24,17 +29,12 @@
         {
             "name": "query-monitor",
             "src": "git@github.com:dxw-wordpress-plugins/query-monitor",
-            "revision": "91e7a3eabf1fbf4b182f4a92972ba2375abed21f"
+            "revision": "cd8b6f23217d9db897943dabe05c54289184593f"
         },
         {
             "name": "two-factor",
             "src": "git@github.com:dxw-wordpress-plugins/two-factor",
-            "revision": "6b68b251cfb81232a7cfa2655e6853aeff7cd9fe"
-        },
-        {
-            "name": "advanced-custom-fields-pro",
-            "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "ae897af1b3098a9caa139f75240b0ae266286d8e"
+            "revision": "64c0911e431732745c680966fb8d9560f4138603"
         }
     ]
 }
