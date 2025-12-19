@@ -146,7 +146,9 @@ class PluginVersionChecker
 		}
 
 		$response = $this->_get_plugin_information($slug);
-		set_transient($t_name, $response, 60 * 60);
+		if (!empty($response)) {
+			set_transient($t_name, $response, 60 * 60);
+		}
 		return $response;
 	}
 
@@ -161,9 +163,12 @@ class PluginVersionChecker
 						'slug' => $slug,
 					]),
 				],
-				]
+			]
 		);
-
-		return unserialize($response['body']);
+		if (!is_wp_error($response)) {
+			return unserialize($response['body']);
+		} else {
+			return "";
+		}
 	}
 }
