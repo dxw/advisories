@@ -1,14 +1,14 @@
 {
-    "src": {
-        "plugins": "git@github.com:dxw-wordpress-plugins/"
-    },
-    "plugins": [
-        {"name": "advanced-custom-fields-pro", "ref": "v6"},
-        {"name": "akismet", "ref": "v5"},
-        {"name": "classic-editor", "ref": "v1"},
-        {"name": "co-authors-plus", "ref": "v3"},
-        {"name": "page-excerpt", "ref": "v1"},
-        {"name": "query-monitor", "ref": "v3"},
-        {"name": "two-factor", "ref": "v0"}
-    ]
+	"src": {
+		"plugins": "git@github.com:dxw-wordpress-plugins/"
+	},
+	"plugins": [
+		{"name": "advanced-custom-fields-pro", "ref": "v6"},
+		{"name": "akismet", "ref": "v5"},
+		{"name": "classic-editor", "ref": "v1"},
+		{"name": "co-authors-plus", "ref": "v3"},
+		{"name": "page-excerpt", "ref": "v1"},
+		{"name": "query-monitor", "ref": "v3"},
+		{"name": "two-factor", "ref": "v0"}
+	]	
 }
