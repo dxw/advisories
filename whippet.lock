@@ -2,11 +2,6 @@
     "hash": "d06d57ba3536edb41e2c8794e16fce915ebc82bd",
     "plugins": [
         {
-            "name": "advanced-custom-fields-pro",
-            "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
-            "revision": "547457df09e7d6a4cffea7f688eb847d572e7213"
-        },
-        {
             "name": "akismet",
             "src": "git@github.com:dxw-wordpress-plugins/akismet",
             "revision": "f381147af2010e3e0d1011679dc59a2406333326"
@@ -40,6 +35,11 @@
             "name": "two-factor",
             "src": "git@github.com:dxw-wordpress-plugins/two-factor",
             "revision": "64c0911e431732745c680966fb8d9560f4138603"
+        },
+        {
+            "name": "advanced-custom-fields-pro",
+            "src": "git@github.com:dxw-wordpress-plugins/advanced-custom-fields-pro",
+            "revision": "79156a75b9867d2e91d83389f8eecdb0494dd632"
         }
     ]
 }
