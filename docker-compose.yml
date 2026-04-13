@@ -1,5 +1,5 @@
 volumes:
-  mysql_data_dxw-security:
+  mysql_data_advisories:
 
 services:
   mailcatcher:
@@ -25,7 +25,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - mysql_data_dxw-security:/var/lib/mysql
+      - mysql_data_advisories:/var/lib/mysql
     environment:
       MYSQL_DATABASE: wordpress
       MYSQL_ROOT_PASSWORD: foobar
