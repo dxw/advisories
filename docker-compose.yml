@@ -2,28 +2,8 @@ volumes:
   mysql_data_advisories:
 
 services:
-  mailcatcher:
-    image: schickling/mailcatcher
-    ports:
-      - "1080:1080"
-
-  beanstalk:
-    image: schickling/beanstalkd
-    ports:
-      - "11300:11300"
-
-  beanstalkd_console:
-    image: schickling/beanstalkd-console
-    ports:
-      - "2080:80"
-    environment:
-      BEANSTALKD_HOST: beanstalk
-      BEANSTALKD_PORT: 11300
-
   mysql:
     image: mariadb:10
-    ports:
-      - "3306:3306"
     volumes:
       - mysql_data_advisories:/var/lib/mysql
     environment:
@@ -32,12 +12,19 @@ services:
 
   wordpress:
     image: thedxw/wpc-wordpress:php8.2
-    ports:
-      - "80:80"
-    links:
-      - mysql
-      - mailcatcher
-      - beanstalk
     volumes:
       - .:/usr/src/app
       - ./wp-content:/var/www/html/wp-content
+    networks:
+      - default
+      - traefik_proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.advisories.rule=Host(`advisories.localhost`)"
+      - "traefik.http.routers.advisories.entrypoints=web"
+      - "traefik.docker.network=traefik_proxy"
+
+networks:
+  traefik_proxy:
+    external: true
+    name: traefik_proxy
