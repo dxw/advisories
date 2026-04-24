@@ -1,5 +1,5 @@
 {
-    "hash": "d06d57ba3536edb41e2c8794e16fce915ebc82bd",
+    "hash": "ea2505339f6f2e1b65ff42bb622858101ed12ac3",
     "plugins": [
         {
             "name": "advanced-custom-fields-pro",
@@ -15,11 +15,6 @@
             "name": "classic-editor",
             "src": "git@github.com:dxw-wordpress-plugins/classic-editor",
             "revision": "7982979d76350e64a8ae60409526faa3b07cd662"
-        },
-        {
-            "name": "co-authors-plus",
-            "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
-            "revision": "7fbc826ab850c394734b383ebff64b934fce560a"
         },
         {
             "name": "page-excerpt",
@@ -40,6 +35,11 @@
             "name": "two-factor",
             "src": "git@github.com:dxw-wordpress-plugins/two-factor",
             "revision": "08849c8729b9392adc56ed4984c4737f860d3412"
+        },
+        {
+            "name": "co-authors-plus",
+            "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
+            "revision": "36b1b45350cb6956d6af7660ce73a16a4cd5944b"
         }
     ]
 }
