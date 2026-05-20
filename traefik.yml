@@ -1,0 +1,22 @@
+name: traefik_global
+
+networks:
+  traefik_proxy:
+    name: traefik_proxy
+
+services:
+  traefik:
+    image: traefik:v3.6
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - traefik_proxy
+
+  mailcatcher:
+    image: schickling/mailcatcher
