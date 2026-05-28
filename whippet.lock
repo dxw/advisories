@@ -12,11 +12,6 @@
             "revision": "f1f920cb99dbf1eb7df710042cdff0d96a917f1d"
         },
         {
-            "name": "classic-editor",
-            "src": "git@github.com:dxw-wordpress-plugins/classic-editor",
-            "revision": "7982979d76350e64a8ae60409526faa3b07cd662"
-        },
-        {
             "name": "co-authors-plus",
             "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
             "revision": "306dd21ac506073221286e8c1d6a359f1984ff31"
@@ -40,6 +35,11 @@
             "name": "two-factor",
             "src": "git@github.com:dxw-wordpress-plugins/two-factor",
             "revision": "08849c8729b9392adc56ed4984c4737f860d3412"
+        },
+        {
+            "name": "classic-editor",
+            "src": "git@github.com:dxw-wordpress-plugins/classic-editor",
+            "revision": "203d1aef94a57d49a09e1b4bd388978afdca3e81"
         }
     ]
 }
