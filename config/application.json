@@ -3,6 +3,6 @@
 	"wordpress": {
 		"repository": "git@github.com:dxw/wordpress-snapshot",
 		"staging": "v7",
-		"prod": "v6"
+		"prod": "v7"
 	}
 }
