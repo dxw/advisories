@@ -8,16 +8,19 @@ services:
     image: schickling/mailcatcher
     ports:
       - "127.0.0.1:1080:1080"
+      - "[::1]:1080:1080"
 
   beanstalk:
     image: schickling/beanstalkd
     ports:
       - "127.0.0.1:11300:11300"
+      - "[::1]:11300:11300"
 
   beanstalkd_console:
     image: schickling/beanstalkd-console
     ports:
       - "127.0.0.1:2080:80"
+      - "[::1]:2080:80"
     environment:
       BEANSTALKD_HOST: beanstalk
       BEANSTALKD_PORT: 11300
@@ -26,6 +29,7 @@ services:
     image: mariadb:10
     ports:
       - "127.0.0.1:3306:3306"
+      - "[::1]:3306:3306"
     volumes:
       - mysql_data_dxw-security:/var/lib/mysql
     environment:
@@ -36,6 +40,7 @@ services:
     image: thedxw/wpc-wordpress:php8.2
     ports:
       - "127.0.0.1:80:80"
+      - "[::1]:80:80"
     links:
       - mysql
       - mailcatcher
