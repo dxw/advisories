@@ -8,6 +8,12 @@
     "require": {
         "aura/autoload": "^2.0"
     },
+    "config": {
+        "autoloader-suffix": "DxwSecAPI",
+        "platform": {
+            "php": "8.2"
+        }
+    },
     "scripts": {
       "post-update-cmd": "vendor/bin/phar-install"
     }
