@@ -14,6 +14,7 @@ class Headers
 		add_filter('wp_headers', [$this, 'addStrictTransportPolicy']);
 		add_filter('wp_headers', [$this, 'addContentSecurityPolicy']);
 		add_filter('wp_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
+		/** @psalm-suppress MixedArgumentTypeCoercion */
 		add_filter('wp_inline_script_attributes', [$this, 'addCSPScriptAttributes'], 99999);
 		add_filter('get_avatar', [$this, 'removeGravatarSupport'], 10, 1);
 	}
@@ -33,7 +34,10 @@ class Headers
 	 */
 	private function getCSPNonce(): string
 	{
-		return wp_create_nonce(self::NONCE_NAME);
+		/** @var string */
+		$nonce = wp_create_nonce(self::NONCE_NAME);
+		
+		return $nonce;
 	}
 
 	/**
