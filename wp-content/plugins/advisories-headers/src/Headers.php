@@ -36,7 +36,7 @@ class Headers
 	{
 		/** @var string */
 		$nonce = wp_create_nonce(self::NONCE_NAME);
-		
+
 		return $nonce;
 	}
 
