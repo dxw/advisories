@@ -2,6 +2,7 @@
     "type": "wordpress-plugin",
     "license": "MIT",
     "config": {
+      "autoloader-suffix": "AdvisoriesHeaders",
       "platform": {
         "php": "8.2"
       }

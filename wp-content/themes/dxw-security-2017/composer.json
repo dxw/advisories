@@ -12,8 +12,9 @@
         }
     ],
     "config": {
+        "autoloader-suffix": "DxwSecurity2017",
         "platform": {
-            "php": "8.3"
+            "php": "8.2"
         }
     },
     "require-dev": {
@@ -32,7 +33,7 @@
     },
     "require": {
         "dxw/pagination": "^1.0.1",
-        "dxw/iguana": "^1.0",
+        "dxw/iguana": "^1.4",
         "dxw/iguana-theme": "^1.0",
         "dxw/iguana-extras": "^1.0",
         "dxw/result": "^1.0",

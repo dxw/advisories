@@ -29,7 +29,9 @@ describe(\Dxw\DxwSecurity2017\Theme\Pagination::class, function () {
 	it('makes the current page link an anchor', function () {
 		$pagination = new \Dxw\DxwSecurity2017\Theme\Pagination();
 		allow('get_query_var')->toBeCalled()->andReturn(27);
-		allow('esc_url')->toBeCalled()->andRun(function ($s) { return $s; });
+		allow('esc_url')->toBeCalled()->andRun(function ($s) {
+			return $s;
+		});
 		allow('get_pagenum_link')->toBeCalled()->andReturn('http://localhost/plugins/page/27/');
 
 		$input = <<<HTML
