@@ -9,7 +9,7 @@
 		{"name": "co-authors-plus", "ref": "v4"},
 		{"name": "markdown-for-agents-and-statistics", "ref": "v1"},
 		{"name": "page-excerpt", "ref": "v1"},
-		{"name": "redis-cache", "ref": "v2"},
+		{"name": "redis-cache", "ref": "v3"},
 		{"name": "query-monitor", "ref": "v4"},
 		{"name": "two-factor", "ref": "v0"}
 	]
