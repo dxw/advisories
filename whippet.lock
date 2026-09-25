@@ -1,5 +1,5 @@
 {
-    "hash": "559a83cb6d43b5011f21ffda2e8efebf01aef080",
+    "hash": "1c5137973ea505bfff1c4a85755ee97c5c0ccc97",
     "plugins": [
         {
             "name": "advanced-custom-fields-pro",
@@ -39,7 +39,7 @@
         {
             "name": "redis-cache",
             "src": "git@github.com:dxw-wordpress-plugins/redis-cache",
-            "revision": "06712fd828af2b7768cf1539a7b9d8397086d1fd"
+            "revision": "b74e21030d6deb40ea547c35bb16a3c377ccb723"
         },
         {
             "name": "two-factor",
