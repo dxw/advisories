@@ -44,7 +44,7 @@
         {
             "name": "two-factor",
             "src": "git@github.com:dxw-wordpress-plugins/two-factor",
-            "revision": "08849c8729b9392adc56ed4984c4737f860d3412"
+            "revision": "cfb62cdf8c6449445641884c5875fc434fd562a1"
         }
     ]
 }
