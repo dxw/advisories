@@ -14,7 +14,7 @@
     "config": {
         "autoloader-suffix": "DxwSecurity2017",
         "platform": {
-            "php": "8.2"
+            "php": "8.3"
         }
     },
     "require-dev": {
