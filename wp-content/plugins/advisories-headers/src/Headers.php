@@ -2,7 +2,7 @@
 
 namespace Dxw\AdvisoriesHeaders;
 
-class Headers
+final class Headers
 {
 	private int $ttl_short = 1800;  // 30 mins..
 	private int $ttl_long = 86400;  // 1 day.

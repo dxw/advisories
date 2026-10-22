@@ -4,7 +4,7 @@
     "config": {
       "autoloader-suffix": "AdvisoriesHeaders",
       "platform": {
-        "php": "8.2"
+        "php": "8.3.16"
       }
     },
     "autoload": {
@@ -15,10 +15,10 @@
     "require-dev": {
         "dxw/php-cs-fixer-config": "^2.0",
         "kahlan/kahlan": "^6",
-        "vimeo/psalm": "^5.14",
+        "vimeo/psalm": "^6",
         "humanmade/psalm-plugin-wordpress": "^3.1"
     },
     "require": {
-        "php": "^8.2"
+        "php": "^8.3"
     }
 }

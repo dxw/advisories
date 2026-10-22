@@ -1,5 +1,6 @@
 {
-    "php": "8.3",
+    "php": "8.5",
+    "ubuntu": "resolute",
     "wordpress": {
         "repository": "git@github.com:dxw/wordpress-snapshot",
         "staging": "latest",
