@@ -19,7 +19,7 @@
         {
             "name": "co-authors-plus",
             "src": "git@github.com:dxw-wordpress-plugins/co-authors-plus",
-            "revision": "f276036f30a5449fda2c379c7b89ed3db59ad8f2"
+            "revision": "56c6ee5bf5aa2dfb9268a4f5cc940d9ebe8c0974"
         },
         {
             "name": "markdown-for-agents-and-statistics",
