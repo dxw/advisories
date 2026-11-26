@@ -53,9 +53,12 @@ class Helpers implements \Dxw\Iguana\Registerable
 
 	public function the_short_recommendation($post_id = 0)
 	{
-		$recommendation = $this->recommendation_data(get_field('recommendation', $post_id)); ?>
+		$recommendation = $this->recommendation_data(get_field('recommendation', $post_id));
+		$recommendation_slug = (!empty($recommendation->slug)) ? $recommendation->slug : 'unknown';
+		$recommendation_name = (!empty($recommendation->name)) ? $recommendation->name : 'unknown';
+		?>
 
-        <p class="<?php echo $recommendation->slug ?> recommendation"><span class="name"><?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?> -</span> <?php echo $recommendation->name ?></p>
+        <p class="<?php echo $recommendation_slug ?> recommendation"><span class="name"><?php echo str_replace(',', ', ', get_field('version_of_plugin')) ?> -</span> <?php echo $recommendation_name ?></p>
     <?php
 	}
 
