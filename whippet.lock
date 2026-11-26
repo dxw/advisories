@@ -1,5 +1,5 @@
 {
-    "hash": "1c5137973ea505bfff1c4a85755ee97c5c0ccc97",
+    "hash": "bc706bdd639d29c7fade377e496201c6864e4391",
     "plugins": [
         {
             "name": "advanced-custom-fields-pro",
@@ -40,6 +40,11 @@
             "name": "redis-cache",
             "src": "git@github.com:dxw-wordpress-plugins/redis-cache",
             "revision": "b74e21030d6deb40ea547c35bb16a3c377ccb723"
+        },
+        {
+            "name": "smtp",
+            "src": "git@github.com:dxw-wordpress-plugins/smtp",
+            "revision": "e38d9b69470f0c75d6ebd3fc5eafd5a29998b83f"
         },
         {
             "name": "two-factor",

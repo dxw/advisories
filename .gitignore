@@ -85,6 +85,7 @@ wp-content/languages/
 /wp-content/plugins/co-authors-plus
 /wp-content/plugins/markdown-for-agents-and-statistics
 /wp-content/plugins/page-excerpt
-/wp-content/plugins/redis-cache
 /wp-content/plugins/query-monitor
+/wp-content/plugins/redis-cache
+/wp-content/plugins/smtp
 /wp-content/plugins/two-factor
